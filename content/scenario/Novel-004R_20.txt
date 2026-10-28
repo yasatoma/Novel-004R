@@ -1,0 +1,237 @@
+# 第二十章　次の頁
+@chapter start id=CH20 title="次の頁"
+
+@scene start id=SC20_001
+# シーン：橘栞の作業机／初冬・午後
+@location show text="橘栞の作業机／初冬・午後"
+@overlay hide
+@char hide id=ALL
+@bgm play file=B011.dat volume=0.55 fade_ms=4000 continue_if_same=true
+@ambient stop fade_ms=800
+@textbox hide
+@bg show id=BG_018 image=base filter=normal effect=none transition=blackfade duration_ms=4000
+@chapter_title show chapter="第二十章" title="次の頁" duration_ms=700 hold_ms=2600
+@wait start duration_ms=4000 mode=always
+@textbox show
+@char show id=CH_001 expression=基本_室内 position=center
+
+@text show id=TX20_0001 speaker=narration
+栞は作業を始める前に、手を洗った。
+@text show id=TX20_0002 speaker=narration
+乾いたことを確かめ、机の上へ標本帳を置く。母の字と、伯父の貼った紙が、同じ頁に残っている。
+@text show id=TX20_0003 speaker=narration
+僕は机から離れた椅子に座った。ここに来るのは二度目だった。最初は、ただ夕食を一緒に食べた。今日は栞から、始めるところを見てほしいと言われていた。
+
+@overlay show id=I001 position=center size=medium duration_ms=300
+@text show id=TX20_0004 speaker=narration
+栞「ここ。伯父が糊をつけすぎたところ」
+
+@text show id=TX20_0005 speaker=narration
+開かれた頁の端が、薄く波打っていた。葉柄の近くに、古い紙帯が重なっている。
+
+@text show id=TX20_0006 speaker=narration
+律「外す？」
+
+@text show id=TX20_0007 speaker=narration
+栞「状態を見てから。でも、全部を綺麗にしようとは思っていないの」
+
+@text show id=TX20_0008 speaker=narration
+栞は写真を撮り、位置を書いた。
+@text show id=TX20_0009 speaker=narration
+僕のカメラより小さな機械だった。表示された時刻は合っていた。
+
+@text show id=TX20_0010 speaker=narration
+栞「伯父が手を入れたことも、この帳面が持ってきた時間だから。残すことで壊れやすくなるところは考えるけど、触った跡そのものを、消したくはない」
+
+@text show id=TX20_0011 speaker=narration
+律「残す義理はないって、書いてあったね」
+
+@text show id=TX20_0012 speaker=narration
+栞「うん。だから、私が残すと決める」
+
+@text show id=TX20_0013 speaker=narration
+栞の指は傷の上では止まらなかった。端に触れる前に止まり、紙の支え方を変えた。
+@text show id=TX20_0014 speaker=narration
+春の工房で見た手つきだった。
+
+@text show id=TX20_0015 speaker=narration
+窓の外で、乾いた枝が揺れている。
+@text show id=TX20_0016 speaker=narration
+千鶴さんからの二通目の手紙は、棚に置かれていた。宿の全館再開は決まっていない。事業や支払いの調査も終わってはいない。その中に、植木鉢を一つ倒したことや、新しい眼鏡にまだ慣れないことが書かれていた。
+@text show id=TX20_0017 speaker=narration
+黒田さんとの連絡も続いていた。事件の確認が必要な日はあるし、栞が帰ってから疲れて話せない日もあった。
+@text show id=TX20_0018 speaker=narration
+僕たちは、その日の予定を変えた。何でも話す約束ではなく、話せない日にも会っていられるように。
+
+@overlay hide duration_ms=250
+@text show id=TX20_0019 speaker=narration
+栞「今日は、ここまでにする」
+
+@text show id=TX20_0020 speaker=narration
+律「もう？」
+
+@text show id=TX20_0021 speaker=narration
+栞「始める前の記録だけでも、時間がかかるから。……それに、続きができる日に終わるのも、大事だと思って」
+
+@text show id=TX20_0022 speaker=narration
+栞は標本帳を閉じた。母のものだった帳面を、自分の手でしまった。
+
+@scene end id=SC20_001
+@scene start id=SC20_002
+# シーン：橘栞の部屋／初冬・夕方
+@location show text="橘栞の部屋／初冬・夕方"
+@overlay hide
+@char hide id=ALL
+@textbox hide
+@bg show id=BG_018 image=base filter=evening effect=none transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+@char show id=CH_001 expression=基本_室内 position=center
+
+@text show id=TX20_0023 speaker=narration
+台所から、湯が沸く音がした。
+@text show id=TX20_0024 speaker=narration
+栞が二つのカップを出し、僕は菓子の袋を開けた。中の一枚が割れていたので、大きい方を栞の皿へ置いた。
+
+@text show id=TX20_0025 speaker=narration
+栞「いま、選んだ？」
+
+@text show id=TX20_0026 speaker=narration
+律「割れてない方がいいかと思って」
+
+@text show id=TX20_0027 speaker=narration
+栞「じゃあ、半分ずつにしよう」
+
+@text show id=TX20_0028 speaker=narration
+割れていない方まで、栞が二つにした。
+@text show id=TX20_0029 speaker=narration
+僕は笑い、片方をもらった。
+
+@overlay show id=I012 position=center size=medium duration_ms=300
+@text show id=TX20_0030 speaker=narration
+棚の横に、あの日送らずにいた散策路の写真が飾ってあった。
+@text show id=TX20_0031 speaker=narration
+見せても大丈夫か訊いたとき、栞は少し考えてから、自分で選びたいと答えた。何枚か送ると、二つの穴のある葉を持った手の写真が選ばれた。
+@text show id=TX20_0032 speaker=narration
+顔は写っていない。それでも、そのときの会話を二人とも覚えていた。
+
+@text show id=TX20_0033 speaker=narration
+栞「伯父にも、見せたかったな」
+
+@text show id=TX20_0034 speaker=narration
+僕は写真を見た。
+
+@text show id=TX20_0035 speaker=narration
+律「うん」
+
+@text show id=TX20_0036 speaker=narration
+栞「きっと、葉っぱより宿を撮れって言うね」
+
+@text show id=TX20_0037 speaker=narration
+律「言いそう」
+
+@text show id=TX20_0038 speaker=narration
+栞が笑った。次の瞬間に泣きそうになることも、まだあった。今日はそのまま、お茶を飲んだ。
+@text show id=TX20_0039 speaker=narration
+僕もカップを持った。
+
+@overlay hide duration_ms=250
+@char change id=CH_001 expression=微笑み_室内
+@text show id=TX20_0040 speaker=narration
+栞「来週、何曜日なら空いてる？」
+
+@text show id=TX20_0041 speaker=narration
+僕は携帯を出した。仕事の予定を確かめ、木曜日と答えた。
+
+@text show id=TX20_0042 speaker=narration
+栞「じゃあ、木曜日。仕事が遅くなるなら、連絡してね」
+
+@text show id=TX20_0043 speaker=narration
+律「うん。栞も」
+
+@text show id=TX20_0044 speaker=narration
+栞は予定を入れた。標本帳の修復とは別の欄に、僕の名前が載った。
+@text show id=TX20_0045 speaker=narration
+僕も同じ日へ書き込んだ。
+
+@scene end id=SC20_002
+@scene start id=SC20_003
+# シーン：橘栞の部屋・玄関／夜
+@location show text="橘栞の部屋・玄関／夜"
+@overlay hide
+@char hide id=ALL
+@textbox hide
+@bg show id=BG_018 image=base filter=night effect=none view=entrance transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+@char show id=CH_001 expression=基本_室内 position=center
+
+@bg show id=BG_018 image=base filter=night effect=none view=entrance transition=dissolve duration_ms=700
+@text show id=TX20_0046 speaker=narration
+帰ろうとすると、栞がコートを持ってきた。
+@text show id=TX20_0047 speaker=narration
+袖を通す間、彼女は玄関の小さな棚に置いた髪留めを見た。金色の紅葉は、外した後も窓の灯りを受けていた。
+
+@text show id=TX20_0048 speaker=narration
+栞「律さん」
+
+@text show id=TX20_0049 speaker=narration
+律「うん？」
+
+@text show id=TX20_0050 speaker=narration
+栞「呼んだだけ」
+
+@char change id=CH_001 expression=照れ_室内
+@text show id=TX20_0051 speaker=narration
+栞は少し照れたように笑った。
+@text show id=TX20_0052 speaker=narration
+僕は靴を履くのをやめ、一歩戻った。栞がこちらへ寄り、頬を僕の胸へつけた。手を背中へ回すと、ゆっくり体重が預けられた。
+@char change id=CH_001 expression=微笑み_室内 crop=face
+@text show id=TX20_0053 speaker=narration
+しばらくそうしてから、栞は顔を上げた。
+
+@text show id=TX20_0054 speaker=narration
+栞「また、木曜日に」
+
+@text show id=TX20_0055 speaker=narration
+律「木曜日に」
+
+@char hide id=ALL
+@ambient play file=A003.dat volume=0.2 fade_ms=800
+@location show text="橘栞の住居前／夜"
+@bg show id=BG_023 image=base filter=night effect=none transition=dissolve duration_ms=700
+@text show id=TX20_0056 speaker=narration
+外へ出ると、冷たい風が頬に当たった。
+@text show id=TX20_0057 speaker=narration
+階段を降りる途中で見上げると、栞がまだ戸のところにいた。僕が手を振ると、彼女も振った。
+@text show id=TX20_0058 speaker=narration
+角を曲がる前に、今度は僕から呼んだ。
+
+@text show id=TX20_0059 speaker=narration
+律「栞」
+
+@text show id=TX20_0060 speaker=narration
+声は届いた。
+@text show id=TX20_0061 speaker=narration
+栞が顔を上げ、はい、と答えた。
+
+@scene end id=SC20_003
+@scene start id=SC20_004
+# シーン：
+@location hide
+@char hide id=ALL
+@overlay hide
+@ambient stop fade_ms=1000
+@bgm stop fade_ms=2500
+@textbox hide
+@bg hide
+@wait start duration_ms=2500 mode=always
+@textbox show
+
+@text show id=TX20_0062 speaker=narration
+終
+
+@overlay hide
+@scene end id=SC20_004
+@chapter end id=CH20
+

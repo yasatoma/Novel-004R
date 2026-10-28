@@ -1,0 +1,433 @@
+# 第三章　山の向こうから
+@chapter start id=CH03 title="山の向こうから"
+
+@scene start id=SC03_001
+# シーン：栞葉荘・談話室／夕方・豪雨
+@location show text="栞葉荘・談話室／夕方・豪雨"
+@overlay hide
+@char hide id=ALL
+@bgm play file=B004.dat volume=0.55 fade_ms=4000 continue_if_same=true
+@ambient play file=A002.dat volume=0.38 fade_ms=1000 continue_if_same=true
+@textbox hide
+@bg show id=BG_009 image=base filter=evening effect=none transition=blackfade duration_ms=4000
+@chapter_title show chapter="第三章" title="山の向こうから" duration_ms=700 hold_ms=2600
+@wait start duration_ms=4000 mode=always
+@textbox show
+@char show id=CH_006 expression=基本 position=left
+@char show id=CH_002 expression=基本 position=right
+
+@text show id=TX03_0001 speaker=narration
+雨は窓の上から斜めに流れた。近くにあるはずの橋が、薄い影になっている。
+@text show id=TX03_0002 speaker=narration
+黒田さんの携帯が鳴った。応答した顔が、窓から離れた。
+
+@text show id=TX03_0003 speaker=narration
+黒田「通行止めですか。……はい。宿に七名です。こちらから出ないように伝えます」
+
+@text show id=TX03_0004 speaker=narration
+通話を切ると、修蔵さんへ向き直った。
+
+@text show id=TX03_0005 speaker=narration
+黒田「下の山道で斜面が崩れたそうです。道路管理の方から、車を出さないようにと」
+
+@text show id=TX03_0006 speaker=narration
+早瀬「どの辺だ」
+
+@text show id=TX03_0007 speaker=narration
+黒田「二つ目のカーブです。規模の確認もできていないようです」
+
+@text show id=TX03_0008 speaker=narration
+早瀬さんは車の鍵を出しかけ、戻した。栞が携帯の電波を確かめる。表示は一本と二本を行き来していた。
+
+@text show id=TX03_0009 speaker=narration
+奈緒「宿の建物は高台にあります。川側へ出ず、本館でお過ごしください。お部屋には懐中電灯がございます」
+
+@text show id=TX03_0010 speaker=narration
+千鶴「せっかく来てもらったのに。帰るのは明日、様子を見てからね」
+
+@text show id=TX03_0011 speaker=narration
+律「僕たちは元々、明日までいるつもりでしたから」
+
+@text show id=TX03_0012 speaker=narration
+千鶴さんは僕に微笑み、修蔵さんを見た。
+
+@text show id=TX03_0013 speaker=narration
+千鶴「お話、延期した方がよくないかしら。今日は皆さん、落ち着かないでしょう」
+
+@text show id=TX03_0014 speaker=narration
+修蔵「原本を照らすだけだ。明日になれば済む、という話ではない」
+
+@text show id=TX03_0015 speaker=narration
+奈緒「三枝さん。山の状況が分からないうちは、設備の対応を優先させてください」
+
+@text show id=TX03_0016 speaker=narration
+修蔵「分かっている。私も片付けてくる」
+
+@text show id=TX03_0017 speaker=narration
+修蔵さんは栞に何か言おうとした。栞は顔を上げたが、先に早瀬さんが声をかけた。
+
+@text show id=TX03_0018 speaker=narration
+早瀬「支払ったって口座の番号、逃がすなよ。こっちは今月の給料がある」
+
+@text show id=TX03_0019 speaker=narration
+修蔵「逃がさん。全部、出す」
+
+@char hide id=ALL
+@char show id=CH_001 expression=不安 position=center
+@text show id=TX03_0020 speaker=narration
+二人の声が遠ざかった。奈緒は受付へ戻り、千鶴さんは食事の用意に立った。
+
+@text show id=TX03_0021 speaker=narration
+栞「まだ、怒ってるかな」
+
+@text show id=TX03_0022 speaker=narration
+律「栞のこと？」
+
+@text show id=TX03_0023 speaker=narration
+栞「うん」
+
+@text show id=TX03_0024 speaker=narration
+律「あとで訊いてみたら」
+
+@text show id=TX03_0025 speaker=narration
+栞「……そうだね。私が勝手に答えを作っても、仕方ないものね」
+
+@text show id=TX03_0026 speaker=narration
+栞は湯呑を両手で持ち、もう冷めていると気づいて置いた。
+
+@scene end id=SC03_001
+@scene start id=SC03_002
+# シーン：栞葉荘・玄関内／十八時前
+@location show text="栞葉荘・玄関内／十八時前"
+@overlay hide
+@char hide id=ALL
+@textbox hide
+@bg show id=BG_003 image=base filter=evening effect=none transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+@char show id=CH_003 expression=基本 position=left
+@char show id=CH_006 expression=基本 position=right
+
+@text show id=TX03_0027 speaker=narration
+山道の確認に行くと言い出したのは、早瀬さんだった。
+@text show id=TX03_0028 speaker=narration
+黒田さんは玄関まで同行し、戸の外を見てから止めた。
+
+@text show id=TX03_0029 speaker=narration
+黒田「これで先が見えるとは思えません」
+
+@text show id=TX03_0030 speaker=narration
+早瀬「車までだ。道具を取ってくる」
+
+@text show id=TX03_0031 speaker=narration
+奈緒「駐車場は玄関の横です。ただ、川側には近づかないでください」
+
+@text show id=TX03_0032 speaker=narration
+僕も戸の内側で待った。雨が庇を越えて足元へ吹き込んだ。
+@text show id=TX03_0033 speaker=narration
+早瀬さんは車の荷室から包帯とタオルを取り、すぐ戻ってきた。工具箱は既に館内へ運んだものを使うらしかった。
+
+@text show id=TX03_0034 speaker=narration
+早瀬「これじゃ帰れんな。下が崩れてなくても、走りたくない」
+
+@text show id=TX03_0035 speaker=narration
+黒田「ええ。そう思います」
+
+@text show id=TX03_0036 speaker=narration
+靴の水を拭きながら、早瀬さんは携帯を確かめた。画面が点き、顔が少し和らいだ。
+
+@text show id=TX03_0037 speaker=narration
+早瀬「家からだ。車を捨ててもいいから歩くなって」
+
+@text show id=TX03_0038 speaker=narration
+律「心配しているんですね」
+
+@text show id=TX03_0039 speaker=narration
+早瀬「車の方が高いぞ、と返したら怒られた」
+
+@char hide id=CH_006
+@char show id=CH_001 expression=基本 position=right
+@text show id=TX03_0040 speaker=narration
+栞が廊下から顔を出した。手に、乾いたタオルを持っている。
+
+@text show id=TX03_0041 speaker=narration
+栞「千鶴さんから。足元も拭いてくださいって」
+
+@text show id=TX03_0042 speaker=narration
+早瀬「自分のがあるのに」
+
+@text show id=TX03_0043 speaker=narration
+栞「二枚あった方が、早く乾きます」
+
+@text show id=TX03_0044 speaker=narration
+早瀬さんは受け取り、礼を言った。栞は続けて黒田さんにもタオルを渡した。
+@text show id=TX03_0045 speaker=narration
+奈緒が戸を閉めた。雨の圧力で、最後だけ少し力が必要だった。
+
+@text show id=TX03_0046 speaker=narration
+奈緒「玄関はこちらで確認します。皆様は中へどうぞ」
+
+@text show id=TX03_0047 speaker=narration
+玄関を離れる前に、僕は外の橋を見た。
+@text show id=TX03_0048 speaker=narration
+来るときは、短い橋だと思った。いまは向こう岸が別の場所のようだった。
+
+@char hide id=ALL
+@bg show id=BG_009 image=base filter=evening effect=none transition=dissolve duration_ms=700
+@char show id=CH_004 expression=基本 position=left
+@char show id=CH_001 expression=基本 position=right
+@text show id=TX03_0049 speaker=narration
+談話室へ戻ると、修蔵さんが温かい茶を淹れていた。
+
+@text show id=TX03_0050 speaker=narration
+修蔵「人がいない日に限って、忙しい」
+
+@text show id=TX03_0051 speaker=narration
+千鶴「人がいないのに、三枝さんまでお仕事を増やすからですよ」
+
+@text show id=TX03_0052 speaker=narration
+修蔵「今日の分は、今日済ませたい」
+
+@text show id=TX03_0053 speaker=narration
+千鶴「お湯をこぼす分まで、今日作らなくても」
+
+@text show id=TX03_0054 speaker=narration
+急須の下が濡れていた。修蔵さんは布巾を探し、栞が持っていたタオルを見る。栞は黙って、まだ使っていない角を渡した。
+
+@text show id=TX03_0055 speaker=narration
+修蔵「すまんな」
+
+@text show id=TX03_0056 speaker=narration
+栞「熱くない？」
+
+@text show id=TX03_0057 speaker=narration
+修蔵「この程度で火傷はせん」
+
+@text show id=TX03_0058 speaker=narration
+千鶴「するのよ。この前も」
+
+@text show id=TX03_0059 speaker=narration
+修蔵「昔のことを言うな」
+
+@text show id=TX03_0060 speaker=narration
+栞が微笑んだ。修蔵さんはそれを見て、茶を注ぐ手をゆっくりにした。
+@text show id=TX03_0061 speaker=narration
+それが、二人の間で何かがほどける最初の動きに見えた。
+
+@scene end id=SC03_002
+@scene start id=SC03_003
+# シーン：栞葉荘・本館廊下／十八時三十分頃
+@location show text="栞葉荘・本館廊下／十八時三十分頃"
+@overlay hide
+@char hide id=ALL
+@textbox hide
+@bg show id=BG_004 image=base filter=evening effect=none transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+@char show id=CH_003 expression=基本 position=left
+@char show id=CH_005 expression=基本 position=right
+
+@text show id=TX03_0062 speaker=narration
+早瀬さんが受付へ工具を返すところを、僕は写真に入れてしまった。
+@text show id=TX03_0063 speaker=narration
+廊下の窓に映った明かりを撮るつもりだった。画面の端で、彼が大きなレンチを布の上に置いている。
+
+@text show id=TX03_0064 speaker=narration
+早瀬「共用の、ここへ返しとく。自分のは車だ」
+
+@text show id=TX03_0065 speaker=narration
+千鶴「はい。奈緒さんに伝えます」
+
+@text show id=TX03_0066 speaker=narration
+早瀬「手ぇ洗ってくる。今日は飯にありつくまで長いな」
+
+@text show id=TX03_0067 speaker=narration
+律「写ってしまいました。消しますか」
+
+@text show id=TX03_0068 speaker=narration
+早瀬「男前に撮れてりゃいい」
+
+@text show id=TX03_0069 speaker=narration
+撮れていなかった。僕が画面を見せると、早瀬さんは顔がないなら上出来だと言った。
+@text show id=TX03_0070 speaker=narration
+千鶴さんも覗き込み、そのまま受付の布を畳んだ。
+
+@char hide id=ALL
+@bgm stop fade_ms=300
+@text show id=TX03_0071 speaker=narration
+廊下の天井で、硬いものが弾けた。
+@text show id=TX03_0072 speaker=narration
+数秒後、ガラスの落ちる音がした。栞が僕の腕を掴んだ。
+
+@text show id=TX03_0073 speaker=narration
+奈緒「天窓です。皆様、そのままお待ちください」
+
+@bg show id=BG_004 image=broken_skylight filter=evening effect=none transition=cut
+@char show id=CH_002 expression=基本 position=center
+@text show id=TX03_0074 speaker=narration
+玄関へ続く短い廊下に、細かな破片が散っていた。雨と一緒に紅葉が吹き込み、床を濡らしている。
+@text show id=TX03_0075 speaker=narration
+奈緒は栞を談話室へ戻し、戸口に椅子を置いた。
+
+@text show id=TX03_0076 speaker=narration
+奈緒「こちらは通らないように。早瀬さん、上から見ていただけますか」
+
+@text show id=TX03_0077 speaker=narration
+早瀬「外へは出られん。内側から、覆えるか見てくる」
+
+@text show id=TX03_0078 speaker=narration
+修蔵さんが事務室から顔を出した。
+
+@text show id=TX03_0079 speaker=narration
+修蔵「私の方はいい。先にそっちを」
+
+@effect play id=fade strength=normal duration_ms=700
+@bg show id=BG_004 image=broken_skylight filter=dim effect=none transition=fade duration_ms=700
+@text show id=TX03_0080 speaker=narration
+雨音が変わり、照明が落ちた。
+
+@text show id=TX03_0081 speaker=narration
+栞「律さん」
+
+@text show id=TX03_0082 speaker=narration
+僕は声の方へ手を伸ばした。栞の指先に触れた直後、廊下の非常灯が白く点いた。
+@text show id=TX03_0083 speaker=narration
+黒田さんが携帯を見た。
+
+@text show id=TX03_0084 speaker=narration
+黒田「十八時三十八分です」
+
+@text show id=TX03_0085 speaker=narration
+談話室の灯りも、遅れて戻った。遠くから低い機械音が響いてくる。
+
+@text show id=TX03_0086 speaker=narration
+早瀬「予備が入った。揺れるかもしれんが、慌てるな」
+
+@text show id=TX03_0087 speaker=narration
+奈緒「念のため配電室を確認してまいります。皆様はこちらへ」
+
+@text show id=TX03_0088 speaker=narration
+僕と栞、黒田さんは談話室へ入った。千鶴さんは厨房の火を確認しに行くと言った。
+@text show id=TX03_0089 speaker=narration
+早瀬さんは天窓を見上げ、足場を動かしていた。廊下の向こうに奈緒の着物が見え、それから戸が閉まった。
+
+@scene end id=SC03_003
+@scene start id=SC03_004
+# シーン：栞葉荘・談話室／停電後
+@location show text="栞葉荘・談話室／停電後"
+@overlay hide
+@char hide id=ALL
+@bgm play file=B004.dat volume=0.55 fade_ms=1000 continue_if_same=true
+@textbox hide
+@bg show id=BG_009 image=base filter=dim effect=none transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+@char show id=CH_001 expression=不安 position=center
+
+@text show id=TX03_0090 speaker=narration
+卓上に懐中電灯を置くと、部屋の隅の影が濃くなった。栞の手は僕の袖を離れたが、近くに残っていた。
+
+@text show id=TX03_0091 speaker=narration
+栞「ごめん。急に掴んで」
+
+@text show id=TX03_0092 speaker=narration
+律「助かった。どこにいるか分かった」
+
+@text show id=TX03_0093 speaker=narration
+栞「律さんも、暗いの苦手？」
+
+@text show id=TX03_0094 speaker=narration
+律「いまは、少し」
+
+@text show id=TX03_0095 speaker=narration
+栞が小さく笑った。笑えることに、僕はほっとした。
+
+@text show id=TX03_0096 speaker=narration
+黒田「外へ連絡をしておきましょう。電源は確保できても、電波が持つとは限りません」
+
+@text show id=TX03_0097 speaker=narration
+黒田さんは家へ短い文を送り、僕も宿で待機すると連絡した。
+@text show id=TX03_0098 speaker=narration
+栞は画面を見ていたが、何も打たなかった。
+
+@text show id=TX03_0099 speaker=narration
+律「標本帳、部屋に置いた？」
+
+@text show id=TX03_0100 speaker=narration
+栞「うん。窓から離してある。……伯父、まだ事務室かな」
+
+@text show id=TX03_0101 speaker=narration
+律「見に行こうか」
+
+@text show id=TX03_0102 speaker=narration
+栞「天窓の片付けが終わってからでいい。いま通ると、邪魔になるから」
+
+@text show id=TX03_0103 speaker=narration
+二人で明日の天気予報を開いた。読み込みは途中で止まった。
+@char show id=CH_001 expression=基本 position=left
+@char show id=CH_002 expression=基本 position=right
+@text show id=TX03_0104 speaker=narration
+やがて奈緒が戻ってきた。裾を片手で押さえている。
+
+@text show id=TX03_0105 speaker=narration
+奈緒「お待たせしました。配電室で手動復帰をしてまいりました。予備電源は安定しています」
+
+@text show id=TX03_0106 speaker=narration
+黒田「自動で切り替わったのでは？」
+
+@text show id=TX03_0107 speaker=narration
+奈緒「はい。念のため、盤を操作して通常の供給に戻す処理を。古い設備ですので」
+
+@char change id=CH_002 expression=基本
+@text show id=TX03_0108 speaker=narration
+奈緒は床に落ちた小さな葉片を爪先で払った。靴の縁に、赤いものが貼りついていた。
+
+@text show id=TX03_0109 speaker=narration
+栞「廊下、まだ濡れていますか」
+
+@text show id=TX03_0110 speaker=narration
+奈緒「ええ。配電室に行く以外は、しばらく移動をお控えください」
+
+@text show id=TX03_0111 speaker=narration
+黒田さんは質問を続けず、電池の残量を見た。
+@text show id=TX03_0112 speaker=narration
+僕もその説明を、灯りが戻った理由として受け取った。
+
+@text show id=TX03_0113 speaker=narration
+十九時を過ぎて、千鶴さんが湯呑を運んできた。
+
+@char hide id=CH_001
+@char show id=CH_005 expression=基本 position=left
+@text show id=TX03_0114 speaker=narration
+千鶴「三枝さん、まだお仕事かしら。御飯が冷めてしまうわ」
+
+@text show id=TX03_0115 speaker=narration
+奈緒「私が呼んでまいります」
+
+@text show id=TX03_0116 speaker=narration
+千鶴「いいのよ。お盆を戻すついでだから」
+
+@text show id=TX03_0117 speaker=narration
+栞が立ちかけた。千鶴さんは、すぐよ、と手を振った。
+@se play file=S002.dat
+@char hide id=CH_005
+@text show id=TX03_0118 speaker=narration
+厨房へ戻る足音がして、事務室の戸を叩く音がした。
+
+@char hide id=ALL
+@bgm stop fade_ms=250
+@text show id=TX03_0119 speaker=narration
+返事は聞こえなかった。
+
+@text show id=TX03_0120 speaker=narration
+千鶴「三枝さん？」
+
+@text show id=TX03_0121 speaker=narration
+戸が動く音のあと、何かが床に落ちた。
+@text show id=TX03_0122 speaker=narration
+一拍遅れて、千鶴さんが叫んだ。
+
+@overlay hide
+@scene end id=SC03_004
+@chapter end id=CH03
+

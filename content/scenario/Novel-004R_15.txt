@@ -1,0 +1,286 @@
+# 第十五章　夜を越す人
+@chapter start id=CH15 title="夜を越す人"
+
+@scene start id=SC15_001
+# シーン：栞葉荘・談話室／未明
+@location show text="栞葉荘・談話室／未明"
+@overlay hide
+@char hide id=ALL
+@bgm play file=B007.dat volume=0.55 fade_ms=4000 continue_if_same=true
+@ambient play file=A002.dat volume=0.38 fade_ms=1000 continue_if_same=true
+@textbox hide
+@bg show id=BG_009 image=base filter=dim effect=none transition=blackfade duration_ms=4000
+@chapter_title show chapter="第十五章" title="夜を越す人" duration_ms=700 hold_ms=2600
+@wait start duration_ms=4000 mode=always
+@textbox show
+@char show id=CH_005 expression=基本 position=left
+@char show id=CH_006 expression=基本 position=right
+
+@text show id=TX15_0001 speaker=narration
+告白が終わっても、警報は止まらなかった。
+@text show id=TX15_0002 speaker=narration
+黒田さんが奈緒に設備の状態を訊き、本館上階へ避難する必要があるかを確認した。奈緒の説明を一度聞いただけでは採用せず、壁に掲示された避難図と、僕の撮った図面を照らした。
+@text show id=TX15_0003 speaker=narration
+いまいる談話室は旧浴場より高い。客室へ上がる道も本館の中で確保できる。地下側へ戻らず、水位の表示だけを見て判断することにした。
+@text show id=TX15_0004 speaker=narration
+宿は動き続けていた。人が二人死に、誰が殺したのかという説明が出た後にも、配管は水を通し、灯りは燃料を使った。
+
+@text show id=TX15_0005 speaker=narration
+千鶴「ストーブは、使っていいのかしら」
+
+@text show id=TX15_0006 speaker=narration
+奈緒「換気が必要です。そちらの窓を、少し」
+
+@text show id=TX15_0007 speaker=narration
+千鶴さんは返事をせず、取扱表示を見た。黒田さんが一緒に確かめた。
+@text show id=TX15_0008 speaker=narration
+奈緒の知識を必要とすることと、奈緒を信じることが、同じではない夜だった。
+
+@text show id=TX15_0009 speaker=narration
+僕は手帳を閉じた。閉じても、奈緒の言葉がまだ聞こえた。
+@text show id=TX15_0010 speaker=narration
+戻せるつもりだった。間に合ったと思った。あなたが残しておくと言ったから。
+@text show id=TX15_0011 speaker=narration
+書いた頁を読み返したくなかった。けれど、自分の思いが混ざっていないか、確認しなければならない。
+@text show id=TX15_0012 speaker=narration
+栞が、僕の手から少し離れたところへ湯呑を置いた。
+
+@text show id=TX15_0013 speaker=narration
+栞「飲めるときに」
+
+@text show id=TX15_0014 speaker=narration
+律「栞も」
+
+@text show id=TX15_0015 speaker=narration
+栞「うん」
+
+@text show id=TX15_0016 speaker=narration
+湯はもうぬるかった。それでも、喉を通る感触がした。
+
+@text show id=TX15_0017 speaker=narration
+黒田「交代で目を閉じましょう。一人になる当番は作りません」
+
+@text show id=TX15_0018 speaker=narration
+千鶴「私は起きているわ」
+
+@text show id=TX15_0019 speaker=narration
+黒田「私もです。まず、お二人は」
+
+@text show id=TX15_0020 speaker=narration
+僕たちが怪我をしたから、という言葉は続かなかった。黒田さんは栞の手首を見ただけだった。
+@text show id=TX15_0021 speaker=narration
+栞は頷いて椅子へ深く座った。僕も隣へ移動した。
+
+@text show id=TX15_0022 speaker=narration
+奈緒「橘様」
+
+@text show id=TX15_0023 speaker=narration
+栞は目を閉じる前に、顔を向けた。
+
+@text show id=TX15_0024 speaker=narration
+奈緒「毛布でしたら、隣の棚の下に」
+
+@text show id=TX15_0025 speaker=narration
+栞「千鶴さんに、お願いしてもいいですか」
+
+@text show id=TX15_0026 speaker=narration
+奈緒の声が止まった。
+@text show id=TX15_0027 speaker=narration
+千鶴さんが立ち、棚から毛布を出した。栞はありがとうと言った。奈緒には、言わなかった。
+
+@scene end id=SC15_001
+@scene start id=SC15_002
+# シーン：栞葉荘・談話室／未明
+@location show text="栞葉荘・談話室／未明"
+@bg show id=BG_022 image=base filter=dim effect=none transition=dissolve duration_ms=700
+@overlay hide
+@char hide id=CH_005
+@char hide id=CH_006
+@char show id=CH_001 expression=悲しみ position=center
+
+@text show id=TX15_0028 speaker=narration
+しばらくして、栞の頭が僕の肩に触れた。
+@text show id=TX15_0029 speaker=narration
+眠ったのかと思ったが、目は開いていた。
+
+@text show id=TX15_0030 speaker=narration
+栞「重くない？」
+
+@text show id=TX15_0031 speaker=narration
+律「全然」
+
+@text show id=TX15_0032 speaker=narration
+栞「全然は、少し嘘」
+
+@text show id=TX15_0033 speaker=narration
+律「少しだけ。でも、そのままでいい」
+
+@text show id=TX15_0034 speaker=narration
+栞は姿勢を直さなかった。僕は動かさない方の手で毛布を上げた。
+
+@text show id=TX15_0035 speaker=narration
+栞「母が亡くなったとき、伯父がね、泣いていたの」
+
+@text show id=TX15_0036 speaker=narration
+律「うん」
+
+@text show id=TX15_0037 speaker=narration
+栞「人のいないところで。私が来たら、窓の方を向いて、寒いから部屋へ戻りなさいって」
+
+@text show id=TX15_0038 speaker=narration
+栞の声は、肩を通しても聞こえた。
+
+@text show id=TX15_0039 speaker=narration
+栞「そのとき、私がここにいたら迷惑なのかと思った。いまなら、違ったのかもしれないと考えられるのに」
+
+@text show id=TX15_0040 speaker=narration
+律「そのときの栞には、分からないよ」
+
+@text show id=TX15_0041 speaker=narration
+栞「うん。伯父にも、私が何を考えていたか、分からなかったと思う」
+
+@text show id=TX15_0042 speaker=narration
+栞は毛布の縁を指先で伸ばした。
+
+@text show id=TX15_0043 speaker=narration
+栞「今日の話を、続けたかったな」
+
+@text show id=TX15_0044 speaker=narration
+僕は頷いた。栞の髪が頬に触れた。
+@text show id=TX15_0045 speaker=narration
+前なら、その近さにどれだけ意味があるか考えただろう。いまは肩の重さがなくなる方が怖かった。
+
+@text show id=TX15_0046 speaker=narration
+栞「律さん」
+
+@text show id=TX15_0047 speaker=narration
+律「うん」
+
+@text show id=TX15_0048 speaker=narration
+栞「帰ってからも、会える？」
+
+@text show id=TX15_0049 speaker=narration
+律「会えるよ」
+
+@text show id=TX15_0050 speaker=narration
+栞「写真のこととか、記事のことがなくても」
+
+@text show id=TX15_0051 speaker=narration
+律「なくても」
+
+@char hide id=CH_001
+@text show id=TX15_0052 speaker=narration
+栞は小さく息を吐いた。それから、今度は本当に目を閉じた。
+@text show id=TX15_0053 speaker=narration
+僕はその言葉を、告白の返事だとは受け取らなかった。この夜から帰った後にも話せる相手がいる。その約束として、忘れないようにした。
+
+@scene end id=SC15_002
+@scene start id=SC15_003
+# シーン：栞葉荘・談話室／明け方前
+@location show text="栞葉荘・談話室／明け方前"
+@bg show id=BG_021 image=base filter=dim effect=none transition=dissolve duration_ms=700
+@overlay hide
+@char show id=CH_005 expression=基本 position=left
+@char show id=CH_006 expression=基本 position=right
+
+@text show id=TX15_0054 speaker=narration
+僕がうとうとした間に、千鶴さんは早瀬さんの荷物をまとめていた。
+@text show id=TX15_0055 speaker=narration
+工具箱は動かさず、車の鍵と彼の手帳だけ、元の位置が分かるよう撮影して封筒に置いた。
+
+@text show id=TX15_0056 speaker=narration
+千鶴「奥様に、何て言えばいいのかしら」
+
+@text show id=TX15_0057 speaker=narration
+黒田「まず、警察から連絡が行くはずです。私たちからは、分かることを」
+
+@text show id=TX15_0058 speaker=narration
+千鶴「ご飯を食べたことなんて、聞きたくないかもしれないわね」
+
+@text show id=TX15_0059 speaker=narration
+黒田「聞きたくないかどうかは、まだ分かりません」
+
+@text show id=TX15_0060 speaker=narration
+黒田さんの声は責めていなかった。
+@text show id=TX15_0061 speaker=narration
+千鶴さんは封筒へ触れず、両手を膝に戻した。
+
+@text show id=TX15_0062 speaker=narration
+律「いつか、聞かれたら。さっきの話を伝えたいです」
+
+@text show id=TX15_0063 speaker=narration
+二人がこちらを見た。栞を起こさないよう、僕は声を落とした。
+
+@text show id=TX15_0064 speaker=narration
+律「家の人の貯金を使いたくないって。給料を払う人がいるって。怒っていた理由も、それだけじゃなかったことも」
+
+@text show id=TX15_0065 speaker=narration
+千鶴「ええ」
+
+@text show id=TX15_0066 speaker=narration
+律「でも、いま受け取ってもらわなくても。その人が、聞きたいと思ったときに」
+
+@text show id=TX15_0067 speaker=narration
+黒田さんは頷いた。
+@text show id=TX15_0068 speaker=narration
+僕は早瀬さんの言葉を、報告書のどこに書くか考えた。動機の欄でも、行動時刻の欄でもない。事件を説明するだけの形式では、入らない場所だった。
+@text show id=TX15_0069 speaker=narration
+別の頁に書き、記録へ添えることにした。
+
+@text show id=TX15_0070 speaker=narration
+奈緒は机の反対側で、窓のない壁を見ていた。
+@text show id=TX15_0071 speaker=narration
+彼女の目から何かを読み取ろうとするのを、僕はやめた。居場所を失う恐怖を語った人が、いま何を考えているか。僕がもっともらしい答えを作る必要はない。
+@text show id=TX15_0072 speaker=narration
+分かっているのは、これから彼女にも、戻せないことを抱えて時間が続くということだけだった。
+
+@scene end id=SC15_003
+@scene start id=SC15_004
+# シーン：栞葉荘・談話室／夜明け前
+@location show text="栞葉荘・談話室／夜明け前"
+@overlay hide
+@char hide id=ALL
+@bgm stop fade_ms=800
+@ambient stop fade_ms=800
+@textbox hide
+@bg show id=BG_022 image=base filter=cool effect=none transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+@char show id=CH_001 expression=悲しみ position=center
+
+@text show id=TX15_0073 speaker=narration
+表示器の音が止まった。
+@text show id=TX15_0074 speaker=narration
+静かになったことに、かえって皆が顔を上げた。水位が下がった表示を、黒田さんと千鶴さんが確認した。
+@text show id=TX15_0075 speaker=narration
+山はまだ見えなかった。窓の外が、黒から灰色へ変わり始めていた。
+
+@text show id=TX15_0076 speaker=narration
+栞が目を覚ました。僕の肩から頭を離し、窓を見た。
+
+@text show id=TX15_0077 speaker=narration
+栞「朝？」
+
+@text show id=TX15_0078 speaker=narration
+律「もう少しで」
+
+@text show id=TX15_0079 speaker=narration
+栞「……そう」
+
+@text show id=TX15_0080 speaker=narration
+それだけ言って、栞は目を擦ろうとした。傷めた手首に気づき、反対の手を使った。
+@text show id=TX15_0081 speaker=narration
+僕の携帯の端に、一本だけ電波が立った。
+
+@text show id=TX15_0082 speaker=narration
+律「つながるかもしれない」
+
+@text show id=TX15_0083 speaker=narration
+黒田さんが自分の携帯を確かめた。
+@text show id=TX15_0084 speaker=narration
+僕は昨夜の着信履歴から、警察へかけ直した。今度は、向こうから声がした。
+
+@overlay hide
+@scene end id=SC15_004
+@chapter end id=CH15
+

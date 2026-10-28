@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "endings.schema.json",
+  "title": "ChappyNovelEngine endings",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["title", "text"],
+    "properties": {
+      "title": { "type": "string", "minLength": 1 },
+      "text": { "type": "string" }
+    }
+  }
+}

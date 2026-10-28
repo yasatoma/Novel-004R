@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "config.schema.json",
+  "title": "ChappyNovelEngine work config",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "workId",
+    "title",
+    "engineVersion",
+    "entryScenario",
+    "titleImage",
+    "titleLayout",
+    "saveKey"
+  ],
+  "properties": {
+    "workId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "engineVersion": {
+      "type": "string",
+      "const": "1.1"
+    },
+    "entryScenario": {
+      "type": "string",
+      "minLength": 1
+    },
+    "titleImage": {
+      "type": "string"
+    },
+    "titleLayout": {
+      "type": "string",
+      "enum": ["left", "center", "right"]
+    },
+    "saveKey": {
+      "type": "string",
+      "minLength": 1
+    },
+    "presentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "defaultCharacterPosition": {
+          "type": "string",
+          "enum": ["left", "center", "right"]
+        }
+      }
+    },
+    "titleBgm": {
+      "type": "string"
+    }
+  }
+}

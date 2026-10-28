@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ruby.schema.json",
+  "title": "ChappyNovelEngine ruby map",
+  "type": "object",
+  "additionalProperties": { "type": "string", "minLength": 1 }
+}

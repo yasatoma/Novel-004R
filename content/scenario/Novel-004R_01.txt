@@ -1,0 +1,460 @@
+# 第一章　赤い橋を渡る
+@chapter start id=CH01 title="赤い橋を渡る"
+
+@scene start id=SC01_001
+# シーン：栞葉荘への山道／午後
+@location show text="栞葉荘への山道／午後"
+@overlay hide
+@char hide id=ALL
+@bgm play file=B001.dat volume=0.55 fade_ms=4000 continue_if_same=true
+@ambient stop fade_ms=800
+@textbox hide
+@bg show id=BG_001 image=base filter=normal effect=none transition=blackfade duration_ms=4000
+@chapter_title show chapter="第一章" title="赤い橋を渡る" duration_ms=700 hold_ms=2600
+@wait start duration_ms=4000 mode=always
+@textbox show
+@char show id=CH_001 expression=基本 position=center
+
+@text show id=TX01_0001 speaker=narration
+バスの窓に枝が触れた。葉が一枚、硝子の上を滑り、後ろへ消えた。
+
+@text show id=TX01_0002 speaker=narration
+栞「いまの、撮れた？」
+
+@text show id=TX01_0003 speaker=narration
+律「いや。見てた」
+
+@text show id=TX01_0004 speaker=narration
+栞「私も。二人とも見ていたら、写真は残らないね」
+
+@char change id=CH_001 expression=微笑み
+@text show id=TX01_0005 speaker=narration
+隣で栞が笑った。膝に載せた鞄を押さえる手だけが、少し固い。
+@text show id=TX01_0006 speaker=narration
+僕はカメラを持ち直しかけ、やめた。車窓の向こうには、まだ撮っていない赤が幾重にも続いていた。
+
+@text show id=TX01_0007 speaker=narration
+春、紙資料の修復工房を取材した。そのとき、紙の端を撫でる前に必ず指を止める人がいた。触ることで失われるものもあるから、と栞は言った。
+@text show id=TX01_0008 speaker=narration
+取材が終わってからも会う理由を探した。展覧会の招待券、記事の掲載誌、近所にできた喫茶店。理由を用意するのは僕だけではなかったと、この旅の誘いを受けたときにようやく思えた。
+
+@text show id=TX01_0009 speaker=narration
+栞「伯父には、取材でお世話になった方って伝えてあるの」
+
+@text show id=TX01_0010 speaker=narration
+律「間違ってないよ」
+
+@text show id=TX01_0011 speaker=narration
+栞「うん。間違ってはいないんだけど」
+
+@text show id=TX01_0012 speaker=narration
+その先を聞こうとしたところで、運転手が終点を告げた。
+@text show id=TX01_0013 speaker=narration
+栞は窓の外へ顔を向けた。左の髪留めに日が差した。金色の小さな紅葉だった。
+
+@scene end id=SC01_001
+@scene start id=SC01_002
+# シーン：栞葉荘・玄関／午後
+@location show text="栞葉荘・玄関／午後"
+@overlay hide
+@char hide id=ALL
+@bgm play file=B002.dat volume=0.55 fade_ms=1000 continue_if_same=true
+@textbox hide
+@bg show id=BG_002 image=base filter=normal effect=none transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+@char show id=CH_002 expression=基本 position=center
+
+@text show id=TX01_0014 speaker=narration
+朱塗りの短い橋を渡ると、宿の門があった。二階の窓に山の色が映っている。軒先の雨樋から、乾いた葉が一枚突き出ていた。
+
+@text show id=TX01_0015 speaker=narration
+奈緒「橘様ですね。お待ちしておりました」
+
+@text show id=TX01_0016 speaker=narration
+紺の着物の女性が、こちらへ歩いてきた。
+@text show id=TX01_0017 speaker=narration
+桐生奈緒と名乗った支配人は、僕のカメラと栞の鞄を見て、荷物を預かる順番を変えた。
+
+@text show id=TX01_0018 speaker=narration
+奈緒「そちらはお手元に。お仕事のものをお持ちと伺っています」
+
+@text show id=TX01_0019 speaker=narration
+栞「ありがとうございます。伯父はいますか」
+
+@text show id=TX01_0020 speaker=narration
+奈緒「事務室です。まずお茶を。今日は休館日ですので、お部屋もゆっくりお選びいただけます」
+
+@bg show id=BG_003 image=base filter=normal effect=none transition=dissolve duration_ms=700
+@text show id=TX01_0021 speaker=narration
+玄関を上がると、柚子の香りがした。
+@text show id=TX01_0022 speaker=narration
+受付には黒い背の控え帳が開いていた。用紙の右上が小さな三角に欠け、綴じ目には細長い切れ端が何枚か残っている。
+@text show id=TX01_0023 speaker=narration
+奈緒が宿泊者の欄を示したとき、奥から男の声がした。
+
+@char show id=CH_004 expression=基本 position=left
+@char show id=CH_002 expression=基本 position=right
+@text show id=TX01_0024 speaker=narration
+修蔵「そこは捨てないでくれ。切ったところも全部だ」
+
+@text show id=TX01_0025 speaker=narration
+奈緒「承知しています」
+
+@text show id=TX01_0026 speaker=narration
+修蔵「人の記憶より紙の方が正直だ。都合の悪いところだけ忘れてくれん」
+
+@text show id=TX01_0027 speaker=narration
+灰色のカーディガンの男が、眼鏡を上げた。栞が一歩、受付から離れた。
+
+@char hide id=CH_002
+@char show id=CH_001 expression=基本 position=right
+@text show id=TX01_0028 speaker=narration
+栞「お久しぶりです」
+
+@text show id=TX01_0029 speaker=narration
+修蔵「背が伸びたか」
+
+@text show id=TX01_0030 speaker=narration
+栞「もう伸びないと思う」
+
+@text show id=TX01_0031 speaker=narration
+修蔵「そうか。では私が縮んだな」
+
+@text show id=TX01_0032 speaker=narration
+言ってから修蔵さんは笑った。栞も笑ったが、二人の間には挨拶だけでは埋まらない距離があった。
+@text show id=TX01_0033 speaker=narration
+僕が自己紹介すると、修蔵さんは名刺より先にカメラを見た。
+
+@text show id=TX01_0034 speaker=narration
+修蔵「宿の写真も頼めるかね。今日は人が少ない」
+
+@text show id=TX01_0035 speaker=narration
+律「栞さんの用事の邪魔にならなければ」
+
+@text show id=TX01_0036 speaker=narration
+修蔵「栞の用事で来たんだろう。なら、邪魔にはならん」
+
+@text show id=TX01_0037 speaker=narration
+栞「伯父さん」
+
+@text show id=TX01_0038 speaker=narration
+栞の声に、修蔵さんはわざとらしく受付の時計を見た。
+
+@text show id=TX01_0039 speaker=narration
+修蔵「夕食の後に話をする。それまでは散歩でもしてきなさい。帳面の方は、後で見てもらう」
+
+@text show id=TX01_0040 speaker=narration
+奈緒「帳面のお話も、皆様ご一緒に？」
+
+@text show id=TX01_0041 speaker=narration
+修蔵「全員が揃ったら、先に原本を出す。栞には貼り直したところを見てほしい」
+
+@text show id=TX01_0042 speaker=narration
+奈緒は控え帳を閉じた。音は静かだった。
+
+@scene end id=SC01_002
+@scene start id=SC01_003
+# シーン：栞葉荘・玄関脇の窓辺／午後
+@location show text="栞葉荘・玄関脇の窓辺／午後"
+@overlay hide
+@char hide id=ALL
+@textbox hide
+@bg show id=BG_003 image=base filter=normal effect=none transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+@char show id=CH_001 expression=基本 position=left
+@char show id=CH_004 expression=基本 position=right
+
+@text show id=TX01_0043 speaker=narration
+奈緒が部屋の鍵を用意する間、修蔵さんは窓を少し開けた。
+@text show id=TX01_0044 speaker=narration
+鉢植えの小さな木が並んでいた。葉の端が縮れたものを、栞が覗き込む。
+
+@text show id=TX01_0045 speaker=narration
+栞「これは、昔からあった？」
+
+@text show id=TX01_0046 speaker=narration
+修蔵「お前が来るたびに触っていたやつだ」
+
+@text show id=TX01_0047 speaker=narration
+栞「触っていたのは、これじゃないと思う。もっと葉が丸かった」
+
+@text show id=TX01_0048 speaker=narration
+修蔵「そうか。どれも似たように見える」
+
+@text show id=TX01_0049 speaker=narration
+栞「母に怒られたでしょう」
+
+@text show id=TX01_0050 speaker=narration
+修蔵「よく覚えているな」
+
+@text show id=TX01_0051 speaker=narration
+栞は葉を一枚ずつ見比べた。鉢を持ち上げず、下に差してあった小さな札を読む。古い鉛筆の字は、雨の当たらない側に残っていた。
+
+@text show id=TX01_0052 speaker=narration
+栞「母の字だ」
+
+@text show id=TX01_0053 speaker=narration
+修蔵さんが窓の留め具に触れたまま止まった。
+@text show id=TX01_0054 speaker=narration
+栞は札を戻した。修蔵さんも何も言わず、水差しを持ち上げた。
+
+@text show id=TX01_0055 speaker=narration
+律「世話をされているんですか」
+
+@text show id=TX01_0056 speaker=narration
+修蔵「枯らすと、うるさいからな」
+
+@text show id=TX01_0057 speaker=narration
+栞「千鶴さん？」
+
+@text show id=TX01_0058 speaker=narration
+修蔵「それもある」
+
+@text show id=TX01_0059 speaker=narration
+水が鉢の土へ沁みた。流れ出るまで待ち、修蔵さんは受け皿の位置を直した。
+@text show id=TX01_0060 speaker=narration
+ほったらかしの人の手つきではなかった。
+
+@text show id=TX01_0061 speaker=narration
+修蔵「写真は、枯れていないうちに頼む」
+
+@text show id=TX01_0062 speaker=narration
+律「いま、撮っていいですか」
+
+@text show id=TX01_0063 speaker=narration
+修蔵「私を入れるなよ。木より大きくなる」
+
+@text show id=TX01_0064 speaker=narration
+栞が笑った。僕が構えると、修蔵さんはわざと窓から離れた。栞も下がろうとしたが、葉を透かす光が髪に当たっていて、僕はそのままでと頼んだ。
+
+@text show id=TX01_0065 speaker=narration
+栞「私も、木より大きいけど」
+
+@text show id=TX01_0066 speaker=narration
+律「それは、大丈夫」
+
+@text show id=TX01_0067 speaker=narration
+修蔵「扱いが違うな」
+
+@se play file=S001.dat
+@char change id=CH_001 expression=照れ
+@text show id=TX01_0068 speaker=narration
+僕は返事に困り、先にシャッターを切った。
+@text show id=TX01_0069 speaker=narration
+栞は視線を落とした。髪で隠れた耳が少し赤くなっている気がしたが、光のせいかもしれなかった。
+
+@text show id=TX01_0070 speaker=narration
+修蔵さんは写真を見たがらなかった。後で見せますと言うと、忘れていなかったらな、と答えた。
+@text show id=TX01_0071 speaker=narration
+その言い方で、きっと見たいのだと分かった。
+
+@scene end id=SC01_003
+@scene start id=SC01_004
+# シーン：栞葉荘・浴場棟への廊下／午後
+@location show text="栞葉荘・浴場棟への廊下／午後"
+@overlay hide
+@char hide id=ALL
+@textbox hide
+@bg show id=BG_004 image=base filter=normal effect=none transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+@char show id=CH_002 expression=基本 position=left
+@char show id=CH_003 expression=基本 position=right
+
+@text show id=TX01_0072 speaker=narration
+部屋へ案内する途中、工具箱を持った男とすれ違った。
+
+@text show id=TX01_0073 speaker=narration
+早瀬「悪い。そこの袋、踏まないでくれ」
+
+@text show id=TX01_0074 speaker=narration
+足元の布袋には、外した蛇口が入っていた。男は左手で袋を引いた。右手には包帯が巻かれている。
+
+@text show id=TX01_0075 speaker=narration
+奈緒「保守をお願いしている早瀬さんです」
+
+@char change id=CH_003 expression=微笑み
+@text show id=TX01_0076 speaker=narration
+早瀬「すまん、握手は右でも今日は勘弁してくれ。昼に板金で切った」
+
+@text show id=TX01_0077 speaker=narration
+栞「深かったんですか」
+
+@text show id=TX01_0078 speaker=narration
+早瀬「見た目ほどじゃない。血の出方が派手でな。上着まで駄目にした」
+
+@text show id=TX01_0079 speaker=narration
+袖口に赤黒い染みがあった。
+@text show id=TX01_0080 speaker=narration
+奥の戸が開き、暖かい空気が漏れた。壁には配管の図面と、作業用の白いヘルメットが掛かっていた。
+
+@text show id=TX01_0081 speaker=narration
+奈緒「こちらが湯守室です。通常のお客様は、この先へは入れません」
+
+@text show id=TX01_0082 speaker=narration
+早瀬「旧浴場へ抜ける通路がある。客用廊下より早いが、足元が悪い。今日は特にな」
+
+@text show id=TX01_0083 speaker=narration
+修蔵さんが後ろから来て、戸口を覗いた。
+
+@text show id=TX01_0084 speaker=narration
+修蔵「写真を撮るなら、危ないところも撮っておいてくれ。承継先に、隠して渡したくない」
+
+@text show id=TX01_0085 speaker=narration
+奈緒「お客様をご案内しても？」
+
+@text show id=TX01_0086 speaker=narration
+修蔵「入口までだ」
+
+@char hide id=ALL
+@bg show id=BG_005 image=base filter=normal effect=none transition=dissolve duration_ms=700
+@text show id=TX01_0087 speaker=narration
+湯守室は狭かった。窓のない計器の前から、二本の管が天井へ伸びている。左手の防火戸の向こうには、幅の狭い保守通路があった。
+@text show id=TX01_0088 speaker=narration
+通路の中ほどで床が途切れているように見え、僕は思わず戸枠を掴んだ。
+
+@text show id=TX01_0089 speaker=narration
+早瀬「点検口。床じゃない。横の足場を歩く」
+
+@bg show id=BG_006 image=base filter=normal effect=none transition=dissolve duration_ms=700
+@text show id=TX01_0090 speaker=narration
+開口部の縁に腰ほどの手すりがあり、その内側を固定梯子が下へ降りていた。底には排水溝が見える。梯子の上端は手すりより高く、両側が太い取っ手になっている。
+
+@text show id=TX01_0091 speaker=narration
+栞「向こうの戸は？」
+
+@text show id=TX01_0092 speaker=narration
+早瀬「旧浴場。こっちから普通に歩いて一分半。濡れてたら二分は見とけ。客廊下なら四分以上だ」
+
+@text show id=TX01_0093 speaker=narration
+奈緒「資料室へも、旧浴場側から行けます。今日はお入りにならないでくださいね」
+
+@text show id=TX01_0094 speaker=narration
+僕は入口から一枚撮った。栞がこちらへ顔を向ける。
+
+@text show id=TX01_0095 speaker=narration
+栞「カメラの時計、まだ直してない？」
+
+@text show id=TX01_0096 speaker=narration
+律「そうだった」
+
+@text show id=TX01_0097 speaker=narration
+携帯は十四時五十二分、カメラは十四時五十分。春の取材でも二分遅れていた、と栞は覚えていた。
+@text show id=TX01_0098 speaker=narration
+時計を変える代わりに、携帯の画面を撮った。旅行の途中で設定を触るより、ずれを一枚残す方が確実だと思った。
+
+@bg show id=BG_004 image=base filter=normal effect=none transition=dissolve duration_ms=700
+@char show id=CH_003 expression=基本 position=center
+@text show id=TX01_0099 speaker=narration
+廊下へ戻ると、配電室の小窓があった。奥の盤には、赤い文字の封印紙が扉と枠を跨いで貼ってある。
+
+@text show id=TX01_0100 speaker=narration
+早瀬「今朝貼った。切れてたら勝手に触ったってことだ。停電しても予備電源は勝手に入る。手で戻すなら、あの扉を開ける」
+
+@text show id=TX01_0101 speaker=narration
+奈緒「早瀬さんには、何度もご説明いただいています」
+
+@text show id=TX01_0102 speaker=narration
+早瀬「説明して金になるならいいんだがな」
+
+@text show id=TX01_0103 speaker=narration
+笑いかけた顔が、修蔵さんを見て止まった。
+
+@text show id=TX01_0104 speaker=narration
+修蔵「支払いの話も、今日する」
+
+@text show id=TX01_0105 speaker=narration
+早瀬「今日こそ、だろ」
+
+@text show id=TX01_0106 speaker=narration
+廊下の先で、雨戸を閉める音がした。
+
+@scene end id=SC01_004
+@scene start id=SC01_005
+# シーン：栞葉荘・客室／午後
+@location show text="栞葉荘・客室／午後"
+@overlay hide
+@char hide id=ALL
+@bgm play file=B003.dat volume=0.55 fade_ms=1000 continue_if_same=true
+@textbox hide
+@bg show id=BG_007 image=base filter=normal effect=none transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+@char show id=CH_001 expression=基本 position=center
+
+@text show id=TX01_0107 speaker=narration
+二つの部屋は廊下を挟んで向かい合っていた。僕の部屋の窓からは、来た橋が見えた。
+@text show id=TX01_0108 speaker=narration
+荷物を置いて出ると、栞はまだ戸の前にいた。
+
+@text show id=TX01_0109 speaker=narration
+栞「ごめんね。仕事の話までお願いすることになって」
+
+@text show id=TX01_0110 speaker=narration
+律「誘ってくれたとき、帳面の話も聞いたよ」
+
+@text show id=TX01_0111 speaker=narration
+栞「うん。でも、思っていたより」
+
+@text show id=TX01_0112 speaker=narration
+栞は言いかけ、鞄の留め具を確かめた。
+
+@text show id=TX01_0113 speaker=narration
+律「散歩、行こうか」
+
+@text show id=TX01_0114 speaker=narration
+栞「……行く」
+
+@text show id=TX01_0115 speaker=narration
+玄関へ向かう途中、会計の水野千鶴さんが風呂敷を抱えてやってきた。
+
+@char show id=CH_001 expression=基本 position=left
+@char show id=CH_005 expression=基本 position=right
+@text show id=TX01_0116 speaker=narration
+千鶴「お母さんに似てきたわね」
+
+@text show id=TX01_0117 speaker=narration
+栞「それ、前に来たときも言ってくれた」
+
+@text show id=TX01_0118 speaker=narration
+千鶴「そうだった？　じゃあ、もっと似てきたのね」
+
+@text show id=TX01_0119 speaker=narration
+栞の肩から、力が少し抜けた。
+@overlay show id=I001 position=center size=medium duration_ms=300
+@text show id=TX01_0120 speaker=narration
+千鶴さんは風呂敷を開いた。中には、紐で結んだ古い標本帳があった。表紙の角が白く擦れている。
+
+@text show id=TX01_0121 speaker=narration
+千鶴「いま、お部屋へ置こうと思っていたの。三枝さんから預かったから」
+
+@text show id=TX01_0122 speaker=narration
+栞はすぐに受け取らなかった。手を拭き、風呂敷ごと両手で支えた。
+
+@text show id=TX01_0123 speaker=narration
+栞「ありがとう。……やっと、会えた」
+
+@text show id=TX01_0124 speaker=narration
+その小さな声が母親に向けられたものだと分かり、僕は一歩、場所を空けた。
+
+@overlay hide duration_ms=250
+@text show id=TX01_0125 speaker=narration
+千鶴「散歩から戻ったら、お饅頭があるわ。二人分、隠しておく」
+
+@text show id=TX01_0126 speaker=narration
+律「隠す必要があるんですか」
+
+@text show id=TX01_0127 speaker=narration
+千鶴「早瀬さんが三つ食べるから」
+
+@text show id=TX01_0128 speaker=narration
+奥から、二つだ、と声が返った。
+@text show id=TX01_0129 speaker=narration
+栞が声を立てずに笑った。僕はその顔を撮りたくなったが、またカメラを上げるのが遅れた。
+
+@overlay hide
+@scene end id=SC01_005
+@chapter end id=CH01
+

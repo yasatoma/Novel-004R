@@ -1,0 +1,348 @@
+# 第四章　食事の前に
+@chapter start id=CH04 title="食事の前に"
+
+@scene start id=SC04_001
+# シーン：栞葉荘・事務室前／十九時十分頃
+@location show text="栞葉荘・事務室前／十九時十分頃"
+@overlay hide
+@char hide id=ALL
+@bgm stop fade_ms=800
+@ambient play file=A002.dat volume=0.38 fade_ms=1000 continue_if_same=true
+@textbox hide
+@bg show id=BG_004 image=base filter=dim effect=none transition=blackfade duration_ms=4000
+@chapter_title show chapter="第四章" title="食事の前に" duration_ms=700 hold_ms=2600
+@wait start duration_ms=4000 mode=always
+@textbox show
+
+@text show id=TX04_0001 speaker=narration
+千鶴さんは戸口で腰を落としていた。膝の前に、割れた湯呑が転がっている。
+@text show id=TX04_0002 speaker=narration
+僕は肩を支えようとして、事務室の中を見た。
+@text show id=TX04_0003 speaker=narration
+椅子が倒れていた。机の角から、腕が見えた。その先に、修蔵さんの顔があった。
+
+@char show id=CH_001 expression=驚き position=center
+@text show id=TX04_0004 speaker=narration
+栞「伯父さん」
+
+@text show id=TX04_0005 speaker=narration
+隣を通り抜けようとした栞を、僕は反射的に止めた。
+
+@text show id=TX04_0006 speaker=narration
+栞「離して。伯父さんが」
+
+@text show id=TX04_0007 speaker=narration
+律「待って。硝子がある」
+
+@char hide id=ALL
+@bg show id=BG_019 image=base filter=dim effect=none transition=cut
+@text show id=TX04_0008 speaker=narration
+硝子だけではなかった。修蔵さんの頭のそばに赤いものが広がっていた。顔の片側は、さっき会話した人の輪郭を失っている。
+@text show id=TX04_0009 speaker=narration
+胸が動いていないように見えた。そう見えることと、本当にそうなのかは違う。僕には判断できなかった。
+
+@text show id=TX04_0010 speaker=narration
+黒田「救急へ。成瀬さん、お願いします」
+
+@text show id=TX04_0011 speaker=narration
+携帯の画面で数字を押した。指が滑り、打ち直した。
+@text show id=TX04_0012 speaker=narration
+黒田さんは倒れた椅子を避け、修蔵さんへ近づいた。呼びかけ、息を確かめた。千鶴さんが何度も名前を呼んだ。
+@text show id=TX04_0013 speaker=narration
+通話は発信の表示から変わらなかった。
+
+@text show id=TX04_0014 speaker=narration
+栞「まだ、温かいでしょう。ねえ、まだ」
+
+@text show id=TX04_0015 speaker=narration
+誰に向けた言葉なのか分からなかった。
+@text show id=TX04_0016 speaker=narration
+栞の手を握っていた僕の指にも、力が入りすぎていた。緩めると、栞は手を引かず、修蔵さんだけを見た。
+
+@text show id=TX04_0017 speaker=narration
+黒田「反応がありません。呼吸も確認できません」
+
+@text show id=TX04_0018 speaker=narration
+奈緒が救急箱を持ってきた。蓋を開きかけたところで、黒田さんの顔を見て止まった。
+@text show id=TX04_0019 speaker=narration
+早瀬さんは部屋の中を見た途端、入口の柱を殴るように掴んだ。
+
+@text show id=TX04_0020 speaker=narration
+早瀬「三枝さん。おい、冗談はやめろ」
+
+@bg show id=BG_004 image=broken_skylight filter=dim effect=none transition=dissolve duration_ms=600
+@text show id=TX04_0021 speaker=narration
+僕はもう一度発信した。圏外になり、一本だけ戻った。廊下の窓へ移動した。
+
+@text show id=TX04_0022 speaker=narration
+律「つながってくれ」
+
+@text show id=TX04_0023 speaker=narration
+発信音が聞こえたとき、僕は自分の携帯を取り落としそうになった。
+
+@scene end id=SC04_001
+@scene start id=SC04_002
+# シーン：栞葉荘・本館廊下／十九時十九分頃
+@location show text="栞葉荘・本館廊下／十九時十九分頃"
+@overlay hide
+@char hide id=ALL
+@textbox hide
+@bg show id=BG_004 image=base filter=dim effect=none transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+
+@text show id=TX04_0024 speaker=narration
+律「人が倒れています。頭から血が出ています。山道が崩れて、宿から出られません」
+
+@text show id=TX04_0025 speaker=narration
+問いに答えるたび、何が起きたのかが言葉になっていった。
+@text show id=TX04_0026 speaker=narration
+栞葉荘。七名。倒れているのは一名。呼吸は確認できない。頭部にひどい傷。周囲に重い金属の物が落ちている。
+@text show id=TX04_0027 speaker=narration
+警察にも状況が引き継がれた。担当者は、部屋へ不用意に入らず、他の滞在者と安全な場所に集まるよう言った。
+
+@text show id=TX04_0028 speaker=narration
+律「いつ来られますか」
+
+@text show id=TX04_0029 speaker=narration
+受話口の声が途切れた。もう一度訊いた。
+@text show id=TX04_0030 speaker=narration
+道路を調査中で、到着時刻は約束できない。斜面の状態が分かるまで、歩いて下山しないこと。
+
+@text show id=TX04_0031 speaker=narration
+律「犯人が、まだ」
+
+@text show id=TX04_0032 speaker=narration
+僕は後ろを見た。廊下に並ぶ顔が、こちらを向いていた。
+@text show id=TX04_0033 speaker=narration
+その中に栞もいた。何か聞きたいのに、口が動かない顔だった。
+
+@text show id=TX04_0034 speaker=narration
+律「宿の中にいるかもしれません」
+
+@text show id=TX04_0035 speaker=narration
+向こうの声が慎重になった。可能なら複数で行動すること。争いを避けること。触った物、動かした物を覚えておくこと。
+@text show id=TX04_0036 speaker=narration
+こちらの連絡先と人数を繰り返し確認された。十九時三十一分、質問の途中で音が消えた。
+@text show id=TX04_0037 speaker=narration
+再発信しても、戻らなかった。
+
+@char show id=CH_006 expression=不安 position=center
+@text show id=TX04_0038 speaker=narration
+黒田「通報は受け付けられましたね」
+
+@text show id=TX04_0039 speaker=narration
+律「はい。でも、いつ来るかは」
+
+@text show id=TX04_0040 speaker=narration
+黒田「分からない。そこまでは、分けて伝えましょう」
+
+@text show id=TX04_0041 speaker=narration
+僕は頷いた。黒田さんも、眼鏡を拭く手が震えていた。
+
+@scene end id=SC04_002
+@scene start id=SC04_003
+# シーン：栞葉荘・事務室前／通話が切れた後
+@location show text="栞葉荘・事務室前／通話が切れた後"
+@overlay hide
+
+@text show id=TX04_0042 speaker=narration
+通話が切れた携帯を、僕はしばらく耳に当てていた。
+@text show id=TX04_0043 speaker=narration
+向こうの声が戻ってくる気がした。窓へ近づき、角度を変えた。何も変わらなかった。
+
+@text show id=TX04_0044 speaker=narration
+黒田「電池を残しましょう。先方は宿の場所を知っています」
+
+@text show id=TX04_0045 speaker=narration
+律「はい」
+
+@text show id=TX04_0046 speaker=narration
+声が出たので、僕は驚いた。喉が詰まっているつもりだった。
+@text show id=TX04_0047 speaker=narration
+千鶴さんが事務室へ戻ろうとした。修蔵さんに掛ける物を探していた。
+
+@text show id=TX04_0048 speaker=narration
+千鶴「あのままでは、寒いでしょう」
+
+@text show id=TX04_0049 speaker=narration
+黒田さんは一度目を閉じた。
+
+@text show id=TX04_0050 speaker=narration
+黒田「掛けるものだけなら、私が。これ以上、部屋を動かさないようにします」
+
+@text show id=TX04_0051 speaker=narration
+奈緒が清潔なシーツを持ってきた。黒田さんはどこを通ったか僕に見ていてほしいと言い、部屋へ入った。
+@char hide id=CH_006
+@char show id=CH_001 expression=悲しみ position=center
+@text show id=TX04_0052 speaker=narration
+栞は廊下の壁を見ていた。見たくないのだと分かったので、僕は戸のところに立ち、視界を遮った。
+
+@text show id=TX04_0053 speaker=narration
+栞「隠さなくても、分かるよ」
+
+@text show id=TX04_0054 speaker=narration
+律「……ごめん」
+
+@text show id=TX04_0055 speaker=narration
+栞「でも、見ないでいたい。いまは」
+
+@text show id=TX04_0056 speaker=narration
+僕は位置を変えなかった。
+@text show id=TX04_0057 speaker=narration
+シーツが広がる音がした。黒田さんが戻り、手についたものをどうすればよいかと呟いた。救急箱の手袋を使ったこと、外した後の袋も、まとめて残した。
+@text show id=TX04_0058 speaker=narration
+何を触ったか覚えるだけのことが、ひどく難しかった。
+
+@char hide id=ALL
+@text show id=TX04_0059 speaker=narration
+早瀬さんは廊下の端でしゃがみ込んでいた。右手を膝に置き、額を左手で押さえている。
+
+@text show id=TX04_0060 speaker=narration
+早瀬「千鶴さん、座れ。立ってると倒れる」
+
+@text show id=TX04_0061 speaker=narration
+千鶴「あなたも」
+
+@text show id=TX04_0062 speaker=narration
+早瀬「俺は座ってる」
+
+@text show id=TX04_0063 speaker=narration
+いつもの言い方だった。けれど、千鶴さんが笑うことはなかった。
+@text show id=TX04_0064 speaker=narration
+奈緒が椅子を二脚持ってきた。栞は座る前に、事務室の戸を見た。
+
+@text show id=TX04_0065 speaker=narration
+栞「まだ、入らない方がいいんですね」
+
+@text show id=TX04_0066 speaker=narration
+黒田「警察の方に、まず現状を見ていただきたいです。ごめんなさい」
+
+@text show id=TX04_0067 speaker=narration
+栞「謝らなくて、いいです」
+
+@text show id=TX04_0068 speaker=narration
+自分で言ってから、栞は両膝を揃えた。人に謝らないでと言う方が、泣かないでいるより簡単だったのかもしれない。
+@text show id=TX04_0069 speaker=narration
+僕は携帯に通報時刻を残し、発見の際に部屋へ入った人を書いた。
+@text show id=TX04_0070 speaker=narration
+その一番上に被害者と書きかけた。指が止まった。
+@text show id=TX04_0071 speaker=narration
+三枝修蔵さん、と名前から書き直した。
+
+@scene end id=SC04_003
+@scene start id=SC04_004
+# シーン：栞葉荘・談話室／夜
+@location show text="栞葉荘・談話室／夜"
+@overlay hide
+@char hide id=ALL
+@bgm play file=B005.dat volume=0.55 fade_ms=1000 continue_if_same=true
+@textbox hide
+@bg show id=BG_009 image=base filter=dim effect=none transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+@char show id=CH_001 expression=悲しみ position=center
+
+@text show id=TX04_0072 speaker=narration
+事務室の戸を閉めた。施錠はせず、入口の外に椅子を置いた。
+@text show id=TX04_0073 speaker=narration
+誰も食事をしようと言わなかった。千鶴さんが置いたお盆の上で、吸い物の湯気がなくなっていた。
+
+@text show id=TX04_0074 speaker=narration
+栞「私、あとで話すって言ったの」
+
+@text show id=TX04_0075 speaker=narration
+僕は栞の隣に座った。
+
+@text show id=TX04_0076 speaker=narration
+栞「あとで、ちゃんと。そう言ったから……待ってくれていると思ってた」
+
+@text show id=TX04_0077 speaker=narration
+律「聞いてたよ」
+
+@text show id=TX04_0078 speaker=narration
+栞「最後に、あんなこと言った」
+
+@text show id=TX04_0079 speaker=narration
+栞はコートの袖をつまんだ。部屋へ戻る間もなく、着たままだった。
+
+@text show id=TX04_0080 speaker=narration
+栞「返す代わりに、なんて。そんなこと、思っていたわけじゃないのに」
+
+@text show id=TX04_0081 speaker=narration
+思っていなかったのなら大丈夫だ、と言いかけた。
+@text show id=TX04_0082 speaker=narration
+でも、その言葉で消せるものなら、栞はこんなふうに息をしていない。
+
+@text show id=TX04_0083 speaker=narration
+律「僕も、そばにいた」
+
+@text show id=TX04_0084 speaker=narration
+栞がこちらを見た。
+
+@text show id=TX04_0085 speaker=narration
+律「やり直せるって言った。……先のことなんて、分からなかったのに」
+
+@text show id=TX04_0086 speaker=narration
+栞「律さんのせいじゃない」
+
+@text show id=TX04_0087 speaker=narration
+律「栞のせいでもないよ」
+
+@text show id=TX04_0088 speaker=narration
+栞は何も答えなかった。僕の手の甲へ、指を置いた。
+@char change id=CH_001 expression=涙
+@text show id=TX04_0089 speaker=narration
+それから肩が一度だけ大きく揺れた。声を抑えようとするほど、息が細かく途切れた。
+@text show id=TX04_0090 speaker=narration
+僕は背中に触れてよいか迷い、椅子を寄せた。栞がこちらへ傾いた。肩を支えると、初めて体重が預けられた。
+
+@char hide id=CH_001
+@char show id=CH_002 expression=基本 position=left
+@char show id=CH_003 expression=怒り position=right
+@text show id=TX04_0091 speaker=narration
+少し離れたところで、奈緒が湯呑を並べた。
+
+@text show id=TX04_0092 speaker=narration
+奈緒「皆様、お湯だけでも。冷えますので」
+
+@text show id=TX04_0093 speaker=narration
+早瀬「人が死んだ部屋の隣で、茶を飲めるか」
+
+@text show id=TX04_0094 speaker=narration
+奈緒の手が止まった。
+
+@text show id=TX04_0095 speaker=narration
+奈緒「すみません」
+
+@text show id=TX04_0096 speaker=narration
+早瀬「……あんたに言っても仕方ねえか」
+
+@text show id=TX04_0097 speaker=narration
+彼は自分の包帯を見た。袖の血はすでに乾いていた。その袖から千鶴さんが目を逸らすのを、僕は見てしまった。
+
+@text show id=TX04_0098 speaker=narration
+黒田「今夜は皆さんでここに。移動が必要なら、二人以上で声をかけてください」
+
+@text show id=TX04_0099 speaker=narration
+律「所在も、書いておきましょうか」
+
+@text show id=TX04_0100 speaker=narration
+黒田「お願いします。ただし、捜査の真似をして危険な場所へ入るのはやめましょう」
+
+@text show id=TX04_0101 speaker=narration
+早瀬「誰かが、やったんだろ」
+
+@text show id=TX04_0102 speaker=narration
+誰も否定しなかった。
+
+@text show id=TX04_0103 speaker=narration
+早瀬「俺たちのうちの、誰かが」
+
+@text show id=TX04_0104 speaker=narration
+栞が僕の手を握り直した。卓上の六つの湯呑のうち、一つにもまだ口がついていなかった。
+
+@overlay hide
+@scene end id=SC04_004
+@chapter end id=CH04
+

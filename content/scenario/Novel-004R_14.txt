@@ -1,0 +1,299 @@
+# 第十四章　居場所
+@chapter start id=CH14 title="居場所"
+
+@scene start id=SC14_001
+# シーン：栞葉荘・談話室／深夜
+@location show text="栞葉荘・談話室／深夜"
+@overlay hide
+@char hide id=ALL
+@bgm play file=B008.dat volume=0.55 fade_ms=4000 continue_if_same=true
+@ambient play file=A002.dat volume=0.38 fade_ms=1000 continue_if_same=true
+@textbox hide
+@bg show id=BG_009 image=base filter=dim effect=none transition=blackfade duration_ms=4000
+@chapter_title show chapter="第十四章" title="居場所" duration_ms=700 hold_ms=2600
+@wait start duration_ms=4000 mode=always
+@textbox show
+@char show id=CH_002 expression=基本 position=left
+@char show id=CH_005 expression=基本 position=right
+
+@text show id=TX14_0001 speaker=narration
+奈緒「先に埋めれば、誰も困らないと思ったんです」
+
+@text show id=TX14_0002 speaker=narration
+その言葉が、何を指すのか、最初は分からなかった。
+@text show id=TX14_0003 speaker=narration
+千鶴さんが顔を上げた。奈緒はそちらを見なかった。
+
+@text show id=TX14_0004 speaker=narration
+奈緒「口座は、私が管理していました。宿の支払いと、私が動かせるお金を、一時的に。戻せるつもりでした」
+
+@text show id=TX14_0005 speaker=narration
+黒田「宿から支出したお金を、別の口座へ移したということですか」
+
+@text show id=TX14_0006 speaker=narration
+奈緒は頷いた。
+
+@text show id=TX14_0007 speaker=narration
+奈緒「一度だけで済ませるはずでした。早瀬さんへの支払いを待っていただいて、その間に戻せば。けれど、次の支払いが来る。戻すために、また」
+
+@text show id=TX14_0008 speaker=narration
+千鶴「私に、済んだと」
+
+@text show id=TX14_0009 speaker=narration
+奈緒「あなたには、知られたくありませんでした」
+
+@text show id=TX14_0010 speaker=narration
+千鶴「知りたくないと、私も思った。だから、確かめなかった」
+
+@text show id=TX14_0011 speaker=narration
+奈緒が初めて千鶴さんを見た。
+@text show id=TX14_0012 speaker=narration
+二人とも泣いてはいなかった。目を合わせたまま、どちらも続く言葉を探せなかった。
+
+@text show id=TX14_0013 speaker=narration
+奈緒「三枝さんは今日、全部の原本を出すと言いました。承継の前に、一度、清算するのだと。少し待ってほしいとお願いしました。私が戻すから、皆様の前で話すのは」
+
+@text show id=TX14_0014 speaker=narration
+律「事務室で？」
+
+@text show id=TX14_0015 speaker=narration
+奈緒「停電の後です。皆様が談話室に戻られた後。配電室を見てから、事務室へ行きました」
+
+@text show id=TX14_0016 speaker=narration
+奈緒は机の木目を指でなぞった。
+
+@text show id=TX14_0017 speaker=narration
+奈緒「三枝さんは、もう待てないと。私が宿を守ってきたことは分かっているが、それとは違うと。……そんなふうに分けられるなら、どうして、いままで私に」
+
+@text show id=TX14_0018 speaker=narration
+言葉が急に止まった。
+@text show id=TX14_0019 speaker=narration
+栞は奈緒を見ていた。僕の手を握る力が、少し強くなった。
+
+@bgm stop fade_ms=700
+@char change id=CH_002 expression=悲しみ
+@text show id=TX14_0020 speaker=narration
+奈緒「本立てが、机にありました」
+
+@text show id=TX14_0021 speaker=narration
+千鶴さんが耳を塞ぎかけ、手を下ろした。
+
+@text show id=TX14_0022 speaker=narration
+奈緒「その後は、止められなくなって。最初から、あんなことをするつもりでは」
+
+@text show id=TX14_0023 speaker=narration
+律「でも、工具を置いた」
+
+@text show id=TX14_0024 speaker=narration
+奈緒は口を閉じた。
+
+@text show id=TX14_0025 speaker=narration
+律「早瀬さんが返した共用のレンチです。あの人へ疑いを向けるために」
+
+@text show id=TX14_0026 speaker=narration
+奈緒「……はい」
+
+@text show id=TX14_0027 speaker=narration
+一件目の傷が、恐怖と怒りだけで残されたものではないと、僕は思った。途中から、誰かへ責任を渡す動きが加わっていた。
+@text show id=TX14_0028 speaker=narration
+ただ、どの傷が何によるものかを僕たちは知らない。凶器も含めて、奈緒の説明として記録した。
+
+@text show id=TX14_0029 speaker=narration
+栞「伯父は、そのとき」
+
+@text show id=TX14_0030 speaker=narration
+声がそこで止まった。
+@text show id=TX14_0031 speaker=narration
+奈緒は栞を見た。何かを言おうとし、やめた。
+
+@text show id=TX14_0032 speaker=narration
+栞「いいえ。いまは、答えないでください」
+
+@text show id=TX14_0033 speaker=narration
+奈緒「申し訳ありません」
+
+@text show id=TX14_0034 speaker=narration
+栞は目を閉じた。謝罪を受け取るための返事はしなかった。
+
+@bgm play file=B008.dat volume=0.55 fade_ms=1200 continue_if_same=true
+@bg show id=BG_021 image=base filter=dim effect=none transition=dissolve duration_ms=700
+@text show id=TX14_0035 speaker=narration
+黒田「早瀬さんのことは」
+
+@text show id=TX14_0036 speaker=narration
+奈緒「原本を見れば分かる、と皆様が。早瀬さんも、あれほど見たいと。控えだけではなく、元の番号まで確かめるおつもりで」
+
+@text show id=TX14_0037 speaker=narration
+僕は、あのとき奈緒が誰を見たか思い出した。原本を見れば支払先が分かる、と言った黒田さん。照合票を斜めから照らした栞。それから、見たいと繰り返した早瀬さん。
+
+@text show id=TX14_0038 speaker=narration
+奈緒「受付の照合票から紙を取りました。裏は、まだ書けましたから。設備確認に黒田様がいらっしゃることも、もう決まっていました」
+
+@text show id=TX14_0039 speaker=narration
+黒田「あなたが提案した予定です」
+
+@text show id=TX14_0040 speaker=narration
+奈緒「はい」
+
+@text show id=TX14_0041 speaker=narration
+小さな肯定が落ちた。
+
+@text show id=TX14_0042 speaker=narration
+奈緒「盆に、早瀬さんへ分かるように置きました。会社の口座の話は、人前ではしたくないでしょうから。水野さんが膝掛けをお持ちになる間に」
+
+@text show id=TX14_0043 speaker=narration
+千鶴さんは拳を膝へ押しつけた。
+
+@text show id=TX14_0044 speaker=narration
+奈緒「湯守室から旧浴場へ行きました。早瀬さんは待っていました。原本を、と言いました」
+
+@text show id=TX14_0045 speaker=narration
+そこで奈緒が口を覆った。
+@text show id=TX14_0046 speaker=narration
+僕は、涙が出るのかと思った。違った。吐き気を堪えるように息を止め、ゆっくり吐いた。
+
+@text show id=TX14_0047 speaker=narration
+奈緒「作業台の工具を使いました。書いた紙を上着の内側から取って、戻りました。黒田様が呼ばれたので、処分する前に」
+
+@text show id=TX14_0048 speaker=narration
+黒田「二十九分頃に、あと一回記録すればよいかと声をかけました。それには、すぐ返事がありませんでした」
+
+@text show id=TX14_0049 speaker=narration
+奈緒「間に合ったと思いました」
+
+@text show id=TX14_0050 speaker=narration
+その言葉に、僕の指が止まった。
+@text show id=TX14_0051 speaker=narration
+早瀬さんは、間に合わなかった。僕たちが追うのも、支払原本を見るのも、和解の言葉も。その隣で、奈緒だけが戻る時間に間に合ったと思っていた。
+
+@text show id=TX14_0052 speaker=narration
+律「……それも、書きます」
+
+@text show id=TX14_0053 speaker=narration
+奈緒は頷かなかった。
+
+@text show id=TX14_0054 speaker=narration
+黒田「紙を返して、話すこともできたはずです」
+
+@text show id=TX14_R0001 speaker=narration
+黒田さんの声が、不意に強く響いた。
+
+@text show id=TX14_0055 speaker=narration
+奈緒は目を閉じた。
+
+@text show id=TX14_0056 speaker=narration
+黒田「申し訳ありません。これは確認のための質問ではありませんでした」
+
+@text show id=TX14_0057 speaker=narration
+そう言い直した黒田さんの手も、机の上から動かなかった。
+@text show id=TX14_0058 speaker=narration
+冷静に時刻を書き、人の証言を分けていた人の中に、同じように怒りがあった。早瀬さんを待たせた部屋で、計器の数字を写していた。その時間を、彼も抱えている。
+
+@text show id=TX14_0059 speaker=narration
+奈緒「言えば、宿が終わると思いました」
+
+@text show id=TX14_0060 speaker=narration
+千鶴「宿が終わるのと、早瀬さんが死ぬのは、同じではないわ」
+
+@text show id=TX14_0061 speaker=narration
+奈緒の顔が千鶴さんへ向いた。
+
+@text show id=TX14_0062 speaker=narration
+千鶴「私も、騒ぎになってほしくなかった。だから分かる部分はある。でも、分かるからといって、そこで一緒に頷くことはできない」
+
+@text show id=TX14_0063 speaker=narration
+奈緒「あなたに、同じだとは」
+
+@text show id=TX14_0064 speaker=narration
+千鶴「ええ。私が、自分に言っているの」
+
+@text show id=TX14_0065 speaker=narration
+千鶴さんはハンカチを机へ置いた。握り締めすぎて、細長くなっていた。
+
+@text show id=TX14_0066 speaker=narration
+千鶴「早瀬さんが怒っていたとき、私、怖いと思った。あなたが丁寧に話してくれると、安心した。何を隠しているかより、私が怒られないかの方を見ていたのね」
+
+@text show id=TX14_0067 speaker=narration
+奈緒は答えなかった。
+
+@text show id=TX14_0068 speaker=narration
+律「二件目も、止められなかった、という話ですか」
+
+@text show id=TX14_0069 speaker=narration
+僕は自分の声を聞いた。責めたいだけの質問なら、しない方がよかったかもしれない。けれど、一件目の説明に使われた言葉が、二件目にも重ねられるのを黙って聞いていたくなかった。
+
+@text show id=TX14_0070 speaker=narration
+律「紙を取って、書いて、早瀬さんを待たせて、通路を歩いた。その間にも」
+
+@text show id=TX14_0071 speaker=narration
+奈緒「考えました」
+
+@text show id=TX14_0072 speaker=narration
+僕は続きを止めた。
+
+@text show id=TX14_0073 speaker=narration
+奈緒「何度も、戻ろうと。湯守室で数字を読んでいるときも、戸を開けるときも。でも、早瀬さんが原本を見たら、あなた方に話す。そうしたら、もう」
+
+@text show id=TX14_0074 speaker=narration
+奈緒は顔を上げた。
+
+@text show id=TX14_0075 speaker=narration
+奈緒「……戻らなかったのは、私です」
+
+@text show id=TX14_0076 speaker=narration
+言葉を聞いても、僕の怒りは小さくならなかった。ただ、何もかもが一瞬の錯乱だったという説明の中へ、早瀬さんを押し込めずに済んだ。
+@text show id=TX14_0077 speaker=narration
+僕はその言葉も、本人の説明として書いた。
+@text show id=TX14_0078 speaker=narration
+栞は紙面ではなく、奈緒を見ていた。
+
+@char hide id=CH_005
+@char show id=CH_001 expression=真剣 position=right
+@bg show id=BG_022 image=base filter=dim effect=none transition=dissolve duration_ms=700
+@text show id=TX14_0079 speaker=narration
+栞「私を押したのは、紙を見たからですか」
+
+@text show id=TX14_0080 speaker=narration
+奈緒「あなたが、残しておくと言ったから」
+
+@text show id=TX14_0081 speaker=narration
+栞の指が僕の掌から少し離れた。
+
+@text show id=TX14_0082 speaker=narration
+奈緒「一枚の紙も、切れ端も。全部、残ってしまう。もう、宿にいられなくなる。皆様がここからいなくなったら、私は」
+
+@text show id=TX14_0083 speaker=narration
+栞「早瀬さんは、家に帰れなくなりました」
+
+@text show id=TX14_0084 speaker=narration
+奈緒が顔を上げた。
+@text show id=TX14_0085 speaker=narration
+栞は大きな声を出さなかった。だからこそ、奈緒は聞かずにいられなかった。
+
+@text show id=TX14_0086 speaker=narration
+栞「伯父も、もう、部屋に戻れません。私には、最後に言ったことを、言い直す相手がいません」
+
+@text show id=TX14_0087 speaker=narration
+奈緒の肩が下がった。
+
+@text show id=TX14_0088 speaker=narration
+栞「奈緒さんにとって宿が大切だったことは、分かります。でも、だから他の人の戻る場所を奪ってよかったとは、言えません」
+
+@text show id=TX14_0089 speaker=narration
+奈緒「はい」
+
+@char change id=CH_001 expression=悲しみ
+@text show id=TX14_0090 speaker=narration
+栞「いま、許してほしいと言われても、できません」
+
+@text show id=TX14_0091 speaker=narration
+奈緒は深く頭を下げた。接客のときと同じ角度ではなかった。
+@text show id=TX14_0092 speaker=narration
+誰も立たなかった。誰も彼女の肩へ手を置かなかった。
+@text show id=TX14_0093 speaker=narration
+僕は手帳の最後に時刻を記し、供述という言葉をつけた。分かったことが増えても、修蔵さんと早瀬さんがいない部屋は、そのままだった。
+
+@overlay hide
+@scene end id=SC14_001
+@chapter end id=CH14
+

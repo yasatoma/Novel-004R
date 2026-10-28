@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "characters.schema.json",
+  "title": "ChappyNovelEngine character book snapshots",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["visible", "name", "image", "text"],
+      "properties": {
+        "visible": { "type": "boolean" },
+        "name": { "type": "string", "minLength": 1 },
+        "image": { "type": "string", "minLength": 1 },
+        "text": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

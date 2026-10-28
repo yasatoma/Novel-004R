@@ -1,0 +1,309 @@
+# 第八章　五人目の湯呑
+@chapter start id=CH08 title="五人目の湯呑"
+
+@scene start id=SC08_001
+# シーン：栞葉荘・旧浴場入口／夜
+@location show text="栞葉荘・旧浴場入口／夜"
+@overlay hide
+@char hide id=ALL
+@bgm stop fade_ms=800
+@ambient play file=A002.dat volume=0.38 fade_ms=1000 continue_if_same=true
+@textbox hide
+@bg show id=BG_010 image=aftermath filter=dim effect=none transition=blackfade duration_ms=4000
+@chapter_title show chapter="第八章" title="五人目の湯呑" duration_ms=700 hold_ms=2600
+@wait start duration_ms=4000 mode=always
+@textbox show
+@char show id=CH_002 expression=基本 position=center
+
+@text show id=TX08_0001 speaker=narration
+黒田さんは膝をついた。呼びかけ、早瀬さんの肩に触れた。
+@text show id=TX08_0002 speaker=narration
+僕は携帯を出した。圏外という表示が変わらないことは、見る前から分かっていた。
+
+@text show id=TX08_0003 speaker=narration
+千鶴「お願い、早瀬さん。起きて。奥さんが待っているのよ」
+
+@text show id=TX08_0004 speaker=narration
+栞が千鶴さんの肘を支えた。支えた栞の足も震えていた。
+@text show id=TX08_0005 speaker=narration
+床には赤い筋と、踏み乱された水があった。奥の作業台の下に、短い柄の金槌が見えた。
+
+@text show id=TX08_0006 speaker=narration
+奈緒「何か、掛けるものを」
+
+@text show id=TX08_0007 speaker=narration
+奈緒が僕たちの後ろから入ろうとした。黒田さんが左手を上げた。
+
+@text show id=TX08_0008 speaker=narration
+黒田「そこまでです。入らないでください」
+
+@text show id=TX08_0009 speaker=narration
+奈緒「でも、このままでは」
+
+@text show id=TX08_0010 speaker=narration
+黒田「タオルを、成瀬さんへ。私が掛けます」
+
+@text show id=TX08_0011 speaker=narration
+戸口の脇に積まれていた大判のタオルを、奈緒が取った。僕が受け取り、黒田さんへ渡した。
+@text show id=TX08_0012 speaker=narration
+黒田さんが布を広げる一瞬、早瀬さんの上着の胸が見えた。内ポケットの口が外へ返っている。中身は見えない。
+@char hide id=CH_002
+@text show id=TX08_0013 speaker=narration
+顔が隠れると、千鶴さんがその場に座り込んだ。
+
+@text show id=TX08_0014 speaker=narration
+千鶴「一緒に行けばよかった」
+
+@text show id=TX08_0015 speaker=narration
+黒田「私が追うと言いました」
+
+@text show id=TX08_0016 speaker=narration
+律「僕たちも、黒田さんと会うと思っていました」
+
+@text show id=TX08_0017 speaker=narration
+言葉が重なるほど、誰も早瀬さんのそばにいなかったことが明らかになった。
+@text show id=TX08_0018 speaker=narration
+奈緒は入口の外に立っていた。黒田さんに止められた位置から、動かなかった。
+
+@char show id=CH_001 expression=真剣 position=center
+@text show id=TX08_0019 speaker=narration
+栞「いま、ここにいる人は、離れないでください」
+
+@text show id=TX08_0020 speaker=narration
+声は低かった。千鶴さんの肩を支えながら、栞は一人ずつ顔を見た。
+
+@text show id=TX08_0021 speaker=narration
+栞「お願い。誰かが戻ったと思うのは、もうやめましょう」
+
+@text show id=TX08_0022 speaker=narration
+僕は頷いた。涙を流す前に、栞は僕の返事を確かめた。
+
+@scene end id=SC08_001
+@scene start id=SC08_002
+# シーン：栞葉荘・談話室／夜
+@location show text="栞葉荘・談話室／夜"
+@overlay hide
+@char hide id=ALL
+@bgm play file=B005.dat volume=0.55 fade_ms=1000 continue_if_same=true
+@textbox hide
+@bg show id=BG_009 image=base filter=dim effect=none transition=blackfade duration_ms=1000
+@wait start duration_ms=1000 mode=always
+@textbox show
+@char show id=CH_001 expression=悲しみ position=left
+@char show id=CH_005 expression=基本 position=right
+
+@text show id=TX08_0023 speaker=narration
+全員で戻った。
+@text show id=TX08_0024 speaker=narration
+早瀬さんの座っていた椅子が通路に出ていて、千鶴さんが直そうとした。途中で手を止め、そのままにした。
+@text show id=TX08_0025 speaker=narration
+机にはおにぎりの包みがあった。一つ、食べかけだった。
+
+@text show id=TX08_0026 speaker=narration
+栞は、早瀬さんの椅子へ膝掛けを掛け直した。
+@text show id=TX08_0027 speaker=narration
+隣の椅子にも半分掛かっていた。彼が自分でそうした形を崩さないよう、落ちた端だけを戻した。
+
+@text show id=TX08_0028 speaker=narration
+千鶴「それは、下げましょうか」
+
+@text show id=TX08_0029 speaker=narration
+栞「もう少し、このままでもいいですか」
+
+@text show id=TX08_0030 speaker=narration
+千鶴さんは頷いた。
+@text show id=TX08_0031 speaker=narration
+栞は座ろうとして、座れなかった。膝の力が抜けるのが怖いように、机へ手をついている。
+@text show id=TX08_0032 speaker=narration
+僕は椅子を引いた。
+
+@text show id=TX08_0033 speaker=narration
+栞「ごめん。千鶴さんを、支えていないと」
+
+@text show id=TX08_0034 speaker=narration
+千鶴「私は、ここにいるわ。いまは座って」
+
+@text show id=TX08_0035 speaker=narration
+千鶴さんが栞の手を取った。二人の位置が、旧浴場から戻ったときと逆になった。
+@char change id=CH_001 expression=涙
+@text show id=TX08_0036 speaker=narration
+栞は椅子へ座り、背もたれに触れた途端、顔を両手で覆った。
+
+@text show id=TX08_0037 speaker=narration
+栞「待っていてくれると思ってた」
+
+@text show id=TX08_0038 speaker=narration
+律「うん」
+
+@text show id=TX08_0039 speaker=narration
+栞「さっきも、同じことを考えたのに。誰かが、あの人のそばにいると思って」
+
+@text show id=TX08_0040 speaker=narration
+黒田さんが机の端へ手を置いた。
+
+@text show id=TX08_0041 speaker=narration
+黒田「私は自分で、追うと言ったのに」
+
+@text show id=TX08_0042 speaker=narration
+奈緒「すべてを予測することはできません。皆様、どうか、ご自身を責めないでください」
+
+@text show id=TX08_0043 speaker=narration
+僕は奈緒を見た。その言葉だけなら、間違っていない。
+@text show id=TX08_0044 speaker=narration
+けれど、彼女の声は早瀬さんを置いて帰ってきた人の声より、いつもどおりの案内に近く聞こえた。そう聞こえた自分の感覚だけで、何かを決めてはいけないとも思った。
+
+@text show id=TX08_0045 speaker=narration
+律「早瀬さんは、何を見に行ったのか。そこだけでも」
+
+@text show id=TX08_0046 speaker=narration
+黒田さんは頷いた。さっきまでの表の続きに、彼が最後に見えた位置を書いた。
+@text show id=TX08_0047 speaker=narration
+僕は手帳を出そうとして、裏表を間違えた。ひっくり返すだけのことができず、指が同じ角を二度掴んだ。
+@text show id=TX08_0048 speaker=narration
+栞が手帳を押さえた。
+
+@text show id=TX08_0049 speaker=narration
+栞「私が読む。律さん、少し水を飲んで」
+
+@text show id=TX08_0050 speaker=narration
+僕は頷いた。水はすぐそこにあるのに、手を伸ばすことまで他の人に言われなければできなくなっていた。
+@text show id=TX08_0051 speaker=narration
+栞は二十一時十八分の記録を読み、書いた後に何を見たか僕へ訊いた。
+@text show id=TX08_0052 speaker=narration
+桶の水、便所の戸、黒田さんの声。一つずつ答えていくと、少しだけ手が動くようになった。
+
+@text show id=TX08_0053 speaker=narration
+律「紙を、見ていました」
+
+@text show id=TX08_0054 speaker=narration
+黒田「早瀬さんが？」
+
+@text show id=TX08_0055 speaker=narration
+僕は頷き、二十一時十六分頃と書いた。
+
+@text show id=TX08_0056 speaker=narration
+律「仕事の控えだと言っていました。でも、席を立つ直前です。誰かから呼ばれた可能性は」
+
+@char hide id=CH_005
+@char show id=CH_002 expression=基本 position=right
+@text show id=TX08_0057 speaker=narration
+奈緒「これでしょうか」
+
+@text show id=TX08_0058 speaker=narration
+奈緒が懐の小袋から、折れた紙を出した。
+@text show id=TX08_0059 speaker=narration
+僕はその手を見た。紙の角が、三角形に欠けている。
+
+@text show id=TX08_0060 speaker=narration
+奈緒「旧浴場の床に落ちていました。私、タオルを取るとき、思わず拾ってしまって」
+
+@text show id=TX08_0061 speaker=narration
+黒田さんの動きが止まった。
+@text show id=TX08_0062 speaker=narration
+僕が何か言う前に、奈緒は紙を卓上へ置いた。
+
+@text show id=TX08_0063 speaker=narration
+奈緒「触れないようにというお話でしたのに。申し訳ありません。皆様にお見せしなければと思いまして」
+
+@overlay show id=I006 position=center size=medium duration_ms=300
+@text show id=TX08_0064 speaker=narration
+紙にはこう書かれていた。
+
+@text show id=TX08_0065 speaker=narration
+『支払原本を先に見せる。旧浴場前で。黒田先生も設備確認の後に来る。社名と口座は皆の前で広げない方がよい。』
+
+@text show id=TX08_0066 speaker=narration
+早瀬さんの名も、書き手の名もない。
+@text show id=TX08_0067 speaker=narration
+黒田さんが、そんな約束はしていません、と言った。
+
+@text show id=TX08_0068 speaker=narration
+千鶴「黒田先生もいらっしゃるなら、大丈夫だと思ったのね」
+
+@text show id=TX08_0069 speaker=narration
+律「廊下で話す、と言っていました。ここで皆に口座の話をしたくなかったのかもしれません」
+
+@text show id=TX08_0070 speaker=narration
+早瀬さんが「仕事の控え」と紙を伏せた理由が、初めて違って見えた。
+@text show id=TX08_0071 speaker=narration
+彼は秘密を抱えて逃げたのではなかった。公の確認の前に、自分の会社の支払い先を見たい。誰かに恥をかかせずに、取り違えなら直したい。そんな希望を持ったのかもしれない。
+@text show id=TX08_0072 speaker=narration
+本人に確かめることは、もうできなかった。
+
+@text show id=TX08_0073 speaker=narration
+黒田「私の名前を使われた。設備確認の予定を知っていた人が書ける内容です。ただ、その予定はこの場で話していました」
+
+@text show id=TX08_0074 speaker=narration
+栞「いつ、渡ったのでしょう」
+
+@text show id=TX08_0075 speaker=narration
+千鶴「膝掛けを配る前、受付の盆に、畳んだものがあった気はするの。早瀬さんが取ったのかまでは……」
+
+@text show id=TX08_0076 speaker=narration
+奈緒「私は覚えておりません」
+
+@text show id=TX08_0077 speaker=narration
+僕も、その瞬間を見ていなかった。
+@text show id=TX08_0078 speaker=narration
+机に置かれた紙は、早瀬さんのものと似ていた。しかし僕が見たのは折った外側だけだ。同じ紙だと断定できる写真はない。
+
+@overlay hide duration_ms=250
+@char change id=CH_001 expression=悲しみ
+@text show id=TX08_0079 speaker=narration
+律「僕たちが、原本を見れば分かると言ったから」
+
+@text show id=TX08_0080 speaker=narration
+栞が僕を見た。
+
+@text show id=TX08_0081 speaker=narration
+律「それを聞いて、この人は」
+
+@text show id=TX08_0082 speaker=narration
+黒田「原本を確認しようとするのは、必要なことでした。私たちが殺したのではありません」
+
+@text show id=TX08_0083 speaker=narration
+声が少し大きかった。黒田さん自身にも言い聞かせているようだった。
+
+@text show id=TX08_0084 speaker=narration
+黒田「ただ、どこで約束が食い違ったかは残しましょう。それは早瀬さんを責めるためでも、私たちを免責するためでもありません」
+
+@text show id=TX08_0085 speaker=narration
+僕は手帳を開いた。二十一時十八分の記録の横に、帰ってくると思っていた、と書きかけた。
+@text show id=TX08_0086 speaker=narration
+消して、僕が最後に見た位置を書いた。
+
+@scene end id=SC08_002
+@scene start id=SC08_003
+# シーン：栞葉荘・談話室／夜
+@location show text="栞葉荘・談話室／夜"
+@overlay hide
+@bgm stop fade_ms=800
+@char hide id=CH_001
+@char hide id=CH_002
+@char show id=CH_005 expression=基本 position=center
+
+@text show id=TX08_0087 speaker=narration
+千鶴さんが湯呑を片付けた。
+@text show id=TX08_0088 speaker=narration
+五つを卓に残し、六つ目を持ったまま立ち尽くした。
+
+@text show id=TX08_0089 speaker=narration
+千鶴「私、ずっと、早瀬さんに悪いことを」
+
+@text show id=TX08_0090 speaker=narration
+奈緒「水野さん。いまはお休みに」
+
+@text show id=TX08_0091 speaker=narration
+千鶴「休んだら、また言えなくなる」
+
+@bg show id=BG_021 image=base filter=dim effect=none transition=dissolve duration_ms=700
+@text show id=TX08_0092 speaker=narration
+千鶴さんは湯呑を置いた。六つ目も戻した。
+
+@text show id=TX08_0093 speaker=narration
+千鶴「聞いてください。帳簿のことです」
+
+@overlay hide
+@scene end id=SC08_003
+@chapter end id=CH08
+

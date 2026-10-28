@@ -1,0 +1,98 @@
+{
+  "backgrounds": {
+    "BG_001": "BG_001.webp",
+    "BG_002": "BG_002.webp",
+    "BG_003": "BG_003.webp",
+    "BG_004": {
+      "base": "BG_004.webp",
+      "broken_skylight": "BG_004_broken_skylight.webp"
+    },
+    "BG_005": "BG_005.webp",
+    "BG_006": {
+      "base": "BG_006.webp",
+      "open_rail": "BG_006_open_rail.webp"
+    },
+    "BG_007": "BG_007.webp",
+    "BG_008": "BG_008.webp",
+    "BG_009": "BG_009.webp",
+    "BG_010": {
+      "base": "BG_010.webp",
+      "aftermath": "BG_010_aftermath.webp"
+    },
+    "BG_011": "BG_011.webp",
+    "BG_012": "BG_012.webp",
+    "BG_013": "BG_013.webp",
+    "BG_014": "BG_014.webp",
+    "BG_015": "BG_015.webp",
+    "BG_016": "BG_016.webp",
+    "BG_017": "BG_017.webp",
+    "BG_018": "BG_018.webp",
+    "BG_019": "BG_019.webp",
+    "BG_020": "BG_020.webp",
+    "BG_021": "BG_021.webp",
+    "BG_022": "BG_022.webp",
+    "BG_023": "BG_023.webp"
+  },
+  "characters": {
+    "CH_001": {
+      "name": "栞",
+      "color": "#D9949E",
+      "expressions": {
+        "不安": "CH_001_不安.webp",
+        "基本": "CH_001_基本.webp",
+        "基本_室内": "CH_001_基本_室内.webp",
+        "微笑み": "CH_001_微笑み.webp",
+        "微笑み_室内": "CH_001_微笑み_室内.webp",
+        "恐怖": "CH_001_恐怖.webp",
+        "悲しみ": "CH_001_悲しみ.webp",
+        "涙": "CH_001_涙.webp",
+        "照れ": "CH_001_照れ.webp",
+        "照れ_室内": "CH_001_照れ_室内.webp",
+        "真剣": "CH_001_真剣.webp",
+        "驚き": "CH_001_驚き.webp"
+      }
+    },
+    "CH_002": {
+      "name": "桐生",
+      "color": "#D88696",
+      "expressions": {
+        "不安": "CH_002_不安.webp",
+        "基本": "CH_002_基本.webp",
+        "悲しみ": "CH_002_悲しみ.webp"
+      }
+    },
+    "CH_003": {
+      "name": "早瀬",
+      "color": "#85A8D2",
+      "expressions": {
+        "基本": "CH_003_基本.webp",
+        "微笑み": "CH_003_微笑み.webp",
+        "怒り": "CH_003_怒り.webp",
+        "悲しみ": "CH_003_悲しみ.webp"
+      }
+    },
+    "CH_004": {
+      "name": "三枝",
+      "color": "#85A8D2",
+      "expressions": {
+        "基本": "CH_004_基本.webp"
+      }
+    },
+    "CH_005": {
+      "name": "水野",
+      "color": "#D88696",
+      "expressions": {
+        "基本": "CH_005_基本.webp",
+        "悲しみ": "CH_005_悲しみ.webp"
+      }
+    },
+    "CH_006": {
+      "name": "黒田",
+      "color": "#85A8D2",
+      "expressions": {
+        "不安": "CH_006_不安.webp",
+        "基本": "CH_006_基本.webp"
+      }
+    }
+  }
+}
