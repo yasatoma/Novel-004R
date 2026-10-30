@@ -1,369 +1,307 @@
-# 第七章　原本を見せる
-@chapter start id=CH07 title="原本を見せる"
+@chapter start id=CH07 title="第七章　原本を見せる"
 
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC07_001
-# シーン：栞葉荘・談話室／二十一時前
 @location show text="栞葉荘・談話室／二十一時前"
-@overlay hide
-@char hide id=ALL
-@bgm play file=B007.dat volume=0.55 fade_ms=4000 continue_if_same=true
-@ambient play file=A002.dat volume=0.38 fade_ms=1000 continue_if_same=true
-@textbox hide
-@bg show id=BG_009 image=base filter=dim effect=none transition=blackfade duration_ms=4000
-@chapter_title show chapter="第七章" title="原本を見せる" duration_ms=700 hold_ms=2600
-@wait start duration_ms=4000 mode=always
-@textbox show
-@char show id=CH_001 expression=不安 position=left
-@char show id=CH_003 expression=基本 position=right
-
-@text show id=TX07_0001 speaker=narration
+@bgm play file=B011.dat volume=0.5 fade_ms=1200 continue_if_same=true
+@bg show id=BG_011 image=base filter=dim effect=none effect_layer=background view=full transition=dissolve duration_ms=800
+@char hide id=ALL duration_ms=800
+@chapter_title show chapter="第七章" title="原本を見せる"
+@text show id=TX07_001_0001 speaker=narration
 雨戸の向こうで、何かが転がった。千鶴さんが膝の上のタオルを握った。
-@text show id=TX07_0002 speaker=narration
+@text show id=TX07_001_0002 speaker=narration
 早瀬さんは席を立たず、戸口の方を見た。
-
-@text show id=TX07_0003 speaker=narration
-早瀬「外の樋だ。いま出ても直せん」
-
-@text show id=TX07_0004 speaker=narration
-千鶴「分かるのね」
-
-@text show id=TX07_0005 speaker=narration
-早瀬「俺が留めた。直すときには、また俺を呼べ」
-
-@text show id=TX07_0006 speaker=narration
+@char show id=CH_004 expression=基本 position=left crop=bust duration_ms=800
+@text show id=TX07_001_0003 speaker=CH_004
+外の樋だ。いま出ても直せん
+@text show id=TX07_001_0004 speaker=CH_005
+分かるのね
+@text show id=TX07_001_0005 speaker=CH_004
+俺が留めた。直すときには、また俺を呼べ
+@text show id=TX07_001_0006 speaker=narration
 言い終えてから、彼は眉間を揉んだ。依頼する主人はもういなかった。
-
-@text show id=TX07_0007 speaker=narration
-栞「早瀬さん。母の部屋の窓も、直してくださいましたか」
-
-@text show id=TX07_0008 speaker=narration
-早瀬「昔の話か？　ああ、一回。閉まらなくなったって」
-
-@text show id=TX07_0009 speaker=narration
-栞「私、覚えてます。母が怒られると思って、隠れていて」
-
-@text show id=TX07_0010 speaker=narration
-早瀬「建て付けが悪かっただけだ。子供が壊せるような窓じゃない」
-
-@text show id=TX07_0011 speaker=narration
-栞「それも、言ってくれました」
-
-@text show id=TX07_0012 speaker=narration
+@char show id=CH_001 expression=基本 position=right crop=bust duration_ms=800
+@text show id=TX07_001_0007 speaker=CH_001
+早瀬さん。母の部屋の窓も、直してくださいましたか
+@text show id=TX07_001_0008 speaker=CH_004
+昔の話か？　ああ、一回。閉まらなくなったって
+@text show id=TX07_001_0009 speaker=CH_001
+私、覚えてます。母が怒られると思って、隠れていて
+@text show id=TX07_001_0010 speaker=CH_004
+建て付けが悪かっただけだ。子供が壊せるような窓じゃない
+@text show id=TX07_001_0011 speaker=CH_001
+それも、言ってくれました
+@text show id=TX07_001_0012 speaker=narration
 早瀬さんは困った顔をした。
-
-@text show id=TX07_0013 speaker=narration
-早瀬「もう少し、格好のつくことを覚えとけ」
-
-@text show id=TX07_0014 speaker=narration
-栞「安心したので、覚えていたんです」
-
-@text show id=TX07_0015 speaker=narration
+@text show id=TX07_001_0013 speaker=CH_004
+もう少し、格好のつくことを覚えとけ
+@char change id=CH_001 expression=微笑み crop=bust duration_ms=800
+@text show id=TX07_001_0014 speaker=CH_001
+安心したので、覚えていたんです
+@text show id=TX07_001_0015 speaker=narration
 彼は、そうか、とだけ答えた。
-@text show id=TX07_0016 speaker=narration
+@text show id=TX07_001_0016 speaker=narration
 栞の声を聞く間、早瀬さんの指は包帯から離れていた。
-
-@char hide id=ALL
-@char show id=CH_006 expression=基本 position=left
-@char show id=CH_002 expression=基本 position=right
-@text show id=TX07_0017 speaker=narration
+@char hide id=CH_001 duration_ms=800
+@char show id=CH_006 expression=基本 position=right crop=bust duration_ms=800
+@text show id=TX07_001_0017 speaker=narration
 黒田さんが湯守室の警報表示について奈緒に訊いた。予備電源の負荷を二十一時半までに一度記録したい、という話が先ほどから出ていた。
-
-@text show id=TX07_0018 speaker=narration
-奈緒「私が参ります。二人以上というお約束ですから、黒田様にご同行いただけますか」
-
-@text show id=TX07_0019 speaker=narration
-黒田「私で分かるものですか」
-
-@text show id=TX07_0020 speaker=narration
-奈緒「私が数字を読みますので、お控えいただくだけで。通路へは出ません」
-
-@text show id=TX07_0021 speaker=narration
-早瀬「計器の箱の横に点検道具がある。触るなよ。滑ると厄介だ」
-
-@text show id=TX07_0022 speaker=narration
-黒田「道具というのは？」
-
-@text show id=TX07_0023 speaker=narration
-早瀬「バルブの工具と、短い点検用の金槌。重い方は旧浴場の作業台に置いた。扉を直す途中だったから」
-
-@text show id=TX07_0024 speaker=narration
+@text show id=TX07_001_0018 speaker=CH_003
+私が参ります。二人以上というお約束ですから、黒田様にご同行いただけますか
+@text show id=TX07_001_0019 speaker=CH_006
+私で分かるものですか
+@text show id=TX07_001_0020 speaker=CH_003
+私が数字を読みますので、お控えいただくだけで。通路へは出ません
+@text show id=TX07_001_0021 speaker=CH_004
+計器の箱の横に点検道具がある。触るなよ。滑ると厄介だ
+@text show id=TX07_001_0022 speaker=CH_006
+道具というのは？
+@text show id=TX07_001_0023 speaker=CH_004
+バルブの工具と、短い点検用の金槌。重い方は旧浴場の作業台に置いた。扉を直す途中だったから
+@char hide id=CH_006 duration_ms=800
+@char show id=CH_003 expression=基本 position=right crop=bust duration_ms=800
+@text show id=TX07_001_0024 speaker=narration
 奈緒が口を挟んだ。
-
-@text show id=TX07_0025 speaker=narration
-奈緒「設備の不具合は私からご説明します。早瀬さんも、いまはお休みください」
-
-@text show id=TX07_0026 speaker=narration
-早瀬「休んでるよ」
-
-@text show id=TX07_0027 speaker=narration
+@text show id=TX07_001_0025 speaker=CH_003
+設備の不具合は私からご説明します。早瀬さんも、いまはお休みください
+@text show id=TX07_001_0026 speaker=CH_004
+休んでるよ
+@text show id=TX07_001_0027 speaker=narration
 返しながら、彼は手帳を胸の内ポケットへしまった。
-
 @scene end id=SC07_001
+
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC07_002
-# シーン：栞葉荘・談話室／二十一時過ぎ
 @location show text="栞葉荘・談話室／二十一時過ぎ"
-@overlay hide
-@char hide id=CH_006
-@char hide id=CH_002
-@char show id=CH_005 expression=基本 position=center
-
-@text show id=TX07_0028 speaker=narration
+@char hide id=CH_003 duration_ms=800
+@text show id=TX07_002_0001 speaker=narration
 千鶴さんが、人数分の膝掛けを取りに行く相談をした。廊下の棚なら僕が一緒に行ける。黒田さんは入口へ椅子を移し、こちらを見ていると答えた。
-@text show id=TX07_0029 speaker=narration
+@text show id=TX07_002_0002 speaker=narration
 全員の姿を見ているつもりでも、何を見ているのか言わなければ、別の誰かが見ていると思ってしまう。さっきの話の続きとして、僕たちは口に出すようになっていた。
-
-@text show id=TX07_0030 speaker=narration
+@text show id=TX07_002_0003 speaker=narration
 早瀬さんは受付に残した資料を取りに行きたいと言った。
-
-@text show id=TX07_0031 speaker=narration
-黒田「一度に動かず、お二人が戻ってからにしましょう。私がご一緒します」
-
-@text show id=TX07_0032 speaker=narration
-早瀬「分かった」
-
-@text show id=TX07_0033 speaker=narration
+@char show id=CH_006 expression=真剣 position=right crop=bust duration_ms=800
+@text show id=TX07_002_0004 speaker=CH_006
+一度に動かず、お二人が戻ってからにしましょう。私がご一緒します
+@text show id=TX07_002_0005 speaker=CH_004
+分かった
+@text show id=TX07_002_0006 speaker=narration
 そうして待てる人だった。僕は、彼が苛立っているからといって、周囲の約束を聞かないわけではないと、改めて思った。
-
-@text show id=TX07_0034 speaker=narration
-千鶴さんと棚へ行くと、乾いた布の匂いがした。
-@text show id=TX07_0035 speaker=narration
-彼女は一枚ずつ広げ、ほつれていないかを見てから僕に渡した。いま確かめる必要はないのに、手がいつもの順序を繰り返している。
-
-@text show id=TX07_0036 speaker=narration
-千鶴「三枝さんはね、古いものを捨てるのが下手だったの」
-
-@text show id=TX07_0037 speaker=narration
-律「切れ端も、ですか」
-
-@text show id=TX07_0038 speaker=narration
-千鶴「そう。お部屋の茶碗も、少し欠けただけだからって。危ないので、私が下げたのに。自分用にしていたり」
-
-@text show id=TX07_0039 speaker=narration
-膝掛けの間に、繕ったものがあった。千鶴さんはそれを一番下へ戻しかけ、やめた。
-
-@text show id=TX07_0040 speaker=narration
-千鶴「これは、私が使いましょう」
-
-@text show id=TX07_0041 speaker=narration
-律「僕でも」
-
-@text show id=TX07_0042 speaker=narration
-千鶴「いいのよ。直した人が使うと、次にどこが切れるか分かるから」
-
-@char hide id=CH_005
-@char show id=CH_003 expression=基本 position=center
-@text show id=TX07_0043 speaker=narration
-戻ると、早瀬さんと黒田さんが受付へ移るところだった。奈緒が照合票の整理をしながら、先ほどの控えを探している。受付は談話室の戸口から見えた。
-@text show id=TX07_0044 speaker=narration
-早瀬さんは自分の資料を取って、先に座席へ戻った。黒田さんは奈緒から設備の確認事項を聞いていた。
-@text show id=TX07_0045 speaker=narration
-一人が全ての手元を見ているわけではない。それでも、誰がどこにいるかは伝わっていると思った。
-
-@text show id=TX07_0046 speaker=narration
-僕が膝掛けを渡すと、早瀬さんは左手で受け取った。
-
-@text show id=TX07_0047 speaker=narration
-早瀬「重症の老人みたいだな」
-
-@text show id=TX07_0048 speaker=narration
-千鶴「怪我をしているのは、本当でしょう」
-
-@text show id=TX07_0049 speaker=narration
-早瀬「明日は現場だ。こんなの、昼までに治せりゃいいんだが」
-
-@text show id=TX07_0050 speaker=narration
-律「明日は休んだ方が」
-
-@text show id=TX07_0051 speaker=narration
-早瀬「分かってる。……言ってみただけだ」
-
-@text show id=TX07_0052 speaker=narration
-彼は膝掛けを二つ折りにし、自分の隣の椅子にも掛けた。
-@text show id=TX07_0053 speaker=narration
-誰が座る席を空けたのか、僕には分からなかった。
-
 @scene end id=SC07_002
+
+# 千鶴と廊下の棚へ膝掛けを取りに行く
 @scene start id=SC07_003
-# シーン：栞葉荘・談話室／二十一時十六分頃
-@location show text="栞葉荘・談話室／二十一時十六分頃"
-@overlay hide
-@bgm play file=B004.dat volume=0.55 fade_ms=1000 continue_if_same=true
-@char show id=CH_006 expression=基本 position=right
-
-@text show id=TX07_0054 speaker=narration
-千鶴さんが膝掛けを配っていた。栞の肩へ掛けた一枚がずれて、僕は椅子を引いた。
-@text show id=TX07_0055 speaker=narration
-その向こうで早瀬さんが、袖から畳んだ紙を出した。
-
-@text show id=TX07_0056 speaker=narration
-律「何か、ありましたか」
-
-@text show id=TX07_0057 speaker=narration
-早瀬「仕事の控え」
-
-@text show id=TX07_0058 speaker=narration
-彼は紙を伏せた。それから黒田さんの方を見た。
-
-@text show id=TX07_0059 speaker=narration
-早瀬「先に廊下へ出る。便所と、入口の見えるとこまでだ。黒田先生、二分で来てくれ」
-
-@text show id=TX07_0060 speaker=narration
-黒田「どちらへ？」
-
-@text show id=TX07_0061 speaker=narration
-早瀬「さっきの原本の話。ここじゃ言いづらい。廊下で話す」
-
-@text show id=TX07_0062 speaker=narration
-千鶴「お手洗いなら、私が入口まで」
-
-@text show id=TX07_0063 speaker=narration
-早瀬「すぐそこだ。見えてるだろ」
-
-@text show id=TX07_0064 speaker=narration
-談話室の斜め向かいに便所があり、そこまでは戸口から見えた。黒田さんは時計を見た。
-
-@text show id=TX07_0065 speaker=narration
-黒田「分かりました。ただ、浴場棟には行かないでください。先にお手洗いを。すぐ追います」
-
-@text show id=TX07_0066 speaker=narration
-早瀬「分かってる」
-
-@text show id=TX07_0067 speaker=narration
-二十一時十八分。僕は手帳に、早瀬さんが廊下へ出たと書いた。
-@char hide id=CH_003
-@text show id=TX07_0068 speaker=narration
-彼は本当に便所の前まで行った。戸口に立った千鶴さんが、見えていると教えてくれた。
-
-@text show id=TX07_0069 speaker=narration
-直後、廊下の天井から水が落ちた。
-@text show id=TX07_0070 speaker=narration
-千鶴さんの足元に、栞が桶を差し入れた。膝掛けと書類を避けるため、僕も卓を動かした。
-
-@text show id=TX07_0071 speaker=narration
-奈緒「黒田様、先に湯守室へお願いいたします。早瀬さんは、お手洗いでしょう」
-
-@text show id=TX07_0072 speaker=narration
-黒田「早瀬さんと話す約束が」
-
-@text show id=TX07_0073 speaker=narration
-奈緒「それでしたら、入口で合流できます。資料室の件もお話しできますので」
-
-@text show id=TX07_0074 speaker=narration
-黒田さんは廊下へ出て、便所の方へ声をかけた。
-
-@text show id=TX07_0075 speaker=narration
-黒田「早瀬さん。湯守室の前で待ちます。一人で先へ行かないように」
-
-@text show id=TX07_0076 speaker=narration
-返事は聞こえなかった。水滴が桶を叩いていた。
-@char hide id=CH_006
-@text show id=TX07_0077 speaker=narration
-黒田さんは便所の戸を一度見て、奈緒に続いた。二十一時二十分だった。
-
-@text show id=TX07_0078 speaker=narration
-僕は談話室に戻る前に廊下を覗いた。便所の戸は閉まり、その先は曲がって見えなくなっていた。
-
-@char show id=CH_001 expression=不安 position=center
-@text show id=TX07_0079 speaker=narration
-栞「原本、見せてもらえるのかな」
-
-@text show id=TX07_0080 speaker=narration
-律「黒田さんが一緒なら、何を見たか分かると思う」
-
-@text show id=TX07_0081 speaker=narration
-僕はそう答えた。二人以上で動くという約束が、どう受け渡されたかを確かめなかった。
-
-@scene end id=SC07_003
-@scene start id=SC07_004
-# シーン：栞葉荘・談話室／二十一時半過ぎ
-@location show text="栞葉荘・談話室／二十一時半過ぎ"
-@overlay hide
-@bgm stop fade_ms=800
-@char hide id=CH_001
-@char show id=CH_006 expression=基本 position=left
-@char show id=CH_002 expression=基本 position=right
-
-@text show id=TX07_0082 speaker=narration
-時計の針の音が、雨に混じって聞こえた。
-@text show id=TX07_0083 speaker=narration
-栞が覆いを取ったおにぎりを一口食べた。その手が、廊下の音で止まった。
-@text show id=TX07_0084 speaker=narration
-黒田さんと奈緒だった。二人しかいない。
-
-@text show id=TX07_0085 speaker=narration
-律「早瀬さんは？」
-
-@text show id=TX07_0086 speaker=narration
-黒田「戻っていませんか」
-
-@text show id=TX07_0087 speaker=narration
-千鶴「ご一緒ではなかったの？」
-
-@text show id=TX07_0088 speaker=narration
-黒田さんの顔が変わった。
-
-@text show id=TX07_0089 speaker=narration
-黒田「湯守室には来ませんでした。奈緒さんから、先にお戻りかもしれないと」
-
-@text show id=TX07_0090 speaker=narration
-奈緒「廊下でお見かけしなかったので。てっきり」
-
-@text show id=TX07_0091 speaker=narration
-僕は便所へ行った。手前で名前を呼び、返事がないので戸を叩いた。中には誰もいなかった。
-@text show id=TX07_0092 speaker=narration
-栞が後ろに来ていた。
-
-@text show id=TX07_0093 speaker=narration
-栞「まだ、どこかで待っているのかもしれない」
-
-@text show id=TX07_0094 speaker=narration
-律「うん。皆で探そう」
-
-@text show id=TX07_0095 speaker=narration
-声をかけ合い、館内の灯りのあるところから確かめた。客室、受付、倉庫の前。早瀬さんの車の鍵は、談話室の彼の荷物に残っていた。
-
-@text show id=TX07_0096 speaker=narration
-黒田「旧浴場へ。客用廊下から行きましょう。全員、離れないで」
-
-@text show id=TX07_0097 speaker=narration
-奈緒が一瞬、保守通路の方を見た。
-@text show id=TX07_0098 speaker=narration
-僕はそれを、近道を使うべきか迷ったのだと思った。
-
-@scene end id=SC07_004
-@scene start id=SC07_005
-# シーン：栞葉荘・旧浴場入口／二十一時四十分頃
-@location show text="栞葉荘・旧浴場入口／二十一時四十分頃"
-@overlay hide
-@char hide id=ALL
+@char hide id=ALL duration_ms=800
 @textbox hide
-@bg show id=BG_010 image=base filter=dim effect=none transition=blackfade duration_ms=1000
-@wait start duration_ms=1000 mode=always
+@bg show id=BG_005 image=base filter=dim effect=none effect_layer=background view=wall_crop transition=blackfade duration_ms=800
+@wait start duration_ms=800 mode=always
 @textbox show
+@text show id=TX07_003_0001 speaker=narration
+千鶴さんと棚へ行くと、乾いた布の匂いがした。
+@text show id=TX07_003_0002 speaker=narration
+彼女は一枚ずつ広げ、ほつれていないかを見てから僕に渡した。いま確かめる必要はないのに、手がいつもの順序を繰り返している。
+@char show id=CH_005 expression=不安 position=center crop=bust duration_ms=800
+@text show id=TX07_003_0003 speaker=CH_005
+三枝さんはね、古いものを捨てるのが下手だったの
+@text show id=TX07_003_0004 speaker=CH_000
+切れ端も、ですか
+@text show id=TX07_003_0005 speaker=CH_005
+そう。お部屋の茶碗も、少し欠けただけだからって。危ないので、私が下げたのに。自分用にしていたり
+@text show id=TX07_003_0006 speaker=narration
+膝掛けの間に、繕ったものがあった。千鶴さんはそれを一番下へ戻しかけ、やめた。
+@text show id=TX07_003_0007 speaker=CH_005
+これは、私が使いましょう
+@text show id=TX07_003_0008 speaker=CH_000
+僕でも
+@text show id=TX07_003_0009 speaker=CH_005
+いいのよ。直した人が使うと、次にどこが切れるか分かるから
+@scene end id=SC07_003
 
-@text show id=TX07_0099 speaker=narration
-浴場の戸が少し開いていた。
-@text show id=TX07_0100 speaker=narration
-黒田さんが手をかける前に、僕たちを止めた。床に、早瀬さんの包帯が見えた。
-@text show id=TX07_0101 speaker=narration
-剥がれたのではない。手がついていた。
+# 膝掛けを持ち談話室・受付の見える位置へ戻る
+@scene start id=SC07_004
+@char hide id=ALL duration_ms=800
+@textbox hide
+@bg show id=BG_011 image=base filter=dim effect=none effect_layer=background view=full transition=blackfade duration_ms=800
+@wait start duration_ms=800 mode=always
+@textbox show
+@text show id=TX07_004_0001 speaker=narration
+戻ると、早瀬さんと黒田さんが受付へ移るところだった。奈緒が照合票の整理をしながら、先ほどの控えを探している。受付は談話室の戸口から見えた。
+@text show id=TX07_004_0002 speaker=narration
+早瀬さんは自分の資料を取って、先に座席へ戻った。黒田さんは奈緒から設備の確認事項を聞いていた。
+@text show id=TX07_004_0003 speaker=narration
+一人が全ての手元を見ているわけではない。それでも、誰がどこにいるかは伝わっていると思った。
+@text show id=TX07_004_0004 speaker=narration
+僕が膝掛けを渡すと、早瀬さんは左手で受け取った。
+@char show id=CH_004 expression=基本 position=left crop=bust duration_ms=800
+@char show id=CH_005 expression=基本 position=right crop=bust duration_ms=800
+@text show id=TX07_004_0005 speaker=CH_004
+重症の老人みたいだな
+@text show id=TX07_004_0006 speaker=CH_005
+怪我をしているのは、本当でしょう
+@text show id=TX07_004_0007 speaker=CH_004
+明日は現場だ。こんなの、昼までに治せりゃいいんだが
+@text show id=TX07_004_0008 speaker=CH_000
+明日は休んだ方が
+@text show id=TX07_004_0009 speaker=CH_004
+分かってる。……言ってみただけだ
+@text show id=TX07_004_0010 speaker=narration
+彼は膝掛けを二つ折りにし、自分の隣の椅子にも掛けた。
+@text show id=TX07_004_0011 speaker=narration
+誰が座る席を空けたのか、僕には分からなかった。
+@scene end id=SC07_004
 
-@text show id=TX07_0102 speaker=narration
-栞の息が、背中で止まった。
-@char hide id=ALL
-@bg show id=BG_010 image=aftermath filter=dim effect=none transition=cut
-@text show id=TX07_0103 speaker=narration
-僕は戸口へ進んだ。濡れた床に早瀬さんが倒れていた。頭と顔に傷があった。目を逸らしたいのに、名前を呼ぶためには顔を見るほかなかった。
-
-@text show id=TX07_0104 speaker=narration
-律「早瀬さん」
-
-@text show id=TX07_0105 speaker=narration
-返事がなかった。
-@text show id=TX07_0106 speaker=narration
-四十分ほど前、また呼べと言っていた人が、ここにいた。
-
-@overlay hide
+# ②で明示された場面・時間・焦点の区切り
+@scene start id=SC07_005
+@location show text="栞葉荘・談話室／二十一時十六分頃"
+@bgm play file=B007.dat volume=0.42 fade_ms=1200 continue_if_same=true
+@char hide id=CH_005 duration_ms=800
+@text show id=TX07_005_0001 speaker=narration
+千鶴さんが膝掛けを配っていた。栞の肩へ掛けた一枚がずれて、僕は椅子を引いた。
+@text show id=TX07_005_0002 speaker=narration
+その向こうで早瀬さんが、袖から畳んだ紙を出した。
+@text show id=TX07_005_0003 speaker=CH_000
+何か、ありましたか
+@text show id=TX07_005_0004 speaker=CH_004
+仕事の控え
+@text show id=TX07_005_0005 speaker=narration
+彼は紙を伏せた。それから黒田さんの方を見た。
+@text show id=TX07_005_0006 speaker=CH_004
+先に廊下へ出る。便所と、入口の見えるとこまでだ。黒田先生、二分で来てくれ
+@text show id=TX07_005_0007 speaker=CH_006
+どちらへ？
+@text show id=TX07_005_0008 speaker=CH_004
+さっきの原本の話。ここじゃ言いづらい。廊下で話す
+@text show id=TX07_005_0009 speaker=CH_005
+お手洗いなら、私が入口まで
+@text show id=TX07_005_0010 speaker=CH_004
+すぐそこだ。見えてるだろ
+@text show id=TX07_005_0011 speaker=narration
+談話室の斜め向かいに便所があり、そこまでは戸口から見えた。黒田さんは時計を見た。
+@char show id=CH_006 expression=真剣 position=right crop=bust duration_ms=800
+@text show id=TX07_005_0012 speaker=CH_006
+分かりました。ただ、浴場棟には行かないでください。先にお手洗いを。すぐ追います
+@text show id=TX07_005_0013 speaker=CH_004
+分かってる
+@char hide id=CH_004 duration_ms=800
+@se play file=S007.dat
+@text show id=TX07_005_0014 speaker=narration
+二十一時十八分。僕は手帳に、早瀬さんが廊下へ出たと書いた。
+@text show id=TX07_005_0015 speaker=narration
+彼は本当に便所の前まで行った。戸口に立った千鶴さんが、見えていると教えてくれた。
+@text show id=TX07_005_0016 speaker=narration
+直後、廊下の天井から水が落ちた。
+@text show id=TX07_005_0017 speaker=narration
+千鶴さんの足元に、栞が桶を差し入れた。膝掛けと書類を避けるため、僕も卓を動かした。
+@char show id=CH_003 expression=基本 position=left crop=bust duration_ms=800
+@text show id=TX07_005_0018 speaker=CH_003
+黒田様、先に湯守室へお願いいたします。早瀬さんは、お手洗いでしょう
+@text show id=TX07_005_0019 speaker=CH_006
+早瀬さんと話す約束が
+@text show id=TX07_005_0020 speaker=CH_003
+それでしたら、入口で合流できます。資料室の件もお話しできますので
+@text show id=TX07_005_0021 speaker=narration
+黒田さんは廊下へ出て、便所の方へ声をかけた。
+@text show id=TX07_005_0022 speaker=CH_006
+早瀬さん。湯守室の前で待ちます。一人で先へ行かないように
+@text show id=TX07_005_0023 speaker=narration
+返事は聞こえなかった。水滴が桶を叩いていた。
+@char hide id=CH_006 duration_ms=800
+@char hide id=CH_003 duration_ms=800
+@text show id=TX07_005_0024 speaker=narration
+黒田さんは便所の戸を一度見て、奈緒に続いた。二十一時二十分だった。
+@text show id=TX07_005_0025 speaker=narration
+僕は談話室に戻る前に廊下を覗いた。便所の戸は閉まり、その先は曲がって見えなくなっていた。
+@char show id=CH_001 expression=基本 position=center crop=bust duration_ms=800
+@text show id=TX07_005_0026 speaker=CH_001
+原本、見せてもらえるのかな
+@text show id=TX07_005_0027 speaker=CH_000
+黒田さんが一緒なら、何を見たか分かると思う
+@text show id=TX07_005_0028 speaker=narration
+僕はそう答えた。二人以上で動くという約束が、どう受け渡されたかを確かめなかった。
 @scene end id=SC07_005
+
+# ②で明示された場面・時間・焦点の区切り
+@scene start id=SC07_006
+@location show text="栞葉荘・談話室／二十一時半過ぎ"
+@bgm stop fade_ms=1000
+@text show id=TX07_006_0001 speaker=narration
+時計の針の音が、雨に混じって聞こえた。
+@text show id=TX07_006_0002 speaker=narration
+栞が覆いを取ったおにぎりを一口食べた。その手が、廊下の音で止まった。
+@char hide id=CH_001 duration_ms=800
+@char show id=CH_006 expression=動揺 position=left crop=bust duration_ms=800
+@char show id=CH_003 expression=基本 position=right crop=bust duration_ms=800
+@text show id=TX07_006_0003 speaker=narration
+黒田さんと奈緒だった。二人しかいない。
+@text show id=TX07_006_0004 speaker=CH_000
+早瀬さんは？
+@text show id=TX07_006_0005 speaker=CH_006
+戻っていませんか
+@text show id=TX07_006_0006 speaker=CH_005
+ご一緒ではなかったの？
+@text show id=TX07_006_0007 speaker=narration
+黒田さんの顔が変わった。
+@text show id=TX07_006_0008 speaker=CH_006
+湯守室には来ませんでした。奈緒さんから、先にお戻りかもしれないと
+@text show id=TX07_006_0009 speaker=CH_003
+廊下でお見かけしなかったので。てっきり
+@scene end id=SC07_006
+
+# 便所前から所在不明者の捜索へ切り替わる
+@scene start id=SC07_007
+@char hide id=ALL duration_ms=800
+@textbox hide
+@bg show id=BG_005 image=base filter=dim effect=none effect_layer=background view=wall_crop transition=blackfade duration_ms=800
+@wait start duration_ms=800 mode=always
+@textbox show
+@se play file=S005.dat
+@text show id=TX07_007_0001 speaker=narration
+僕は便所へ行った。手前で名前を呼び、返事がないので戸を叩いた。中には誰もいなかった。
+@text show id=TX07_007_0002 speaker=narration
+栞が後ろに来ていた。
+@char show id=CH_001 expression=恐怖 position=center crop=bust duration_ms=800
+@text show id=TX07_007_0003 speaker=CH_001
+まだ、どこかで待っているのかもしれない
+@text show id=TX07_007_0004 speaker=CH_000
+うん。皆で探そう
+@text show id=TX07_007_0005 speaker=narration
+声をかけ合い、館内の灯りのあるところから確かめた。客室、受付、倉庫の前。早瀬さんの車の鍵は、談話室の彼の荷物に残っていた。
+@char hide id=ALL duration_ms=800
+@bgm play file=B012.dat volume=0.38 fade_ms=1200 continue_if_same=true
+@text show id=TX07_007_0006 speaker=CH_006
+旧浴場へ。客用廊下から行きましょう。全員、離れないで
+@text show id=TX07_007_0007 speaker=narration
+奈緒が一瞬、保守通路の方を見た。
+@text show id=TX07_007_0008 speaker=narration
+僕はそれを、近道を使うべきか迷ったのだと思った。
+@scene end id=SC07_007
+
+# ②で明示された場面・時間・焦点の区切り
+@scene start id=SC07_008
+@location show text="栞葉荘・旧浴場入口／二十一時四十分頃"
+@char hide id=ALL duration_ms=800
+@textbox hide
+@bg show id=BG_013 image=base filter=dim effect=none effect_layer=background view=full transition=blackfade duration_ms=900
+@wait start duration_ms=900 mode=always
+@textbox show
+@text show id=TX07_008_0001 speaker=narration
+浴場の戸が少し開いていた。
+@text show id=TX07_008_0002 speaker=narration
+黒田さんが手をかける前に、僕たちを止めた。床に、早瀬さんの包帯が見えた。
+@effect play id=flash strength=small duration_ms=180
+@wait start duration_ms=900 mode=auto_only
+@text show id=TX07_008_0003 speaker=narration
+剥がれたのではない。手がついていた。
+@text show id=TX07_008_0004 speaker=narration
+栞の息が、背中で止まった。
+@text show id=TX07_008_0005 speaker=narration
+僕は戸口へ進んだ。濡れた床に早瀬さんが倒れていた。頭と顔に傷があった。目を逸らしたいのに、名前を呼ぶためには顔を見るほかなかった。
+@text show id=TX07_008_0006 speaker=CH_000
+早瀬さん
+@text show id=TX07_008_0007 speaker=narration
+返事がなかった。
+@text show id=TX07_008_0008 speaker=narration
+四十分ほど前、また呼べと言っていた人が、ここにいた。
+@scene end id=SC07_008
 @chapter end id=CH07
 

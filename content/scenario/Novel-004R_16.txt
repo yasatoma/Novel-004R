@@ -1,282 +1,225 @@
-# 第十六章　迎えの足音
-@chapter start id=CH16 title="迎えの足音"
+@chapter start id=CH16 title="第十六章　迎えの足音"
 
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC16_001
-# シーン：栞葉荘・談話室／翌朝
 @location show text="栞葉荘・談話室／翌朝"
-@overlay hide
-@char hide id=ALL
-@bgm play file=B007.dat volume=0.55 fade_ms=4000 continue_if_same=true
+@char hide id=ALL duration_ms=800
+@textbox hide
+@bgm play file=B011.dat volume=0.5 fade_ms=1800 continue_if_same=true
+@bg show id=BG_011 image=base filter=cool effect=none effect_layer=background view=full transition=blackfade duration_ms=1800
+@wait start duration_ms=1800 mode=always
+@textbox show
 @ambient stop fade_ms=800
-@textbox hide
-@bg show id=BG_009 image=base filter=cool effect=none transition=blackfade duration_ms=4000
-@chapter_title show chapter="第十六章" title="迎えの足音" duration_ms=700 hold_ms=2600
-@wait start duration_ms=4000 mode=always
-@textbox show
-@char show id=CH_001 expression=悲しみ position=left
-@char show id=CH_006 expression=基本 position=right
-
-@text show id=TX16_0001 speaker=narration
+@chapter_title show chapter="第十六章" title="迎えの足音"
+@text show id=TX16_001_0001 speaker=narration
 声を聞いて、まず宿の名を言った。
-@text show id=TX16_0002 speaker=narration
+@text show id=TX16_001_0002 speaker=narration
 通話の向こうの人は、昨夜の通報を把握していた。救助隊が上からの経路を確認中で、こちらへ向かう準備をしている。動かず待つように、と言われた。
-
-@text show id=TX16_0003 speaker=narration
-律「亡くなった方が、もう一人います」
-
-@text show id=TX16_0004 speaker=narration
+@text show id=TX16_001_0003 speaker=CH_000
+亡くなった方が、もう一人います
+@text show id=TX16_001_0004 speaker=narration
 口にすると、部屋の中の音が消えた気がした。
-@text show id=TX16_0005 speaker=narration
+@text show id=TX16_001_0005 speaker=narration
 僕は早瀬さんの名と、発見場所を伝えた。さらに、栞への襲撃と怪我、奈緒がいま同じ部屋にいることを説明した。
-@text show id=TX16_0006 speaker=narration
+@text show id=TX16_001_0006 speaker=narration
 受話口から確認が繰り返された。こちらから危険を増やす行動をせず、距離を取り、連絡を維持すること。
-@text show id=TX16_0007 speaker=narration
+@text show id=TX16_001_0007 speaker=narration
 黒田さんに代わってもらい、僕は栞の隣へ戻った。
-
-@text show id=TX16_0008 speaker=narration
-栞「来てくれる？」
-
-@text show id=TX16_0009 speaker=narration
-律「うん。道を確かめながら、来てくれる」
-
-@text show id=TX16_0010 speaker=narration
+@char show id=CH_001 expression=悲しみ position=center crop=bust duration_ms=800
+@text show id=TX16_001_0008 speaker=CH_001
+来てくれる？
+@text show id=TX16_001_0009 speaker=CH_000
+うん。道を確かめながら、来てくれる
+@text show id=TX16_001_0010 speaker=narration
 栞は頷いた。よかったと言わず、毛布を抱え直した。
-@text show id=TX16_0011 speaker=narration
+@text show id=TX16_001_0011 speaker=narration
 安心してもよいのか、身体がまだ分かっていないようだった。
-
 @scene end id=SC16_001
+
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC16_002
-# シーン：栞葉荘・玄関／朝
 @location show text="栞葉荘・玄関／朝"
-@overlay hide
-@char hide id=ALL
+@char hide id=ALL duration_ms=800
 @textbox hide
-@bg show id=BG_003 image=base filter=cool effect=none transition=blackfade duration_ms=1000
-@wait start duration_ms=1000 mode=always
+@bg show id=BG_003 image=base filter=normal effect=none effect_layer=background view=full transition=blackfade duration_ms=1600
+@wait start duration_ms=1600 mode=always
 @textbox show
-@char show id=CH_001 expression=悲しみ position=center
-
-@text show id=TX16_0012 speaker=narration
+@se play file=S008.dat
+@text show id=TX16_002_0001 speaker=narration
 最初の足音は、橋の向こうではなく、建物の脇から聞こえた。
-@text show id=TX16_0013 speaker=narration
+@text show id=TX16_002_0002 speaker=narration
 救助の人の声がした。外から呼ばれた宿の名に、千鶴さんがはいと答え、その返事が泣き声になった。
-@text show id=TX16_0014 speaker=narration
+@text show id=TX16_002_0003 speaker=narration
 僕たちは玄関へ出た。一人ずつ、名前と状態を訊かれた。
-@text show id=TX16_0015 speaker=narration
+@char show id=CH_001 expression=恐怖 position=right crop=bust duration_ms=800
+@text show id=TX16_002_0004 speaker=narration
 栞の手首を見るため、救急の隊員が手を差し出したとき、栞は一瞬後ずさった。
-
-@text show id=TX16_0016 speaker=narration
-隊員「触れても大丈夫ですか」
-
-@text show id=TX16_0017 speaker=narration
+@text show id=TX16_002_0005 speaker=MOB name="隊員"
+触れても大丈夫ですか
+@text show id=TX16_002_0006 speaker=narration
 栞はその問いを聞いて、呼吸を整えた。
-
-@text show id=TX16_0018 speaker=narration
-栞「はい。お願いします」
-
-@text show id=TX16_0019 speaker=narration
+@char change id=CH_001 expression=基本 crop=bust duration_ms=800
+@text show id=TX16_002_0007 speaker=CH_001
+はい。お願いします
+@text show id=TX16_002_0008 speaker=narration
 僕はそばにいた。隊員が僕の手も見つけ、同じ問いをした。いまさら、掌がじんじん痛んだ。
-@text show id=TX16_0020 speaker=narration
+@text show id=TX16_002_0009 speaker=narration
 怪我の経緯を話すと、二人とも病院で詳しく診てもらうよう言われた。
-
-@text show id=TX16_0021 speaker=narration
+@text show id=TX16_002_0010 speaker=narration
 警察官が奈緒へ声をかけた。黒田さんが目撃の概要を伝えた。奈緒は否定せず立ち、僕たちと距離を置くよう促された。
-@text show id=TX16_0022 speaker=narration
+@char hide id=CH_001 duration_ms=800
+@char show id=CH_005 expression=涙 position=left crop=bust duration_ms=800
+@char show id=CH_003 expression=沈痛 position=right crop=bust duration_ms=800
+@text show id=TX16_002_0011 speaker=narration
 千鶴さんはその後ろ姿を見ていた。
-
-@char hide id=CH_001
-@char show id=CH_002 expression=悲しみ position=left
-@char show id=CH_005 expression=悲しみ position=right
-@text show id=TX16_0023 speaker=narration
-奈緒「水野さん」
-
-@text show id=TX16_0024 speaker=narration
+@text show id=TX16_002_0012 speaker=CH_003
+水野さん
+@text show id=TX16_002_0013 speaker=narration
 千鶴さんの手が動いた。何かを差し出そうとする癖だったのかもしれない。すぐに止めた。
-
-@text show id=TX16_0025 speaker=narration
-奈緒「宿を、お願いします」
-
-@text show id=TX16_0026 speaker=narration
-千鶴「私一人では、決められないわ」
-
-@text show id=TX16_0027 speaker=narration
+@text show id=TX16_002_0014 speaker=CH_003
+宿を、お願いします
+@text show id=TX16_002_0015 speaker=CH_005
+私一人では、決められないわ
+@char change id=CH_003 expression=沈痛 crop=bust duration_ms=800
+@text show id=TX16_002_0016 speaker=narration
 奈緒は目を伏せた。
-
-@text show id=TX16_0028 speaker=narration
-千鶴「もう、そういうふうには、しない」
-
-@char hide id=CH_002
-@text show id=TX16_0029 speaker=narration
+@text show id=TX16_002_0017 speaker=CH_005
+もう、そういうふうには、しない
+@char hide id=CH_003 duration_ms=800
+@text show id=TX16_002_0018 speaker=narration
 奈緒が建物の外へ出た後も、千鶴さんは玄関に立っていた。
-@text show id=TX16_0030 speaker=narration
+@text show id=TX16_002_0019 speaker=narration
 黒田さんがそっと、まず身体を温めましょう、と言った。
-
 @scene end id=SC16_002
+
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC16_003
-# シーン：栞葉荘・談話室／朝
 @location show text="栞葉荘・談話室／朝"
-@overlay hide
-@char hide id=ALL
+@char hide id=ALL duration_ms=800
 @textbox hide
-@bg show id=BG_009 image=base filter=cool effect=none transition=blackfade duration_ms=1000
-@wait start duration_ms=1000 mode=always
+@bg show id=BG_011 image=base filter=normal effect=none effect_layer=background view=full transition=blackfade duration_ms=1600
+@wait start duration_ms=1600 mode=always
 @textbox show
-@char show id=CH_001 expression=悲しみ position=center
-
-@text show id=TX16_0031 speaker=narration
+@text show id=TX16_003_0001 speaker=narration
 手帳と写真を渡すまでに、何度も同じことを話した。
-@text show id=TX16_0032 speaker=narration
+@text show id=TX16_003_0002 speaker=narration
 僕が見たこと、他の人に聞いたこと、推測したこと。奈緒が話した内容も、確認が済んだ事実には混ぜなかった。
-@text show id=TX16_0033 speaker=narration
+@text show id=TX16_003_0003 speaker=narration
 撮影時刻については、カメラが二分遅れている画像を最初に示した。警察官は原本の画像を確保し、僕にそのまま消さず残すよう伝えた。
-@text show id=TX16_0034 speaker=narration
-紙片に触れたのは誰か。卓上へ置いた後に、どのように保全したか。栞は自分が紙を剥がしていないことと、紙片と控え帳のどの部分が対応していると見たのかを説明した。
-
-@text show id=TX16_0035 speaker=narration
-栞「鑑定したわけではありません。こちらの裂け目と、糊の境が繋がって見えたので、比較をお願いしたいと思って」
-
-@text show id=TX16_0036 speaker=narration
+@text show id=TX16_003_0004 speaker=narration
+紙片に触れたのは誰か。卓上へ置いた後に、どのように保全したか。栞は自分が紙を剥がしていないことと、紙片と綴じ際の帯のどの部分が対応して見えたのかを説明した。
+@char show id=CH_001 expression=真剣 position=center crop=bust duration_ms=800
+@text show id=TX16_003_0005 speaker=CH_001
+鑑定したわけではありません。こちらの裂け目と、糊の境が繋がって見えたので、比較をお願いしたいと思って
+@text show id=TX16_003_0006 speaker=narration
 警察官は頷き、紙を引き取った。
-@text show id=TX16_0037 speaker=narration
+@text show id=TX16_003_0007 speaker=narration
 僕たちの検討が、そこから先へ渡った。証拠を見失わないように張っていた肩が、少し下がった。
-
-@text show id=TX16_0038 speaker=narration
-律「これで、終わりですか」
-
-@text show id=TX16_0039 speaker=narration
+@text show id=TX16_003_0008 speaker=CH_000
+これで、終わりですか
+@text show id=TX16_003_0009 speaker=narration
 自分でも、何を指して訊いたのか分からなかった。
-
-@text show id=TX16_0040 speaker=narration
-警察官「また詳しく、お話を伺います。今日はまず、病院へ」
-
-@text show id=TX16_0041 speaker=narration
+@text show id=TX16_003_0010 speaker=MOB name="警察官"
+また詳しく、お話を伺います。今日はまず、病院へ
+@text show id=TX16_003_0011 speaker=narration
 僕は頷いた。栞は机の上から自分の手帳を取った。
-@text show id=TX16_0042 speaker=narration
+@text show id=TX16_003_0012 speaker=narration
 紙片を置いていた場所が空になっていた。
-
 @scene end id=SC16_003
+
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC16_004
-# シーン：栞葉荘・客室前／朝
 @location show text="栞葉荘・客室前／朝"
-@overlay hide
-@char hide id=ALL
+@char hide id=ALL duration_ms=800
 @textbox hide
-@bg show id=BG_004 image=base filter=cool effect=none transition=blackfade duration_ms=1000
-@wait start duration_ms=1000 mode=always
+@bg show id=BG_009 image=base filter=normal effect=none effect_layer=background view=full transition=blackfade duration_ms=1600
+@wait start duration_ms=1600 mode=always
 @textbox show
-@char show id=CH_001 expression=悲しみ position=center
-
-@text show id=TX16_0043 speaker=narration
-談話室の棚から鞄を取り、荷物をまとめに客室へ戻った。警察官についてきてもらった。
-@text show id=TX16_0044 speaker=narration
+@text show id=TX16_004_0001 speaker=narration
+荷物を取りに、警察官についてきてもらった。
+@text show id=TX16_004_0002 speaker=narration
 栞は部屋へ入る前に一度立ち止まり、母の標本帳が窓から離れた机の上にあることを確かめた。
-@text show id=TX16_0045 speaker=narration
+@text show id=TX16_004_0003 speaker=narration
 風呂敷は濡れていなかった。紐を解かず、そのまま鞄へ収めた。
-
-@text show id=TX16_0046 speaker=narration
-栞「受け取ったばかりだったんだね」
-
-@text show id=TX16_0047 speaker=narration
-律「昨日だよ」
-
-@text show id=TX16_0048 speaker=narration
-栞「もっと、ずっと前みたい」
-
-@text show id=TX16_0049 speaker=narration
+@char show id=CH_001 expression=悲しみ position=center crop=bust duration_ms=800
+@text show id=TX16_004_0004 speaker=CH_001
+受け取ったばかりだったんだね
+@text show id=TX16_004_0005 speaker=CH_000
+昨日だよ
+@text show id=TX16_004_0006 speaker=CH_001
+もっと、ずっと前みたい
+@text show id=TX16_004_0007 speaker=narration
 僕も、部屋の布団が使われていないことに驚いた。ここで寝るつもりで来たのだ。窓を開け、朝の山を撮り、隣の部屋をノックするつもりだった。
-@text show id=TX16_0050 speaker=narration
+@text show id=TX16_004_0008 speaker=narration
 栞は置いてあった案内の紙を持ち上げた。夕食と朝食の時刻が書いてある。
-
-@text show id=TX16_0051 speaker=narration
-栞「伯父と、朝御飯も食べると思っていた」
-
-@text show id=TX16_0052 speaker=narration
+@text show id=TX16_004_0009 speaker=CH_001
+伯父と、朝御飯も食べると思っていた
+@text show id=TX16_004_0010 speaker=narration
 それを鞄に入れようとし、やめた。机へ戻した。
-@text show id=TX16_0053 speaker=narration
+@text show id=TX16_004_0011 speaker=narration
 持ち帰るものを全て思い出にしなくてもいい。栞は一つずつ、いま手放せるものを選んでいた。
-
 @scene end id=SC16_004
+
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC16_005
-# シーン：栞葉荘・受付／朝
 @location show text="栞葉荘・受付／朝"
-@overlay hide
-@char hide id=ALL
+@char hide id=ALL duration_ms=800
 @textbox hide
-@bg show id=BG_003 image=base filter=cool effect=none transition=blackfade duration_ms=1000
-@wait start duration_ms=1000 mode=always
+@bg show id=BG_003 image=base filter=normal effect=none effect_layer=background view=full transition=blackfade duration_ms=1600
+@wait start duration_ms=1600 mode=always
 @textbox show
-@char show id=CH_006 expression=基本 position=left
-@char show id=CH_005 expression=基本 position=right
-
-@text show id=TX16_0054 speaker=narration
+@text show id=TX16_005_0001 speaker=narration
 黒田さんは事業承継の書類を鞄へしまっていた。
-
-@text show id=TX16_0055 speaker=narration
-黒田「承継の手続きは止めます。三枝さんの意思の確認だけで進められる状況ではありませんし、会計も精査が必要です」
-
-@text show id=TX16_0056 speaker=narration
-千鶴「早瀬さんのところへの支払いは」
-
-@text show id=TX16_0057 speaker=narration
-黒田「未払いとして、確認を進めます。今日中に全部戻るとは申し上げられません。ご遺族への説明も、私の担当できる範囲で続けます」
-
-@text show id=TX16_0058 speaker=narration
+@char show id=CH_006 expression=真剣 position=left crop=bust duration_ms=800
+@char show id=CH_005 expression=不安 position=right crop=bust duration_ms=800
+@text show id=TX16_005_0002 speaker=CH_006
+承継の手続きは止めます。三枝さんの意思の確認だけで進められる状況ではありませんし、会計も精査が必要です
+@text show id=TX16_005_0003 speaker=CH_005
+早瀬さんのところへの支払いは
+@text show id=TX16_005_0004 speaker=CH_006
+未払いとして、確認を進めます。今日中に全部戻るとは申し上げられません。ご遺族への説明も、私の担当できる範囲で続けます
+@text show id=TX16_005_0005 speaker=narration
 千鶴さんは顔を覆った。すぐに、眼鏡を外すためだったと分かった。
-
-@text show id=TX16_0059 speaker=narration
-千鶴「ええ。お願いします。私も、覚えていることを、もう一度」
-
-@text show id=TX16_0060 speaker=narration
-黒田「休んでからで結構です。ただ、後から思い出したことは、思い出した時期と一緒に」
-
-@text show id=TX16_0061 speaker=narration
+@text show id=TX16_005_0006 speaker=CH_005
+ええ。お願いします。私も、覚えていることを、もう一度
+@text show id=TX16_005_0007 speaker=CH_006
+休んでからで結構です。ただ、後から思い出したことは、思い出した時期と一緒に
+@text show id=TX16_005_0008 speaker=narration
 僕は二人へ頭を下げた。
-@text show id=TX16_0062 speaker=narration
+@text show id=TX16_005_0009 speaker=narration
 黒田さんが手を出しかけ、僕の包帯を見て引っ込めた。
-
-@text show id=TX16_0063 speaker=narration
-黒田「また、落ち着いてお会いしたいですね」
-
-@text show id=TX16_0064 speaker=narration
-律「はい」
-
-@text show id=TX16_0065 speaker=narration
-黒田「事件の確認以外のことで」
-
-@text show id=TX16_0066 speaker=narration
+@text show id=TX16_005_0010 speaker=CH_006
+また、落ち着いてお会いしたいですね
+@text show id=TX16_005_0011 speaker=CH_000
+はい
+@text show id=TX16_005_0012 speaker=CH_006
+事件の確認以外のことで
+@text show id=TX16_005_0013 speaker=narration
 僕はもう一度、はいと答えた。
-
-@char hide id=CH_006
-@char show id=CH_001 expression=悲しみ position=left
-@text show id=TX16_0067 speaker=narration
+@char hide id=CH_006 duration_ms=800
+@text show id=TX16_005_0014 speaker=narration
 玄関へ向かう栞を、千鶴さんが呼び止めた。封筒を持っている。
-
-@text show id=TX16_0068 speaker=narration
-千鶴「これは、あとで。今朝、三枝さんの机の中を警察の方が確認して、あなた宛てだからと」
-
-@text show id=TX16_0069 speaker=narration
+@text show id=TX16_005_0015 speaker=CH_005
+これは、あとで。今朝、三枝さんの机の中を警察の方が確認して、あなた宛てだからと
+@char show id=CH_001 expression=悲しみ position=left crop=bust duration_ms=800
+@text show id=TX16_005_0016 speaker=narration
 栞の足が止まった。
-@text show id=TX16_0070 speaker=narration
+@text show id=TX16_005_0017 speaker=narration
 薄茶の封筒だった。昨日、事務室で修蔵さんが引き出しへしまったものに似ていた。
-
-@text show id=TX16_0071 speaker=narration
-千鶴「事件の資料ではないと、確かめてくださったの。受け取れるときでいいわ」
-
-@text show id=TX16_0072 speaker=narration
+@text show id=TX16_005_0018 speaker=CH_005
+事件の資料ではないと、確かめてくださったの。受け取れるときでいいわ
+@text show id=TX16_005_0019 speaker=narration
 栞はすぐには手を伸ばさなかった。
-@text show id=TX16_0073 speaker=narration
+@text show id=TX16_005_0020 speaker=narration
 それから、母の標本帳を受け取ったときと同じように、両手を空けた。
-
-@text show id=TX16_0074 speaker=narration
-栞「ありがとう」
-
-@overlay show id=I010 position=center size=medium duration_ms=300
-@text show id=TX16_0075 speaker=narration
+@text show id=TX16_005_0021 speaker=CH_001
+ありがとう
+@overlay show id=I010 position=center size=large duration_ms=600
+@text show id=TX16_005_0022 speaker=narration
 封筒には、栞へ、と書かれていた。
-@text show id=TX16_0076 speaker=narration
+@overlay hide duration_ms=600
+@text show id=TX16_005_0023 speaker=narration
 栞はそれを裏返した。封はしてあった。切手は貼られていなかった。
-
-@overlay hide
 @scene end id=SC16_005
 @chapter end id=CH16
 

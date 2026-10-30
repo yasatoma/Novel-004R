@@ -3,24 +3,25 @@
     "BG_001": "BG_001.webp",
     "BG_002": "BG_002.webp",
     "BG_003": "BG_003.webp",
-    "BG_004": {
-      "base": "BG_004.webp",
-      "broken_skylight": "BG_004_broken_skylight.webp"
+    "BG_004": "BG_004.webp",
+    "BG_005": {
+      "base": "BG_005.webp",
+      "broken_skylight": "BG_005_broken_skylight.webp"
     },
-    "BG_005": "BG_005.webp",
-    "BG_006": {
-      "base": "BG_006.webp",
-      "open_rail": "BG_006_open_rail.webp"
-    },
+    "BG_006": "BG_006.webp",
     "BG_007": "BG_007.webp",
     "BG_008": "BG_008.webp",
     "BG_009": "BG_009.webp",
-    "BG_010": {
-      "base": "BG_010.webp",
-      "aftermath": "BG_010_aftermath.webp"
+    "BG_010": "BG_010.webp",
+    "BG_011": {
+      "base": "BG_011.webp",
+      "table_oblique": "BG_011_table_oblique.webp",
+      "window_oblique": "BG_011_window_oblique.webp"
     },
-    "BG_011": "BG_011.webp",
-    "BG_012": "BG_012.webp",
+    "BG_012": {
+      "base": "BG_012.webp",
+      "crime": "BG_012_crime.webp"
+    },
     "BG_013": "BG_013.webp",
     "BG_014": "BG_014.webp",
     "BG_015": "BG_015.webp",
@@ -31,67 +32,79 @@
     "BG_020": "BG_020.webp",
     "BG_021": "BG_021.webp",
     "BG_022": "BG_022.webp",
-    "BG_023": "BG_023.webp"
+    "BG_023": "BG_023.webp",
+    "BG_024": "BG_024.webp"
   },
   "characters": {
+    "CH_000": {
+      "name": "律",
+      "color": "#7DA3CA",
+      "expressions": {}
+    },
     "CH_001": {
       "name": "栞",
-      "color": "#D9949E",
+      "color": "#D1808E",
       "expressions": {
-        "不安": "CH_001_不安.webp",
         "基本": "CH_001_基本.webp",
-        "基本_室内": "CH_001_基本_室内.webp",
         "微笑み": "CH_001_微笑み.webp",
-        "微笑み_室内": "CH_001_微笑み_室内.webp",
-        "恐怖": "CH_001_恐怖.webp",
+        "照れ": "CH_001_照れ.webp",
+        "真剣": "CH_001_真剣.webp",
         "悲しみ": "CH_001_悲しみ.webp",
         "涙": "CH_001_涙.webp",
-        "照れ": "CH_001_照れ.webp",
-        "照れ_室内": "CH_001_照れ_室内.webp",
-        "真剣": "CH_001_真剣.webp",
-        "驚き": "CH_001_驚き.webp"
+        "恐怖": "CH_001_恐怖.webp",
+        "決意": "CH_001_決意.webp",
+        "室内基本": "CH_001_室内基本.webp",
+        "室内微笑み": "CH_001_室内微笑み.webp",
+        "髪飾りなし照れ": "CH_001_髪飾りなし照れ.webp"
       }
     },
     "CH_002": {
-      "name": "桐生",
-      "color": "#D88696",
+      "name": "三枝",
+      "color": "#8BA5C3",
       "expressions": {
-        "不安": "CH_002_不安.webp",
         "基本": "CH_002_基本.webp",
-        "悲しみ": "CH_002_悲しみ.webp"
+        "微笑み": "CH_002_微笑み.webp",
+        "険しい": "CH_002_険しい.webp"
       }
     },
     "CH_003": {
-      "name": "早瀬",
-      "color": "#85A8D2",
+      "name": "桐生",
+      "color": "#C28C9D",
       "expressions": {
         "基本": "CH_003_基本.webp",
         "微笑み": "CH_003_微笑み.webp",
-        "怒り": "CH_003_怒り.webp",
-        "悲しみ": "CH_003_悲しみ.webp"
+        "緊張": "CH_003_緊張.webp",
+        "動揺": "CH_003_動揺.webp",
+        "沈痛": "CH_003_沈痛.webp"
       }
     },
     "CH_004": {
-      "name": "三枝",
-      "color": "#85A8D2",
+      "name": "早瀬",
+      "color": "#6E9FBC",
       "expressions": {
-        "基本": "CH_004_基本.webp"
+        "基本": "CH_004_基本.webp",
+        "怒り": "CH_004_怒り.webp",
+        "悲しみ": "CH_004_悲しみ.webp"
       }
     },
     "CH_005": {
       "name": "水野",
-      "color": "#D88696",
+      "color": "#CB7E8A",
       "expressions": {
         "基本": "CH_005_基本.webp",
-        "悲しみ": "CH_005_悲しみ.webp"
+        "微笑み": "CH_005_微笑み.webp",
+        "不安": "CH_005_不安.webp",
+        "涙": "CH_005_涙.webp",
+        "決意": "CH_005_決意.webp"
       }
     },
     "CH_006": {
       "name": "黒田",
-      "color": "#85A8D2",
+      "color": "#7D9DBE",
       "expressions": {
-        "不安": "CH_006_不安.webp",
-        "基本": "CH_006_基本.webp"
+        "基本": "CH_006_基本.webp",
+        "真剣": "CH_006_真剣.webp",
+        "動揺": "CH_006_動揺.webp"
       }
     }
   }

@@ -123,6 +123,9 @@ def replace_local_repository(factory_root: Path, target: Path, repo: str) -> Non
         remove_local_target(target)
     print(f"[init_work] clone: {repo} -> {target}")
     run(["gh", "repo", "clone", repo, str(target)], cwd=factory_root)
+    # Preserve repository metadata/history, but discard the previous generated work tree.
+    print(f"[init_work] clear cloned work tree: {target}")
+    run(["git", "rm", "-r", "."], cwd=target)
 
 
 def prepare_repository(factory_root: Path, work_id: str, repo: str) -> tuple[Path, str, bool]:

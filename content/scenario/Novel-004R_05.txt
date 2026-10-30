@@ -1,347 +1,254 @@
-# 第五章　袖の赤
-@chapter start id=CH05 title="袖の赤"
+@chapter start id=CH05 title="第五章　袖の赤"
 
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC05_001
-# シーン：栞葉荘・談話室／夜
 @location show text="栞葉荘・談話室／夜"
-@overlay hide
-@char hide id=ALL
-@bgm play file=B004.dat volume=0.55 fade_ms=4000 continue_if_same=true
-@ambient play file=A002.dat volume=0.38 fade_ms=1000 continue_if_same=true
-@textbox hide
-@bg show id=BG_009 image=base filter=dim effect=none transition=blackfade duration_ms=4000
-@chapter_title show chapter="第五章" title="袖の赤" duration_ms=700 hold_ms=2600
-@wait start duration_ms=4000 mode=always
-@textbox show
-@char show id=CH_002 expression=基本 position=left
-@char show id=CH_003 expression=基本 position=right
-
-@text show id=TX05_0001 speaker=narration
+@bgm play file=B007.dat volume=0.5 fade_ms=1200 continue_if_same=true
+@bg show id=BG_011 image=table_oblique filter=dim effect=none effect_layer=background view=full transition=dissolve duration_ms=800
+@char hide id=ALL duration_ms=800
+@chapter_title show chapter="第五章" title="袖の赤"
+@text show id=TX05_001_0001 speaker=narration
 黒田さんが白い紙を置き、停電した時刻を書いた。
-@text show id=TX05_0002 speaker=narration
+@text show id=TX05_001_0002 speaker=narration
 十八時三十八分。その数字の下に、修蔵さんが見つかった十九時十分を記す。間に三十二分の空白ができた。
-
-@text show id=TX05_0003 speaker=narration
-黒田「見たことだけを、先に並べましょう。何をしたかと、誰かに確認してもらえるかは、別の欄にします」
-
-@text show id=TX05_0004 speaker=narration
-早瀬「俺は天窓だ。脚立を取りに倉庫へ行った。その後は廊下。ずっと誰かが見てたわけじゃない」
-
-@text show id=TX05_0005 speaker=narration
-千鶴「私は厨房。火を止めて、お湯を沸かし直して。それからお盆を」
-
-@text show id=TX05_0006 speaker=narration
-奈緒「配電室です。手動復帰をして、こちらへ戻りました」
-
-@text show id=TX05_0007 speaker=narration
+@char show id=CH_006 expression=真剣 position=right crop=bust duration_ms=800
+@char show id=CH_004 expression=基本 position=left crop=bust duration_ms=800
+@text show id=TX05_001_0003 speaker=CH_006
+見たことだけを、先に並べましょう。何をしたかと、誰かに確認してもらえるかは、別の欄にします
+@text show id=TX05_001_0004 speaker=CH_004
+俺は天窓だ。脚立を取りに倉庫へ行った。その後は廊下。ずっと誰かが見てたわけじゃない
+@text show id=TX05_001_0005 speaker=CH_005
+私は厨房。火を止めて、お湯を沸かし直して。それからお盆を
+@text show id=TX05_001_0006 speaker=CH_003
+配電室です。手動復帰をして、こちらへ戻りました
+@text show id=TX05_001_0007 speaker=narration
 僕と栞と黒田さんは、談話室で互いを見ていた。ただ、入口を常に監視していたわけではない。
-@text show id=TX05_0008 speaker=narration
+@text show id=TX05_001_0008 speaker=narration
 それを書き添えると、早瀬さんが低く息を吐いた。
-
-@text show id=TX05_0009 speaker=narration
-早瀬「隙だらけだな」
-
-@text show id=TX05_0010 speaker=narration
-律「そのときは、人が襲われるとは思っていませんでしたから」
-
-@text show id=TX05_0011 speaker=narration
-早瀬「いまも、思いたくはねえよ」
-
-@text show id=TX05_0012 speaker=narration
+@text show id=TX05_001_0009 speaker=CH_004
+隙だらけだな
+@text show id=TX05_001_0010 speaker=CH_000
+そのときは、人が襲われるとは思っていませんでしたから
+@text show id=TX05_001_0011 speaker=CH_004
+いまも、思いたくはねえよ
+@char hide id=CH_006 duration_ms=800
+@char show id=CH_003 expression=基本 position=right crop=bust duration_ms=800
+@text show id=TX05_001_0012 speaker=narration
 奈緒が顔を上げた。
-
-@text show id=TX05_0013 speaker=narration
-奈緒「失礼ですが、早瀬さん。三枝さんとは、最後にいつお話を？」
-
-@text show id=TX05_0014 speaker=narration
-早瀬「停電の前。ここで言い合ったろ」
-
-@text show id=TX05_0015 speaker=narration
-奈緒「その後は？」
-
-@text show id=TX05_0016 speaker=narration
-早瀬「会ってない」
-
-@text show id=TX05_0017 speaker=narration
+@text show id=TX05_001_0013 speaker=CH_003
+失礼ですが、早瀬さん。三枝さんとは、最後にいつお話を？
+@text show id=TX05_001_0014 speaker=CH_004
+停電の前。ここで言い合ったろ
+@text show id=TX05_001_0015 speaker=CH_003
+その後は？
+@text show id=TX05_001_0016 speaker=CH_004
+会ってない
+@text show id=TX05_001_0017 speaker=narration
 千鶴さんの目が、また袖へ動いた。
-
-@char change id=CH_003 expression=怒り
-@text show id=TX05_0018 speaker=narration
-早瀬「これか」
-
-@text show id=TX05_0019 speaker=narration
+@text show id=TX05_001_0018 speaker=CH_004
+これか
+@char change id=CH_004 expression=怒り crop=bust duration_ms=800
+@text show id=TX05_001_0019 speaker=narration
 彼は袖口を突き出した。千鶴さんが椅子の背にぶつかった。
-
-@text show id=TX05_0020 speaker=narration
-早瀬「昼に切ったって言っただろ。顔に書いてあるぞ。俺がやったんじゃねえかって」
-
-@text show id=TX05_0021 speaker=narration
-黒田「袖の血と、先ほどの口論だけで疑うべきではありません」
-
-@text show id=TX05_0022 speaker=narration
-早瀬「じゃあ、何を訊いてる」
-
-@text show id=TX05_0023 speaker=narration
-奈緒「事実を確認したいだけです。事務室には、共用のレンチも落ちていましたので」
-
-@text show id=TX05_0024 speaker=narration
+@text show id=TX05_001_0020 speaker=CH_004
+昼に切ったって言っただろ。顔に書いてあるぞ。俺がやったんじゃねえかって
+@text show id=TX05_001_0021 speaker=CH_006
+袖の血と、先ほどの口論だけで疑うべきではありません
+@text show id=TX05_001_0022 speaker=CH_004
+じゃあ、何を訊いてる
+@text show id=TX05_001_0023 speaker=CH_003
+事実を確認したいだけです。事務室には、共用のレンチも落ちていましたので
+@text show id=TX05_001_0024 speaker=narration
 それは僕も見ていた。机の脚に近いところに、金属の柄があった。血のついた真鍮の本立ても倒れていた。
-@text show id=TX05_0025 speaker=narration
+@text show id=TX05_001_0025 speaker=narration
 早瀬さんは立ち上がった。
-
-@text show id=TX05_0026 speaker=narration
-早瀬「返した」
-
-@text show id=TX05_0027 speaker=narration
-奈緒「私が受付に戻ったときには、見当たりませんでした」
-
-@text show id=TX05_0028 speaker=narration
-早瀬「千鶴さんに渡した。言えよ」
-
-@text show id=TX05_0029 speaker=narration
-千鶴「ええ。置いていったわ。布の上に」
-
-@text show id=TX05_0030 speaker=narration
-早瀬「聞いたか」
-
-@text show id=TX05_0031 speaker=narration
+@text show id=TX05_001_0026 speaker=CH_004
+返した
+@text show id=TX05_001_0027 speaker=CH_003
+私が受付に戻ったときには、見当たりませんでした
+@text show id=TX05_001_0028 speaker=CH_004
+千鶴さんに渡した。言えよ
+@text show id=TX05_001_0029 speaker=CH_005
+ええ。置いていったわ。布の上に
+@text show id=TX05_001_0030 speaker=CH_004
+聞いたか
+@text show id=TX05_001_0031 speaker=narration
 声の大きさに、栞の指が机の縁へ掛かった。
-@text show id=TX05_0032 speaker=narration
+@text show id=TX05_001_0032 speaker=narration
 僕は早瀬さんへ、座ってもらえますか、と言った。自分の声まで固くなっていると気づいた。
-
-@text show id=TX05_0033 speaker=narration
-早瀬「俺だけが怖いか」
-
-@text show id=TX05_0034 speaker=narration
-律「そうじゃ」
-
-@text show id=TX05_0035 speaker=narration
-早瀬「こいつの隣に座らせておけない。そう思ったろ」
-
-@text show id=TX05_0036 speaker=narration
+@text show id=TX05_001_0033 speaker=CH_004
+俺だけが怖いか
+@text show id=TX05_001_0034 speaker=CH_000
+そうじゃ
+@text show id=TX05_001_0035 speaker=CH_004
+こいつの隣に座らせておけない。そう思ったろ
+@text show id=TX05_001_0036 speaker=narration
 僕はすぐには答えられなかった。
-@char hide id=CH_002
-@char show id=CH_001 expression=真剣 position=left
-@text show id=TX05_0037 speaker=narration
+@char hide id=CH_003 duration_ms=800
+@char show id=CH_001 expression=決意 position=right crop=bust duration_ms=800
+@text show id=TX05_001_0037 speaker=narration
 栞が椅子を少し前へ出した。
-
-@text show id=TX05_0038 speaker=narration
-栞「大きな声が怖かったんです。早瀬さんが犯人だと決めたわけではありません」
-
-@text show id=TX05_0039 speaker=narration
+@text show id=TX05_001_0038 speaker=CH_001
+大きな声が怖かったんです。早瀬さんが犯人だと決めたわけではありません
+@char change id=CH_004 expression=基本 crop=bust duration_ms=800
+@text show id=TX05_001_0039 speaker=narration
 早瀬さんは栞を見た。肩を落とし、椅子へ戻った。
-
-@text show id=TX05_0040 speaker=narration
-早瀬「……悪かった」
-
-@overlay show id=I002 position=center size=medium duration_ms=300
-@text show id=TX05_0041 speaker=narration
+@text show id=TX05_001_0040 speaker=CH_004
+……悪かった
+@text show id=TX05_001_0041 speaker=narration
 僕はカメラを取り出した。事件の写真を見せるのだと思ったのか、栞の顔が強張った。
-
-@text show id=TX05_0042 speaker=narration
-律「廊下の写真です。さっきの」
-
-@text show id=TX05_0043 speaker=narration
+@text show id=TX05_001_0042 speaker=CH_000
+廊下の写真です。さっきの
+@bgm play file=B010.dat volume=0.5 fade_ms=1200 continue_if_same=true
+@overlay show id=I003 position=center size=large duration_ms=600
+@text show id=TX05_001_0043 speaker=narration
 画面を拡大した。早瀬さんの手から離れたレンチ。受付の布。千鶴さんの指。
-@text show id=TX05_0044 speaker=narration
+@text show id=TX05_001_0044 speaker=narration
 撮影時刻は十八時二十八分。携帯と比較した画像を出し、二分を足す。
-
-@text show id=TX05_0045 speaker=narration
-律「実際には、十八時三十分です。停電の八分前」
-
-@text show id=TX05_0046 speaker=narration
-黒田「返したことは確認できますね」
-
-@text show id=TX05_0047 speaker=narration
-律「袖も」
-
-@overlay hide duration_ms=250
-@overlay show id=I003 position=center size=medium duration_ms=300
-@text show id=TX05_0048 speaker=narration
+@text show id=TX05_001_0045 speaker=CH_000
+実際には、十八時三十分です。停電の八分前
+@text show id=TX05_001_0046 speaker=CH_006
+返したことは確認できますね
+@text show id=TX05_001_0047 speaker=CH_000
+袖も
+@overlay show id=I004 position=center size=large duration_ms=600
+@text show id=TX05_001_0048 speaker=narration
 その前、到着時の廊下の写真にも、早瀬さんは写っていた。袖の染みは同じ場所にある。
-@text show id=TX05_0049 speaker=narration
+@text show id=TX05_001_0049 speaker=narration
 さらに栞が、到着直後に怪我の話を聞いたと答えた。
-
-@text show id=TX05_0050 speaker=narration
-黒田「これで犯行全体が不可能になるわけではありません。ただ、血のついた袖を根拠にはできません。工具も早瀬さん専用ではない」
-
-@overlay hide duration_ms=250
-@char hide id=CH_001
-@char show id=CH_002 expression=基本 position=left
-@text show id=TX05_0051 speaker=narration
-奈緒「共用工具ですから、他の方が取った可能性もありますね」
-
-@text show id=TX05_0052 speaker=narration
-早瀬「さっきとは話が違うじゃねえか」
-
-@text show id=TX05_0053 speaker=narration
+@overlay hide duration_ms=600
+@char hide id=CH_001 duration_ms=800
+@char show id=CH_006 expression=真剣 position=right crop=bust duration_ms=800
+@text show id=TX05_001_0050 speaker=CH_006
+これで犯行全体が不可能になるわけではありません。ただ、血のついた袖を根拠にはできません。工具も早瀬さん専用ではない
+@text show id=TX05_001_0051 speaker=CH_003
+共用工具ですから、他の方が取った可能性もありますね
+@text show id=TX05_001_0052 speaker=CH_004
+さっきとは話が違うじゃねえか
+@text show id=TX05_001_0053 speaker=narration
 奈緒は答えず、湯呑の位置を直した。
-@text show id=TX05_0054 speaker=narration
+@text show id=TX05_001_0054 speaker=narration
 僕は写真を戻した。返却の事実を思い出す前に、袖を見て疑った自分がいた。
-
-@text show id=TX05_0055 speaker=narration
-律「すみませんでした。僕も、最初にそれを考えました」
-
-@text show id=TX05_0056 speaker=narration
-早瀬「謝るなら、もう一つ」
-
-@text show id=TX05_0057 speaker=narration
-律「はい」
-
-@char change id=CH_003 expression=基本
-@text show id=TX05_0058 speaker=narration
-早瀬「金の話をしたら、殺したくなるほど困ってた、と書くな。困ってる。腹も立ってる。だが、殺したら振り込まれるわけじゃない」
-
-@text show id=TX05_0059 speaker=narration
+@text show id=TX05_001_0055 speaker=CH_000
+すみませんでした。僕も、最初にそれを考えました
+@text show id=TX05_001_0056 speaker=CH_004
+謝るなら、もう一つ
+@text show id=TX05_001_0057 speaker=CH_000
+はい
+@char change id=CH_004 expression=悲しみ crop=bust duration_ms=800
+@text show id=TX05_001_0058 speaker=CH_004
+金の話をしたら、殺したくなるほど困ってた、と書くな。困ってる。腹も立ってる。だが、殺したら振り込まれるわけじゃない
+@text show id=TX05_001_0059 speaker=narration
 僕は手帳を閉じず、その言葉を書いた。
-
 @scene end id=SC05_001
+
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC05_002
-# シーン：栞葉荘・談話室／夜
 @location show text="栞葉荘・談話室／夜"
-@bg show id=BG_021 image=base filter=dim effect=none transition=dissolve duration_ms=700
-@overlay hide
-@bgm play file=B005.dat volume=0.55 fade_ms=1000 continue_if_same=true
-@char hide id=CH_002
-@char show id=CH_001 expression=基本 position=left
-
-@text show id=TX05_0060 speaker=narration
+@bg show id=BG_011 image=window_oblique filter=dim effect=none effect_layer=background view=full transition=dissolve duration_ms=800
+@bgm play file=B011.dat volume=0.5 fade_ms=1200 continue_if_same=true
+@char hide id=CH_006 duration_ms=800
+@char show id=CH_001 expression=悲しみ position=right crop=bust duration_ms=800
+@text show id=TX05_002_0001 speaker=narration
 栞は写真を見せてもらいたいと言った。
-@text show id=TX05_0061 speaker=narration
+@text show id=TX05_002_0002 speaker=narration
 僕がカメラを差し出すと、早瀬さんの袖の画像を拡大した。長く見た後、彼へ向けた。
-
-@text show id=TX05_0062 speaker=narration
-栞「これを、最初から知っていたのに、言えませんでした」
-
-@text show id=TX05_0063 speaker=narration
-早瀬「俺が喚いてたからな」
-
-@text show id=TX05_0064 speaker=narration
-栞「でも、私も聞いていたんです。怪我の話」
-
-@text show id=TX05_0065 speaker=narration
+@text show id=TX05_002_0003 speaker=CH_001
+これを、最初から知っていたのに、言えませんでした
+@text show id=TX05_002_0004 speaker=CH_004
+俺が喚いてたからな
+@text show id=TX05_002_0005 speaker=CH_001
+でも、私も聞いていたんです。怪我の話
+@text show id=TX05_002_0006 speaker=narration
 早瀬さんは写真に目を落とした。
-
-@text show id=TX05_0066 speaker=narration
-早瀬「自分の伯父さんが、あんなふうになって。聞いたことを、すぐ思い出せるかよ」
-
-@text show id=TX05_0067 speaker=narration
+@text show id=TX05_002_0007 speaker=CH_004
+自分の伯父さんが、あんなふうになって。聞いたことを、すぐ思い出せるかよ
+@char change id=CH_001 expression=涙 crop=bust duration_ms=800
+@text show id=TX05_002_0008 speaker=narration
 栞の目が赤くなった。
-@text show id=TX05_0068 speaker=narration
+@text show id=TX05_002_0009 speaker=narration
 早瀬さんは困ったように座り直し、カメラを僕へ返した。
-
-@text show id=TX05_0069 speaker=narration
-早瀬「俺も、人のことは言えん。最初は、金を払わず死にやがってと思った」
-
-@text show id=TX05_0070 speaker=narration
+@text show id=TX05_002_0010 speaker=CH_004
+俺も、人のことは言えん。最初は、金を払わず死にやがってと思った
+@text show id=TX05_002_0011 speaker=narration
 千鶴さんが顔を上げた。
-
-@text show id=TX05_0071 speaker=narration
-早瀬「思っただけだ。死ねと思ったわけじゃない。……その差も、誰かに見せる方法はねえんだな」
-
-@char hide id=CH_001
-@char show id=CH_006 expression=基本 position=left
-@text show id=TX05_0072 speaker=narration
-黒田「言葉にしていただければ、聞くことはできます」
-
-@text show id=TX05_0073 speaker=narration
-早瀬「先生は、うまいこと言う」
-
-@text show id=TX05_0074 speaker=narration
-黒田「うまいことを言っているように聞こえますか」
-
-@text show id=TX05_0075 speaker=narration
+@text show id=TX05_002_0012 speaker=CH_004
+思っただけだ。死ねと思ったわけじゃない。……その差も、誰かに見せる方法はねえんだな
+@char hide id=CH_001 duration_ms=800
+@char show id=CH_006 expression=基本 position=right crop=bust duration_ms=800
+@text show id=TX05_002_0013 speaker=CH_006
+言葉にしていただければ、聞くことはできます
+@text show id=TX05_002_0014 speaker=CH_004
+先生は、うまいこと言う
+@text show id=TX05_002_0015 speaker=CH_006
+うまいことを言っているように聞こえますか
+@text show id=TX05_002_0016 speaker=narration
 黒田さんは眼鏡を外した。鼻の付け根を押さえ、裸の目で早瀬さんを見た。
-
-@text show id=TX05_0076 speaker=narration
-黒田「私は、自分が見たと思ったものが、どこまで確かなのか、自信がありません。書いた後から思い出すこともある。ここへ来た理由だって、仕事の中身を知っていれば動機に見えるかもしれない」
-
-@text show id=TX05_0077 speaker=narration
-早瀬「承継の話で揉めてたのか」
-
-@text show id=TX05_0078 speaker=narration
-黒田「仕事として、確認すべきことがありました。三枝さんに、資料を出していただく必要があった。怒鳴ってはいません。でも、穏やかな声なら、相手へ何も感じていないというわけではないでしょう」
-
-@text show id=TX05_0079 speaker=narration
+@text show id=TX05_002_0017 speaker=CH_006
+私は、自分が見たと思ったものが、どこまで確かなのか、自信がありません。書いた後から思い出すこともある。ここへ来た理由だって、仕事の中身を知っていれば動機に見えるかもしれない
+@text show id=TX05_002_0018 speaker=CH_004
+承継の話で揉めてたのか
+@text show id=TX05_002_0019 speaker=CH_006
+仕事として、確認すべきことがありました。三枝さんに、資料を出していただく必要があった。怒鳴ってはいません。でも、穏やかな声なら、相手へ何も感じていないというわけではないでしょう
+@text show id=TX05_002_0020 speaker=narration
 奈緒は自分の手元を見ていた。
-@text show id=TX05_0080 speaker=narration
+@text show id=TX05_002_0021 speaker=narration
 僕も最初から、黒田さんの言い方に落ち着かされていた。だからといって、彼の一瞬一瞬を見ていたことにはならない。
-
-@text show id=TX05_0081 speaker=narration
-律「僕の記録も、皆さんに見てもらえますか。僕が思い違いをしているところがあったら、そのまま指摘してください」
-
-@text show id=TX05_0082 speaker=narration
+@text show id=TX05_002_0022 speaker=CH_000
+僕の記録も、皆さんに見てもらえますか。僕が思い違いをしているところがあったら、そのまま指摘してください
+@text show id=TX05_002_0023 speaker=narration
 手帳を卓の中央へ置いた。
-@text show id=TX05_0083 speaker=narration
-早瀬さんは少し迷ってから、工具は千鶴さんに手渡したのではなく、布の上に置いて返したのだと訂正した。
-@text show id=TX05_0084 speaker=narration
+@text show id=TX05_002_0024 speaker=narration
+早瀬さんは少し迷ってから、工具は千鶴さんに手渡したのではなく、受付の布の上に置いたのだと訂正した。
+@text show id=TX05_002_0025 speaker=narration
 千鶴さんも頷いた。たったそれだけの差でも、受け取った人がずっと持っていたように書けば、その後の工具の所在が変わってしまう。
-@text show id=TX05_0085 speaker=narration
+@text show id=TX05_002_0026 speaker=narration
 僕は直した。訂正前の字も読めるよう、一重の線で消した。
-
-@char hide id=CH_006
-@char show id=CH_001 expression=真剣 position=left
-@bg show id=BG_009 image=base filter=dim effect=none transition=dissolve duration_ms=700
-@text show id=TX05_0086 speaker=narration
-栞「急いで、一人の名前にしなくていいと思います。いま、分からないところは、分からないままで」
-
-@text show id=TX05_0087 speaker=narration
-早瀬「分からないまま、一緒に夜を越すんだろ」
-
-@text show id=TX05_0088 speaker=narration
+@char hide id=CH_006 duration_ms=800
+@char show id=CH_001 expression=決意 position=right crop=bust duration_ms=800
+@text show id=TX05_002_0027 speaker=CH_001
+急いで、一人の名前にしなくていいと思います。いま、分からないところは、分からないままで
+@text show id=TX05_002_0028 speaker=CH_004
+分からないまま、一緒に夜を越すんだろ
+@text show id=TX05_002_0029 speaker=narration
 栞は頷いた。答えにくいことでも、否定しなかった。
-
-@text show id=TX05_0089 speaker=narration
-早瀬「……それが、いちばん嫌だな」
-
-@text show id=TX05_0090 speaker=narration
+@text show id=TX05_002_0030 speaker=CH_004
+……それが、いちばん嫌だな
+@text show id=TX05_002_0031 speaker=narration
 言ってから、彼はカメラの方を見た。
-
-@text show id=TX05_0091 speaker=narration
-早瀬「だが、写真は消すなよ。俺の顔がなくてもな」
-
-@text show id=TX05_0092 speaker=narration
-律「はい」
-
-@text show id=TX05_0093 speaker=narration
+@text show id=TX05_002_0032 speaker=CH_004
+だが、写真は消すなよ。俺の顔がなくてもな
+@text show id=TX05_002_0033 speaker=CH_000
+はい
+@char hide id=CH_001 duration_ms=800
+@text show id=TX05_002_0034 speaker=narration
 その後、千鶴さんがおにぎりを持ってきた。厨房へは黒田さんが同行し、入口で待った。
-@text show id=TX05_0094 speaker=narration
+@text show id=TX05_002_0035 speaker=narration
 早瀬さんは一つ受け取って、しばらく持っていた。
-
-@text show id=TX05_0095 speaker=narration
-早瀬「家の奴には、帰れないとだけ送った。返事はまだ見てない」
-
-@text show id=TX05_0096 speaker=narration
-律「奥さんですか」
-
-@text show id=TX05_0097 speaker=narration
-早瀬「ああ。金の話はしてない。言ったら、また自分の貯金を出す」
-
-@text show id=TX05_0098 speaker=narration
+@text show id=TX05_002_0036 speaker=CH_004
+家の奴には、帰れないとだけ送った。返事はまだ見てない
+@text show id=TX05_002_0037 speaker=CH_000
+奥さんですか
+@text show id=TX05_002_0038 speaker=CH_004
+ああ。金の話はしてない。言ったら、また自分の貯金を出す
+@text show id=TX05_002_0039 speaker=narration
 口に運びかけたおにぎりが、戻った。
-
-@text show id=TX05_0099 speaker=narration
-早瀬「三枝さんには昔、仕事を回してもらった。独立したばっかりで、見積もりもろくに出せなくてな」
-
-@text show id=TX05_0100 speaker=narration
-千鶴「ええ。知っているわ」
-
-@text show id=TX05_0101 speaker=narration
-早瀬「だから待った。うちの若いのに、社長が甘いって怒られながら。……今日だって、払わないとは言ってなかった」
-
-@text show id=TX05_0102 speaker=narration
+@char change id=CH_004 expression=悲しみ crop=bust duration_ms=800
+@text show id=TX05_002_0040 speaker=CH_004
+三枝さんには昔、仕事を回してもらった。独立したばっかりで、見積もりもろくに出せなくてな
+@text show id=TX05_002_0041 speaker=CH_005
+ええ。知っているわ
+@text show id=TX05_002_0042 speaker=CH_004
+だから待った。うちの若いのに、社長が甘いって怒られながら。……今日だって、払わないとは言ってなかった
+@text show id=TX05_002_0043 speaker=narration
 早瀬さんはおにぎりを一口食べた。噛むのに時間がかかった。
-
-@char change id=CH_003 expression=悲しみ
-@text show id=TX05_0103 speaker=narration
-早瀬「仲直りも、できねえ」
-
-@text show id=TX05_0104 speaker=narration
+@text show id=TX05_002_0044 speaker=CH_004
+仲直りも、できねえ
+@char show id=CH_001 expression=悲しみ position=right crop=bust duration_ms=800
+@text show id=TX05_002_0045 speaker=narration
 栞の目が伏せられた。
-@text show id=TX05_0105 speaker=narration
+@text show id=TX05_002_0046 speaker=narration
 僕はその二人に、何も言えなかった。帳簿という言葉の向こうに、やっと二人の長い時間が見えた。
-
-@overlay hide
 @scene end id=SC05_002
 @chapter end id=CH05
 

@@ -91,6 +91,9 @@ export function validateScenario(commands, resources = null) {
     if (command.type === "option" && !choice) fail(command, "@option add はchoice内でのみ使用できます");
 
     validateValues(command);
+    if (command.type === "text" && command.action === "show" && command.args.speaker === "MOB" && !String(command.args.name ?? "").trim()) {
+      fail(command, "speaker=MOB では name が必須です");
+    }
     if (resources) validateReference(command, resources);
     if (command.type === "jump") targets.push([command.args.target, command]);
     if (command.type === "if") targets.push([command.args.goto, command]);
@@ -118,7 +121,7 @@ function validateReference(command, resources) {
     validateBackgroundReference(command, assets, command.args.left_id, command.args.left_image ?? "base");
     validateBackgroundReference(command, assets, command.args.right_id, command.args.right_image ?? "base");
   }
-  if (command.type === "text" && command.action === "show" && command.args.speaker !== "narration") {
+  if (command.type === "text" && command.action === "show" && !["narration", "MOB"].includes(command.args.speaker)) {
     const character = assets.characters?.[command.args.speaker];
     if (!character) fail(command, `未登録話者: ${command.args.speaker}`);
   }

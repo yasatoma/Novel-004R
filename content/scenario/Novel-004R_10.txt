@@ -1,279 +1,216 @@
-# 第十章　書いた人、切った紙
-@chapter start id=CH10 title="書いた人、切った紙"
+@chapter start id=CH10 title="第十章　書いた人、切った紙"
 
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC10_001
-# シーン：栞葉荘・談話室／夜
 @location show text="栞葉荘・談話室／夜"
-@overlay hide
-@char hide id=ALL
-@bgm play file=B006.dat volume=0.55 fade_ms=4000 continue_if_same=true
-@ambient play file=A002.dat volume=0.38 fade_ms=1000 continue_if_same=true
-@textbox hide
-@bg show id=BG_021 image=base filter=dim effect=none transition=blackfade duration_ms=4000
-@chapter_title show chapter="第十章" title="書いた人、切った紙" duration_ms=700 hold_ms=2600
-@wait start duration_ms=4000 mode=always
-@textbox show
-@char show id=CH_001 expression=基本 position=left
-@char show id=CH_006 expression=基本 position=right
-
-@text show id=TX10_0001 speaker=narration
+@bgm play file=B010.dat volume=0.5 fade_ms=1200 continue_if_same=true
+@bg show id=BG_011 image=base filter=dim effect=none effect_layer=background view=full transition=dissolve duration_ms=800
+@char hide id=ALL duration_ms=800
+@chapter_title show chapter="第十章" title="書いた人、切った紙"
+@text show id=TX10_001_0001 speaker=narration
 僕は控え帳の字と、呼び出し紙の字を写真で並べた。
-@text show id=TX10_0002 speaker=narration
+@text show id=TX10_001_0002 speaker=narration
 似ているところを探し始めると、どれも似ている気がした。「原」の最初の払い。「黒田」の「田」の閉じ方。違うと思えば、違うところもある。
-
-@text show id=TX10_0003 speaker=narration
-律「普段より大きく書いた字なら、変わりますよね」
-
-@text show id=TX10_0004 speaker=narration
-黒田「意識して変えることもできるでしょう。私たちは鑑定人ではありません」
-
-@text show id=TX10_0005 speaker=narration
-千鶴「この言い方、三枝さんみたい。でも、三枝さんが……」
-
-@text show id=TX10_0006 speaker=narration
+@char show id=CH_006 expression=真剣 position=left crop=bust duration_ms=800
+@text show id=TX10_001_0003 speaker=CH_000
+普段より大きく書いた字なら、変わりますよね
+@text show id=TX10_001_0004 speaker=CH_006
+意識して変えることもできるでしょう。私たちは鑑定人ではありません
+@text show id=TX10_001_0005 speaker=CH_005
+この言い方、三枝さんみたい。でも、三枝さんが……
+@text show id=TX10_001_0006 speaker=narration
 亡くなった時刻より後に出た紙だ。修蔵さんが書いたのだとしても、誰かが今夜に合わせて使ったことになる。
-@text show id=TX10_0007 speaker=narration
+@text show id=TX10_001_0007 speaker=narration
 文面に名前が出ている黒田さんにも、これを書ける。支払原本という言葉を知っていたのは、この場の全員だった。
-
-@text show id=TX10_0008 speaker=narration
-奈緒「誰にでも書ける文章です。早瀬さんがご自身で書いた控えかもしれません」
-
-@text show id=TX10_0009 speaker=narration
-律「その可能性も、字だけでは否定できない」
-
-@text show id=TX10_0010 speaker=narration
+@text show id=TX10_001_0008 speaker=CH_003
+誰にでも書ける文章です。早瀬さんがご自身で書いた控えかもしれません
+@text show id=TX10_001_0009 speaker=CH_000
+その可能性も、字だけでは否定できない
+@text show id=TX10_001_0010 speaker=narration
 答えながら、机の端にあった紙の折り目を見た。
-@text show id=TX10_0011 speaker=narration
+@char show id=CH_001 expression=真剣 position=right crop=bust duration_ms=800
+@text show id=TX10_001_0011 speaker=narration
 栞は文章ではなく、紙の裏へ光を当てていた。
-
-@char hide id=CH_006
-@char show id=CH_001 expression=真剣 position=center
-@overlay show id=I007 position=center size=medium duration_ms=300
-@text show id=TX10_0012 speaker=narration
-栞「成瀬さん。受付の写真を見せて」
-
-@text show id=TX10_0013 speaker=narration
+@text show id=TX10_001_0012 speaker=CH_001
+成瀬さん。受付の写真を見せて
+@text show id=TX10_001_0013 speaker=narration
 久しぶりに名字で呼ばれ、僕は顔を上げた。栞の指が、写真の控え帳を指す。
-
-@text show id=TX10_0014 speaker=narration
-栞「もう少し、大きく」
-
-@text show id=TX10_0015 speaker=narration
+@text show id=TX10_001_0014 speaker=CH_001
+もう少し、大きく
+@overlay show id=I007 position=center size=large duration_ms=600
+@text show id=TX10_001_0015 speaker=narration
 受付控え帳の右上。その日に開かれていた用紙には、三角形の欠損があった。
-@text show id=TX10_0016 speaker=narration
+@text show id=TX10_001_0016 speaker=narration
 紙片にも、三角形に欠けた角がある。
-
-@text show id=TX10_0017 speaker=narration
-奈緒「角が破れた紙は、いくらでもあります」
-
-@text show id=TX10_0018 speaker=narration
-栞「はい。これだけでは、同じものとは言えません」
-
-@text show id=TX10_0019 speaker=narration
+@text show id=TX10_001_0017 speaker=CH_003
+角が破れた紙は、いくらでもあります
+@text show id=TX10_001_0018 speaker=CH_001
+はい。これだけでは、同じものとは言えません
+@text show id=TX10_001_0019 speaker=narration
 栞は写真を拡大しすぎた部分を戻した。
-
-@text show id=TX10_0020 speaker=narration
-栞「字を似せたかどうかより、どこにあった紙なのかを、先に調べられると思います」
-
-@text show id=TX10_0021 speaker=narration
-黒田「紙の出所ですか」
-
-@text show id=TX10_0022 speaker=narration
-栞「綴じ目に切り残した部分がありました。そこが残っていれば、実物で確かめられます。合わせるときに、無理に触る必要もありません」
-
-@text show id=TX10_0023 speaker=narration
+@text show id=TX10_001_0020 speaker=CH_001
+字を似せたかどうかより、どこにあった紙なのかを、先に調べられると思います
+@text show id=TX10_001_0021 speaker=CH_006
+紙の出所ですか
+@text show id=TX10_001_0022 speaker=CH_001
+綴じ目に切り残した部分がありました。そこが残っていれば、実物で確かめられます。合わせるときに、無理に触る必要もありません
+@overlay hide duration_ms=600
+@se play file=S001.dat
+@text show id=TX10_001_0023 speaker=narration
 僕は紙片の裏表を、現状のまま撮った。奈緒が持っていたこと、卓上に置いた時刻も記した。
-@overlay hide duration_ms=250
-@text show id=TX10_0024 speaker=narration
+@text show id=TX10_001_0024 speaker=narration
 黒田さんが新しい透明袋を持ってくる提案をした。千鶴さんは、受付の封筒入れに未使用のものがあると答えた。
-@text show id=TX10_0025 speaker=narration
+@text show id=TX10_001_0025 speaker=narration
 誰も一人では取りに行かなかった。
-
 @scene end id=SC10_001
+
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC10_002
-# シーン：栞葉荘・受付／夜
 @location show text="栞葉荘・受付／夜"
-@overlay hide
-@char hide id=ALL
+@char hide id=ALL duration_ms=800
 @textbox hide
-@bg show id=BG_003 image=base filter=dim effect=none transition=blackfade duration_ms=1000
-@wait start duration_ms=1000 mode=always
+@bg show id=BG_003 image=base filter=dim effect=none effect_layer=background view=full transition=blackfade duration_ms=1600
+@wait start duration_ms=1600 mode=always
 @textbox show
-@char show id=CH_001 expression=基本 position=left
-@char show id=CH_002 expression=基本 position=right
-
-@text show id=TX10_0026 speaker=narration
+@text show id=TX10_002_0001 speaker=narration
 五人で移動すると、通路がひどく狭く感じられた。奈緒を最後尾にしないよう、黒田さんが自然に歩調を落とした。
-@text show id=TX10_0027 speaker=narration
+@text show id=TX10_002_0002 speaker=narration
 控え帳は、奈緒が閉じた位置にあった。千鶴さんが台へ置いたが、栞はまだ開かなかった。
-
-@text show id=TX10_0028 speaker=narration
-栞「修蔵さんが残すようにと言ったのは、この切れ端ですか」
-
-@text show id=TX10_0029 speaker=narration
-千鶴「ええ。照合票を外したところも、破った紙も。捨てたら分からなくなるからって」
-
-@text show id=TX10_0030 speaker=narration
+@char show id=CH_001 expression=真剣 position=right crop=bust duration_ms=800
+@char show id=CH_005 expression=不安 position=left crop=bust duration_ms=800
+@text show id=TX10_002_0003 speaker=CH_001
+修蔵さんが残すようにと言ったのは、この切れ端ですか
+@text show id=TX10_002_0004 speaker=CH_005
+ええ。照合票を外したところも、破った紙も。捨てたら分からなくなるからって
+@text show id=TX10_002_0005 speaker=narration
 控え帳には、会計資料を渡す際の照合票が挟まれていた。該当の頁は大半が外され、綴じ際の細い帯だけが残っている。
-@text show id=TX10_0031 speaker=narration
+@text show id=TX10_002_0006 speaker=narration
 その上部に、糊の曇った痕があった。
-@text show id=TX10_0032 speaker=narration
+@text show id=TX10_002_0007 speaker=narration
 呼び出し紙は文章の裏に、薄い罫線と、剥がした紙帯の跡が残っていた。
-
-@text show id=TX10_0033 speaker=narration
-栞「これを、同じ向きに並べてください。重ねずに」
-
-@text show id=TX10_0034 speaker=narration
+@text show id=TX10_002_0008 speaker=CH_001
+これを、同じ向きに並べてください。重ねずに
+@text show id=TX10_002_0009 speaker=narration
 黒田さんが袋の上で紙片の向きを変えた。
-@text show id=TX10_0035 speaker=narration
+@text show id=TX10_002_0010 speaker=narration
 一度目は、縁が合わなかった。三角形の欠けだけを目印にすると、下の裂けた部分が逆へ出る。
-@text show id=TX10_0036 speaker=narration
+@text show id=TX10_002_0011 speaker=narration
 僕は、違う紙なのか、と口にしかけた。栞は首を少し傾け、控え帳ではなく、僕のカメラを見た。
-
-@text show id=TX10_0037 speaker=narration
-栞「写真の、頁の裏も見える？」
-
-@text show id=TX10_0038 speaker=narration
-律「この一枚しかない。表だけ」
-
-@text show id=TX10_0039 speaker=narration
-栞「じゃあ、いま、裏を見せてもらえますか。無理に開かず、開くところまで」
-
-@text show id=TX10_0040 speaker=narration
+@text show id=TX10_002_0012 speaker=CH_001
+写真の、頁の裏も見える？
+@text show id=TX10_002_0013 speaker=CH_000
+この一枚しかない。表だけ
+@text show id=TX10_002_0014 speaker=CH_001
+じゃあ、いま、裏を見せてもらえますか。無理に開かず、開くところまで
+@text show id=TX10_002_0015 speaker=narration
 千鶴さんが背を支え、黒田さんが残った帯をめくった。栞は触らずに、紙の端の色を追った。
-
-@text show id=TX10_0041 speaker=narration
-栞「向きが逆です。文章の側ではなく、罫線の側が表だったのだと思います」
-
-@text show id=TX10_0042 speaker=narration
-律「裏に書いたから」
-
-@text show id=TX10_0043 speaker=narration
-栞「うん。欠けた角だけを見ると、こちらから見た左右を取り違える」
-
-@overlay show id=I008 position=center size=medium duration_ms=300
-@text show id=TX10_0044 speaker=narration
+@text show id=TX10_002_0016 speaker=CH_001
+向きが逆です。文章の側ではなく、罫線の側が表だったのだと思います
+@text show id=TX10_002_0017 speaker=CH_000
+裏に書いたから
+@text show id=TX10_002_0018 speaker=CH_001
+うん。欠けた角だけを見ると、こちらから見た左右を取り違える
+@text show id=TX10_002_0019 speaker=narration
 紙片を裏返すと、糊の曇りが受付の灯りを鈍く返した。
-@text show id=TX10_0045 speaker=narration
+@text show id=TX10_002_0020 speaker=narration
 栞は新しい灯りを足さず、僕の持つ懐中電灯の位置を少し下げてもらった。何か特殊なものが浮かぶのではなく、凸凹の影が見やすくなっただけだった。
-
-@text show id=TX10_0046 speaker=narration
-栞「ここに、貼っていた紙の端がありました。紙帯がまだ残っているところと、剥がれたところ。その境を見てください」
-
-@text show id=TX10_0047 speaker=narration
-奈緒「貼り替えは、先ほどもお話ししました」
-
-@text show id=TX10_0048 speaker=narration
-栞「はい。貼り替えたことが全部、不正だと言っているのではありません。これは、この紙とあの紙が元は一枚だったかを見るためです」
-
-@text show id=TX10_0049 speaker=narration
+@text show id=TX10_002_0021 speaker=CH_001
+ここに、貼っていた紙の端がありました。紙帯がまだ残っているところと、剥がれたところ。その境を見てください
+@char hide id=CH_005 duration_ms=800
+@char show id=CH_003 expression=緊張 position=left crop=bust duration_ms=800
+@text show id=TX10_002_0022 speaker=CH_003
+貼り替えは、先ほどもお話ししました
+@text show id=TX10_002_0023 speaker=CH_001
+はい。貼り替えたことが全部、不正だと言っているのではありません。これは、この紙とあの紙が元は一枚だったかを見るためです
+@se play file=S001.dat
+@text show id=TX10_002_0024 speaker=narration
 栞はそこで顔を上げ、黒田さんに写真を頼んだ。僕が撮ることにすると、紙に定規を直接載せず、横へ置いて全体を記録した。
-@text show id=TX10_0050 speaker=narration
+@text show id=TX10_002_0025 speaker=narration
 二つを触れ合わせることもしなかった。合ってほしいと思って押し込めば、脆い縁は簡単に変わるのだと栞は言った。
-@text show id=TX10_0051 speaker=narration
+@text show id=TX10_002_0026 speaker=narration
 僕はカメラの拡大表示を使った。栞が指す位置を見つけるまで、二度、画面を戻した。
-@text show id=TX10_0052 speaker=narration
+@overlay show id=I009 position=center size=large duration_ms=600
+@text show id=TX10_002_0027 speaker=narration
 千切れた縁が、綴じ際の帯と向かい合った。小さく膨らんだところ、その下の裂け目。糊の境も、二つの紙を跨いで続くように見えた。
-
-@text show id=TX10_0053 speaker=narration
-律「ここから切った？」
-
-@text show id=TX10_0054 speaker=narration
-栞「その可能性は高いと思う。写真の右上の欠けも一致して見えるから。ただ、細かな確認は、道具のあるところでお願いしたい」
-
-@overlay hide duration_ms=250
-@char change id=CH_002 expression=不安
-@text show id=TX10_0055 speaker=narration
-奈緒「不要になった紙の裏を使ったのでしょう。それで、何が分かるのですか」
-
-@text show id=TX10_0056 speaker=narration
-栞「受付にあった照合票から取られた紙だということです。筆跡が違うから無関係、と片付けなくてよくなります」
-
-@text show id=TX10_0057 speaker=narration
+@text show id=TX10_002_0028 speaker=CH_000
+ここから切った？
+@text show id=TX10_002_0029 speaker=CH_001
+その可能性は高いと思う。写真の右上の欠けも一致して見えるから。ただ、細かな確認は、道具のあるところでお願いしたい
+@text show id=TX10_002_0030 speaker=CH_003
+不要になった紙の裏を使ったのでしょう。それで、何が分かるのですか
+@text show id=TX10_002_0031 speaker=CH_001
+受付にあった照合票から取られた紙だということです。筆跡が違うから無関係、と片付けなくてよくなります
+@text show id=TX10_002_0032 speaker=narration
 千鶴さんが目を近づけた。栞はそっと、息がかかるので、と伝えた。千鶴さんは慌てて離れた。
-
-@text show id=TX10_0058 speaker=narration
-黒田「この頁を扱ったのは、どなたですか」
-
-@text show id=TX10_0059 speaker=narration
-千鶴「昼に三枝さんへ見せたときは私も。夜の分は、奈緒さんです。受付の盆で原本と控えを分けていたから」
-
-@text show id=TX10_0060 speaker=narration
-奈緒「ここは誰でも触れます。鍵も掛かっていません」
-
-@text show id=TX10_0061 speaker=narration
-律「はい。奈緒さんだけが使えた、とは言えません」
-
-@text show id=TX10_0062 speaker=narration
+@overlay hide duration_ms=600
+@char hide id=CH_001 duration_ms=800
+@char show id=CH_006 expression=真剣 position=right crop=bust duration_ms=800
+@text show id=TX10_002_0033 speaker=CH_006
+この頁を扱ったのは、どなたですか
+@text show id=TX10_002_0034 speaker=CH_005
+昼に三枝さんへ見せたときは私も。夜の分は、奈緒さんです。受付の盆で原本と控えを分けていたから
+@text show id=TX10_002_0035 speaker=CH_003
+ここは誰でも触れます。鍵も掛かっていません
+@text show id=TX10_002_0036 speaker=CH_000
+はい。奈緒さんだけが使えた、とは言えません
+@text show id=TX10_002_0037 speaker=narration
 奈緒の目が一瞬、僕に向いた。
-
-@text show id=TX10_0063 speaker=narration
-律「でも、どこから出たのか分からない紙ではなくなった。そこは記録します」
-
-@text show id=TX10_0064 speaker=narration
+@text show id=TX10_002_0038 speaker=CH_000
+でも、どこから出たのか分からない紙ではなくなった。そこは記録します
+@char hide id=CH_006 duration_ms=800
+@char show id=CH_001 expression=真剣 position=right crop=bust duration_ms=800
+@text show id=TX10_002_0039 speaker=narration
 栞は欠けた頁を見たまま、指先を自分の掌へ折り込んだ。
-@text show id=TX10_0065 speaker=narration
+@text show id=TX10_002_0040 speaker=narration
 伯父の言葉が、帳面の綴じ際に残っていた。切ったところも全部残せ。その指示がなければ、僕たちはまだ文字の形を眺めていただろう。
-
-@text show id=TX10_0066 speaker=narration
-奈緒「橘様。お母様のお仕事を継がれて、よく勉強されたのですね」
-
-@text show id=TX10_0067 speaker=narration
-栞「母は、修復の仕事ではありませんでした」
-
-@text show id=TX10_0068 speaker=narration
-奈緒「そうでしたね。失礼いたしました」
-
-@text show id=TX10_0069 speaker=narration
+@text show id=TX10_002_0041 speaker=CH_003
+橘様。お母様のお仕事を継がれて、よく勉強されたのですね
+@text show id=TX10_002_0042 speaker=CH_001
+母は、修復の仕事ではありませんでした
+@text show id=TX10_002_0043 speaker=CH_003
+そうでしたね。失礼いたしました
+@char change id=CH_003 expression=緊張 crop=bust duration_ms=800
+@text show id=TX10_002_0044 speaker=narration
 言葉は丁寧だった。けれど、栞に向けた顔に、さっきまでの接客の笑みはなかった。
-
 @scene end id=SC10_002
+
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC10_003
-# シーン：栞葉荘・談話室／夜
 @location show text="栞葉荘・談話室／夜"
-@overlay hide
-@char hide id=ALL
-@bgm play file=B004.dat volume=0.55 fade_ms=1000 continue_if_same=true
+@char hide id=ALL duration_ms=800
 @textbox hide
-@bg show id=BG_009 image=base filter=dim effect=none transition=blackfade duration_ms=1000
-@wait start duration_ms=1000 mode=always
+@bgm play file=B008.dat volume=0.5 fade_ms=1600 continue_if_same=true
+@bg show id=BG_011 image=base filter=dim effect=none effect_layer=background view=full transition=blackfade duration_ms=1600
+@wait start duration_ms=1600 mode=always
 @textbox show
-@char show id=CH_002 expression=基本 position=left
-@char show id=CH_006 expression=基本 position=right
-
-@text show id=TX10_0070 speaker=narration
+@text show id=TX10_003_0001 speaker=narration
 紙片と控え帳を一緒にせず、それぞれ現状を撮って保全した。栞は貼られた紙を剥がさなかった。剥がせば見えるものもあるが、失うものもあると言った。
-@text show id=TX10_0071 speaker=narration
+@text show id=TX10_003_0002 speaker=narration
 黒田さんが現場へ戻る必要を検討した。いま持っている証言で、先に位置を照合できる。
-
-@text show id=TX10_0072 speaker=narration
-律「奈緒さんが紙を拾ったとき、僕はタオルを受け取っています。栞と千鶴さんは、僕の後ろ」
-
-@text show id=TX10_0073 speaker=narration
-栞「奈緒さんは廊下にいました。私の横から先には、出ていません」
-
-@text show id=TX10_0074 speaker=narration
-千鶴「私も見ていたわ。……黒田さんが、入らないでと」
-
-@text show id=TX10_0075 speaker=narration
-黒田「奈緒さんが入ってこないよう、手を上げました。床へ屈んだことも、その後に私の脇を通ったこともありません」
-
-@text show id=TX10_0076 speaker=narration
-奈緒「タオルを取るときに、拾ったのだと思います。あの状況です。皆様も、何もかも見ておられたわけでは」
-
-@text show id=TX10_0077 speaker=narration
-律「だから、食い違う説明をそのまま残します」
-
-@text show id=TX10_0078 speaker=narration
+@char show id=CH_006 expression=真剣 position=left crop=bust duration_ms=800
+@char show id=CH_003 expression=緊張 position=right crop=bust duration_ms=800
+@text show id=TX10_003_0003 speaker=CH_000
+奈緒さんが紙を拾ったとき、僕はタオルを受け取っています。栞と千鶴さんは、僕の後ろ
+@text show id=TX10_003_0004 speaker=CH_001
+奈緒さんは廊下にいました。私の横から先には、出ていません
+@text show id=TX10_003_0005 speaker=CH_005
+私も見ていたわ。……黒田さんが、入らないでと
+@text show id=TX10_003_0006 speaker=CH_006
+奈緒さんが入ってこないよう、手を上げました。床へ屈んだことも、その後に私の脇を通ったこともありません
+@text show id=TX10_003_0007 speaker=CH_003
+タオルを取るときに、拾ったのだと思います。あの状況です。皆様も、何もかも見ておられたわけでは
+@text show id=TX10_003_0008 speaker=CH_000
+だから、食い違う説明をそのまま残します
+@text show id=TX10_003_0009 speaker=narration
 紙の出所は、書いた人を一人に絞らない。
-@text show id=TX10_0079 speaker=narration
+@text show id=TX10_003_0010 speaker=narration
 通れる経路があっても、そこを通った証明ではない。
-@text show id=TX10_0080 speaker=narration
+@text show id=TX10_003_0011 speaker=narration
 それでも、配電盤、八分間の空白、呼び出し紙を持っていたこと。その三つに、同じ人の説明の揺れが重なっていた。
-@text show id=TX10_0081 speaker=narration
+@char hide id=CH_003 duration_ms=800
+@char show id=CH_001 expression=真剣 position=right crop=bust duration_ms=800
+@text show id=TX10_003_0012 speaker=narration
 僕は栞の手元を見た。栞は自分の作業を終えた顔ではなかった。まだ、目の前の紙から目を離せない顔だった。
-
-@overlay hide
 @scene end id=SC10_003
 @chapter end id=CH10
 

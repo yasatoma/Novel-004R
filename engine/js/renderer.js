@@ -102,8 +102,8 @@ export class Renderer {
   showTitle(config, titleData = null) {
     this.clearAdvance();
     const workTitle=document.querySelector("#work-title");
-    if(titleData?.title){
-      const parsed=new DOMParser().parseFromString(titleData.title,"text/html");
+    const renderTitleHtml=(target,value)=>{
+      const parsed=new DOMParser().parseFromString(value,"text/html");
       const allowed=new Set(["H1","BR","SPAN"]);
       const clean=node=>{
         for(const child of [...node.childNodes]){
@@ -114,10 +114,14 @@ export class Renderer {
           }else if(child.nodeType!==3)child.remove();
         }
       };
-      clean(parsed.body);workTitle.replaceChildren(...parsed.body.childNodes);
-    }else workTitle.textContent = config.title;
+      clean(parsed.body);target.replaceChildren(...parsed.body.childNodes);
+    };
+    if(titleData?.title)renderTitleHtml(workTitle,titleData.title);
+    else workTitle.textContent = config.title;
     for(const [id,key] of [["title-en","title_en"],["title-catch","catch"],["title-lead","lead"],["title-quote","quote"]]){
-      const el=document.querySelector("#"+id);if(!el)continue;const value=titleData?.[key]??"";el.textContent=value.replaceAll("\\n","\n");el.hidden=!value;
+      const el=document.querySelector("#"+id);if(!el)continue;const value=titleData?.[key]??"";
+      if(key==="title_en"&&value)renderTitleHtml(el,value);else el.textContent=value.replaceAll("\\n","\n");
+      el.hidden=!value;
     }
     this.title.dataset.layout = config.titleLayout ?? "left";
     const image = config.titleImage ? resolveContentUrl(this.workRoot, `images/title/${config.titleImage}`) : "";
@@ -341,7 +345,7 @@ export class Renderer {
   showText(command, next, options = {}) {
     this.showTextbox(true);
     if (this.textAdvanceTimer !== null) { clearTimeout(this.textAdvanceTimer); this.textAdvanceTimer = null; }
-    this.bringSpeakingCharacterToFront(command.args.speaker);
+    if (command.args.speaker !== "MOB") this.bringSpeakingCharacterToFront(command.args.speaker);
     const narration = command.args.speaker === "narration";
     const speaker = options.speaker ?? {};
     this.speaker.textContent = narration ? "" : (speaker.name ?? "話者不明");
@@ -648,8 +652,8 @@ export class Renderer {
       const presentation = calculateFaceCropPresentation(bounds);
       slot.style.setProperty("--char-face-height", `${presentation.desktop.imageHeightVh}vh`);
       slot.style.setProperty("--char-face-top", `${presentation.desktop.imageTopVh}vh`);
-      slot.style.setProperty("--char-face-height-mobile", `${presentation.mobile.imageHeightVh}vh`);
-      slot.style.setProperty("--char-face-top-mobile", `${presentation.mobile.imageTopVh}vh`);
+      slot.style.setProperty("--char-face-height-mobile", `${presentation.mobile.imageHeightVh}dvh`);
+      slot.style.setProperty("--char-face-top-mobile", `${presentation.mobile.imageTopVh}dvh`);
     };
     const cached = this.characterAlphaBounds.get(source);
     if (cached) { apply(cached); return; }

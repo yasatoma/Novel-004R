@@ -1,281 +1,210 @@
-# 第九章　書かなかったこと
-@chapter start id=CH09 title="書かなかったこと"
+@chapter start id=CH09 title="第九章　書かなかったこと"
 
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC09_001
-# シーン：栞葉荘・談話室／夜
 @location show text="栞葉荘・談話室／夜"
-@overlay hide
-@char hide id=ALL
-@bgm play file=B008.dat volume=0.55 fade_ms=4000 continue_if_same=true
-@ambient play file=A002.dat volume=0.38 fade_ms=1000 continue_if_same=true
-@textbox hide
-@bg show id=BG_021 image=base filter=dim effect=none transition=blackfade duration_ms=4000
-@chapter_title show chapter="第九章" title="書かなかったこと" duration_ms=700 hold_ms=2600
-@wait start duration_ms=4000 mode=always
-@textbox show
-@char show id=CH_005 expression=基本 position=left
-@char show id=CH_002 expression=基本 position=right
-
-@text show id=TX09_0001 speaker=narration
-千鶴「支払済みの印を押したのは、私です」
-
-@text show id=TX09_0002 speaker=narration
+@bgm play file=B007.dat volume=0.5 fade_ms=1200 continue_if_same=true
+@bg show id=BG_011 image=base filter=dim effect=none effect_layer=background view=full transition=dissolve duration_ms=800
+@char hide id=ALL duration_ms=800
+@char show id=CH_005 expression=不安 position=left crop=bust duration_ms=800
+@char show id=CH_003 expression=緊張 position=right crop=bust duration_ms=800
+@chapter_title show chapter="第九章" title="書かなかったこと"
+@text show id=TX09_001_0001 speaker=CH_005
+支払済みの印を押したのは、私です
+@text show id=TX09_001_0002 speaker=narration
 奈緒は膝の上で手を重ねた。
-@text show id=TX09_0003 speaker=narration
+@text show id=TX09_001_0003 speaker=narration
 黒田さんは書く前に、千鶴さんへ続きを求めた。
-
-@text show id=TX09_0004 speaker=narration
-千鶴「奈緒さんから、処理は済んでいるから控えを揃えてって言われて。毎回、そうしていたの。振込先までは、確かめなかった」
-
-@text show id=TX09_0005 speaker=narration
-奈緒「当時の処理については、原本を見なければお答えできません」
-
-@text show id=TX09_0006 speaker=narration
-千鶴「そうね。だから、私が知っていることだけ話します」
-
-@text show id=TX09_0007 speaker=narration
+@text show id=TX09_001_0004 speaker=CH_005
+奈緒さんから、処理は済んでいるから控えを揃えてって言われて。毎回、そうしていたの。振込先までは、確かめなかった
+@text show id=TX09_001_0005 speaker=CH_003
+当時の処理については、原本を見なければお答えできません
+@text show id=TX09_001_0006 speaker=CH_005
+そうね。だから、私が知っていることだけ話します
+@text show id=TX09_001_0007 speaker=narration
 千鶴さんは栞の方を見た。許してほしい顔ではなかった。見られることを怖がっている顔だった。
-
-@text show id=TX09_0008 speaker=narration
-千鶴「早瀬さんが払ってもらっていないと言ってからも、控えに印があるからって、三枝さんに答えていた。私の確認が間違っていると思われたくなかったの」
-
-@text show id=TX09_0009 speaker=narration
-律「口座の違いには、いつ気づいたんですか」
-
-@text show id=TX09_0010 speaker=narration
-千鶴「今日の昼。三枝さんに、昔の照合票を出してと言われて。重ねた紙の下に、違う番号が見えていた」
-
-@text show id=TX09_0011 speaker=narration
-栞「伯父には？」
-
-@text show id=TX09_0012 speaker=narration
-千鶴「言った。だから、あなたに見てもらいたいと。……なのに、早瀬さんには言わなかった。夕方、あんなに怒っていたのに」
-
-@text show id=TX09_0013 speaker=narration
-奈緒「その番号が口座番号かどうかも、分かっていないでしょう」
-
-@text show id=TX09_0014 speaker=narration
-千鶴「ええ。分かっていない。だから、知っている人に確かめればよかったのよ。私は、それをしなかった」
-
-@text show id=TX09_0015 speaker=narration
+@text show id=TX09_001_0008 speaker=CH_005
+早瀬さんが払ってもらっていないと言ってからも、控えに印があるからって、三枝さんに答えていた。私の確認が間違っていると思われたくなかったの
+@text show id=TX09_001_0009 speaker=CH_000
+口座の違いには、いつ気づいたんですか
+@text show id=TX09_001_0010 speaker=CH_005
+今日の昼。三枝さんに、昔の照合票を出してと言われて。重ねた紙の下に、違う番号が見えていた
+@text show id=TX09_001_0011 speaker=CH_001
+伯父には？
+@text show id=TX09_001_0012 speaker=CH_005
+言った。だから、あなたに見てもらいたいと。……なのに、早瀬さんには言わなかった。夕方、あんなに怒っていたのに
+@text show id=TX09_001_0013 speaker=CH_003
+その番号が口座番号かどうかも、分かっていないでしょう
+@text show id=TX09_001_0014 speaker=CH_005
+ええ。分かっていない。だから、知っている人に確かめればよかったのよ。私は、それをしなかった
+@char change id=CH_005 expression=涙 crop=bust duration_ms=800
+@text show id=TX09_001_0015 speaker=narration
 千鶴さんの声が詰まった。
-@text show id=TX09_0016 speaker=narration
+@text show id=TX09_001_0016 speaker=narration
 栞は差し出しかけたハンカチを、自分の手元に置いた。すぐに慰めれば、その告白を終わらせてしまうと感じたのかもしれない。
-
-@text show id=TX09_0017 speaker=narration
-黒田「印を押したこと、疑問を抱いた時期、誰へ伝えたか。その三つは記録します。ただし、不適切な会計処理と二件の殺人を、同じものとしては扱いません」
-
-@text show id=TX09_0018 speaker=narration
-千鶴「はい」
-
-@char hide id=CH_005
-@char show id=CH_006 expression=基本 position=left
-@text show id=TX09_0019 speaker=narration
-律「紙片を拾ったところも、もう一度確認したいです」
-
-@text show id=TX09_0020 speaker=narration
+@text show id=TX09_001_0017 speaker=CH_006
+印を押したこと、疑問を抱いた時期、誰へ伝えたか。その三つは記録します。ただし、不適切な会計処理と二件の殺人を、同じものとしては扱いません
+@text show id=TX09_001_0018 speaker=CH_005
+はい
+@char hide id=CH_005 duration_ms=800
+@char show id=CH_006 expression=真剣 position=left crop=bust duration_ms=800
+@text show id=TX09_001_0019 speaker=CH_000
+紙片を拾ったところも、もう一度確認したいです
+@text show id=TX09_001_0020 speaker=narration
 僕が奈緒を見ると、奈緒は目を伏せた。
-
-@text show id=TX09_0021 speaker=narration
-奈緒「戸口の近くだったと思います」
-
-@text show id=TX09_0022 speaker=narration
-黒田「私は、入らないようにお願いしました。奈緒さんは廊下側にいましたね」
-
-@text show id=TX09_0023 speaker=narration
-奈緒「その手前です。床に落ちていました」
-
-@text show id=TX09_0024 speaker=narration
-栞「旧浴場の中ではなく、廊下ですか」
-
-@text show id=TX09_0025 speaker=narration
-奈緒「ええ。位置を正確に覚えているわけではありません」
-
-@text show id=TX09_0026 speaker=narration
+@text show id=TX09_001_0021 speaker=CH_003
+戸口の近くだったと思います
+@text show id=TX09_001_0022 speaker=CH_006
+私は、入らないようにお願いしました。奈緒さんは廊下側にいましたね
+@text show id=TX09_001_0023 speaker=CH_003
+その手前です。床に落ちていました
+@text show id=TX09_001_0024 speaker=CH_001
+旧浴場の中ではなく、廊下ですか
+@text show id=TX09_001_0025 speaker=CH_003
+ええ。位置を正確に覚えているわけではありません
+@text show id=TX09_001_0026 speaker=narration
 最初は旧浴場の床と言った。それが戸口、廊下へと動いた。
-@text show id=TX09_0027 speaker=narration
+@text show id=TX09_001_0027 speaker=narration
 僕は言い直しを二重線で消さず、三つとも書いた。
-
 @scene end id=SC09_001
+
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC09_002
-# シーン：栞葉荘・談話室／夜
 @location show text="栞葉荘・談話室／夜"
-@bg show id=BG_022 image=base filter=dim effect=none transition=dissolve duration_ms=700
-@overlay hide
-@bgm play file=B007.dat volume=0.55 fade_ms=1000 continue_if_same=true
-@char hide id=CH_002
-@char hide id=CH_006
-@char show id=CH_001 expression=基本 position=left
-@char show id=CH_005 expression=基本 position=right
-
-@text show id=TX09_0028 speaker=narration
+@bg show id=BG_011 image=window_oblique filter=dim effect=none effect_layer=background view=full transition=dissolve duration_ms=800
+@bgm play file=B011.dat volume=0.5 fade_ms=1200 continue_if_same=true
+@char hide id=CH_003 duration_ms=800
+@char hide id=CH_006 duration_ms=800
+@char show id=CH_005 expression=不安 position=left crop=bust duration_ms=800
+@text show id=TX09_002_0001 speaker=narration
 千鶴さんの話を書き終えて、黒田さんがペンを置いた。
-@text show id=TX09_0029 speaker=narration
+@text show id=TX09_002_0002 speaker=narration
 奈緒は黙っていた。五人が揃っているのに、言葉を交わせる人数が減ったようだった。
-
-@text show id=TX09_0030 speaker=narration
-千鶴「栞ちゃん。お母さんのことを知っているからって、私を、いい人のままにしなくていいの」
-
-@text show id=TX09_0031 speaker=narration
+@text show id=TX09_002_0003 speaker=CH_005
+栞ちゃん。お母さんのことを知っているからって、私を、いい人のままにしなくていいの
+@char show id=CH_001 expression=悲しみ position=right crop=bust duration_ms=800
+@text show id=TX09_002_0004 speaker=narration
 栞は顔を上げた。
-
-@text show id=TX09_0032 speaker=narration
-千鶴「昔、優しくしたこともあると思う。でも、今日、言わなかったことがある。それは、別よ」
-
-@text show id=TX09_0033 speaker=narration
-栞「はい」
-
-@text show id=TX09_0034 speaker=narration
+@text show id=TX09_002_0005 speaker=CH_005
+昔、優しくしたこともあると思う。でも、今日、言わなかったことがある。それは、別よ
+@text show id=TX09_002_0006 speaker=CH_001
+はい
+@text show id=TX09_002_0007 speaker=narration
 返事が短かった。千鶴さんの目が揺れた。
-
-@text show id=TX09_0035 speaker=narration
-栞「いま、どう受け取ればいいのか、まだ分かりません。でも、話してくれたことは聞きました」
-
-@text show id=TX09_0036 speaker=narration
-千鶴「ええ」
-
-@text show id=TX09_0037 speaker=narration
-栞「千鶴さんが今日の昼に伯父へ話したことも、残します。私には、それを聞いたというところまでしか書けないけれど」
-
-@text show id=TX09_0038 speaker=narration
+@text show id=TX09_002_0008 speaker=CH_001
+いま、どう受け取ればいいのか、まだ分かりません。でも、話してくれたことは聞きました
+@text show id=TX09_002_0009 speaker=CH_005
+ええ
+@text show id=TX09_002_0010 speaker=CH_001
+千鶴さんが今日の昼に伯父へ話したことも、残します。私には、それを聞いたというところまでしか書けないけれど
+@text show id=TX09_002_0011 speaker=narration
 千鶴さんは頷いた。その手が、膝の上から落ちた。
-@text show id=TX09_0039 speaker=narration
+@text show id=TX09_002_0012 speaker=narration
 僕は栞が彼女をすぐ慰めなかったことを、冷たさだとは思わなかった。知っている人の全てを、優しかった記憶だけで守れない。いまの栞には、それを引き受ける余裕まで求められない。
-
-@text show id=TX09_0040 speaker=narration
-黒田「この後、どう過ごすかも決めましょう」
-
-@text show id=TX09_0041 speaker=narration
-奈緒「調べるのは、もう朝までお待ちになっては」
-
-@text show id=TX09_0042 speaker=narration
-黒田「現場を歩き回るのは避けます。ただ、ここにある紙と、互いの説明は確認できます」
-
-@text show id=TX09_0043 speaker=narration
-奈緒「皆様、お疲れです。記憶も曖昧になるでしょう」
-
-@text show id=TX09_0044 speaker=narration
-律「だから、いま覚えていることを残したいです。無理に答えを合わせずに」
-
-@text show id=TX09_0045 speaker=narration
+@char hide id=CH_005 duration_ms=800
+@char show id=CH_006 expression=真剣 position=left crop=bust duration_ms=800
+@text show id=TX09_002_0013 speaker=CH_006
+この後、どう過ごすかも決めましょう
+@text show id=TX09_002_0014 speaker=CH_003
+調べるのは、もう朝までお待ちになっては
+@text show id=TX09_002_0015 speaker=CH_006
+現場を歩き回るのは避けます。ただ、ここにある紙と、互いの説明は確認できます
+@text show id=TX09_002_0016 speaker=CH_003
+皆様、お疲れです。記憶も曖昧になるでしょう
+@text show id=TX09_002_0017 speaker=CH_000
+だから、いま覚えていることを残したいです。無理に答えを合わせずに
+@text show id=TX09_002_0018 speaker=narration
 奈緒の視線が、栞の前に置かれた手帳へ動いた。
-@text show id=TX09_0046 speaker=narration
+@text show id=TX09_002_0019 speaker=narration
 栞はそれを伏せなかった。
-
-@text show id=TX09_0047 speaker=narration
-栞「待っている間に、分からないところが一つでも減るなら。誰かを一人にしないためにも、続けたいです」
-
-@text show id=TX09_0048 speaker=narration
-奈緒「犯人を見つければ、安全になると？」
-
-@text show id=TX09_0049 speaker=narration
-栞「私たちだけで、捕まえようとは思っていません。でも、誰と誰が一緒にいたかを、間違えて信じていたら、同じことを繰り返すかもしれません」
-
-@text show id=TX09_0050 speaker=narration
+@char change id=CH_001 expression=決意 crop=bust duration_ms=800
+@text show id=TX09_002_0020 speaker=CH_001
+待っている間に、分からないところが一つでも減るなら。誰かを一人にしないためにも、続けたいです
+@text show id=TX09_002_0021 speaker=CH_003
+犯人を見つければ、安全になると？
+@text show id=TX09_002_0022 speaker=CH_001
+私たちだけで、捕まえようとは思っていません。でも、誰と誰が一緒にいたかを、間違えて信じていたら、同じことを繰り返すかもしれません
+@text show id=TX09_002_0023 speaker=narration
 黒田さんが、はいと答えた。自分の記録の横に大きく、「視認できた範囲」と書いた。
-@text show id=TX09_0051 speaker=narration
+@text show id=TX09_002_0024 speaker=narration
 その文字を見て、僕は湯守室の写真を出した。
-
 @scene end id=SC09_002
+
+# ②で明示された場面・時間・焦点の区切り
 @scene start id=SC09_003
-# シーン：栞葉荘・談話室／二十二時過ぎ
 @location show text="栞葉荘・談話室／二十二時過ぎ"
-@bg show id=BG_021 image=base filter=dim effect=none transition=dissolve duration_ms=700
-@overlay hide
-@bgm play file=B006.dat volume=0.55 fade_ms=1000 continue_if_same=true
-@char hide id=CH_001
-@char hide id=CH_005
-@char show id=CH_006 expression=基本 position=left
-@char show id=CH_002 expression=基本 position=right
-
-@text show id=TX09_0052 speaker=narration
+@bgm play file=B010.dat volume=0.5 fade_ms=1200 continue_if_same=true
+@char hide id=CH_001 duration_ms=800
+@bg show id=BG_011 image=table_oblique filter=dim effect=none effect_layer=background view=full transition=dissolve duration_ms=800
+@char show id=CH_003 expression=緊張 position=right crop=bust duration_ms=800
+@text show id=TX09_003_0001 speaker=narration
 黒田さんは湯守室の図を描いた。僕が午後の写真を出し、栞が入口の位置を指した。
-
-@text show id=TX09_0053 speaker=narration
-黒田「私はこの計器の前にいました。左に防火戸です。奈緒さんは奥の弁を見ると言って、二十一時二十二分頃に戸の向こうへ行きました」
-
-@text show id=TX09_0054 speaker=narration
-律「ずっと姿は見えなかった？」
-
-@text show id=TX09_0055 speaker=narration
-黒田「はい。声は最初の一度だけ。数字を四つ控えるよう言われました。二十三分から、二分おきに」
-
-@text show id=TX09_0056 speaker=narration
-奈緒「配管の異常がないか見ていました。黒田様には、移動されないようにと」
-
-@text show id=TX09_0057 speaker=narration
-黒田「そう言われました。二十一時三十分頃に戻られ、最後の数字を確認しました。湯守室を出たのは三十二分です」
-
-@text show id=TX09_0058 speaker=narration
-律「八分ほど、見えていない」
-
-@text show id=TX09_0059 speaker=narration
-奈緒「危険な通路ですから、ご一緒いただく方が問題です」
-
-@text show id=TX09_0060 speaker=narration
-黒田「危険な通路でも、二人以上でという約束は同じです。私は入口から先を見るべきでした」
-
-@text show id=TX09_0061 speaker=narration
+@text show id=TX09_003_0002 speaker=CH_006
+私はこの計器の前にいました。左に防火戸です。奈緒さんは奥の弁を見ると言って、二十一時二十二分頃に戸の向こうへ行きました
+@text show id=TX09_003_0003 speaker=CH_000
+ずっと姿は見えなかった？
+@text show id=TX09_003_0004 speaker=CH_006
+はい。声は最初の一度だけ。数字を四つ控えるよう言われました。二十三分から、二分おきに
+@text show id=TX09_003_0005 speaker=CH_003
+配管の異常がないか見ていました。黒田様には、移動されないようにと
+@text show id=TX09_003_0006 speaker=CH_006
+そう言われました。二十一時三十分頃に戻られ、最後の数字を確認しました。湯守室を出たのは三十二分です
+@text show id=TX09_003_0007 speaker=CH_000
+八分ほど、見えていない
+@text show id=TX09_003_0008 speaker=CH_003
+危険な通路ですから、ご一緒いただく方が問題です
+@text show id=TX09_003_0009 speaker=CH_006
+危険な通路でも、二人以上でという約束は同じです。私は入口から先を見るべきでした
+@text show id=TX09_003_0010 speaker=narration
 黒田さんはペンを持ち替えた。握っていたところに汗がついていた。
-
-@text show id=TX09_0062 speaker=narration
-栞「黒田さんが見ていなかった範囲を確かめることは、間違いを見つけるために必要です。でも、それだけで奈緒さんが旧浴場へ行ったとは言えません」
-
-@text show id=TX09_0063 speaker=narration
-律「早瀬さんは、一分半と言っていた。濡れていたら二分。往復して四分、残り四分」
-
-@text show id=TX09_0064 speaker=narration
-黒田「犯行が可能かという検討にはなります。時刻自体も、私の携帯を見た記憶による部分があります。秒単位で正確とは言えません」
-
-@text show id=TX09_0065 speaker=narration
-奈緒「私には、そのようなことはできません」
-
-@text show id=TX09_0066 speaker=narration
+@char hide id=CH_003 duration_ms=800
+@char show id=CH_001 expression=真剣 position=right crop=bust duration_ms=800
+@text show id=TX09_003_0011 speaker=CH_001
+黒田さんが奈緒さんを見ていなかった時間を確かめることは、思い込みを見直すために必要です。でも、それだけで奈緒さんが旧浴場へ行ったとは言えません
+@text show id=TX09_003_0012 speaker=CH_000
+早瀬さんは、一分半と言っていた。濡れていたら二分。往復して四分、残り四分
+@text show id=TX09_003_0013 speaker=CH_006
+犯行が可能かという検討にはなります。時刻自体も、私の携帯を見た記憶による部分があります。秒単位で正確とは言えません
+@char hide id=CH_001 duration_ms=800
+@char show id=CH_003 expression=緊張 position=right crop=bust duration_ms=800
+@text show id=TX09_003_0014 speaker=CH_003
+私には、そのようなことはできません
+@text show id=TX09_003_0015 speaker=narration
 声が初めて細くなった。
-@text show id=TX09_0067 speaker=narration
+@text show id=TX09_003_0016 speaker=narration
 僕は金槌のことを思い出した。旧浴場の作業台にあると、早瀬さんが話していた。犯人は重い物を持って湯守室へ入る必要がない。使ってからも、現場に残せる。
-@text show id=TX09_0068 speaker=narration
+@text show id=TX09_003_0017 speaker=narration
 工具を持ち帰っていないという印象は、何の保証にもならなかった。
-
-@text show id=TX09_0069 speaker=narration
-千鶴「同じ人なのかしら」
-
-@text show id=TX09_0070 speaker=narration
-黒田「二つの事件を、ですか」
-
-@text show id=TX09_0071 speaker=narration
-千鶴「同じように……顔を」
-
-@text show id=TX09_0072 speaker=narration
+@text show id=TX09_003_0018 speaker=CH_005
+同じ人なのかしら
+@text show id=TX09_003_0019 speaker=CH_006
+二つの事件を、ですか
+@text show id=TX09_003_0020 speaker=CH_005
+同じように……顔を
+@char hide id=ALL duration_ms=800
+@wait start duration_ms=600 mode=auto_only
+@text show id=TX09_003_0021 speaker=narration
 言葉がそこで途切れた。栞は机の一点を見たまま、息を吐いた。
-
-@text show id=TX09_0073 speaker=narration
-律「傷が似て見えることだけでは、同じ犯人とは言えません。ただ、二件目には、早瀬さんを呼び出す必要があった」
-
-@text show id=TX09_0074 speaker=narration
-黒田「一件目のように見せることと、二件目を起こすための準備。その二つを分けましょう」
-
-@overlay show id=I006 position=center size=medium duration_ms=300
-@text show id=TX09_0075 speaker=narration
+@text show id=TX09_003_0022 speaker=CH_000
+傷が似て見えることだけでは、同じ犯人とは言えません。ただ、二件目には、早瀬さんを呼び出す必要があった
+@text show id=TX09_003_0023 speaker=CH_006
+一件目のように見せることと、二件目を起こすための準備。その二つを分けましょう
+@text show id=TX09_003_0024 speaker=narration
 僕たちは紙片に目を戻した。
-@text show id=TX09_0076 speaker=narration
+@text show id=TX09_003_0025 speaker=narration
 この紙に従って、早瀬さんは便所の先へ歩いたのかもしれない。待っていれば黒田さんも来ると思って、誰にも知られずに行ったつもりではなかったのかもしれない。
-
-@text show id=TX09_0077 speaker=narration
-栞「誰が書いたか、見ますか」
-
-@text show id=TX09_0078 speaker=narration
-奈緒「筆跡でしたら、私のものではありません」
-
-@text show id=TX09_0079 speaker=narration
-黒田「まず、決めずに見ましょう」
-
-@text show id=TX09_0080 speaker=narration
+@char show id=CH_001 expression=真剣 position=right crop=bust duration_ms=800
+@char show id=CH_006 expression=真剣 position=left crop=bust duration_ms=800
+@text show id=TX09_003_0026 speaker=CH_001
+誰が書いたか、見ますか
+@text show id=TX09_003_0027 speaker=CH_003
+筆跡でしたら、私のものではありません
+@text show id=TX09_003_0028 speaker=CH_006
+まず、決めずに見ましょう
+@text show id=TX09_003_0029 speaker=narration
 僕は手帳の頁を変えた。
-@text show id=TX09_0081 speaker=narration
+@text show id=TX09_003_0030 speaker=narration
 部屋の外で湯が管を流れる音がした。さっきまでなら、宿が動いている音だった。いまは、誰かが戸の向こうで動いたように聞こえた。
-
-@overlay hide
 @scene end id=SC09_003
 @chapter end id=CH09
 

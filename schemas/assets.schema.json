@@ -71,7 +71,6 @@
           },
           "expressions": {
             "type": "object",
-            "minProperties": 1,
             "additionalProperties": {
               "type": "string",
               "minLength": 1

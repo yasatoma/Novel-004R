@@ -35,7 +35,7 @@
     },
     "titleLayout": {
       "type": "string",
-      "enum": ["left", "center", "right"]
+      "enum": ["left", "right"]
     },
     "saveKey": {
       "type": "string",

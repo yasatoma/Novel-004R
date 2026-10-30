@@ -54,6 +54,11 @@ class Validator:
             self.error("JSON_SCHEMA",group,f"{rel}: {path} must be {schema['const']!r}",path=rel,field=path)
         if "enum" in schema and data not in schema["enum"]:
             self.error("JSON_SCHEMA",group,f"{rel}: {path} has unsupported value: {data!r}",path=rel,field=path)
+        if isinstance(data,(int,float)) and not isinstance(data,bool):
+            if "minimum" in schema and data < schema["minimum"]:
+                self.error("JSON_SCHEMA",group,f"{rel}: {path} is less than minimum {schema['minimum']}",path=rel,field=path)
+            if "maximum" in schema and data > schema["maximum"]:
+                self.error("JSON_SCHEMA",group,f"{rel}: {path} is greater than maximum {schema['maximum']}",path=rel,field=path)
         if isinstance(data,str):
             if "minLength" in schema and len(data) < schema["minLength"]:
                 self.error("JSON_SCHEMA",group,f"{rel}: {path} is shorter than minLength {schema['minLength']}",path=rel,field=path)

@@ -2,12 +2,12 @@
   "workId": "Novel-004R",
   "title": "紅葉の底で、君を呼ぶ",
   "engineVersion": "1.1",
-  "entryScenario": "scenario/Novel-004R_01.txt",
-  "titleImage": "",
+  "entryScenario": "scenario/main.txt",
+  "titleImage": "title.webp",
   "titleLayout": "left",
   "saveKey": "Novel-004R",
   "presentation": {
     "defaultCharacterPosition": "right"
   },
-  "titleBgm": ""
+  "titleBgm": "B020.dat"
 }

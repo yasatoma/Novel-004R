@@ -43,6 +43,8 @@ py tools\init-work\init_work.py Novel-005
 - GitHub上に既存repositoryが存在する場合、そのrepositoryおよびcommit履歴は削除しない
 - ローカルの `<factory-root>/<work_id>` が存在する場合は、未commit・未追跡変更を含めてディレクトリを削除する
 - その後、GitHub上の対象repositoryを `<factory-root>/<work_id>` へcloneし直す
+- clone直後に `git rm -r .` を実行し、`.git` とGit履歴・remote情報は維持したまま、前回の生成成果物をwork treeから全削除する
+- 空にしたwork treeへ最新Engine配布物と作品用初期構成を配置する
 - 削除対象が `<factory-root>/<work_id>` そのものであることを確認してからローカル削除を行う
 - 本ツールからGitHub repositoryを削除する処理は行わない
 
