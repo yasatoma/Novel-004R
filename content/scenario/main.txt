@@ -7,8 +7,9 @@
 
 @bgm play file=B001.dat volume=0.5 fade_ms=5000 continue_if_same=true
 @bg show id=BG_001 transition=fade duration_ms=5000
-@chapter_title show chapter="第一章" title="赤い橋を渡る" duration_ms=2000 hold_ms=3000
-@wait start duration_ms=5000
+@wait start duration_ms=1000
+@chapter_title show chapter="第一章" title="赤い橋を渡る" duration_ms=2000 hold_ms=2000
+@wait start duration_ms=4000
 @location show text="栞葉荘への山道／午後"
 
 @textbox show
