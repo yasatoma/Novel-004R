@@ -268,6 +268,9 @@ export class Renderer {
     this.chapterPresentationTitle.textContent = command.args.title ?? "";
     this.chapterPresentation.style.setProperty("--chapter-fade-ms", `${Math.max(0,fade)}ms`);
     this.chapterPresentation.hidden = false;
+    // Commit the initial opacity before toggling visibility so the browser
+    // cannot collapse both states into one frame and skip the fade-in.
+    void this.chapterPresentation.offsetWidth;
     requestAnimationFrame(()=>{ if(generation===this.presentationGeneration) this.chapterPresentation.dataset.visible="true"; });
     this.presentationTimers.push(setTimeout(()=>{
       if(generation!==this.presentationGeneration)return;
