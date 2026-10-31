@@ -2,14 +2,16 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC01_001
-@location show text="栞葉荘への山道／午後"
-@ambient stop fade_ms=800
-@bgm play file=B001.dat volume=0.5 fade_ms=1600 continue_if_same=true
+@ambient stop
 @textbox hide
-@bg show id=BG_001 image=base filter=normal effect=none effect_layer=background view=full transition=fade duration_ms=1600
-@wait start duration_ms=1600 mode=always
+
+@bgm play file=B001.dat volume=0.5 fade_ms=5000 continue_if_same=true
+@bg show id=BG_001 transition=fade duration_ms=5000
+@chapter_title show chapter="第一章" title="赤い橋を渡る" duration_ms=2000 hold_ms=3000
+@wait start duration_ms=5000
+@location show text="栞葉荘への山道／午後"
+
 @textbox show
-@chapter_title show chapter="第一章" title="赤い橋を渡る"
 @text show id=TX01_001_0001 speaker=narration
 バスの窓に枝が触れた。葉が一枚、硝子の上を滑り、後ろへ消えた。
 @char show id=CH_001 expression=微笑み position=center crop=bust duration_ms=800

@@ -3,7 +3,7 @@
   "repository": "yasatoma/Novel-004R",
   "engine": {
     "repository": "yasatoma/ChappyNovelEngine",
-    "revision": "b0e4a129e4e110c115fda1408f8463f513897360",
+    "revision": "a58b991f4447f44afe0912a159bae31532c7c32e",
     "branch": "main",
     "version": "1.1"
   }

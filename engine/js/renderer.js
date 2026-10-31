@@ -125,6 +125,7 @@ export class Renderer {
     }
     this.title.dataset.layout = config.titleLayout ?? "left";
     const image = config.titleImage ? resolveContentUrl(this.workRoot, `images/title/${config.titleImage}`) : "";
+    this.title.dataset.hasImage = image ? "true" : "false";
     this.title.style.setProperty("--title-image", image ? `url("${image}")` : "none");
     this.title.hidden = false;
     this.game.hidden = true;
@@ -304,8 +305,37 @@ export class Renderer {
     const select=nextIndex=>{
       index=(nextIndex+entries.length)%entries.length;
       const [,entry]=entries[index];
-      portrait.src=resolveContentUrl(this.workRoot,`images/char/${entry.image}`);
+      const source=resolveContentUrl(this.workRoot,`images/char/${entry.image}`);
+      portrait.src=source;
       portrait.alt=entry.name??"";
+      portrait.style.removeProperty("height");
+      portrait.style.removeProperty("width");
+      portrait.style.removeProperty("max-width");
+      portrait.style.removeProperty("transform");
+      const applyPortraitBounds=bounds=>{
+        if(!bounds||portrait.src!==source)return;
+        const height=Math.max(.01,Math.min(1,Number(bounds.height)||1));
+        const bottom=Math.max(0,1-(Number(bounds.top)||0)-height);
+        portrait.style.height=`${100/height}%`;
+        portrait.style.width="auto";
+        portrait.style.maxWidth="none";
+        portrait.style.transform=`translateY(${bottom*100}%)`;
+      };
+      const cached=this.characterAlphaBounds.get(source);
+      if(cached)applyPortraitBounds(cached);
+      else {
+        const measure=()=>{
+          if(portrait.src!==source)return;
+          try{
+            const bounds=measureAlphaBounds(portrait);
+            if(!bounds)return;
+            this.characterAlphaBounds.set(source,bounds);
+            applyPortraitBounds(bounds);
+          }catch{}
+        };
+        if(portrait.complete&&portrait.naturalWidth)queueMicrotask(measure);
+        else portrait.addEventListener("load",measure,{once:true});
+      }
       name.textContent=entry.name??"";
       text.textContent=entry.text??"";
       count.textContent=`${index+1} / ${entries.length}`;
@@ -695,6 +725,12 @@ export class Renderer {
 
   showChoice(_command, options, select) {
     this.clearAdvance();
+    const readingArea=document.querySelector("#reading-area");
+    if(readingArea&&this.game){
+      const gameRect=this.game.getBoundingClientRect();
+      const readingRect=readingArea.getBoundingClientRect();
+      this.choices.style.bottom=`${Math.max(0,gameRect.bottom-readingRect.top+80)}px`;
+    }
     this.choices.replaceChildren();
     let selected = false;
     for (const option of options) {
