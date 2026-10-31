@@ -1262,17 +1262,17 @@ input[type=range] {
   flex: 0 0 24px;
   width: 24px;
   height: 24px;
-  fill: none;
-  stroke: var(--gold);
-  stroke-width: 1.35;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  color: var(--gold);
 }
 
-.chappy-mark circle {
-  fill: var(--gold);
-  stroke: none;
-  opacity: .9;
+.chappy-mark-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.chappy-mark .chappy-clock-face {
+  fill: #fff;
 }
 
 .title-brand-line {
