@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="198 127 96 96" aria-hidden="true">
   <path class="chappy-mark-flower" fill="currentColor" d="M266.146,183.011c38.797,11.465,26.51-50.785-4.785-24.51c-1.541,1.295-2.043,1.016-0.678-0.635c25.672-30.996-38.6-42.023-24.368-2.543c0.334,0.926,0.014,1.045-0.517,0.16c-22.221-37.119-54.038,23.451-11.018,21.551c1.808-0.08,1.918,0.344,0.174,0.746c-40.99,9.488,11.184,56.52,17.734,17.27c0.306-1.828,0.551-1.553,0.616,0.41c1.252,36.951,55.334,5.959,22.626-11.701C263.967,182.697,264.003,182.376,266.146,183.011z"/>
   <circle class="chappy-clock-face" cx="246" cy="175" r="12"/>
-  <g class="chappy-clock-hands" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.4">
+  <g class="chappy-clock-hands" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4">
     <line x1="246" y1="175" x2="246" y2="165.5"/>
     <line x1="246" y1="175" x2="253.5" y2="175"/>
   </g>
-  <circle class="chappy-clock-pin" cx="246" cy="175" r="1.6" fill="currentColor"/>
+  <circle class="chappy-clock-pin" cx="246" cy="175" r="2.8" fill="currentColor"/>
 </svg>
