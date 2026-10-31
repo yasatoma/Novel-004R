@@ -1,0 +1,37 @@
+{
+  "assets": [
+    {
+      "files": [
+        "U001.dat"
+      ],
+      "role": "game_start",
+      "name": "ゲームスタート・決定音（システム決定音_9）",
+      "author": "Make a field Music",
+      "source": "https://opentracks.com/se/detail/1026",
+      "license": "https://opentracks.com/help/articles/license/",
+      "creator_terms": "https://opentracks.com/creator/detail/159"
+    },
+    {
+      "files": [
+        "U002.dat"
+      ],
+      "role": "confirm",
+      "name": "システム決定音_候補（システム決定音_6）",
+      "author": "Make a field Music",
+      "source": "https://opentracks.com/se/detail/960",
+      "license": "https://opentracks.com/help/articles/license/",
+      "creator_terms": "https://opentracks.com/creator/detail/159"
+    },
+    {
+      "files": [
+        "U003.dat"
+      ],
+      "role": "cancel",
+      "name": "キャンセル音（キャンセル音_4）",
+      "author": "Make a field Music",
+      "source": "https://opentracks.com/se/detail/1479",
+      "license": "https://opentracks.com/help/articles/license/",
+      "creator_terms": "https://opentracks.com/creator/detail/159"
+    }
+  ]
+}

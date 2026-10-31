@@ -1,6 +1,6 @@
 # init_work temporary/source directories
-Image-master/
-Image/
-audio_original/
-audio/
-logs/
+/Image-master/
+/Image/
+/audio_original/
+/audio/
+/logs/
