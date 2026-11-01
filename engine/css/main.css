@@ -127,8 +127,8 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: start;
-  padding: 20px 3vw;
-  background: linear-gradient(#061621b8, transparent)
+  padding: 20px 3vw 60px 3vw;
+  background: linear-gradient(#000000CC, #00000000 100%);
 }
 
 #menu-open {
@@ -1174,7 +1174,7 @@ input[type=range] {
   }
 
   #game-top {
-    padding: 10px 12px
+    padding: 10px 12px 40px 12px
   }
 
   #chapter-title {
