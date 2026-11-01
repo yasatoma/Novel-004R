@@ -10,7 +10,7 @@
   --text-scale: 1;
   --serif: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", Georgia, serif;
   --sans: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
-  font-family: var(--sans);
+  font-family: var(--serif);
   color: var(--ink);
   background: #0c1b24
 }
@@ -150,7 +150,7 @@ button:hover {
 }
 
 #chapter-title {
-  font: 16px var(--serif);
+  font-size: 16px;
   letter-spacing: .14em;
   margin: 5px 0
 }
@@ -181,7 +181,7 @@ button:hover {
 }
 
 #speaker {
-  font: 18px var(--serif);
+  font-size: 18px;
   letter-spacing: .16em;
   color: var(--speaker-color)
 }
@@ -200,7 +200,8 @@ button:hover {
 }
 
 #text {
-  font: calc(21px * var(--text-scale))/2 var(--serif);
+  font-size: calc(21px * var(--text-scale));
+  line-height: 2;
   letter-spacing: .055em;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
@@ -265,7 +266,8 @@ button:hover {
   min-height: 48px;
   padding: 11px 18px 11px 52px;
   text-align: left;
-  font: 16px/1.6 var(--serif);
+  font-size: 16px;
+  line-height: 1.6;
   background: linear-gradient(90deg, #102630f7, #0b2027e8);
   border-color: #cbb48280;
   border-left: 3px solid var(--gold);
@@ -332,7 +334,7 @@ button:hover {
 }
 
 .panel-header h2 {
-  font: 24px var(--serif);
+  font-size: 24px;
   letter-spacing: .14em;
   margin: 0
 }
@@ -408,7 +410,6 @@ button:hover {
 }
 
 .slot-name {
-  font-family: var(--serif);
   color: var(--gold)
 }
 
@@ -468,7 +469,8 @@ input[type=range] {
 }
 
 #text-size-preview {
-  font: calc(21px * var(--text-scale))/1.8 var(--serif);
+  font-size: calc(21px * var(--text-scale));
+  line-height: 1.8;
   padding: 18px;
   background: #071b2480
 }
@@ -488,7 +490,7 @@ input[type=range] {
 }
 
 .record-card h3 {
-  font: 17px var(--serif);
+  font-size: 17px;
   color: #e5d1a9
 }
 
@@ -1337,7 +1339,7 @@ input[type=range] {
 
 .character-book-header h2 {
   margin: 0;
-  font: 24px var(--serif);
+  font-size: 24px;
   letter-spacing: .14em
 }
 
@@ -1386,7 +1388,7 @@ input[type=range] {
   border-left: 3px solid transparent;
   background: transparent;
   text-align: left;
-  font: clamp(15px, 1.25vw, 20px) var(--serif);
+  font-size: clamp(15px, 1.25vw, 20px);
   color: var(--ink)
 }
 
@@ -1431,14 +1433,15 @@ input[type=range] {
 
 .character-book-detail h3 {
   margin: 0 0 14px;
-  font: clamp(24px, 2.2vw, 36px) var(--serif);
+  font-size: clamp(24px, 2.2vw, 36px);
   letter-spacing: .1em
 }
 
 #character-book-text {
   margin: 0;
   white-space: pre-wrap;
-  font: clamp(15px, 1.2vw, 19px)/1.9 var(--serif)
+  font-size: clamp(15px, 1.2vw, 19px);
+  line-height: 1.9
 }
 
 .character-book-count {
@@ -1499,7 +1502,6 @@ input[type=range] {
 .info-document h2,
 .info-document h3 {
   color: var(--info-accent, var(--gold));
-  font-family: var(--serif);
   font-weight: 400;
   letter-spacing: .08em
 }
@@ -1710,8 +1712,8 @@ input[type=range] {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, #00000080, #00000000 100%),
-    linear-gradient(0deg, #00000080, #00000000 100%);
+    linear-gradient(90deg, #00000099, #00000033 40%, #00000000 80%, #00000000 100%),
+    linear-gradient(0deg, #000000CC, #00000099 20%, #00000000 60%, #00000000 100%);
   pointer-events: none;
 }
 
@@ -1736,6 +1738,11 @@ input[type=range] {
   width: min(620px, 86vw);
   padding-left: clamp(18px, 2vw, 30px);
   text-shadow: 0 2px 18px #000c;
+}
+
+#title[data-layout="right"] .title-brand-box {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .title-brand {
@@ -1794,7 +1801,9 @@ input[type=range] {
 #work-title:not(:has(h1)) {
   margin: 0;
   color: #fff8ec;
-  font: 400 clamp(36px, 4.4vw, 66px)/1.45 var(--serif);
+  font-weight: 400;
+  font-size: clamp(36px, 4.4vw, 66px);
+  line-height: 1.45;
   letter-spacing: .11em;
   text-wrap: balance;
 }
@@ -1820,15 +1829,17 @@ input[type=range] {
 #title-catch {
   margin: 0 0 clamp(18px, 2.6vh, 30px);
   color: #f2e7d2;
-  font: 400 clamp(14px, 1.25vw, 17px)/1.8 var(--serif);
+  font-weight: 400;
+  font-size: clamp(14px, 1.25vw, 17px);
+  line-height: 1.8;
   letter-spacing: .12em;
 }
 
 #title-lead {
-  max-width: 34rem;
   margin: 10px 0 0;
   color: color-mix(in srgb, var(--ink), transparent 12%);
-  font: clamp(12px, 1vw, 14px)/1.9 var(--serif);
+  font-size: clamp(12px, 1vw, 14px);
+  line-height: 1.9;
   letter-spacing: .055em;
 }
 
@@ -1837,12 +1848,12 @@ input[type=range] {
   z-index: 1;
   right: var(--title-quote-right);
   bottom: var(--title-quote-bottom);
-  width: var(--title-quote-width);
   margin: 0;
   padding: 0 18px 22px 0;
   border: 0;
   color: color-mix(in srgb, var(--ink), transparent 8%);
-  font: clamp(12px, 1.05vw, 15px)/1.9 var(--serif);
+  font-size: clamp(12px, 1.05vw, 15px);
+  line-height: 1.9;
   letter-spacing: .055em;
   text-align: right;
   white-space: pre-line;
@@ -1974,8 +1985,8 @@ input[type=range] {
 
 #title[data-layout="right"][data-has-image="true"] .title-image::after {
   background:
-    linear-gradient(270deg, #00000080, #00000000 100%),
-    linear-gradient(0deg, #00000080, #00000000 100%);
+    linear-gradient(270deg, #00000099, #00000033 40%, #00000000 80%, #00000000 100%),
+    linear-gradient(0deg, #000000CC, #00000099 20%, #00000000 60%, #00000000 100%);
 }
 
 #title[data-layout="right"]::after {
