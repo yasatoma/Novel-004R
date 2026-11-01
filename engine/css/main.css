@@ -1808,12 +1808,6 @@ input[type=range] {
   text-wrap: balance;
 }
 
-#work-title h1 {
-  margin: 0;
-  font: inherit;
-  letter-spacing: inherit;
-}
-
 #work-title span {
   color: var(--gold);
 }
@@ -1841,6 +1835,7 @@ input[type=range] {
   font-size: clamp(12px, 1vw, 14px);
   line-height: 1.9;
   letter-spacing: .055em;
+  white-space: pre-line;
 }
 
 #title-quote {

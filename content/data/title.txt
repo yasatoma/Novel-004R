@@ -1,4 +1,4 @@
-title=紅葉の底で、<SPAN>君を呼ぶ</SPAN>
+title=<h1>紅葉の底で、<SPAN>君を呼ぶ</SPAN></h1>
 title_en=BENEATH THE AUTUMN LEAVES
 catch=紅葉の宿、帰れない一夜。
 lead=母の標本帳を受け取る旅。\n豪雨に閉ざされた宿で、二人は誰を信じるのか。
