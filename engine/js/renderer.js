@@ -295,15 +295,16 @@ export class Renderer {
     const root=document.querySelector("#character-book");
     const nav=document.querySelector("#character-book-nav");
     const portrait=document.querySelector("#character-book-portrait");
+    const ruby=document.querySelector("#character-book-ruby");
     const name=document.querySelector("#character-book-name");
     const text=document.querySelector("#character-book-text");
     const count=document.querySelector("#character-book-count");
     const prev=document.querySelector("#character-book-prev");
     const next=document.querySelector("#character-book-next");
-    if(!root||!nav||!portrait||!name||!text||!count||!prev||!next)return;
-    const entries=Object.entries(snapshot).filter(([,entry])=>entry?.visible);
+    if(!root||!nav||!portrait||!ruby||!name||!text||!count||!prev||!next)return;
+    const entries=Object.entries(snapshot);
     nav.replaceChildren();
-    if(!entries.length){portrait.removeAttribute("src");portrait.alt="";name.textContent="";text.textContent="人物情報はまだありません。";count.textContent="";prev.hidden=true;next.hidden=true;return;}
+    if(!entries.length){portrait.removeAttribute("src");portrait.alt="";ruby.textContent="";name.textContent="";text.textContent="人物情報はまだありません。";count.textContent="";prev.hidden=true;next.hidden=true;return;}
     let index=0,touchX=null;
     const select=nextIndex=>{
       index=(nextIndex+entries.length)%entries.length;
@@ -339,6 +340,7 @@ export class Renderer {
         if(portrait.complete&&portrait.naturalWidth)queueMicrotask(measure);
         else portrait.addEventListener("load",measure,{once:true});
       }
+      ruby.textContent=entry.ruby??"";
       name.textContent=entry.name??"";
       text.textContent=entry.text??"";
       count.textContent=`${index+1} / ${entries.length}`;

@@ -6,6 +6,8 @@ export class Runner {
     this.state = state;
     this.hooks = hooks;
     this.defaultCharacterPosition = options.defaultCharacterPosition ?? "right";
+    this.characterBookIds = new Set(options.characterBookIds ?? []);
+    if (!Array.isArray(this.state.unlockedCharacterIds)) this.state.unlockedCharacterIds = [];
     this.revision = scenarioRevision(commands);
     this.index = 0;
     this.sceneIndexes = new Map();
@@ -68,10 +70,16 @@ export class Runner {
           this.state.flags[command.args.id] = command.args.value;
           break;
 
-        case "text":
+        case "text": {
           this.state.currentTextId = command.args.id;
+          const speakerId = command.args.speaker;
+          if (this.characterBookIds.has(speakerId) && !this.state.unlockedCharacterIds.includes(speakerId)) {
+            this.state.unlockedCharacterIds.push(speakerId);
+            this.hooks.characterBookUnlock?.(speakerId, command);
+          }
           this.hooks.text?.(command, () => this.resume(), this);
           return;
+        }
 
         case "bg":
           if (command.action === "show") {

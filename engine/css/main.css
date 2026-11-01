@@ -1344,6 +1344,9 @@ input[type=range] {
 }
 
 .character-book-close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
   pointer-events: auto;
   background: rgba(4, 14, 20, .72);
   border: 1px solid #ffffff38;
@@ -1430,6 +1433,14 @@ input[type=range] {
   max-width: 720px
 }
 
+.character-book-ruby {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: .16em
+}
+
 .character-book-detail h3 {
   margin: 0 0 14px;
   font-size: clamp(24px, 2.2vw, 36px);
@@ -1445,7 +1456,8 @@ input[type=range] {
 }
 
 .character-book-count {
-  margin: 0 0 8px;
+  display: none;
+  margin: 6px 0 0;
   color: var(--muted);
   font-size: 12px;
   letter-spacing: .18em
@@ -1574,6 +1586,8 @@ input[type=range] {
   }
 
   .character-book-close {
+    top: 10px;
+    right: 12px;
     width: 40px;
     height: 40px
   }
@@ -1622,6 +1636,12 @@ input[type=range] {
     overscroll-behavior: contain
   }
 
+  .character-book-ruby {
+    margin-bottom: 4px;
+    font-size: 13px;
+    text-shadow: 0 1px 5px #000
+  }
+
   .character-book-detail h3 {
     font-size: clamp(23px, 7vw, 30px);
     margin: 0 0 10px;
@@ -1635,6 +1655,7 @@ input[type=range] {
   }
 
   .character-book-count {
+    display: block;
     font-size: 11px
   }
 

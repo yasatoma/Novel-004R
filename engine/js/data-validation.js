@@ -90,7 +90,7 @@ export function assertValidSaveState(state) {
   for (const key of ["currentCommandIndex"]) {
     if (key in state && (!Number.isInteger(state[key]) || state[key] < 0)) throw new Error(`Save state invalid: ${key}`);
   }
-  for (const key of ["unlockedMemoIds","trail","reachedEndingIds","currentBackgroundEffects"]) {
+  for (const key of ["unlockedMemoIds","unlockedCharacterIds","trail","reachedEndingIds","currentBackgroundEffects"]) {
     if (key in state && (!Array.isArray(state[key]) || !state[key].every(v => typeof v === "string"))) throw new Error(`Save state invalid: ${key}`);
   }
   if ("flags" in state && !validFlags(state.flags)) throw new Error("Save state invalid: flags");
@@ -109,7 +109,7 @@ export function assertValidTransferPayload(data) {
   const state = data.state;
   validateResumeFields(state);
   if ("currentBackgroundEffectLayer" in state && !["background","foreground"].includes(state.currentBackgroundEffectLayer)) throw new Error("Transfer payload invalid: currentBackgroundEffectLayer");
-  const allowed = new Set(["currentResumePoint","scenarioRevision","currentChoiceId","currentChapterId","currentSceneId","currentCommandIndex","currentTextId","flags","unlockedMemoIds","trail","reachedEndingIds","visibleCharacters","currentBackground","currentBackgroundImage","currentBackgroundFilter","currentBackgroundEffect","currentBackgroundEffectLayer","currentBackgroundView","currentComparison","currentBgm","currentBgmVolume","currentAmbient","currentAmbientVolume","currentLocationText","currentOverlay","rubySeenByChapter"]);
+  const allowed = new Set(["currentResumePoint","scenarioRevision","currentChoiceId","currentChapterId","currentSceneId","currentCommandIndex","currentTextId","flags","unlockedMemoIds","unlockedCharacterIds","trail","reachedEndingIds","visibleCharacters","currentBackground","currentBackgroundImage","currentBackgroundFilter","currentBackgroundEffect","currentBackgroundEffectLayer","currentBackgroundView","currentComparison","currentBgm","currentBgmVolume","currentAmbient","currentAmbientVolume","currentLocationText","currentOverlay","rubySeenByChapter"]);
   if (Object.keys(state).some(key => !allowed.has(key))) throw new Error("Transfer payload invalid: unknown state key");
   for (const key of ["currentChapterId","currentSceneId","currentTextId","currentBackground","currentBackgroundImage","currentBackgroundFilter","currentBackgroundEffect","currentBackgroundEffectLayer","currentBackgroundView","currentBgm","currentAmbient","currentLocationText"]) if (key in state && !optionalString(state[key])) throw new Error(`Transfer payload invalid: ${key}`);
   if ("currentCommandIndex" in state && (!Number.isInteger(state.currentCommandIndex) || state.currentCommandIndex < 0)) throw new Error("Transfer payload invalid: currentCommandIndex");
@@ -120,7 +120,7 @@ export function assertValidTransferPayload(data) {
   if ("currentAmbientVolume" in state && (!Number.isFinite(Number(state.currentAmbientVolume)) || Number(state.currentAmbientVolume) < 0 || Number(state.currentAmbientVolume) > 1)) throw new Error("Transfer payload invalid: currentAmbientVolume");
   if ("currentOverlay" in state && !validOverlay(state.currentOverlay)) throw new Error("Transfer payload invalid: currentOverlay");
   if ("rubySeenByChapter" in state && !validRubySeen(state.rubySeenByChapter)) throw new Error("Transfer payload invalid: rubySeenByChapter");
-  for (const key of ["unlockedMemoIds","trail","reachedEndingIds"]) {
+  for (const key of ["unlockedMemoIds","unlockedCharacterIds","trail","reachedEndingIds"]) {
     if (key in state && (!Array.isArray(state[key]) || !state[key].every(v => typeof v === "string"))) throw new Error(`Transfer payload invalid: ${key}`);
   }
   if (!data.readIds.every(v => typeof v === "string")) throw new Error("Transfer payload invalid: readIds");

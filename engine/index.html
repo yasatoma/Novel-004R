@@ -52,11 +52,11 @@
   <section id="about" class="overlay" hidden role="dialog" aria-modal="true"><div class="panel panel-large info-panel"><header class="panel-header"><div><p class="eyebrow">ABOUT</p><h2>作品・操作について</h2></div><button data-close="about" class="close">×</button></header><div id="about-content" class="info-document about-document"></div></div></section>
   <section id="character-book" class="overlay character-book-overlay" hidden role="dialog" aria-modal="true" aria-label="人物帳" tabindex="-1">
   <div class="character-book-shell">
-    <header class="character-book-header"><div><p class="eyebrow">CHARACTERS</p><h2>人物帳</h2></div><button data-close="character-book" class="close character-book-close" aria-label="人物帳を閉じる">×</button></header>
+    <header class="character-book-header"><div><p class="eyebrow">CHARACTERS</p><h2>人物帳</h2><p id="character-book-count" class="character-book-count"></p></div><button data-close="character-book" class="close character-book-close" aria-label="人物帳を閉じる">×</button></header>
     <div class="character-book-stage">
       <nav id="character-book-nav" class="character-book-nav" aria-label="人物一覧"></nav>
       <div id="character-book-portrait-wrap" class="character-book-portrait-wrap"><img id="character-book-portrait" alt=""></div>
-      <article class="character-book-detail"><p id="character-book-count" class="character-book-count"></p><h3 id="character-book-name"></h3><p id="character-book-text"></p></article>
+      <article class="character-book-detail"><p id="character-book-ruby" class="character-book-ruby"></p><h3 id="character-book-name"></h3><p id="character-book-text"></p></article>
       <button id="character-book-prev" class="character-book-arrow character-book-prev" aria-label="前の人物">‹</button>
       <button id="character-book-next" class="character-book-arrow character-book-next" aria-label="次の人物">›</button>
     </div>

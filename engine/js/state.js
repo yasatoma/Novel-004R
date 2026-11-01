@@ -6,6 +6,7 @@ export function createGameState() {
     currentTextId: null,
     flags: {},
     unlockedMemoIds: [],
+    unlockedCharacterIds: [],
     visibleCharacters: {},
     currentBackground: null,
     currentBackgroundImage: "base",
