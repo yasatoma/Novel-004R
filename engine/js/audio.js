@@ -142,7 +142,7 @@ export class AudioManager {
     const started=performance.now();
     const tick=now=>{
       if(this.fadeTokens.get(audio)!==token)return;
-      const p=Math.min(1,(now-started)/ms);
+      const p=Math.max(0,Math.min(1,(now-started)/ms));
       audio.volume=from+(to-from)*p;
       if(p<1)requestAnimationFrame(tick);
       else { this.fadeTokens.delete(audio); done?.(); }
