@@ -393,9 +393,28 @@ button:hover {
   display: grid;
   gap: 8px;
   max-height: 62vh;
-  overflow: auto
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #7f8f8f #0b2027;
 }
 
+.slot-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.slot-list::-webkit-scrollbar-track {
+  background: #0b2027;
+}
+
+.slot-list::-webkit-scrollbar-thumb {
+  background: #687b7c;
+  border-radius: 999px;
+  border: 2px solid #0b2027;
+}
+
+.slot-list::-webkit-scrollbar-thumb:hover {
+  background: #93a5a5;
+}
 .slot-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 24px;
@@ -447,7 +466,9 @@ button:hover {
   line-height: 1;
   color: var(--muted);
   background: transparent;
-  opacity: .6
+  opacity: .6;
+  align-self: end;
+  margin-bottom: 4px;
 }
 
 .slot-delete:hover,
