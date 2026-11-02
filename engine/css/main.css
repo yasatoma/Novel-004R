@@ -1424,14 +1424,16 @@ input[type=range] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 24px;
+  padding: 18px 18px;
   pointer-events: none
 }
 
 .character-book-header>div {
   padding: 8px 14px;
-  background: rgba(4, 14, 20, .72);
-  backdrop-filter: blur(5px)
+  background: linear-gradient(90deg, rgba(2, 9, 13, .66), rgba(2, 9, 13, .16));
+  border-left: 1px solid #ffffff44;
+  /*background: rgba(4, 14, 20, .72);*/
+  /*backdrop-filter: blur(5px)*/
 }
 
 .character-book-header .eyebrow {
