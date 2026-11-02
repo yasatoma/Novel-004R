@@ -394,27 +394,36 @@ button:hover {
   gap: 8px;
   max-height: 62vh;
   overflow: auto;
+}
+
+.slot-list,
+#backlog-list {
   scrollbar-width: thin;
   scrollbar-color: #7f8f8f #0b2027;
 }
 
-.slot-list::-webkit-scrollbar {
+.slot-list::-webkit-scrollbar,
+#backlog-list::-webkit-scrollbar {
   width: 8px;
 }
 
-.slot-list::-webkit-scrollbar-track {
+.slot-list::-webkit-scrollbar-track,
+#backlog-list::-webkit-scrollbar-track {
   background: #0b2027;
 }
 
-.slot-list::-webkit-scrollbar-thumb {
+.slot-list::-webkit-scrollbar-thumb,
+#backlog-list::-webkit-scrollbar-thumb {
   background: #687b7c;
   border-radius: 999px;
   border: 2px solid #0b2027;
 }
 
-.slot-list::-webkit-scrollbar-thumb:hover {
+.slot-list::-webkit-scrollbar-thumb:hover,
+#backlog-list::-webkit-scrollbar-thumb:hover {
   background: #93a5a5;
 }
+
 .slot-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 24px;
@@ -1432,8 +1441,6 @@ input[type=range] {
   padding: 8px 14px;
   background: linear-gradient(90deg, rgba(2, 9, 13, .66), rgba(2, 9, 13, .16));
   border-left: 1px solid #ffffff44;
-  /*background: rgba(4, 14, 20, .72);*/
-  /*backdrop-filter: blur(5px)*/
 }
 
 .character-book-header .eyebrow {
