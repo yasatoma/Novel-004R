@@ -398,9 +398,9 @@ button:hover {
 
 .slot-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 42px;
-  gap: 6px;
-  align-items: stretch
+  grid-template-columns: minmax(0, 1fr) 24px;
+  gap: 2px;
+  align-items: center
 }
 
 .slot-row[data-slot-kind="system"] {
@@ -437,19 +437,25 @@ button:hover {
 }
 
 .slot-delete {
-  width: 42px;
-  min-width: 42px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  height: 24px;
   padding: 0;
-  font-size: 18px;
+  border: 0;
+  font-size: 16px;
+  line-height: 1;
   color: var(--muted);
-  background: transparent
+  background: transparent;
+  opacity: .6
 }
 
 .slot-delete:hover,
 .slot-delete:focus-visible {
   color: #ffd5d5;
-  border-color: #d88;
-  background: #6b2f2f55
+  border: 0;
+  background: transparent;
+  opacity: 1
 }
 
 .slot-button[disabled] {
@@ -942,10 +948,6 @@ input[type=range] {
 /* Desktop character side staging: 10%; mobile override: 3%. */
 
 
-.slot-list:has(.slot-button[data-slot-kind="system"]) {
-  grid-template-columns: 1fr 1fr
-}
-
 .slot-button[data-slot-kind="system"] {
   grid-column: auto;
   grid-template-columns: 7rem 1fr;
@@ -966,7 +968,7 @@ input[type=range] {
 }
 
 .slot-button[data-slot-kind="manual"] {
-  grid-column: 1/-1;
+  grid-column: auto;
   border-color: #d1b88445;
   background: #10262db0;
   min-height: 54px
@@ -1316,14 +1318,6 @@ input[type=range] {
 
   .settings-footer {
     align-items: flex-end
-  }
-
-  .slot-list:has(.slot-row[data-slot-kind="system"]) {
-    grid-template-columns: 1fr 1fr
-  }
-
-  .slot-row[data-slot-kind="manual"] {
-    grid-column: 1 / -1
   }
 
   .slot-button[data-slot-kind="system"] {
