@@ -21,7 +21,7 @@ const COMMANDS = {
   // Legacy compatibility: effect `blocking` remains runtime-readable only for old works.
   // Do not expose it as a public I/F; new works must use `@wait start`.
   effect: { play: { required: ["id"] }, stop: { required: ["id"] } },
-  wait: { start: { required: ["duration_ms"] } },
+  wait: { start: { required: ["duration_ms"] }, sync: { required: [] } },
   flag: { set: { required: ["id", "value"] } },
   if: { check: { required: ["flag", "operator", "value", "goto"] } },
   jump: { goto: { required: ["target"] } },
@@ -168,7 +168,8 @@ function validateValues(command) {
   }
   if(command.type==="char"&&["show","change"].includes(command.action)&&a.position&&!["left","center","right"].includes(a.position)) fail(command,`未定義char.position: ${a.position}`);
   if(command.type==="char"&&["show","change"].includes(command.action)&&a.crop&&!["bust","face"].includes(a.crop)) fail(command,`未定義char.crop: ${a.crop}`);
-  if(command.type==="wait"&&a.mode!==undefined&&!["always","auto_only"].includes(a.mode)) fail(command,`未定義wait.mode: ${a.mode}`);
+  if(command.type==="wait"&&command.action==="start"&&a.mode!==undefined&&!["always","auto_only"].includes(a.mode)) fail(command,`未定義wait.mode: ${a.mode}`);
+  if(command.type==="wait"&&command.action==="sync"&&Object.keys(a).length) fail(command,"@wait sync にkeyは指定できません");
   if(command.type==="effect"&&!["shake","flash","fade","mist","blackfade"].includes(a.id)) fail(command,`未定義effect.id: ${a.id}`);
   if(command.type==="effect"&&a.strength!==undefined&&!["","small","normal"].includes(a.strength)) fail(command,`未定義effect.strength: ${a.strength}`);
   if(["bgm","ambient"].includes(command.type)&&a.continue_if_same!==undefined&&typeof a.continue_if_same!=="boolean") fail(command,`continue_if_sameはtrue/false: ${a.continue_if_same}`);

@@ -396,12 +396,60 @@ button:hover {
   overflow: auto
 }
 
-.slot-button {
+.slot-row {
   display: grid;
-  grid-template-columns: 9rem 1fr auto;
+  grid-template-columns: minmax(0, 1fr) 42px;
+  gap: 6px;
+  align-items: stretch
+}
+
+.slot-row[data-slot-kind="system"] {
+  grid-template-columns: 1fr
+}
+
+.slot-button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
   gap: 12px;
   align-items: center;
   text-align: left
+}
+
+.slot-main {
+  min-width: 0;
+  display: grid;
+  gap: 3px
+}
+
+.slot-location {
+  font-weight: 400;
+  color: var(--ink)
+}
+
+.slot-preview {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.slot-delete {
+  width: 42px;
+  min-width: 42px;
+  padding: 0;
+  font-size: 18px;
+  color: var(--muted);
+  background: transparent
+}
+
+.slot-delete:hover,
+.slot-delete:focus-visible {
+  color: #ffd5d5;
+  border-color: #d88;
+  background: #6b2f2f55
 }
 
 .slot-button[disabled] {
@@ -415,7 +463,28 @@ button:hover {
 
 .slot-date {
   font-size: 11px;
-  color: var(--muted)
+  color: var(--muted);
+  white-space: nowrap
+}
+
+.data-management-list {
+  display: grid;
+  gap: 18px
+}
+
+.data-management-list>div {
+  padding: 14px 0;
+  border-bottom: 1px solid #ffffff18
+}
+
+.data-management-list h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 400
+}
+
+.danger-action {
+  border-color: #c77a7a70
 }
 
 .dialog-actions,
@@ -1249,8 +1318,12 @@ input[type=range] {
     align-items: flex-end
   }
 
-  .slot-list:has(.slot-button[data-slot-kind="system"]) {
+  .slot-list:has(.slot-row[data-slot-kind="system"]) {
     grid-template-columns: 1fr 1fr
+  }
+
+  .slot-row[data-slot-kind="manual"] {
+    grid-column: 1 / -1
   }
 
   .slot-button[data-slot-kind="system"] {
@@ -1258,8 +1331,22 @@ input[type=range] {
     padding: 6px 8px
   }
 
+  .slot-button[data-slot-kind="system"] .slot-name,
+  .slot-button[data-slot-kind="system"] .slot-date {
+    display: none
+  }
+
   .slot-button[data-slot-kind="system"] .slot-location {
     font-size: 11px
+  }
+
+  .slot-button[data-slot-kind="manual"] {
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+    gap: 8px
+  }
+
+  .slot-button[data-slot-kind="manual"] .slot-date {
+    grid-column: auto;
   }
 
   /* Engine v1.1 presentation */
