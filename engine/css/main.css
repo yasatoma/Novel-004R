@@ -754,7 +754,7 @@ input[type=range] {
 }
 
 #transition-layer.transition-fade-in.transition-ready {
-  transition: opacity var(--transition-ms, 0ms) linear
+  transition: opacity var(--transition-ms, 0ms) ease
 }
 
 #transition-layer.transition-fade-in.transition-ready[data-active="true"] {
