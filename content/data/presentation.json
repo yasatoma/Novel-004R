@@ -1,0 +1,38 @@
+{
+  "bg": {
+    "show": {
+      "transition": "blackfade",
+      "duration_ms": 2000
+    }
+  },
+  "bgm": {
+    "play": {
+      "fade_ms": 2000
+    },
+    "stop": {
+      "fade_ms": 800
+    }
+  },
+  "ambient": {
+    "play": {
+      "fade_ms": 800
+    },
+    "stop": {
+      "fade_ms": 800
+    }
+  },
+  "char": {
+    "show": {
+      "duration_ms": 800
+    },
+    "hide": {
+      "duration_ms": 800
+    }
+  },
+  "chapter_title": {
+    "show": {
+      "duration_ms": 1000,
+      "hold_ms": 3000
+    }
+  }
+}
