@@ -13,7 +13,6 @@ export function createGameState() {
     currentBackgroundFilter: "normal",
     currentBackgroundEffect: "none",
     currentBackgroundEffectLayer: "background",
-    currentBackgroundView: "full",
     currentComparison: null,
     currentBackgroundEffects: [],
     currentBgm: null,

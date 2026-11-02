@@ -82,20 +82,20 @@ export class Runner {
         }
 
         case "bg":
+          // Legacy compatibility: `blocking` is intentionally kept at runtime only.
+          // New works use the public `@wait start` command instead.
           if (command.action === "show") {
             this.state.currentBackground = command.args.id;
             this.state.currentBackgroundImage = command.args.image ?? "base";
             this.state.currentBackgroundFilter = command.args.filter ?? "normal";
             this.state.currentBackgroundEffect = command.args.effect ?? "none";
             this.state.currentBackgroundEffectLayer = command.args.effect_layer ?? "background";
-            this.state.currentBackgroundView = command.args.view ?? "full";
           } else {
             this.state.currentBackground = null;
             this.state.currentBackgroundImage = "base";
             this.state.currentBackgroundFilter = "normal";
             this.state.currentBackgroundEffect = "none";
               this.state.currentBackgroundEffectLayer = "background";
-            this.state.currentBackgroundView = "full";
           }
           if (command.args.blocking && this.hooks.bg) {
             this.hooks.bg(command, () => this.resume());
@@ -141,10 +141,33 @@ export class Runner {
         case "bgm":
         case "ambient":
         case "se":
-          if (command.type === "bgm") { this.state.currentBgm = command.action === "play" ? command.args.file : null; this.state.currentBgmVolume = command.action === "play" ? Number(command.args.volume ?? 1) : 1; }
+          if (command.type === "bgm") {
+            if (command.action === "play") {
+              const same = this.state.currentBgm === command.args.file;
+              const continues = command.args.continue_if_same !== false && command.args.continue_if_same !== "false";
+              const volume = command.args.volume !== undefined
+                ? Number(command.args.volume)
+                : (same && continues ? this.state.currentBgmVolume : 1);
+              this.state.currentBgm = command.args.file;
+              this.state.currentBgmVolume = volume;
+            } else {
+              this.state.currentBgm = null;
+              this.state.currentBgmVolume = 1;
+            }
+          }
           if (command.type === "ambient") {
-            this.state.currentAmbient = command.action === "play" ? command.args.file : null;
-            this.state.currentAmbientVolume = command.action === "play" ? Number(command.args.volume ?? 1) : 1;
+            if (command.action === "play") {
+              const same = this.state.currentAmbient === command.args.file;
+              const continues = command.args.continue_if_same !== false && command.args.continue_if_same !== "false";
+              const volume = command.args.volume !== undefined
+                ? Number(command.args.volume)
+                : (same && continues ? this.state.currentAmbientVolume : 1);
+              this.state.currentAmbient = command.args.file;
+              this.state.currentAmbientVolume = volume;
+            } else {
+              this.state.currentAmbient = null;
+              this.state.currentAmbientVolume = 1;
+            }
           }
           this.hooks.audio?.(command);
           break;
@@ -172,6 +195,8 @@ export class Runner {
           break;
 
         case "effect":
+          // Legacy compatibility: effect `blocking` is runtime-only and not public.
+          // New works use the public `@wait start` command instead.
           if (command.args.blocking && command.action === "play" && this.hooks.effect) {
             this.hooks.effect(command, () => this.resume());
             return;
@@ -185,6 +210,8 @@ export class Runner {
           return;
 
         case "memo":
+          // Legacy compatibility only: keep old `@memo unlock` scenarios functional.
+          // Story memo is not a public v1.1 I/F and must not be used by new works.
           if (!this.state.unlockedMemoIds.includes(command.args.id)) {
             this.state.unlockedMemoIds.push(command.args.id);
           }

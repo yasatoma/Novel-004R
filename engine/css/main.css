@@ -623,14 +623,6 @@ input[type=range] {
   filter: hue-rotate(165deg) saturate(.82)
 }
 
-#background[data-view="wall_crop"],
-#background[data-view="detail_crop"] {
-  background-size: 115% auto
-}
-
-#background[data-view="entrance"] {
-  background-position: center 62%
-}
 
 #background[data-effect="mist_weak"]::before,
 #background[data-effect="steam_weak"]::before,

@@ -2,6 +2,8 @@ const COMMANDS = {
   chapter: { start: { required: ["id", "title"] }, end: { required: ["id"] } },
   scene: { start: { required: ["id"] }, end: { required: ["id"] } },
   text: { show: { required: ["id", "speaker"] } },
+  // Legacy compatibility: `blocking` is still accepted by generic argument validation,
+  // but it is not part of the ENG-03 public I/F. New works must use `@wait start`.
   bg: { show: { required: ["id"] }, hide: { required: [] } },
   compare: { show: { required: ["left_id", "right_id"] }, hide: { required: [] } },
   char: {
@@ -16,6 +18,8 @@ const COMMANDS = {
   textbox: { show: { required: [] }, hide: { required: [] } },
   overlay: { show: { required: ["id"] }, hide: { required: [] } },
   se: { play: { required: ["file"] } },
+  // Legacy compatibility: effect `blocking` remains runtime-readable only for old works.
+  // Do not expose it as a public I/F; new works must use `@wait start`.
   effect: { play: { required: ["id"] }, stop: { required: ["id"] } },
   wait: { start: { required: ["duration_ms"] } },
   flag: { set: { required: ["id", "value"] } },
@@ -23,6 +27,8 @@ const COMMANDS = {
   jump: { goto: { required: ["target"] } },
   choice: { start: { required: ["id"] }, end: { required: ["id"] } },
   option: { add: { required: ["id", "text", "goto"] } },
+  // Legacy compatibility only. Story memo UI is no longer part of the public I/F,
+  // but old scenarios using `@memo unlock` must remain loadable/executable.
   memo: { unlock: { required: ["id"] } },
   ending: { reach: { required: ["id"] } }
 };
@@ -156,7 +162,7 @@ function validateValues(command) {
   if(command.type==="bg"&&command.action==="show"){
     if(a.effect_layer!==undefined&&!["background","foreground"].includes(a.effect_layer)) fail(command,`未定義bg.effect_layer: ${a.effect_layer}`);
     if(a.filter&&!["normal","evening","night","dim","bright","warm","cool"].includes(a.filter)) fail(command,`未定義bg.filter: ${a.filter}`);
-    if(a.view&&!["full","wall_crop","detail_crop","entrance"].includes(a.view)) fail(command,`未定義bg.view: ${a.view}`);
+    if(a.view!==undefined) fail(command,"bg.view は廃止されています");
     if(a.transition&&!["cut","fade","dissolve","blackfade"].includes(a.transition)) fail(command,`未定義bg.transition: ${a.transition}`);
     if(a.effect&&!["none","mist_weak","steam_weak","steam_medium","dust_weak","dust_medium"].includes(a.effect)) fail(command,`未定義bg.effect: ${a.effect}`);
   }

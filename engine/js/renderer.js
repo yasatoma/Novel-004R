@@ -172,7 +172,6 @@ export class Renderer {
     this.background.dataset.filter = "normal";
     this.background.dataset.effect = "none";
     this.updateEffectLayer("none", "background");
-    this.background.dataset.view = "full";
     if (typeof document !== "undefined") for (const outgoing of document.querySelectorAll("#characters .char-crossfade-outgoing")) outgoing.remove();
     for (const slot of this.characterSlots.values()) {
       slot.hidden = true; slot.removeAttribute("src"); delete slot.dataset.character; delete slot.dataset.hiding; slot.style.opacity = "";
@@ -419,7 +418,6 @@ export class Renderer {
       filter:state.currentBackgroundFilter ?? "normal",
       effect:state.currentBackgroundEffect ?? "none",
       effect_layer:state.currentBackgroundEffectLayer ?? "background",
-      view:state.currentBackgroundView ?? "full"
     } }, assets);
     for (const [position, character] of Object.entries(state.visibleCharacters ?? {})) {
       this.showCharacter({ action:"show", args:{ id:character.id, expression:character.expression, position, crop:character.crop ?? "bust" } }, assets);
@@ -483,7 +481,6 @@ export class Renderer {
       this.background.dataset.filter = "normal";
       this.background.dataset.effect = "none";
       this.updateEffectLayer("none", "background");
-      this.background.dataset.view = "full";
     };
     if (command.action === "hide") {
       const transition = command.args?.transition ?? "cut";
@@ -538,7 +535,6 @@ export class Renderer {
       this.background.dataset.filter = command.args.filter ?? "normal";
       this.background.dataset.effect = command.args.effect ?? "none";
       this.updateEffectLayer(command.args.effect ?? "none", command.args.effect_layer ?? "background");
-      this.background.dataset.view = command.args.view ?? "full";
     };
     const transition = command.args.transition ?? "cut";
     const duration = Number(command.args.duration_ms ?? 0);

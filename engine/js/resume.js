@@ -82,7 +82,7 @@ export function prepareResumeState(commands, data, saved, defaultCharacterPositi
     new Runner(presentation, rebuilt, {}, {defaultCharacterPosition}).start();
     for (const key of ["visibleCharacters","currentBackground","currentBackgroundImage",
       "currentBackgroundFilter","currentBackgroundEffect","currentBackgroundEffectLayer",
-      "currentBackgroundView","currentComparison","currentBgm","currentBgmVolume","currentAmbient","currentAmbientVolume","currentLocationText","currentOverlay"]) {
+      "currentComparison","currentBgm","currentBgmVolume","currentAmbient","currentAmbientVolume","currentLocationText","currentOverlay"]) {
       state[key] = rebuilt[key];
     }
     if (activeChapter) state.currentChapterId = activeChapter;
@@ -91,6 +91,7 @@ export function prepareResumeState(commands, data, saved, defaultCharacterPositi
     state.visibleCharacters[defaultCharacterPosition] ??= state.visibleCharacters.undefined;
     delete state.visibleCharacters.undefined;
   }
+  delete state.currentBackgroundView; // legacy v1.1 save field; view feature is retired
   state.scenarioRevision = revision;
   state.currentCommandIndex = index;
   state.currentResumePoint = commandAnchor(commands[index]);
