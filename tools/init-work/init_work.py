@@ -188,12 +188,19 @@ def copy_engine_distribution(target: Path, engine_repo: str) -> tuple[str, dict]
         for name in distribution:
             src = source / name
             if not src.exists(): raise InitError(f"Engine distribution item is missing: {name}")
-            if src.is_dir(): shutil.copytree(src, target / name)
-            else: shutil.copy2(src, target / name)
+            dst = target / name
+            if dst.exists() or dst.is_symlink():
+                if dst.is_dir() and not dst.is_symlink():
+                    shutil.rmtree(dst, onerror=_make_writable_and_retry)
+                else:
+                    dst.chmod(stat.S_IWRITE)
+                    dst.unlink()
+            if src.is_dir(): shutil.copytree(src, dst)
+            else: shutil.copy2(src, dst)
         if not (source / "engine" / "index.html").is_file(): raise InitError("Engine entry point is missing: engine/index.html")
         write_root_launcher(target)
         (target / ".nojekyll").write_text("", encoding="utf-8")
-        (target / ".gitignore").write_text("# init_work temporary/source directories\nImage-master/\nImage/\naudio_original/\naudio/\nlogs/\n", encoding="utf-8")
+        (target / ".gitignore").write_text("# init_work temporary/source directories\n/Image-master/\n/Image/\n/audio_original/\n/audio/\n/logs/\n", encoding="utf-8")
         (target / "logs").mkdir(parents=True, exist_ok=True)
         for path in ("content/scenario","content/images/bg","content/images/char","content/images/title","content/images/item","content/audio/bgm","content/audio/ambient","content/audio/se","content/data"):
             (target / path).mkdir(parents=True, exist_ok=True)

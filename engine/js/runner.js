@@ -43,6 +43,14 @@ export class Runner {
   run() {
     while (this.index < this.commands.length) {
       const command = this.commands[this.index];
+      const before = this.hooks.beforeCommand?.(command, this.index);
+      if (before && typeof before.then === "function") {
+        const waitingIndex = this.index;
+        Promise.resolve(before).then(() => {
+          if (this.index === waitingIndex) this.run();
+        });
+        return;
+      }
       this.state.currentCommandIndex = this.index;
       this.state.scenarioRevision = this.revision;
       const anchor = commandAnchor(command);

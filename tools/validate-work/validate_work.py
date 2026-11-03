@@ -15,6 +15,7 @@ DATA_SCHEMA_PATHS = {
     "content/data/memo.json": Path(__file__).resolve().parents[2] / "schemas" / "memo.schema.json",
     "content/data/ruby.json": Path(__file__).resolve().parents[2] / "schemas" / "ruby.schema.json",
     "content/data/characters.json": Path(__file__).resolve().parents[2] / "schemas" / "characters.schema.json",
+    "content/data/presentation.json": Path(__file__).resolve().parents[2] / "schemas" / "presentation.schema.json",
 }
 WORK_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
 REF_RE = re.compile(r"""(?i)(?:^|[\s"'=:(])((?:\.\.?/)?(?:content/)?[^\s"'<>]+\.(?:webp|png|jpg|jpeg|svg|dat|json|txt|css|js|html))""")
@@ -71,12 +72,21 @@ class Validator:
             for key in schema.get("required",[]):
                 if key not in data:
                     self.error("JSON_SCHEMA",group,f"{rel}: {path}.{key} is required",path=rel,field=f"{path}.{key}")
+            patterns=schema.get("patternProperties",{})
             additional=schema.get("additionalProperties",True)
             for key,value in data.items():
                 child=f"{path}.{key}"
                 if key in props:
                     self.validate_schema(value,props[key],rel,group,child)
-                elif additional is False:
+                    continue
+                matched=False
+                for pattern,pattern_schema in patterns.items():
+                    if re.search(pattern,key):
+                        matched=True
+                        self.validate_schema(value,pattern_schema,rel,group,child)
+                if matched:
+                    continue
+                if additional is False:
                     self.error("JSON_SCHEMA",group,f"{rel}: {child} is not allowed",path=rel,field=child)
                 elif isinstance(additional,dict):
                     self.validate_schema(value,additional,rel,group,child)
