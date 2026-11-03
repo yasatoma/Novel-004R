@@ -3,12 +3,17 @@
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC01_001
 
+@char hide id=ALL
 @ambient stop
+@bgm stop
+@bg hide
+@location hide
 @textbox hide
+@wait sync
 
 @bg show id=BG_001 transition=fade duration_ms=1000
 @bgm play file=B001.dat fade_ms=2000 
-@chapter_title show chapter="第一章" title="赤い橋を渡る" duration_ms=1000 hold_ms=3000
+@chapter_title show chapter="第一章" title="赤い橋を渡る"
 @wait sync
 
 @location show text="栞葉荘への山道／午後"
@@ -269,7 +274,8 @@
 # 開口部と固定梯子を目で確認する
 @scene start id=SC01_007
 @char hide id=ALL
-@bg show id=BG_007 transition=cut duration_ms=0
+
+@bg show id=BG_007 transition=dissolve duration_ms=1000
 @text show id=TX01_007_0001 speaker=narration
 通路の中ほどで床が途切れているように見え、僕は思わず戸枠を掴んだ。
 @char show id=CH_004 expression=基本 position=left
@@ -303,8 +309,9 @@
 @scene start id=SC01_008
 @char hide id=ALL
 @textbox hide
-@bg show id=BG_008 transition=blackfade duration_ms=1000
-@wait start duration_ms=1000
+@bg show id=BG_008 transition=dissolve duration_ms=1000
+@wait sync
+
 @textbox show
 @text show id=TX01_008_0001 speaker=narration
 廊下へ戻ると、配電室の小窓があった。奥の盤には、赤い文字の封印紙が扉と枠を跨いで貼ってある。
@@ -332,7 +339,8 @@
 @char hide id=ALL
 @textbox hide
 @bg show id=BG_009 transition=blackfade duration_ms=1000
-@wait start duration_ms=1000
+@wait sync
+
 @textbox show
 @text show id=TX01_009_0001 speaker=narration
 二つの部屋は廊下を挟んで向かい合っていた。僕の部屋の窓からは、来た橋が見えた。
@@ -341,6 +349,8 @@
 # 荷物を置いて客室前廊下へ戻る
 @scene start id=SC01_010
 @bg show id=BG_005 transition=dissolve duration_ms=800
+@wait sync
+
 @text show id=TX01_010_0001 speaker=narration
 荷物を置いて出ると、栞はまだ戸の前にいた。
 @char show id=CH_001 expression=悲しみ position=right
@@ -367,8 +377,11 @@
 そうだった？　じゃあ、もっと似てきたのね
 @text show id=TX01_010_0012 speaker=narration
 栞の肩から、力が少し抜けた。
-@bgm play file=B004.dat fade_ms=1200 
-@overlay show id=I001 position=center size=large duration_ms=600
+
+@bgm play file=B004.dat fade_ms=2000 
+@overlay show id=I001 duration_ms=2000
+@wait sync
+
 @text show id=TX01_010_0013 speaker=narration
 千鶴さんは風呂敷を開いた。中には、紐で結んだ古い標本帳があった。表紙の角が白く擦れている。
 @text show id=TX01_010_0014 speaker=CH_005
@@ -380,7 +393,7 @@
 ありがとう。……やっと、会えた
 @text show id=TX01_010_0017 speaker=narration
 その小さな声が母親に向けられたものだと分かり、僕は一歩、場所を空けた。
-@overlay hide duration_ms=600
+@overlay hide duration_ms=1000
 @text show id=TX01_010_0018 speaker=CH_005
 散歩から戻ったら、お饅頭があるわ。二人分、隠しておく
 @text show id=TX01_010_0019 speaker=CH_000
@@ -399,16 +412,25 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC02_001
-@location show text="谷沿いの散策路／午後"
+
 @char hide id=ALL
+@ambient stop
+@bgm stop
+@bg hide
+@location hide
 @textbox hide
-@bgm play file=B005.dat fade_ms=1800 
-@bg show id=BG_010 transition=blackfade duration_ms=1800
-@wait start duration_ms=1800
-@textbox show
+@wait sync
+
+@bg show id=BG_010 transition=fade duration_ms=1000
+@bgm play file=B005.dat fade_ms=2000 
+@ambient play file=A001.dat
 @chapter_title show chapter="第二章" title="ほどかない糸"
-@ambient play file=A001.dat volume=0.22 fade_ms=800 
+@wait sync
+
+@location show text="谷沿いの散策路／午後"
+@textbox show
 @se play file=S002.dat
+
 @text show id=TX02_001_0001 speaker=narration
 橋を渡り直して谷へ下ると、宿の屋根が木々に隠れた。
 @text show id=TX02_001_0002 speaker=narration
@@ -624,7 +646,7 @@
 私、すぐ大事にしすぎるね
 @text show id=TX02_003_0008 speaker=CH_000
 いまは、大事にしたくなるんじゃないかな
-@overlay show id=I002 position=center size=large duration_ms=600
+@overlay show id=I002
 @text show id=TX02_003_0009 speaker=narration
 表紙の裏には、年ごとの日付が並んでいた。葉の名前に、場所と天気が添えてある。頁の隅に、違う筆圧の小さな丸があった。
 @text show id=TX02_003_0010 speaker=narration
@@ -1496,7 +1518,7 @@
 @text show id=TX05_001_0042 speaker=CH_000
 廊下の写真です。さっきの
 @bgm play file=B010.dat fade_ms=1200 
-@overlay show id=I003 position=center size=large duration_ms=600
+@overlay show id=I003
 @text show id=TX05_001_0043 speaker=narration
 画面を拡大した。早瀬さんの手から離れたレンチ。受付の布。千鶴さんの指。
 @text show id=TX05_001_0044 speaker=narration
@@ -1507,7 +1529,7 @@
 返したことは確認できますね
 @text show id=TX05_001_0047 speaker=CH_000
 袖も
-@overlay show id=I004 position=center size=large duration_ms=600
+@overlay show id=I004
 @text show id=TX05_001_0048 speaker=narration
 その前、到着時の廊下の写真にも、早瀬さんは写っていた。袖の染みは同じ場所にある。
 @text show id=TX05_001_0049 speaker=narration
@@ -1708,7 +1730,7 @@
 全員で移動した。談話室を空にするのが不安で、千鶴さんは入口を振り返った。
 @text show id=TX06_002_0002 speaker=narration
 僕は先に、触らず見えるところだけにしましょう、と言った。黒田さんが同意した。
-@overlay show id=I005 position=center size=large duration_ms=600
+@overlay show id=I005
 @text show id=TX06_002_0003 speaker=narration
 小窓越しに照らすと、封印紙は枠と扉を繋いでいた。赤い線が一続きになっている。
 @text show id=TX06_002_0004 speaker=CH_001
@@ -1787,7 +1809,7 @@
 そこを確認したい。会社名が同じでも、振込先の口座が違えば別の問題です
 @text show id=TX06_003_0009 speaker=narration
 千鶴さんの頬が白くなった。奈緒が控えの端を押さえる。
-@overlay show id=I006 position=center size=large duration_ms=600
+@overlay show id=I006
 @text show id=TX06_003_0010 speaker=narration
 透明な保護紙の下に、細い紙が重ねて貼られていた。栞は指を伸ばさず、横から光を当てた。
 @char hide id=CH_005
@@ -1873,7 +1895,7 @@
 @text show id=TX06_003_0047 speaker=CH_001
 隠すかどうかではなくて。残っているものを、順番に見たいだけです
 @se play file=S001.dat
-@overlay show id=I007 position=center size=large duration_ms=600
+@overlay show id=I007
 @text show id=TX06_003_0048 speaker=narration
 僕は受付控え帳の写真も撮った。欠けた右上と、綴じ目に残る切れ端が写った。
 @text show id=TX06_003_0049 speaker=narration
@@ -2381,7 +2403,7 @@
 触れないようにというお話でしたのに。申し訳ありません。皆様にお見せしなければと思いまして
 @text show id=TX08_002_0042 speaker=narration
 紙にはこう書かれていた。
-@overlay show id=I008 position=center size=large duration_ms=600
+@overlay show id=I008
 @text show id=TX08_002_0043 speaker=narration
 『支払原本を先に見せる。旧浴場前で。黒田先生も設備確認の後に来る。社名と口座は皆の前で広げない方がよい。』
 @text show id=TX08_002_0044 speaker=narration
@@ -2705,7 +2727,7 @@
 久しぶりに名字で呼ばれ、僕は顔を上げた。栞の指が、写真の控え帳を指す。
 @text show id=TX10_001_0014 speaker=CH_001
 もう少し、大きく
-@overlay show id=I007 position=center size=large duration_ms=600
+@overlay show id=I007
 @text show id=TX10_001_0015 speaker=narration
 受付控え帳の右上。その日に開かれていた用紙には、三角形の欠損があった。
 @text show id=TX10_001_0016 speaker=narration
@@ -2797,7 +2819,7 @@
 二つを触れ合わせることもしなかった。合ってほしいと思って押し込めば、脆い縁は簡単に変わるのだと栞は言った。
 @text show id=TX10_002_0026 speaker=narration
 僕はカメラの拡大表示を使った。栞が指す位置を見つけるまで、二度、画面を戻した。
-@overlay show id=I009 position=center size=large duration_ms=600
+@overlay show id=I009
 @text show id=TX10_002_0027 speaker=narration
 千切れた縁が、綴じ際の帯と向かい合った。小さく膨らんだところ、その下の裂け目。糊の境も、二つの紙を跨いで続くように見えた。
 @text show id=TX10_002_0028 speaker=CH_000
@@ -3126,7 +3148,7 @@
 @text show id=TX11_007_0010 speaker=narration
 奈緒の手が、栞の肩へ伸びた。
 @char hide id=ALL
-@bgm play file=B013.dat8 fade_ms=200 
+@bgm play file=B013.dat fade_ms=200 
 @effect play id=shake strength=normal duration_ms=500
 @text show id=TX11_007_0011 speaker=narration
 道を譲ってもらう動きに見えた。次の瞬間、栞の身体が横へ押し出された。
@@ -3147,7 +3169,7 @@
 @location show text="栞葉荘・保守通路／夜"
 @bg show id=BG_007 image=base filter=dim effect=none effect_layer=background transition=dissolve duration_ms=800
 @char hide id=ALL
-@bgm play file=B013.dat8 fade_ms=200 
+@bgm play file=B013.dat fade_ms=200 
 @chapter_title show chapter="第十二章" title="手を離さないで"
 @text show id=TX12_001_0001 speaker=narration
 栞のコートの裾が、手すりをかすめた。
@@ -4177,7 +4199,7 @@
 それから、母の標本帳を受け取ったときと同じように、両手を空けた。
 @text show id=TX16_005_0021 speaker=CH_001
 ありがとう
-@overlay show id=I010 position=center size=large duration_ms=600
+@overlay show id=I010
 @text show id=TX16_005_0022 speaker=narration
 封筒には、栞へ、と書かれていた。
 @overlay hide duration_ms=600
@@ -4410,7 +4432,7 @@
 大事だからじゃないかな
 @text show id=TX17_003_0005 speaker=CH_001
 うん。大事
-@overlay show id=I011 position=center size=large duration_ms=600
+@overlay show id=I011
 @text show id=TX17_003_0006 speaker=narration
 手紙をすぐ封筒へは戻さなかった。栞は二枚を並べ、乾いた指で端を揃えた。
 @text show id=TX17_003_0007 speaker=CH_001
@@ -4712,7 +4734,7 @@
 カメラの電源を入れた。
 @text show id=TX18_005_0012 speaker=narration
 最後の画像まで送る勇気はなかった。最初の方に、散策路の写真があった。風景だけを撮ったつもりなのに、端に栞の手が写っている。
-@overlay show id=I012 position=center size=large duration_ms=600
+@overlay show id=I012
 @text show id=TX18_005_0013 speaker=narration
 葉に二つ、穴があいていた。
 @text show id=TX18_005_0014 speaker=narration
@@ -5020,7 +5042,7 @@
 @char show id=CH_001 expression=室内基本 position=right
 @text show id=TX20_001_0004 speaker=CH_001
 ここ。伯父が糊をつけすぎたところ
-@overlay show id=I013 position=center size=large duration_ms=600
+@overlay show id=I013
 @text show id=TX20_001_0005 speaker=narration
 開かれた頁の端が、薄く波打っていた。葉柄の近くに、古い紙帯が重なっている。
 @text show id=TX20_001_0006 speaker=CH_000
@@ -5086,7 +5108,7 @@
 割れていない方まで、栞が二つにした。
 @text show id=TX20_002_0007 speaker=narration
 僕は笑い、片方をもらった。
-@overlay show id=I012 position=center size=large duration_ms=600
+@overlay show id=I012
 @text show id=TX20_002_0008 speaker=narration
 棚の横に、あの日送らずにいた散策路の写真が飾ってあった。
 @text show id=TX20_002_0009 speaker=narration
@@ -5133,7 +5155,7 @@
 @textbox show
 @text show id=TX20_003_0001 speaker=narration
 帰ろうとすると、栞がコートを持ってきた。
-@overlay show id=I014 position=center size=large duration_ms=600
+@overlay show id=I014
 @text show id=TX20_003_0002 speaker=narration
 袖を通す間、彼女は玄関の小さな棚に置いた髪留めを見た。金色の紅葉は、外した後も窓の灯りを受けていた。
 @overlay hide duration_ms=600
