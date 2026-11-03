@@ -1,4 +1,4 @@
-const TOP_LEVEL = new Set(["bg","bgm","char","chapter_title","ambient"]);
+const TOP_LEVEL = new Set(["bg","bgm","char","chapter_title","ambient","overlay"]);
 
 function isRecord(value) {
   return !!value && typeof value === "object" && !Array.isArray(value);
@@ -66,6 +66,21 @@ export function assertValidPresentation(presentation) {
     validateLeaf(presentation.char, "hide", ["duration_ms"], { duration_ms: assertDuration });
   }
 
+  if (presentation.overlay !== undefined) {
+    assertRecord(presentation.overlay, "overlay");
+    assertKnownKeys(presentation.overlay, new Set(["show","hide"]), "overlay");
+    validateLeaf(presentation.overlay, "show", ["position","size","duration_ms"], {
+      position(value, path) {
+        if (value !== undefined && !["left","center","right"].includes(value)) throw new Error(`presentation.json: ${path} has an unsupported value`);
+      },
+      size(value, path) {
+        if (value !== undefined && !["small","medium","large"].includes(value)) throw new Error(`presentation.json: ${path} has an unsupported value`);
+      },
+      duration_ms: assertDuration
+    });
+    validateLeaf(presentation.overlay, "hide", ["duration_ms"], { duration_ms: assertDuration });
+  }
+
   if (presentation.chapter_title !== undefined) {
     assertRecord(presentation.chapter_title, "chapter_title");
     assertKnownKeys(presentation.chapter_title, new Set(["show"]), "chapter_title");
@@ -85,6 +100,7 @@ export function applyPresentationDefaults(command, presentation = {}) {
   else if (command.type === "ambient" && ["play","stop"].includes(command.action)) defaults = presentation.ambient?.[command.action];
   else if (command.type === "char" && ["show","hide"].includes(command.action)) defaults = presentation.char?.[command.action];
   else if (command.type === "chapter_title" && command.action === "show") defaults = presentation.chapter_title?.show;
+  else if (command.type === "overlay" && ["show","hide"].includes(command.action)) defaults = presentation.overlay?.[command.action];
   if (!defaults || !Object.keys(defaults).length) return command;
   return {...command, args:{...defaults, ...command.args}};
 }
