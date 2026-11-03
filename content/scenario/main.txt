@@ -1006,7 +1006,7 @@
 @char hide id=ALL
 @text show id=TX03_004_0010 speaker=narration
 廊下の天井で、硬いものが弾けた。
-@effect play id=shake strength=small duration_ms=350
+@effect play id=shake strength=small effect_ms=350
 @text show id=TX03_004_0011 speaker=narration
 数秒後、ガラスの落ちる音がした。栞が僕の腕を掴んだ。
 @text show id=TX03_004_0012 speaker=CH_003
@@ -1026,7 +1026,7 @@
 @text show id=TX03_004_0018 speaker=CH_002
 私の方はいい。先にそっちを
 @char hide id=ALL
-@effect play id=blackfade strength=normal duration_ms=800
+@effect play id=blackfade strength=normal effect_ms=800
 @text show id=TX03_004_0019 speaker=narration
 雨音が変わり、照明が落ちた。
 @text show id=TX03_004_0020 speaker=CH_001
@@ -1155,7 +1155,7 @@
 @text show id=TX04_001_0002 speaker=narration
 僕は肩を支えようとして、事務室の中を見た。
 @bg show id=BG_012 image=crime filter=dim effect=none effect_layer=background transition=cut duration_ms=0
-@effect play id=flash strength=small duration_ms=180
+@effect play id=flash strength=small effect_ms=180
 @text show id=TX04_001_0003 speaker=narration
 椅子が倒れていた。机の角から、腕が見えた。その先に、修蔵さんの顔があった。
 @char show id=CH_001 expression=恐怖 position=center
@@ -2223,7 +2223,7 @@
 浴場の戸が少し開いていた。
 @text show id=TX07_008_0002 speaker=narration
 黒田さんが手をかける前に、僕たちを止めた。床に、早瀬さんの包帯が見えた。
-@effect play id=flash strength=small duration_ms=180
+@effect play id=flash strength=small effect_ms=180
 @wait start duration_ms=900 mode=auto_only
 @text show id=TX07_008_0003 speaker=narration
 剥がれたのではない。手がついていた。
@@ -3149,7 +3149,7 @@
 奈緒の手が、栞の肩へ伸びた。
 @char hide id=ALL
 @bgm play file=B013.dat fade_ms=200 
-@effect play id=shake strength=normal duration_ms=500
+@effect play id=shake strength=normal effect_ms=500
 @text show id=TX11_007_0011 speaker=narration
 道を譲ってもらう動きに見えた。次の瞬間、栞の身体が横へ押し出された。
 @text show id=TX11_007_0012 speaker=CH_001
@@ -3173,7 +3173,7 @@
 @chapter_title show chapter="第十二章" title="手を離さないで"
 @text show id=TX12_001_0001 speaker=narration
 栞のコートの裾が、手すりをかすめた。
-@effect play id=shake strength=small duration_ms=350
+@effect play id=shake strength=small effect_ms=350
 @text show id=TX12_001_0002 speaker=narration
 僕は腕を掴んだ。身体が引かれ、膝が足場に落ちた。握ったところが栞の袖ごと滑り、手首で止まった。
 @text show id=TX12_001_0003 speaker=CH_000
