@@ -483,8 +483,8 @@ export class Renderer {
       this.updateEffectLayer("none", "background");
     };
     if (command.action === "hide") {
-      const transition = command.args?.transition ?? "cut";
       const duration = Number(command.args?.duration_ms ?? 0);
+      const transition = command.args?.transition ?? (duration > 0 ? "fade" : "cut");
       if (transition === "cut" || duration <= 0 || !this.transition || !this.background.style.backgroundImage) {
         clearBackground();
         done?.();

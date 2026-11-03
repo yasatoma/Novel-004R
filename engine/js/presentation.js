@@ -34,7 +34,7 @@ export function assertValidPresentation(presentation) {
 
   if (presentation.bg !== undefined) {
     assertRecord(presentation.bg, "bg");
-    assertKnownKeys(presentation.bg, new Set(["show"]), "bg");
+    assertKnownKeys(presentation.bg, new Set(["show","hide"]), "bg");
     validateLeaf(presentation.bg, "show", ["transition","duration_ms"], {
       transition(value, path) {
         if (value !== undefined && !["cut","fade","dissolve","blackfade"].includes(value)) {
@@ -43,6 +43,7 @@ export function assertValidPresentation(presentation) {
       },
       duration_ms: assertDuration
     });
+    validateLeaf(presentation.bg, "hide", ["duration_ms"], { duration_ms: assertDuration });
   }
 
   if (presentation.bgm !== undefined) {
@@ -95,7 +96,7 @@ export function assertValidPresentation(presentation) {
 
 export function applyPresentationDefaults(command, presentation = {}) {
   let defaults = null;
-  if (command.type === "bg" && command.action === "show") defaults = presentation.bg?.show;
+  if (command.type === "bg" && ["show","hide"].includes(command.action)) defaults = presentation.bg?.[command.action];
   else if (command.type === "bgm" && ["play","stop"].includes(command.action)) defaults = presentation.bgm?.[command.action];
   else if (command.type === "ambient" && ["play","stop"].includes(command.action)) defaults = presentation.ambient?.[command.action];
   else if (command.type === "char" && ["show","hide"].includes(command.action)) defaults = presentation.char?.[command.action];
