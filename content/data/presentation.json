@@ -3,6 +3,9 @@
     "show": {
       "transition": "blackfade",
       "duration_ms": 2000
+    },
+    "hide": {
+      "duration_ms": 1000
     }
   },
   "bgm": {
