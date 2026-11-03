@@ -12,7 +12,7 @@ export class EffectManager{
   if(command.action==="stop"){this.root.classList.remove(cls);delete this.root.dataset.effectStrength;done?.();return;}
   for(const effectId of ALLOWED)this.root.classList.remove(`effect-${effectId}`);
   void this.root.offsetWidth;this.root.classList.add(cls);
-  const duration=Number(command.args.duration_ms ?? 700),generation=this.generation;
+  const duration=Number(command.args.effect_ms ?? 700),generation=this.generation;
   this.root.style.setProperty("--effect-duration",`${duration}ms`);
   this.root.dataset.effectStrength=command.args.strength ?? "";
   this.timer=setTimeout(()=>{

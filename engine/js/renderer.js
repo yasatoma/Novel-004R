@@ -616,19 +616,26 @@ export class Renderer {
       for (const slot of this.characterSlots.values()) {
         if (command.args.id === "ALL" ? !slot.hidden : slot.dataset.character === command.args.id) {
           const duration = Number(command.args.duration_ms ?? 0);
-          slot.style.setProperty("--char-fade-ms", `${duration}ms`);
           if (duration > 0) {
-            slot.dataset.hiding = "true";
-            slot.style.opacity = "0";
-            setTimeout(() => {
-              if (slot.dataset.hiding !== "true") return;
-              slot.hidden = true; slot.removeAttribute("src"); delete slot.dataset.character; delete slot.dataset.hiding; slot.style.opacity = "";
-              this.updateVisibleCharacterCount();
-            }, duration);
-          } else {
-            slot.hidden = true; slot.removeAttribute("src"); delete slot.dataset.character;
-            this.updateVisibleCharacterCount();
+            const outgoing = slot.cloneNode(false);
+            outgoing.removeAttribute("id");
+            outgoing.classList.add("char-crossfade-outgoing");
+            outgoing.removeAttribute("aria-label");
+            outgoing.alt = "";
+            outgoing.style.pointerEvents = "none";
+            outgoing.style.setProperty("--char-fade-ms", `${duration}ms`);
+            outgoing.style.opacity = getComputedStyle(slot).opacity || "1";
+            slot.parentElement?.append(outgoing);
+            void outgoing.offsetWidth;
+            requestAnimationFrame(() => { outgoing.style.opacity = "0"; });
+            setTimeout(() => outgoing.remove(), duration);
           }
+          slot.hidden = true;
+          slot.removeAttribute("src");
+          delete slot.dataset.character;
+          delete slot.dataset.hiding;
+          slot.style.opacity = "";
+          this.updateVisibleCharacterCount();
         }
       }
       return;

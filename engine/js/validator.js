@@ -172,11 +172,13 @@ function validateValues(command) {
   if(command.type==="wait"&&command.action==="sync"&&Object.keys(a).length) fail(command,"@wait sync にkeyは指定できません");
   if(command.type==="effect"&&!["shake","flash","fade","mist","blackfade"].includes(a.id)) fail(command,`未定義effect.id: ${a.id}`);
   if(command.type==="effect"&&a.strength!==undefined&&!["","small","normal"].includes(a.strength)) fail(command,`未定義effect.strength: ${a.strength}`);
+  if(command.type==="effect"&&command.action==="play"&&a.duration_ms!==undefined) fail(command,"effect play の duration_ms は廃止されています。effect_ms を使用してください");
+  if(command.type==="effect"&&command.action==="stop"&&a.effect_ms!==undefined) fail(command,"effect stop では effect_ms を使用できません");
   if(["bgm","ambient"].includes(command.type)&&a.continue_if_same!==undefined&&typeof a.continue_if_same!=="boolean") fail(command,`continue_if_sameはtrue/false: ${a.continue_if_same}`);
   if(command.type==="overlay"&&command.action==="show"&&!/^I\d{3}$/.test(a.id)) fail(command,`overlay.idはI + 3桁数字: ${a.id}`);
   if(command.type==="overlay"&&command.action==="show"&&a.position!==undefined&&!["left","center","right"].includes(a.position)) fail(command,`未定義overlay.position: ${a.position}`);
   if(command.type==="overlay"&&command.action==="show"&&a.size!==undefined&&!["small","medium","large"].includes(a.size)) fail(command,`未定義overlay.size: ${a.size}`);
   if(a.blocking!==undefined&&typeof a.blocking!=="boolean") fail(command,`blockingはtrue/false: ${a.blocking}`);
-  for(const key of ["duration_ms","fade_ms","hold_ms"]) if(a[key]!==undefined&&(!Number.isFinite(Number(a[key]))||Number(a[key])<0)) fail(command,`${key}は0以上の数値: ${a[key]}`);
+  for(const key of ["duration_ms","fade_ms","hold_ms","effect_ms"]) if(a[key]!==undefined&&(!Number.isFinite(Number(a[key]))||Number(a[key])<0)) fail(command,`${key}は0以上の数値: ${a[key]}`);
   if(a.volume!==undefined&&(!Number.isFinite(Number(a.volume))||Number(a.volume)<0||Number(a.volume)>1)) fail(command,`volumeは0..1: ${a.volume}`);
 }
