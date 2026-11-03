@@ -120,7 +120,7 @@ button:hover {
 
 #game-top {
   position: absolute;
-  z-index: 5;
+  z-index: 35;
   left: 0;
   right: 0;
   top: 0;
@@ -157,7 +157,7 @@ button:hover {
 
 #reading-area {
   position: absolute;
-  z-index: 3;
+  z-index: 33;
   left: 5%;
   right: 5%;
   bottom: 2%;
@@ -247,7 +247,7 @@ button:hover {
 
 #choices {
   position: absolute;
-  z-index: 6;
+  z-index: 36;
   left: 50%;
   bottom: 306px;
   /* JS replaces this with reading-area top + 80px when choices open. */
