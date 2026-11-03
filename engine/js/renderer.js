@@ -620,6 +620,7 @@ export class Renderer {
             const outgoing = slot.cloneNode(false);
             outgoing.removeAttribute("id");
             outgoing.classList.add("char-crossfade-outgoing");
+            outgoing.classList.remove("char-fade-in");
             outgoing.removeAttribute("aria-label");
             outgoing.alt = "";
             outgoing.style.pointerEvents = "none";
@@ -630,6 +631,8 @@ export class Renderer {
             requestAnimationFrame(() => { outgoing.style.opacity = "0"; });
             setTimeout(() => outgoing.remove(), duration);
           }
+          slot.classList.remove("char-fade-in");
+          slot.dataset.fadeToken = String((Number(slot.dataset.fadeToken ?? 0) + 1));
           slot.hidden = true;
           slot.removeAttribute("src");
           delete slot.dataset.character;
@@ -655,6 +658,8 @@ export class Renderer {
       outgoing = slot.cloneNode(false);
       outgoing.removeAttribute("id");
       outgoing.classList.add("char-crossfade-outgoing");
+      outgoing.classList.remove("char-fade-in");
+      outgoing.style.opacity = getComputedStyle(slot).opacity || "1";
       outgoing.removeAttribute("aria-label");
       outgoing.alt = "";
       outgoing.style.pointerEvents = "none";
@@ -669,13 +674,21 @@ export class Renderer {
     if (command.args.crop !== undefined || command.action === "show") slot.dataset.crop = command.args.crop ?? "bust";
     this.prepareCharacterCrop(slot, source);
     slot.style.setProperty("--char-fade-ms", `${duration}ms`);
+    slot.classList.remove("char-fade-in");
+    const fadeToken = String((Number(slot.dataset.fadeToken ?? 0) + 1));
+    slot.dataset.fadeToken = fadeToken;
+    slot.style.opacity = "";
+    slot.hidden = false;
     if (duration > 0) {
-      slot.style.opacity = "0";
-      slot.hidden = false;
-      requestAnimationFrame(() => { if (slot.dataset.character === command.args.id) slot.style.opacity = "1"; });
-    } else {
-      slot.style.opacity = "";
-      slot.hidden = false;
+      // Use an explicit keyframe animation instead of a transition from display:none.
+      // A CSS transition may be skipped when the slot becomes visible and opacity
+      // changes in the same presentation cycle.
+      void slot.offsetWidth;
+      slot.classList.add("char-fade-in");
+      setTimeout(() => {
+        if (slot.dataset.fadeToken !== fadeToken) return;
+        slot.classList.remove("char-fade-in");
+      }, duration);
     }
     this.updateVisibleCharacterCount();
   }

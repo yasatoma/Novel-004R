@@ -757,6 +757,15 @@ input[type=range] {
   transition: opacity var(--char-fade-ms, 0ms) ease
 }
 
+@keyframes character-fade-in {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+#characters img.char-fade-in {
+  animation: character-fade-in var(--char-fade-ms, 0ms) ease both
+}
+
 #characters img[data-crop="bust"] {
   top: auto;
   bottom: -30vh;
