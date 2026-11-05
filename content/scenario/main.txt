@@ -71,7 +71,7 @@
 @text show id=TX01_002_0003 speaker=narration
 紺の着物の女性が、こちらへ歩いてきた。
 @text show id=TX01_002_0004 speaker=narration
-桐生奈緒と名乗った支配人は、僕のカメラと栞の鞄を見て、荷物を預かる順番を変えた。
+桐生奈緒と名乗った支配人は、僕のカメラと栞の鞄に目を留めた。
 @text show id=TX01_002_0005 speaker=CH_003
 そちらはお手元に。お仕事のものをお持ちと伺っています
 @text show id=TX01_002_0006 speaker=CH_001
@@ -227,7 +227,7 @@
 @wait start duration_ms=1000
 @textbox show
 @text show id=TX01_005_0001 speaker=narration
-部屋へ案内する途中、工具箱を持った男とすれ違った。
+部屋へ案内される途中、工具箱を持った男とすれ違った。
 @char show id=CH_004 expression=基本 position=left
 @text show id=TX01_005_0002 speaker=CH_004
 悪い。そこの袋、踏まないでくれ
@@ -237,7 +237,7 @@
 @text show id=TX01_005_0004 speaker=CH_003
 保守をお願いしている早瀬さんです
 @text show id=TX01_005_0005 speaker=CH_004
-すまん、握手は右でも今日は勘弁してくれ。昼に板金で切った
+すまん、握手は今日は勘弁してくれ。昼に板金で切った
 @text show id=TX01_005_0006 speaker=CH_001
 深かったんですか
 @text show id=TX01_005_0007 speaker=CH_004
@@ -251,7 +251,7 @@
 @text show id=TX01_005_0011 speaker=CH_004
 旧浴場へ抜ける通路がある。客用廊下より早いが、足元が悪い。今日は特にな
 @text show id=TX01_005_0012 speaker=narration
-修蔵さんが後ろから来て、戸口を覗いた。
+修蔵さんが後ろから来て、戸口を覗いた。この宿の事業は、修蔵さんから次の担い手へ引き継がれる予定になっていた。
 @text show id=TX01_005_0013 speaker=CH_002
 写真を撮るなら、危ないところも撮っておいてくれ。承継先に、隠して渡したくない
 @text show id=TX01_005_0014 speaker=CH_003
@@ -268,7 +268,7 @@
 @wait start duration_ms=1000
 @textbox show
 @text show id=TX01_006_0001 speaker=narration
-湯守室は狭かった。窓のない計器の前から、二本の管が天井へ伸びている。左手の防火戸の向こうには、幅の狭い保守通路があった。
+湯守室は狭く、窓がなかった。計器の前から、二本の管が天井へ伸びている。左手の防火戸の向こうには、幅の狭い保守通路があった。
 @scene end id=SC01_006
 
 # 開口部と固定梯子を目で確認する
@@ -538,7 +538,7 @@
 @textbox show
 @ambient stop fade_ms=800
 @text show id=TX02_002_0001 speaker=narration
-戻ると、饅頭は本当に二つ残っていた。皿の下に、千鶴さんの字で「お二人へ」と書かれている。
+戻ると、饅頭は本当に二つ残っていた。「お二人へ」という千鶴さんの添え書きがあった。
 @char show id=CH_004 expression=基本 position=left
 @text show id=TX02_002_0002 speaker=CH_004
 俺が食ったみたいな置き方だな
@@ -548,7 +548,7 @@
 一つは主人が食った。証人はいないが
 @char show id=CH_006 expression=基本 position=right
 @text show id=TX02_002_0005 speaker=narration
-談話室の窓際には、黒田正紀さんが座っていた。名刺を交換すると、黒田さんは僕の所属を確認し、鞄へ丁寧にしまった。
+談話室の窓際には、司法書士の黒田正紀さんが座っていた。修蔵さんに頼まれ、宿の事業を引き継ぐための書類を確かめに来ていた。名刺を交換すると、黒田さんは僕の所属を確認し、鞄へ丁寧にしまった。
 @text show id=TX02_002_0006 speaker=CH_006
 今日は取材としておいでですか
 @text show id=TX02_002_0007 speaker=CH_000
@@ -688,7 +688,7 @@
 @text show id=TX02_003_0027 speaker=CH_001
 怒ってはいなかったよ。ちゃんと伝えたかっただけ
 @text show id=TX02_003_0028 speaker=narration
-僕は鞄から掲載誌を出すときのことを思い出した。栞が何度も読み、言い方を変えた一段落があった。あれは、取材相手へよい印象を与えたいからではなかった。
+僕は、掲載誌を鞄から出した日のことを思い出した。誌面には、原稿の段階で栞が何度も読み、言い方を変えた一段落があった。僕によい印象を与えたいから、そこまで言葉を確かめたのではなかった。
 @text show id=TX02_003_0029 speaker=narration
 だから僕も、次に会う理由として別の記事を持ちかけるのをやめたのだ。結局、展覧会という理由に変えただけだったけれど。
 @text show id=TX02_003_0030 speaker=narration
@@ -752,7 +752,7 @@
 @text show id=TX02_004_0014 speaker=narration
 しかし出てきたのは、台帳を指す言葉だった。
 @text show id=TX02_004_0015 speaker=CH_002
-これを見てもらいたい。何枚か、貼った紙が違う
+これを見てもらいたい。何か所か、紙を貼り直したように見える
 @text show id=TX02_004_0016 speaker=CH_001
 今日は、母のものを受け取りに来たの
 @text show id=TX02_004_0017 speaker=CH_002
@@ -809,7 +809,7 @@
 @se play file=S004.dat
 @char show id=CH_006 expression=真剣 position=right
 @text show id=TX03_001_0002 speaker=narration
-黒田さんの携帯が鳴った。応答した顔が、窓から離れた。
+黒田さんの携帯が鳴った。電話に出ると、窓から離れた。
 @text show id=TX03_001_0003 speaker=CH_006
 通行止めですか。……はい。宿に七名です。こちらから出ないように伝えます
 @text show id=TX03_001_0004 speaker=narration
@@ -840,7 +840,7 @@
 @char hide id=CH_003
 @char show id=CH_002 expression=基本 position=left
 @text show id=TX03_001_0014 speaker=CH_002
-原本を照らすだけだ。明日になれば済む、という話ではない
+原本と台帳を照らし合わせるだけだ。明日に延ばせば済む、という話ではない
 @text show id=TX03_001_0015 speaker=CH_003
 三枝さん。山の状況が分からないうちは、設備の対応を優先させてください
 @text show id=TX03_001_0016 speaker=CH_002
@@ -848,9 +848,9 @@
 @text show id=TX03_001_0017 speaker=narration
 修蔵さんは栞に何か言おうとした。栞は顔を上げたが、先に早瀬さんが声をかけた。
 @text show id=TX03_001_0018 speaker=CH_004
-支払ったって口座の番号、逃がすなよ。こっちは今月の給料がある
+振り込んだ先の口座番号、確かめてくれ。こっちは今月の給料がある
 @text show id=TX03_001_0019 speaker=CH_002
-逃がさん。全部、出す
+確かめる。全部、出す
 @char hide id=ALL
 @char show id=CH_001 expression=悲しみ position=center
 @text show id=TX03_001_0020 speaker=narration
@@ -1103,7 +1103,7 @@
 @text show id=TX03_005_0020 speaker=CH_001
 廊下、まだ濡れていますか
 @text show id=TX03_005_0021 speaker=CH_003
-ええ。配電室に行く以外は、しばらく移動をお控えください
+ええ。設備の確認は私がいたしますので、皆様はしばらく移動をお控えください
 @text show id=TX03_005_0022 speaker=narration
 黒田さんは質問を続けず、電池の残量を見た。
 @text show id=TX03_005_0023 speaker=narration
@@ -1278,7 +1278,7 @@
 @text show id=TX04_003_0008 speaker=narration
 黒田さんは一度目を閉じた。
 @text show id=TX04_003_0009 speaker=CH_006
-掛けるものだけなら、私が。これ以上、部屋を動かさないようにします
+掛けるものだけなら、私が。これ以上、部屋の物を動かさないようにします
 @text show id=TX04_003_0010 speaker=narration
 奈緒が清潔なシーツを持ってきた。黒田さんはどこを通ったか僕に見ていてほしいと言い、部屋へ入った。
 @char hide id=CH_005
@@ -1294,7 +1294,7 @@
 @text show id=TX04_003_0015 speaker=narration
 僕は位置を変えなかった。
 @text show id=TX04_003_0016 speaker=narration
-シーツが広がる音がした。黒田さんが戻り、手についたものをどうすればよいかと呟いた。救急箱の手袋を使ったこと、外した後の袋も、まとめて残した。
+シーツが広がる音がした。黒田さんが戻り、手についたものをどうすればよいかと呟いた。救急箱の手袋を使ったことは記録し、外した手袋も捨てずに残した。
 @text show id=TX04_003_0017 speaker=narration
 何を触ったか覚えるだけのことが、ひどく難しかった。
 @char hide id=CH_001
@@ -1625,7 +1625,7 @@
 @char hide id=CH_006
 @char show id=CH_001 expression=決意 position=right
 @text show id=TX05_002_0027 speaker=CH_001
-急いで、一人の名前にしなくていいと思います。いま、分からないところは、分からないままで
+急いで、一人を犯人だと決めなくていいと思います。いま、分からないところは、分からないままで
 @text show id=TX05_002_0028 speaker=CH_004
 分からないまま、一緒に夜を越すんだろ
 @text show id=TX05_002_0029 speaker=narration
@@ -1666,7 +1666,7 @@
 @text show id=TX05_002_0045 speaker=narration
 栞の目が伏せられた。
 @text show id=TX05_002_0046 speaker=narration
-僕はその二人に、何も言えなかった。帳簿という言葉の向こうに、やっと二人の長い時間が見えた。
+僕はその二人に、何も言えなかった。帳簿という言葉の向こうに、やっと修蔵さんと早瀬さんの長い時間が見えた。
 @scene end id=SC05_002
 @chapter end id=CH05
 
@@ -1756,7 +1756,7 @@
 @text show id=TX06_002_0012 speaker=CH_003
 こちらの確認と、廊下の片付けを。天窓の方にも
 @text show id=TX06_002_0013 speaker=CH_000
-談話室に戻ったときは、配電室以外へ行かないように、と言っていました
+談話室に戻ったときは、皆には移動を控えるように、と言っていました
 @text show id=TX06_002_0014 speaker=CH_003
 皆様には移動をお控えいただきたかったので。私は管理する立場です
 @text show id=TX06_002_0015 speaker=narration
@@ -1794,7 +1794,7 @@
 @text show id=TX06_003_0002 speaker=CH_004
 支払済みだって控え、そこだ。俺の会社の名前だけは合ってる
 @text show id=TX06_003_0003 speaker=narration
-黒田さんが千鶴さんに許可を求めた。修蔵さんから閲覧を頼まれた資料の範囲だと確認し、受付に置かれていた会計控えだけを出した。
+黒田さんが千鶴さんに許可を求めた。修蔵さんから閲覧を頼まれた資料の範囲だと確認し、受付に置かれていた会計控えだけを出した。ここに支払済みとあっても、早瀬さんの口座に金が入った証明にはならない。
 @text show id=TX06_003_0004 speaker=narration
 事務室の台帳には触れない。捜査の対象になるかもしれないからだ。
 @char show id=CH_005 expression=不安 position=right
@@ -1825,7 +1825,7 @@
 @text show id=TX06_003_0015 speaker=CH_001
 はい。だから、その前の記録を残すんです。どこを訂正したか、分かるように
 @text show id=TX06_003_0016 speaker=narration
-黒田さんが書類の所在を訊いた。奈緒は、資料室の原本と事務室の台帳を照らす予定だったと答えた。
+黒田さんが書類の所在を訊いた。奈緒は、資料室の原本と、支払いをまとめた事務室の台帳を照らし合わせる予定だったと答えた。
 @overlay hide duration_ms=600
 @bgm play file=B011.dat volume=0.42 fade_ms=1200 
 @text show id=TX06_003_0017 speaker=narration
@@ -1837,7 +1837,7 @@
 @text show id=TX06_003_0020 speaker=CH_004
 それが見たい。払ったなら、誰に払ったんだ
 @text show id=TX06_003_0021 speaker=narration
-黒田さんが、いま閲覧できる控えと、後で確認する原本を別の紙へ書いた。
+黒田さんが、いま閲覧できる控えと、後で確認する原本を別の紙へ書いた。控えを写しただけなら、同じ記載を読み返すことになる。黒田さんは、実際の振込先を確かめられる元の記録を探していた。
 @text show id=TX06_003_0022 speaker=narration
 早瀬さんは、それを見るために椅子を寄せた。近づかれると千鶴さんの肩が動く。その動きに気づき、彼は一脚分の距離を残した。
 @text show id=TX06_003_0023 speaker=CH_004
@@ -1845,7 +1845,7 @@
 @text show id=TX06_003_0024 speaker=CH_006
 私には必要ですが、お客様もいらっしゃいます。細かな額は後で結構です。まず、どの工事の支払いか
 @text show id=TX06_003_0025 speaker=CH_004
-去年の配管だ。追加で頼まれた分を含めて、約束どおり出した。見積もりと違うと言われたこともない
+去年の配管だ。追加で頼まれた分を含めて、約束どおり請求した。見積もりと違うと言われたこともない
 @text show id=TX06_003_0026 speaker=CH_005
 三枝さんも、そこは言っていなかったわ
 @text show id=TX06_003_0027 speaker=CH_004
@@ -1862,7 +1862,7 @@
 談話室からこちらへ来るとき、事務室の戸は見ないようにしていた。いまはその方角に顔を向けたまま、指で膝を叩いた。
 @char change id=CH_004 expression=悲しみ
 @text show id=TX06_003_0033 speaker=CH_004
-そこまで言っといて、受け取っていないものに印を押される。俺の仕事がなかったみたいだ
+そこまで言っといて、金はまだ入ってない。なのに、書類には支払済みの印だ。俺の仕事がなかったみたいだ
 @text show id=TX06_003_0034 speaker=CH_005
 なくなってなんか
 @text show id=TX06_003_0035 speaker=CH_004
@@ -1915,7 +1915,7 @@
 @text show id=TX06_004_0001 speaker=narration
 すぐに資料室へは行かなかった。
 @text show id=TX06_004_0002 speaker=narration
-旧浴場側には雨水が入り始めていると奈緒が言い、黒田さんも、七人目を助けることのできなかった夜に、さらに危険を増やすべきではないと答えた。
+旧浴場側には雨水が入り始めていると奈緒が言い、黒田さんも、修蔵さんを助けることのできなかった夜に、さらに危険を増やすべきではないと答えた。
 @char show id=CH_006 expression=真剣 position=right
 @char show id=CH_004 expression=基本 position=left
 @text show id=TX06_004_0003 speaker=CH_006
@@ -1961,7 +1961,7 @@
 @text show id=TX07_001_0008 speaker=CH_004
 昔の話か？　ああ、一回。閉まらなくなったって
 @text show id=TX07_001_0009 speaker=CH_001
-私、覚えてます。母が怒られると思って、隠れていて
+私、覚えてます。母に怒られると思って、隠れていて
 @text show id=TX07_001_0010 speaker=CH_004
 建て付けが悪かっただけだ。子供が壊せるような窓じゃない
 @text show id=TX07_001_0011 speaker=CH_001
@@ -2012,7 +2012,7 @@
 @text show id=TX07_002_0001 speaker=narration
 千鶴さんが、人数分の膝掛けを取りに行く相談をした。廊下の棚なら僕が一緒に行ける。黒田さんは入口へ椅子を移し、こちらを見ていると答えた。
 @text show id=TX07_002_0002 speaker=narration
-全員の姿を見ているつもりでも、何を見ているのか言わなければ、別の誰かが見ていると思ってしまう。さっきの話の続きとして、僕たちは口に出すようになっていた。
+誰が誰を見ているか言わなければ、皆が別の誰かに任せてしまう。さっきの話の続きとして、僕たちは口に出すようになっていた。
 @text show id=TX07_002_0003 speaker=narration
 早瀬さんは受付に残した資料を取りに行きたいと言った。
 @char show id=CH_006 expression=真剣 position=right
@@ -2082,7 +2082,7 @@
 @text show id=TX07_004_0010 speaker=narration
 彼は膝掛けを二つ折りにし、自分の隣の椅子にも掛けた。
 @text show id=TX07_004_0011 speaker=narration
-誰が座る席を空けたのか、僕には分からなかった。
+誰のために席を空けたのか、僕には分からなかった。
 @scene end id=SC07_004
 
 # ②で明示された場面・時間・焦点の区切り
@@ -2361,7 +2361,7 @@
 @text show id=TX08_002_0023 speaker=CH_000
 早瀬さんは、何を見に行ったのか。そこだけでも
 @text show id=TX08_002_0024 speaker=narration
-黒田さんは頷いた。さっきまでの表の続きに、彼が最後に見えた位置を書いた。
+黒田さんは頷いた。さっきまでの表の続きに、早瀬さんが最後に見えた位置を書いた。
 @text show id=TX08_002_0025 speaker=narration
 僕は手帳を出そうとして、裏表を間違えた。ひっくり返すだけのことができず、指が同じ角を二度掴んだ。
 @char change id=CH_001 expression=真剣
@@ -2372,7 +2372,7 @@
 @text show id=TX08_002_0028 speaker=narration
 僕は頷いた。水はすぐそこにあるのに、手を伸ばすことまで他の人に言われなければできなくなっていた。
 @text show id=TX08_002_0029 speaker=narration
-栞は二十一時十八分の記録を読み、書いた後に何を見たか僕へ訊いた。
+栞は二十一時十八分の記録を読み、その後に何を見たか僕に訊いた。
 @text show id=TX08_002_0030 speaker=narration
 桶の水、便所の戸、黒田さんの声。一つずつ答えていくと、少しだけ手が動くようになった。
 @text show id=TX08_002_0031 speaker=CH_000
@@ -2417,7 +2417,7 @@
 @text show id=TX08_002_0048 speaker=narration
 早瀬さんが「仕事の控え」と紙を伏せた理由が、初めて違って見えた。
 @text show id=TX08_002_0049 speaker=narration
-彼は秘密を抱えて逃げたのではなかった。公の確認の前に、自分の会社の支払い先を見たい。誰かに恥をかかせずに、取り違えなら直したい。そんな希望を持ったのかもしれない。
+彼は秘密を抱えて逃げたのではなかった。公の確認の前に、自分の会社へ払われたはずの金の行き先を見たい。誰かに恥をかかせずに、取り違えなら直したい。そんな希望を持ったのかもしれない。
 @text show id=TX08_002_0050 speaker=narration
 本人に確かめることは、もうできなかった。
 @overlay hide duration_ms=600
@@ -2512,7 +2512,7 @@
 @text show id=TX09_001_0011 speaker=CH_001
 伯父には？
 @text show id=TX09_001_0012 speaker=CH_005
-言った。だから、あなたに見てもらいたいと。……なのに、早瀬さんには言わなかった。夕方、あんなに怒っていたのに
+言った。そうしたら、三枝さんが、あなたに見てもらいたいと。……なのに、早瀬さんには言わなかった。夕方、あんなに怒っていたのに
 @text show id=TX09_001_0013 speaker=CH_003
 その番号が口座番号かどうかも、分かっていないでしょう
 @text show id=TX09_001_0014 speaker=CH_005
@@ -2672,7 +2672,7 @@
 @text show id=TX09_003_0024 speaker=narration
 僕たちは紙片に目を戻した。
 @text show id=TX09_003_0025 speaker=narration
-この紙に従って、早瀬さんは便所の先へ歩いたのかもしれない。待っていれば黒田さんも来ると思って、誰にも知られずに行ったつもりではなかったのかもしれない。
+この紙に従って、早瀬さんは便所の先へ歩いたのかもしれない。自分の行き先は黒田さんも知っている。そう思って、待っていたのかもしれない。
 @char show id=CH_001 expression=真剣 position=right
 @char show id=CH_006 expression=真剣 position=left
 @text show id=TX09_003_0026 speaker=CH_001
@@ -2773,7 +2773,7 @@
 @text show id=TX10_002_0004 speaker=CH_005
 ええ。照合票を外したところも、破った紙も。捨てたら分からなくなるからって
 @text show id=TX10_002_0005 speaker=narration
-控え帳には、会計資料を渡す際の照合票が挟まれていた。該当の頁は大半が外され、綴じ際の細い帯だけが残っている。
+控え帳に残る細い帯は、会計資料を渡す際に内容を確かめる照合票の一部だった。頁の大半は切り取られ、綴じ際だけが残っている。
 @text show id=TX10_002_0006 speaker=narration
 その上部に、糊の曇った痕があった。
 @text show id=TX10_002_0007 speaker=narration
@@ -2880,7 +2880,7 @@
 @char show id=CH_006 expression=真剣 position=left
 @char show id=CH_003 expression=緊張 position=right
 @text show id=TX10_003_0003 speaker=CH_000
-奈緒さんが紙を拾ったとき、僕はタオルを受け取っています。栞と千鶴さんは、僕の後ろ
+奈緒さんのお話では、紙を拾ったのは僕がタオルを受け取ったときです。栞と千鶴さんは、僕の後ろ
 @text show id=TX10_003_0004 speaker=CH_001
 奈緒さんは廊下にいました。私の横から先には、出ていません
 @text show id=TX10_003_0005 speaker=CH_005
@@ -2892,7 +2892,7 @@
 @text show id=TX10_003_0008 speaker=CH_000
 だから、食い違う説明をそのまま残します
 @text show id=TX10_003_0009 speaker=narration
-紙の出所は、書いた人を一人に絞らない。
+紙の出所だけでは、書いた人を一人に絞れない。
 @text show id=TX10_003_0010 speaker=narration
 通れる経路があっても、そこを通った証明ではない。
 @text show id=TX10_003_0011 speaker=narration
@@ -2927,7 +2927,7 @@
 @text show id=TX11_001_0006 speaker=narration
 栞は空の湯呑を見せた。
 @text show id=TX11_001_0007 speaker=CH_001
-二人で行こう。まだ、ここにいるから
+二人で行こう。まだ、安心はできないから
 @scene end id=SC11_001
 
 # 二人で隣の厨房へ湯を替えに行く
@@ -2938,7 +2938,7 @@
 @wait start duration_ms=900
 @textbox show
 @text show id=TX11_002_0001 speaker=narration
-厨房は談話室の隣だった。千鶴さんに断り、戸を開けたままにして湯を注いだ。栞が手を滑らせかけたので、僕が急須を受け取った。
+厨房は談話室の隣だった。千鶴さんに断り、戸を開けたままにした。栞が湯を注いでいて手を滑らせかけたので、僕が急須を受け取った。
 @char show id=CH_001 expression=悲しみ position=center
 @text show id=TX11_002_0002 speaker=CH_001
 ありがとう
@@ -2967,7 +2967,7 @@
 @text show id=TX11_002_0014 speaker=CH_001
 でも、もう伯父を見なくていいのは、少しほっとしてしまった。ひどいよね
 @text show id=TX11_002_0015 speaker=CH_000
-ひどくない。僕も、布を掛けたとき、ほっとした
+ひどくない。僕も、布が掛けられたとき、ほっとした
 @char change id=CH_001 expression=悲しみ
 @text show id=TX11_002_0016 speaker=narration
 栞がこちらを見た。僕の顔を確かめるようにしてから、湯呑へ目を落とした。
@@ -3050,7 +3050,7 @@
 @text show id=TX11_005_0001 speaker=narration
 黒田さんが、談話室の戸を開けたまま廊下を照らした。
 @text show id=TX11_005_0002 speaker=narration
-誰かをここへ残す案は出さなかった。五人で動けば、怪我をしたときに全員が危険へ巻き込まれる。だからといって、誰かを二人で残して、その組み合わせを信用できるかという問題も解けていない。
+誰かをここへ残す案は出さなかった。五人で動けば、危険にさらされるのも全員だ。だからといって、誰かを二人で残して、その組み合わせを信用できるかという問題も解けていない。
 @text show id=TX11_005_0003 speaker=CH_006
 まず、この部屋を戻る場所にします。動かす資料も、ここです。状況が悪くなったら、本館の階段から上へ
 @text show id=TX11_005_0004 speaker=narration
@@ -3144,7 +3144,7 @@
 @text show id=TX11_007_0008 speaker=narration
 栞は覗き込まず、千鶴さんへ振り向いた。
 @text show id=TX11_007_0009 speaker=CH_001
-箱を運ぶなら、ここを戻る必要がありますよね。上げるだけにして、人を増やさずに
+箱を運ぶなら、ここを戻る必要がありますよね。棚の上へ移すだけにして、ここを行き来する人数を増やさずに
 @text show id=TX11_007_0010 speaker=narration
 奈緒の手が、栞の肩へ伸びた。
 @char hide id=ALL
@@ -3286,7 +3286,7 @@
 奈緒は湯守室へ戻る間、一言も喋らなかった。
 @char show id=CH_006 expression=真剣 position=left
 @text show id=TX12_002_0004 speaker=CH_006
-資料は諦めます。ここからは動きません
+資料は諦めます。これ以上、奥へは進みません
 @text show id=TX12_002_0005 speaker=CH_001
 はい
 @text show id=TX12_002_0006 speaker=narration
@@ -3446,7 +3446,7 @@
 @text show id=TX13_004_C_0003 speaker=CH_000
 そうだ。廊下を歩いた人にもつく
 @text show id=TX13_004_C_0004 speaker=CH_006
-最初の説明との食い違いを補う材料です。殺人を直接示すものとは分けましょう
+最初の説明との食い違いを裏付ける材料です。殺人を直接示すものとは分けましょう
 @jump goto target=SC13_002
 @scene end id=SC13_004
 
@@ -3486,7 +3486,7 @@
 @char hide id=CH_006
 @char show id=CH_005 expression=決意 position=left
 @text show id=TX13_006_0009 speaker=CH_005
-私も、栞ちゃんのすぐ横で見ていたわ。タオルを渡して、それから、ずっと立っていた
+私も、栞ちゃんのすぐ横で見ていたわ。奈緒さんはタオルを渡して、それから、ずっと立っていた
 @text show id=TX13_006_0010 speaker=CH_003
 成瀬様がタオルを受け取られたときは、私の手元を見ていらっしゃったのですか
 @text show id=TX13_006_0011 speaker=CH_000
@@ -3508,7 +3508,7 @@
 @text show id=TX13_006_0018 speaker=narration
 奈緒は栞を見た。目の動きがそこで止まった。
 @text show id=TX13_006_0019 speaker=CH_000
-第一事件では、手動復帰のため配電盤を操作したと説明しました。でも、封印紙は開いていない。自動切替は停電直後に動いていました
+第一事件では、手動復帰のため配電盤を操作したと説明しました。でも、封印紙は切れていない。自動切替は停電直後に動いていました
 @text show id=TX13_006_0020 speaker=CH_006
 その説明では、配電室にいた時間を裏付けられません
 @text show id=TX13_006_0021 speaker=CH_003
@@ -3611,7 +3611,7 @@
 @text show id=TX14_001_0026 speaker=CH_003
 ……はい
 @text show id=TX14_001_0027 speaker=narration
-一件目の傷が、恐怖と怒りだけで残されたものではないと、僕は思った。途中から、誰かへ責任を渡す動きが加わっていた。
+一件目は、恐怖と怒りだけの犯行ではないと、僕は思った。途中から、誰かへ責任を渡す動きが加わっていた。
 @text show id=TX14_001_0028 speaker=narration
 ただ、どの傷が何によるものかを僕たちは知らない。凶器も含めて、奈緒の説明として記録した。
 @text show id=TX14_001_0029 speaker=CH_001
@@ -3655,7 +3655,7 @@
 @text show id=TX14_001_0046 speaker=narration
 僕は、涙が出るのかと思った。違った。吐き気を堪えるように息を止め、ゆっくり吐いた。
 @text show id=TX14_001_0047 speaker=CH_003
-作業台の工具を使いました。書いた紙を上着の内側から取って、戻りました。黒田様が呼ばれたので、処分する前に
+作業台の工具を使いました。書いた紙を早瀬さんの上着の内側から取って、戻りました。黒田様に呼ばれたので、処分する前に
 @text show id=TX14_001_0048 speaker=CH_006
 二十九分頃に、あと一回記録すればよいかと声をかけました。それには、すぐ返事がありませんでした
 @char change id=CH_003 expression=沈痛
@@ -3680,7 +3680,7 @@
 @text show id=TX14_001_0057 speaker=narration
 そう言い直した黒田さんの手も、机の上から動かなかった。
 @text show id=TX14_001_0058 speaker=narration
-冷静に時刻を書き、人の証言を分けていた人の中に、同じように怒りがあった。早瀬さんを待たせた部屋で、計器の数字を写していた。その時間を、彼も抱えている。
+冷静に時刻を書き、人の証言を分けていた人の中に、同じように怒りがあった。早瀬さんが旧浴場で待つ間、湯守室で計器の数字を写していた。その時間を、彼も抱えている。
 @text show id=TX14_001_0059 speaker=CH_003
 言えば、宿が終わると思いました
 @char hide id=CH_006
@@ -3726,7 +3726,7 @@
 @text show id=TX14_001_0078 speaker=narration
 栞は紙面ではなく、奈緒を見ていた。
 @text show id=TX14_001_0079 speaker=CH_001
-私を押したのは、紙を見たからですか
+私が紙を調べたから、押したんですか
 @text show id=TX14_001_0080 speaker=CH_003
 あなたが、残しておくと言ったから
 @text show id=TX14_001_0081 speaker=narration
@@ -3774,7 +3774,7 @@
 @text show id=TX15_001_0001 speaker=narration
 告白が終わっても、警報は止まらなかった。
 @text show id=TX15_001_0002 speaker=narration
-黒田さんが奈緒に設備の状態を訊き、本館上階へ避難する必要があるかを確認した。奈緒の説明を一度聞いただけでは採用せず、壁に掲示された避難図と、僕の撮った図面を照らした。
+黒田さんが奈緒に設備の状態を訊き、本館上階へ避難する必要があるかを確認した。奈緒の説明を一度聞いただけでは採用せず、壁に掲示された避難図と、僕の撮った図面を照らし合わせた。
 @text show id=TX15_001_0003 speaker=narration
 いまいる談話室は旧浴場より高い。客室へ上がる道も本館の中で確保できる。地下側へ戻らず、水位の表示だけを見て判断することにした。
 @text show id=TX15_001_0004 speaker=narration
@@ -3852,7 +3852,7 @@
 @text show id=TX15_002_0006 speaker=CH_000
 少しだけ。でも、そのままでいい
 @text show id=TX15_002_0007 speaker=narration
-栞は姿勢を直さなかった。僕は動かさない方の手で毛布を上げた。
+栞は姿勢を直さなかった。僕は肩を揺らさないように、毛布を引き上げた。
 @text show id=TX15_002_0008 speaker=CH_001
 母が亡くなったとき、伯父がね、泣いていたの
 @text show id=TX15_002_0009 speaker=CH_000
@@ -3904,7 +3904,7 @@
 @text show id=TX15_003_0001 speaker=narration
 僕がうとうとした間に、千鶴さんは早瀬さんの荷物をまとめていた。
 @text show id=TX15_003_0002 speaker=narration
-工具箱は動かさず、車の鍵と彼の手帳だけ、元の位置が分かるよう撮影して封筒に置いた。
+工具箱は動かさず、車の鍵だけ、元の位置が分かるよう撮影して封筒に置いた。
 @text show id=TX15_003_0003 speaker=CH_005
 奥様に、何て言えばいいのかしら
 @text show id=TX15_003_0004 speaker=CH_006
@@ -3922,7 +3922,7 @@
 @text show id=TX15_003_0010 speaker=narration
 二人がこちらを見た。栞を起こさないよう、僕は声を落とした。
 @text show id=TX15_003_0011 speaker=CH_000
-家の人の貯金を使いたくないって。給料を払う人がいるって。怒っていた理由も、それだけじゃなかったことも
+家の人の貯金を使いたくないって。給料を払う相手がいるって。怒っていた理由も、それだけじゃなかったことも
 @text show id=TX15_003_0012 speaker=CH_005
 ええ
 @text show id=TX15_003_0013 speaker=CH_000
@@ -3979,7 +3979,7 @@
 @text show id=TX15_004_0011 speaker=narration
 黒田さんが自分の携帯を確かめた。
 @text show id=TX15_004_0012 speaker=narration
-僕は昨夜の着信履歴から、警察へかけ直した。今度は、向こうから声がした。
+僕は警察へ電話をかけた。今度は、向こうから声がした。
 @scene end id=SC15_004
 @chapter end id=CH15
 
@@ -4142,7 +4142,7 @@
 @text show id=TX16_004_0010 speaker=narration
 それを鞄に入れようとし、やめた。机へ戻した。
 @text show id=TX16_004_0011 speaker=narration
-持ち帰るものを全て思い出にしなくてもいい。栞は一つずつ、いま手放せるものを選んでいた。
+思い出のために、何もかも持ち帰らなくてもいい。栞は一つずつ、いま手放せるものを選んでいた。
 @scene end id=SC16_004
 
 # ②で明示された場面・時間・焦点の区切り
@@ -4154,7 +4154,7 @@
 @wait start duration_ms=1600
 @textbox show
 @text show id=TX16_005_0001 speaker=narration
-黒田さんは事業承継の書類を鞄へしまっていた。
+黒田さんは、宿の事業を引き継ぐための書類を鞄へしまっていた。
 @char show id=CH_006 expression=真剣 position=left
 @char show id=CH_005 expression=不安 position=right
 @text show id=TX16_005_0002 speaker=CH_006
@@ -4321,7 +4321,7 @@
 声が掠れた。
 # 修蔵の手紙。登録済み筆者CH_002の文章として表示し、立ち絵は表示しない。
 @text show id=TX17_002_0026 speaker=CH_002
-年寄りの勝手だ。お前に預けるべきものを、私が寂しいというだけで持っていた。
+年寄りの勝手だ。お前に返すべきものを、私が寂しいというだけで持っていた。
 @text show id=TX17_002_0027 speaker=CH_002
 それで、お前をもっと来づらくした。来てほしいと言えばよかったものを、帳面を口実にした。すまなかった。
 @char change id=CH_001 expression=涙
@@ -4583,7 +4583,7 @@
 @location show text="町の喫茶店／同日・午後"
 @bgm play file=B016.dat volume=0.4 fade_ms=1200 
 @text show id=TX18_003_0001 speaker=narration
-注文したときにはなかった菓子が、隣の卓へ運ばれた。
+菓子が、隣の卓へ運ばれた。
 @text show id=TX18_003_0002 speaker=narration
 栞がその皿を目で追い、自分で気づいて視線を戻した。
 @text show id=TX18_003_0003 speaker=CH_000
@@ -4608,7 +4608,7 @@
 @text show id=TX18_003_0012 speaker=CH_001
 うん。食べたいと思ったから、頼んでみた
 @text show id=TX18_003_0013 speaker=narration
-皿が来るまで、栞は工房の話をした。急ぎの作業は引き継ぎ、戻れる日に少しずつ始めている。事件のことを知っている人に会うと、気を遣わせているのが分かって、自分から明るく話そうとしてしまう。
+皿が来るまで、栞は工房の話をした。戻れる日に少しずつ作業を始めている。事件のことを知っている人に会うと、気を遣わせているのが分かって、自分から明るく話そうとしてしまう。
 @char change id=CH_001 expression=悲しみ
 @text show id=TX18_003_0014 speaker=CH_001
 元気そうで安心したって言われると、そのままでいないといけない気がして
@@ -4675,7 +4675,7 @@
 @text show id=TX18_004_0008 speaker=CH_000
 寝るのは、寝る。途中で目が覚めることはある
 @text show id=TX18_004_0009 speaker=CH_001
-私も。寝て起きたら、昨日みたいになっていないか確かめるの
+私も。寝て起きたら、あの夜みたいになっていないか確かめるの
 @text show id=TX18_004_0010 speaker=CH_000
 僕は、携帯を見る
 @text show id=TX18_004_0011 speaker=CH_001
@@ -4733,7 +4733,7 @@
 @text show id=TX18_005_0011 speaker=narration
 カメラの電源を入れた。
 @text show id=TX18_005_0012 speaker=narration
-最後の画像まで送る勇気はなかった。最初の方に、散策路の写真があった。風景だけを撮ったつもりなのに、端に栞の手が写っている。
+最後の画像まで見ていく勇気はなかった。最初の方に、散策路の写真があった。風景だけを撮ったつもりなのに、端に栞の手が写っている。
 @overlay show id=I012
 @text show id=TX18_005_0013 speaker=narration
 葉に二つ、穴があいていた。
@@ -5062,7 +5062,7 @@
 うん。だから、私が残すと決める
 @overlay hide duration_ms=600
 @text show id=TX20_001_0013 speaker=narration
-栞の指は傷の上では止まらなかった。端に触れる前に止まり、紙の支え方を変えた。
+栞は紙の端に触れる前に指を止め、支え方を変えた。
 @text show id=TX20_001_0014 speaker=narration
 春の工房で見た手つきだった。
 @text show id=TX20_001_0015 speaker=narration
@@ -5080,7 +5080,7 @@
 @text show id=TX20_001_0020 speaker=CH_000
 もう？
 @text show id=TX20_001_0021 speaker=CH_001
-始める前の記録だけでも、時間がかかるから。……それに、続きができる日に終わるのも、大事だと思って
+始める前の記録だけでも、時間がかかるから。……それに、まだ続けられるうちに終わるのも、大事だと思って
 @text show id=TX20_001_0022 speaker=narration
 栞は標本帳を閉じた。母のものだった帳面を、自分の手でしまった。
 @scene end id=SC20_001
@@ -5096,7 +5096,7 @@
 @text show id=TX20_002_0001 speaker=narration
 台所から、湯が沸く音がした。
 @text show id=TX20_002_0002 speaker=narration
-栞が二つのカップを出し、僕は菓子の袋を開けた。中の一枚が割れていたので、大きい方を栞の皿へ置いた。
+栞が二つのカップを出し、僕は菓子の袋を開けた。中の一枚が割れていたので、割れていない方を栞の皿へ置いた。
 @char show id=CH_001 expression=室内微笑み position=right
 @text show id=TX20_002_0003 speaker=CH_001
 いま、選んだ？
