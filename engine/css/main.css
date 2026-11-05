@@ -713,7 +713,11 @@ input[type=range] {
 }
 
 #background[data-filter="dim"] {
-  filter: brightness(.62)
+  filter: brightness(.70)
+}
+
+#background[data-filter="dim_strong"] {
+  filter: brightness(.40)
 }
 
 #background[data-filter="bright"] {
