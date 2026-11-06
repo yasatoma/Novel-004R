@@ -28,6 +28,9 @@
     "show": {
       "duration_ms": 1000
     },
+    "change": {
+      "duration_ms": 1000
+    },
     "hide": {
       "duration_ms": 1000
     }
