@@ -62,8 +62,9 @@ export function assertValidPresentation(presentation) {
 
   if (presentation.char !== undefined) {
     assertRecord(presentation.char, "char");
-    assertKnownKeys(presentation.char, new Set(["show","hide"]), "char");
+    assertKnownKeys(presentation.char, new Set(["show","change","hide"]), "char");
     validateLeaf(presentation.char, "show", ["duration_ms"], { duration_ms: assertDuration });
+    validateLeaf(presentation.char, "change", ["duration_ms"], { duration_ms: assertDuration });
     validateLeaf(presentation.char, "hide", ["duration_ms"], { duration_ms: assertDuration });
   }
 
@@ -99,7 +100,7 @@ export function applyPresentationDefaults(command, presentation = {}) {
   if (command.type === "bg" && ["show","hide"].includes(command.action)) defaults = presentation.bg?.[command.action];
   else if (command.type === "bgm" && ["play","stop"].includes(command.action)) defaults = presentation.bgm?.[command.action];
   else if (command.type === "ambient" && ["play","stop"].includes(command.action)) defaults = presentation.ambient?.[command.action];
-  else if (command.type === "char" && ["show","hide"].includes(command.action)) defaults = presentation.char?.[command.action];
+  else if (command.type === "char" && ["show","change","hide"].includes(command.action)) defaults = presentation.char?.[command.action];
   else if (command.type === "chapter_title" && command.action === "show") defaults = presentation.chapter_title?.show;
   else if (command.type === "overlay" && ["show","hide"].includes(command.action)) defaults = presentation.overlay?.[command.action];
   if (!defaults || !Object.keys(defaults).length) return command;

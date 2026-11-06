@@ -653,8 +653,9 @@ export class Renderer {
     const duration = Number(command.args.duration_ms ?? 0);
     const source = resolveContentUrl(this.workRoot, `images/char/${file}`);
     const replacing = command.action === "show" && !slot.hidden && !!slot.getAttribute("src") && slot.dataset.character !== command.args.id;
+    const changing = command.action === "change" && !slot.hidden && !!slot.getAttribute("src");
     let outgoing = null;
-    if (replacing && duration > 0) {
+    if ((replacing || changing) && duration > 0) {
       outgoing = slot.cloneNode(false);
       outgoing.removeAttribute("id");
       outgoing.classList.add("char-crossfade-outgoing");

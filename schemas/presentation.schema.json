@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "presentation.schema.json",
+  "title": "ChappyNovelEngine presentation defaults",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "bg": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "show": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "transition": {
+              "type": "string",
+              "enum": [
+                "cut",
+                "fade",
+                "dissolve",
+                "blackfade"
+              ]
+            },
+            "duration_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        "hide": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "duration_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "bgm": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "play": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "fade_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        "stop": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "fade_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "ambient": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "play": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "fade_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        "stop": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "fade_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "char": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "show": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "duration_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        "change": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "duration_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        "hide": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "duration_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "chapter_title": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "show": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "duration_ms": {
+              "type": "number",
+              "minimum": 0
+            },
+            "hold_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "overlay": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "show": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "position": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "size": {
+              "type": "string",
+              "enum": [
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            "duration_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        },
+        "hide": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "duration_ms": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    }
+  }
+}
