@@ -25,7 +25,7 @@ export async function importTransfer(config,text){
   bytes=new Uint8Array(size);let pos=0;for(const part of parts){bytes.set(part,pos);pos+=part.length;}
  }
  let data;try{data=JSON.parse(new TextDecoder("utf-8",{fatal:true}).decode(bytes));}catch{throw invalid();}
- if(data.schemaVersion!==SCHEMA_VERSION||data.workId!==config.workId||data.engineVersion!==config.engineVersion)throw invalid();
+ if(data.schemaVersion!==SCHEMA_VERSION||data.workId!==config.workId)throw invalid();
  try{assertValidTransferPayload(data);}catch{throw invalid();}
  return data;
 }
