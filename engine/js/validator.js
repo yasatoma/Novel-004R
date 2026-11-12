@@ -21,7 +21,7 @@ const COMMANDS = {
   // Legacy compatibility: effect `blocking` remains runtime-readable only for old works.
   // Do not expose it as a public I/F; new works must use `@wait start`.
   effect: { play: { required: ["id"] }, stop: { required: ["id"] } },
-  wait: { start: { required: ["duration_ms"] }, sync: { required: [] } },
+  wait: { start: { required: ["duration_ms"] }, sync: { required: [] }, beat: { required: [] } },
   flag: { set: { required: ["id", "value"] } },
   if: { check: { required: ["flag", "operator", "value", "goto"] } },
   jump: { goto: { required: ["target"] } },
@@ -170,6 +170,7 @@ function validateValues(command) {
   if(command.type==="char"&&["show","change"].includes(command.action)&&a.crop&&!["bust","face"].includes(a.crop)) fail(command,`未定義char.crop: ${a.crop}`);
   if(command.type==="wait"&&command.action==="start"&&a.mode!==undefined&&!["always","auto_only"].includes(a.mode)) fail(command,`未定義wait.mode: ${a.mode}`);
   if(command.type==="wait"&&command.action==="sync"&&Object.keys(a).length) fail(command,"@wait sync にkeyは指定できません");
+  if(command.type==="wait"&&command.action==="beat"&&Object.keys(a).length) fail(command,"@wait beat にkeyは指定できません");
   if(command.type==="effect"&&!["shake","flash","fade","mist","blackfade"].includes(a.id)) fail(command,`未定義effect.id: ${a.id}`);
   if(command.type==="effect"&&a.strength!==undefined&&!["","small","normal"].includes(a.strength)) fail(command,`未定義effect.strength: ${a.strength}`);
   if(command.type==="effect"&&command.action==="play"&&a.duration_ms!==undefined) fail(command,"effect play の duration_ms は廃止されています。effect_ms を使用してください");

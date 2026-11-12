@@ -1,4 +1,4 @@
-const TOP_LEVEL = new Set(["bg","bgm","char","chapter_title","ambient","overlay"]);
+const TOP_LEVEL = new Set(["bg","bgm","char","chapter_title","ambient","overlay","wait"]);
 
 function isRecord(value) {
   return !!value && typeof value === "object" && !Array.isArray(value);
@@ -83,6 +83,12 @@ export function assertValidPresentation(presentation) {
     validateLeaf(presentation.overlay, "hide", ["duration_ms"], { duration_ms: assertDuration });
   }
 
+  if (presentation.wait !== undefined) {
+    assertRecord(presentation.wait, "wait");
+    assertKnownKeys(presentation.wait, new Set(["beat"]), "wait");
+    validateLeaf(presentation.wait, "beat", ["duration_ms"], { duration_ms: assertDuration });
+  }
+
   if (presentation.chapter_title !== undefined) {
     assertRecord(presentation.chapter_title, "chapter_title");
     assertKnownKeys(presentation.chapter_title, new Set(["show"]), "chapter_title");
@@ -103,6 +109,7 @@ export function applyPresentationDefaults(command, presentation = {}) {
   else if (command.type === "char" && ["show","change","hide"].includes(command.action)) defaults = presentation.char?.[command.action];
   else if (command.type === "chapter_title" && command.action === "show") defaults = presentation.chapter_title?.show;
   else if (command.type === "overlay" && ["show","hide"].includes(command.action)) defaults = presentation.overlay?.[command.action];
+  else if (command.type === "wait" && command.action === "beat") defaults = presentation.wait?.beat;
   if (!defaults || !Object.keys(defaults).length) return command;
   return {...command, args:{...defaults, ...command.args}};
 }

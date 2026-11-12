@@ -200,6 +200,7 @@ export class Renderer {
     if (this.readingArea) this.readingArea.hidden = !visible;
   }
 
+
   showLocation(command) {
     if (!this.locationDisplay) return;
     if (command.action === "hide") {
