@@ -1,7 +1,7 @@
 {
   "bg": {
     "show": {
-      "transition": "blackfade",
+      "transition": "dissolve",
       "duration_ms": 2000
     },
     "hide": {

@@ -38,12 +38,12 @@
   "characters": {
     "CH_000": {
       "name": "律",
-      "color": "#d1b884",
+      "color": "#E6D3A4",
       "expressions": {}
     },
     "CH_001": {
       "name": "栞",
-      "color": "#D1808E",
+      "color": "#EC9090",
       "expressions": {
         "基本": "CH_001_基本.webp",
         "微笑み": "CH_001_微笑み.webp",
@@ -69,7 +69,7 @@
     },
     "CH_003": {
       "name": "桐生",
-      "color": "#C28C9D",
+      "color": "#BE82A6",
       "expressions": {
         "基本": "CH_003_基本.webp",
         "微笑み": "CH_003_微笑み.webp",
@@ -80,7 +80,7 @@
     },
     "CH_004": {
       "name": "早瀬",
-      "color": "#6E9FBC",
+      "color": "#8BB3C3",
       "expressions": {
         "基本": "CH_004_基本.webp",
         "怒り": "CH_004_怒り.webp",
@@ -89,7 +89,7 @@
     },
     "CH_005": {
       "name": "水野",
-      "color": "#CB7E8A",
+      "color": "#BB82BE",
       "expressions": {
         "基本": "CH_005_基本.webp",
         "微笑み": "CH_005_微笑み.webp",
@@ -100,7 +100,7 @@
     },
     "CH_006": {
       "name": "黒田",
-      "color": "#7D9DBE",
+      "color": "#8BC3BA",
       "expressions": {
         "基本": "CH_006_基本.webp",
         "真剣": "CH_006_真剣.webp",

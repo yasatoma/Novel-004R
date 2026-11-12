@@ -2,23 +2,14 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC01_001
-
-@char hide id=ALL
-@ambient stop
-@bgm stop
-@bg hide
-@location hide
 @textbox hide
-@wait sync
-
+@char hide id=ALL
 @bg show id=BG_001 transition=fade duration_ms=1000
-@bgm play file=B001.dat fade_ms=2000 
+@bgm play file=B001.dat fade_ms=2000
 @chapter_title show chapter="第一章" title="赤い橋を渡る"
 @wait sync
-
 @location show text="栞葉荘への山道／午後"
 @textbox show
-
 @text show id=TX01_001_0001 speaker=narration
 バスの窓に枝が触れた。葉が一枚、硝子の上を滑り、後ろへ消えた。
 @char show id=CH_001 expression=微笑み
@@ -52,17 +43,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC01_002
-
+@bgm stop
 @char hide id=ALL
-@textbox hide
-
-@bg show id=BG_002 duration_ms=2000
-@bgm play file=B002.dat fade_ms=2000 
 @wait sync
-
+@bg show id=BG_002
+@bgm play file=B002.dat
+@wait sync
 @location show text="栞葉荘・玄関／午後"
-@textbox show
-
 @text show id=TX01_002_0001 speaker=narration
 朱塗りの短い橋を渡ると、宿の門があった。二階の窓に山の色が映っている。軒先の雨樋から、乾いた葉が一枚突き出ていた。
 @char show id=CH_003 expression=微笑み
@@ -82,12 +69,12 @@
 
 # 玄関外から受付へ進む
 @scene start id=SC01_003
+@bgm stop
 @char hide id=ALL
-@textbox hide
-@bgm play file=B003.dat fade_ms=1000 
-@bg show id=BG_003 transition=blackfade duration_ms=1000
 @wait sync
-@textbox show
+@bgm play file=B003.dat
+@bg show id=BG_003
+@wait sync
 @text show id=TX01_003_0001 speaker=narration
 玄関を上がると、柚子の香りがした。
 @char show id=CH_003 expression=基本 position=right
@@ -143,13 +130,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC01_004
-@location show text="栞葉荘・玄関脇の窓辺／午後"
+@bgm stop
 @char hide id=ALL
-@textbox hide
-@bgm play file=B002.dat fade_ms=1000 
-@bg show id=BG_004 transition=blackfade duration_ms=1000
 @wait sync
-@textbox show
+@bgm play file=B002.dat
+@bg show id=BG_004
+@wait sync
+@location show text="栞葉荘・玄関脇の窓辺／午後"
 @text show id=TX01_004_0001 speaker=narration
 奈緒が部屋の鍵を用意する間、修蔵さんは窓を少し開けた。
 @text show id=TX01_004_0002 speaker=narration
@@ -195,8 +182,9 @@
 いま、撮っていいですか
 @text show id=TX01_004_0021 speaker=CH_002
 私を入れるなよ。木より大きくなる
-@char change id=CH_001 expression=微笑み
 @char hide id=CH_002
+@wait sync
+@char change id=CH_001 expression=微笑み
 @text show id=TX01_004_0022 speaker=narration
 栞が笑った。僕が構えると、修蔵さんはわざと窓から離れた。栞も下がろうとしたが、葉を透かす光が髪に当たっていて、僕はそのままでと頼んだ。
 @text show id=TX01_004_0023 speaker=CH_001
@@ -219,13 +207,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC01_005
-@location show text="栞葉荘・浴場棟への廊下／午後"
+@bgm stop
 @char hide id=ALL
-@textbox hide
-@bgm play file=B003.dat fade_ms=1000 
-@bg show id=BG_005 transition=blackfade duration_ms=1000
-@wait start duration_ms=1000
-@textbox show
+@wait sync
+@bgm play file=B003.dat
+@bg show id=BG_005
+@wait sync
+@location show text="栞葉荘・浴場棟への廊下／午後"
 @text show id=TX01_005_0001 speaker=narration
 部屋へ案内される途中、工具箱を持った男とすれ違った。
 @char show id=CH_004 expression=基本 position=left
@@ -237,7 +225,7 @@
 @text show id=TX01_005_0004 speaker=CH_003
 保守をお願いしている早瀬さんです
 @text show id=TX01_005_0005 speaker=CH_004
-すまん、握手は今日は勘弁してくれ。昼に金属板で切った
+すまん、握手は今日は勘弁してくれ。昼に板金で切った
 @text show id=TX01_005_0006 speaker=CH_001
 深かったんですか
 @text show id=TX01_005_0007 speaker=CH_004
@@ -263,11 +251,10 @@
 # 湯守室入口から内部を確認する
 @scene start id=SC01_006
 @char hide id=ALL
-@textbox hide
+@wait sync
+@bg show id=BG_006
+@wait sync
 @location show text="栞葉荘・湯守室入口／午後"
-@bg show id=BG_006 transition=blackfade duration_ms=1000
-@wait start duration_ms=1000
-@textbox show
 @text show id=TX01_006_0001 speaker=narration
 湯守室は狭く、窓がなかった。計器の前から、二本の管が天井へ伸びている。左手の防火戸の向こうには、幅の狭い保守通路があった。
 @scene end id=SC01_006
@@ -275,9 +262,8 @@
 # 開口部と固定梯子を目で確認する
 @scene start id=SC01_007
 @char hide id=ALL
-
+@bg show id=BG_007
 @location show text="栞葉荘・保守通路入口／午後"
-@bg show id=BG_007 transition=dissolve duration_ms=1000
 @text show id=TX01_007_0001 speaker=narration
 通路の中ほどで床が途切れているように見え、僕は思わず戸枠を掴んだ。
 @char show id=CH_004 expression=基本 position=left
@@ -310,12 +296,10 @@
 # 廊下へ戻り配電室の小窓を確認する
 @scene start id=SC01_008
 @char hide id=ALL
-@textbox hide
-@location show text="栞葉荘・配電室前／午後"
-@bg show id=BG_008 transition=dissolve duration_ms=1000
 @wait sync
-
-@textbox show
+@bg show id=BG_008
+@wait sync
+@location show text="栞葉荘・配電室前／午後"
 @text show id=TX01_008_0001 speaker=narration
 廊下へ戻ると、配電室の小窓があった。奥の盤には、赤い文字の封印紙が扉と枠を跨いで貼ってある。
 @char show id=CH_004 expression=基本 position=left
@@ -326,7 +310,7 @@
 @text show id=TX01_008_0004 speaker=CH_004
 説明して金になるならいいんだがな
 @text show id=TX01_008_0005 speaker=narration
-笑いかけたが、修蔵さんを見てやめた。
+笑いかけた顔が、修蔵さんを見て止まった。
 @char show id=CH_002 expression=基本 position=right
 @text show id=TX01_008_0006 speaker=CH_002
 支払いの話も、今日する
@@ -338,23 +322,20 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC01_009
-@location show text="栞葉荘・客室／午後"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_009 transition=blackfade duration_ms=1000
 @wait sync
-
-@textbox show
+@bg show id=BG_009
+@wait sync
+@location show text="栞葉荘・客室／午後"
 @text show id=TX01_009_0001 speaker=narration
 二つの部屋は廊下を挟んで向かい合っていた。僕の部屋の窓からは、来た橋が見えた。
 @scene end id=SC01_009
 
 # 荷物を置いて客室前廊下へ戻る
 @scene start id=SC01_010
-@location show text="栞葉荘・廊下／午後"
-@bg show id=BG_005 transition=dissolve duration_ms=800
+@bg show id=BG_005
 @wait sync
-
+@location show text="栞葉荘・本館廊下／午後"
 @text show id=TX01_010_0001 speaker=narration
 荷物を置いて出ると、栞はまだ戸の前にいた。
 @char show id=CH_001 expression=悲しみ position=right
@@ -382,10 +363,11 @@
 @text show id=TX01_010_0012 speaker=narration
 栞の肩から、力が少し抜けた。
 
-@bgm play file=B004.dat fade_ms=2000 
-@overlay show id=I001 duration_ms=2000
+@bgm stop
 @wait sync
-
+@bgm play file=B004.dat
+@overlay show id=I001
+@wait sync
 @text show id=TX01_010_0013 speaker=narration
 千鶴さんは風呂敷を開いた。中には、紐で結んだ古い標本帳があった。表紙の角が白く擦れている。
 @text show id=TX01_010_0014 speaker=CH_005
@@ -397,7 +379,7 @@
 ありがとう。……やっと、会えた
 @text show id=TX01_010_0017 speaker=narration
 その小さな声が母親に向けられたものだと分かり、僕は一歩、場所を空けた。
-@overlay hide duration_ms=1000
+@overlay hide
 @text show id=TX01_010_0018 speaker=CH_005
 散歩から戻ったら、お饅頭があるわ。二人分、隠しておく
 @text show id=TX01_010_0019 speaker=CH_000
@@ -416,25 +398,20 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC02_001
-
+@textbox hide
 @char hide id=ALL
-@ambient stop
 @bgm stop
 @bg hide
 @location hide
-@textbox hide
 @wait sync
-
 @bg show id=BG_010 transition=fade duration_ms=1000
-@bgm play file=B005.dat fade_ms=2000 
-@ambient play file=A001.dat
+@bgm play file=B005.dat fade_ms=2000
+@ambient play file=A001.dat fade_ms=2000
 @chapter_title show chapter="第二章" title="ほどかない糸"
 @wait sync
-
 @location show text="谷沿いの散策路／午後"
 @textbox show
 @se play file=S002.dat
-
 @text show id=TX02_001_0001 speaker=narration
 橋を渡り直して谷へ下ると、宿の屋根が木々に隠れた。
 @text show id=TX02_001_0002 speaker=narration
@@ -524,7 +501,7 @@
 @char change id=CH_001 expression=照れ
 @text show id=TX02_001_0042 speaker=CH_001
 仕事じゃなくても
-@wait start duration_ms=900 mode=auto_only
+@wait beat
 @text show id=TX02_001_0043 speaker=narration
 返す言葉を探しているうちに、橋の上を鳥が横切った。
 @text show id=TX02_001_0044 speaker=narration
@@ -533,14 +510,17 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC02_002
-@location show text="栞葉荘・談話室／夕方"
-@char hide id=ALL
 @textbox hide
-@bgm play file=B003.dat fade_ms=1600 
-@bg show id=BG_011 image=base filter=evening transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
+@bgm stop
+@bg hide
+@char hide id=ALL
+@ambient stop
+@wait sync
+@bgm play file=B003.dat
+@bg show id=BG_011 filter=evening transition=fade
+@wait sync
+@location show text="栞葉荘・談話室／夕方"
 @textbox show
-@ambient stop fade_ms=800
 @text show id=TX02_002_0001 speaker=narration
 戻ると、饅頭は本当に二つ残っていた。「お二人へ」という千鶴さんの添え書きがあった。
 @char show id=CH_004 expression=基本 position=left
@@ -572,6 +552,7 @@
 @text show id=TX02_002_0014 speaker=CH_005
 四つ目を狙っているところは見ましたよ
 @char hide id=CH_006
+@wait sync
 @char show id=CH_005 expression=微笑み position=right
 @text show id=TX02_002_0015 speaker=narration
 入口の声に早瀬さんが肩を竦めた。千鶴さんは急須を置き、彼の包帯を見た。
@@ -586,8 +567,9 @@
 @text show id=TX02_002_0020 speaker=CH_005
 両方よ
 @char hide id=CH_005
+@bgm stop
+@wait sync
 @char show id=CH_002 expression=基本 position=right
-@bgm stop fade_ms=1000
 @text show id=TX02_002_0021 speaker=narration
 修蔵さんも、入口で聞いていた。笑いかけて、早瀬さんと目が合うと表情を戻した。
 @text show id=TX02_002_0022 speaker=CH_002
@@ -602,6 +584,7 @@
 @text show id=TX02_002_0026 speaker=narration
 栞の指が湯呑の横で止まった。
 @char hide id=CH_002
+@wait sync
 @char show id=CH_003 expression=基本 position=right
 @text show id=TX02_002_0027 speaker=narration
 奈緒が茶菓子の空き皿を引いた。
@@ -610,6 +593,7 @@
 @text show id=TX02_002_0029 speaker=CH_004
 あんたの説明で振り込まれるなら、ここまで来てねえよ
 @char hide id=CH_003
+@wait sync
 @char show id=CH_006 expression=真剣 position=right
 @text show id=TX02_002_0030 speaker=CH_006
 早瀬さん。支払いの事実と、帳簿上の記載は分けて確認しましょう。原本をまだ見ていません
@@ -626,15 +610,17 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC02_003
-@location show text="栞葉荘・客室／夕方"
-@char hide id=ALL
 @textbox hide
-@bgm play file=B004.dat fade_ms=1600 
-@bg show id=BG_009 image=base filter=evening transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
+@bg hide
+@char hide id=ALL
+@wait sync
+@bgm play file=B004.dat
+@bg show id=BG_009 filter=evening transition=fade
+@wait sync
+@location show text="栞葉荘・客室／夕方"
 @textbox show
 @text show id=TX02_003_0001 speaker=narration
-標本帳を開くとき、栞が僕を呼んだ。
+標本帳を開くときは、栞が僕を呼んだ。
 @text show id=TX02_003_0002 speaker=narration
 二人で卓の両側に座り、風呂敷をほどいた。紐は固く結ばれていたが、古い紙へ力がかからないよう、栞は帳面を支えてから緩めた。
 @char show id=CH_001 expression=基本
@@ -660,7 +646,7 @@
 @text show id=TX02_003_0012 speaker=CH_000
 字じゃなくて、丸？
 @text show id=TX02_003_0013 speaker=CH_001
-字のつもりだったの。書けなかったから、読めたのも私だけ
+字のつもりだったの。書けなかったから、読むのも私だけ
 @text show id=TX02_003_0014 speaker=CH_000
 何て書いた？
 @text show id=TX02_003_0015 speaker=narration
@@ -671,7 +657,8 @@
 母の字の隣に、幼い栞の筆圧が残っていた。
 @text show id=TX02_003_0018 speaker=narration
 それは、誰かへ見せるために作った思い出ではなかった。帳面を開き、母が書き、その隣で栞も書いた。そんな日の一部が、丸い跡になっている。
-@overlay hide duration_ms=600
+@overlay hide
+@wait sync
 @char change id=CH_001 expression=微笑み
 @text show id=TX02_003_0019 speaker=CH_001
 律さんの字も、すぐ分かるよね
@@ -716,12 +703,11 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC02_004
-@location show text="栞葉荘・事務室前／夕方"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_012 image=base filter=evening transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
-@textbox show
+@wait sync
+@bg show id=BG_012 filter=evening
+@wait sync
+@location show text="栞葉荘・事務室前／夕方"
 @text show id=TX02_004_0001 speaker=narration
 栞が標本帳の話をしに行くというので、僕もついていった。
 @text show id=TX02_004_0002 speaker=narration
@@ -734,7 +720,8 @@
 うん。ありがとう
 @text show id=TX02_004_0005 speaker=CH_002
 傷んでいる。お前なら、うまく直せるだろう
-@bgm stop fade_ms=1000
+@bgm stop
+@wait sync
 @char change id=CH_001 expression=悲しみ
 @text show id=TX02_004_0006 speaker=CH_001
 ……どうして、もっと早く返してくれなかったの
@@ -772,10 +759,11 @@
 ごめんなさい。……後で、見ます
 @text show id=TX02_004_0022 speaker=CH_002
 夕食の後でいい。急がん
-@se play file=S003.dat
 @char hide id=CH_002
-@bg show id=BG_005 image=base filter=evening transition=dissolve duration_ms=800
-@bgm play file=B006.dat volume=0.5 fade_ms=1200 
+@wait sync
+@bg show id=BG_005 filter=evening
+@bgm play file=B006.dat volume=0.5
+@se play file=S003.dat
 @text show id=TX02_004_0023 speaker=narration
 栞が戸を閉めた。取っ手から指が離れるまで、時間がかかった。
 @text show id=TX02_004_0024 speaker=CH_000
@@ -799,19 +787,22 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC03_001
-@location show text="栞葉荘・談話室／夕方・豪雨"
-@char hide id=ALL
 @textbox hide
-@bgm play file=B007.dat fade_ms=1600 
-@bg show id=BG_011 image=base filter=dim transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
-@textbox show
-@ambient play file=A002.dat volume=0.3 fade_ms=800 
+@bgm stop
+@bg hide
+@char hide id=ALL
+@wait sync
+@bgm play file=B007.dat fade_ms=2000
+@bg show id=BG_011 filter=dim transition=fade duration_ms=1000
+@ambient play file=A002.dat volume=0.3 fade_ms=2000
 @chapter_title show chapter="第三章" title="山の向こうから"
+@wait sync
+@location show text="栞葉荘・談話室／夕方・豪雨"
+@textbox show
 @text show id=TX03_001_0001 speaker=narration
 雨は窓の上から斜めに流れた。近くにあるはずの橋が、薄い影になっている。
-@se play file=S004.dat
 @char show id=CH_006 expression=真剣 position=right
+@se play file=S004.dat
 @text show id=TX03_001_0002 speaker=narration
 黒田さんの携帯が鳴った。電話に出ると、窓から離れた。
 @text show id=TX03_001_0003 speaker=CH_006
@@ -828,6 +819,7 @@
 @text show id=TX03_001_0008 speaker=narration
 早瀬さんは車の鍵を出しかけ、戻した。栞が携帯の電波を確かめる。表示は一本と二本を行き来していた。
 @char hide id=CH_004
+@wait sync
 @char show id=CH_003 expression=基本 position=left
 @text show id=TX03_001_0009 speaker=CH_003
 宿の建物は高台にあります。川側へ出ず、本館でお過ごしください。お部屋には懐中電灯がございます
@@ -838,10 +830,12 @@
 @text show id=TX03_001_0012 speaker=narration
 千鶴さんは僕に微笑み、修蔵さんを見た。
 @char hide id=CH_006
+@wait sync
 @char show id=CH_005 expression=不安 position=right
 @text show id=TX03_001_0013 speaker=CH_005
 お話、延期した方がよくないかしら。今日は皆さん、落ち着かないでしょう
 @char hide id=CH_003
+@wait sync
 @char show id=CH_002 expression=基本 position=left
 @text show id=TX03_001_0014 speaker=CH_002
 原本と台帳を照らし合わせるだけだ。明日に延ばせば済む、という話ではない
@@ -852,10 +846,11 @@
 @text show id=TX03_001_0017 speaker=narration
 修蔵さんは栞に何か言おうとした。栞は顔を上げたが、先に早瀬さんが声をかけた。
 @text show id=TX03_001_0018 speaker=CH_004
-振込先の口座番号、確かめてくれ。こっちは今月の給料を払わなきゃならん
+振り込んだ先の口座番号、確かめてくれ。こっちは今月の給料がある
 @text show id=TX03_001_0019 speaker=CH_002
 確かめる。全部、出す
 @char hide id=ALL
+@wait sync
 @char show id=CH_001 expression=悲しみ
 @text show id=TX03_001_0020 speaker=narration
 二人の声が遠ざかった。奈緒は受付へ戻り、千鶴さんは食事の用意に立った。
@@ -875,11 +870,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC03_002
-@location show text="栞葉荘・玄関内／十八時前"
-@char hide id=ALL
 @textbox hide
-@bg show id=BG_003 image=base filter=dim transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
+@bg hide
+@char hide id=ALL
+@wait sync
+@bg show id=BG_003 filter=dim transition=fade
+@wait sync
+@location show text="栞葉荘・玄関内／十八時前"
 @textbox show
 @text show id=TX03_002_0001 speaker=narration
 山道の確認に行くと言い出したのは、早瀬さんだった。
@@ -894,7 +891,8 @@
 @text show id=TX03_002_0005 speaker=CH_003
 駐車場は玄関の横です。ただ、川側には近づかないでください
 @char hide id=CH_004
-@ambient play file=A002.dat volume=0.7 fade_ms=800 
+@wait sync
+@ambient play file=A002.dat volume=0.5
 @text show id=TX03_002_0006 speaker=narration
 僕も戸の内側で待った。雨が庇を越えて足元へ吹き込んだ。
 @char show id=CH_004 expression=基本 position=left
@@ -913,6 +911,7 @@
 @text show id=TX03_002_0013 speaker=CH_004
 車の方が高いぞ、と返したら怒られた
 @char hide id=CH_006
+@wait sync
 @char show id=CH_001 expression=微笑み position=right
 @text show id=TX03_002_0014 speaker=narration
 栞が廊下から顔を出した。手に、乾いたタオルを持っている。
@@ -924,8 +923,8 @@
 二枚あった方が、早く乾きます
 @text show id=TX03_002_0018 speaker=narration
 早瀬さんは受け取り、礼を言った。栞は続けて黒田さんにもタオルを渡した。
+@ambient play file=A002.dat volume=0.3
 @se play file=S003.dat
-@ambient play file=A002.dat volume=0.3 fade_ms=800 
 @text show id=TX03_002_0019 speaker=narration
 奈緒が戸を閉めた。雨の圧力で、最後だけ少し力が必要だった。
 @text show id=TX03_002_0020 speaker=CH_003
@@ -939,11 +938,10 @@
 # 談話室へ戻り修蔵と栞の小さな和解を見る
 @scene start id=SC03_003
 @char hide id=ALL
-@textbox hide
+@wait sync
+@bg show id=BG_011 filter=dim
+@wait sync
 @location show text="栞葉荘・談話室／十八時前"
-@bg show id=BG_011 image=base filter=dim transition=blackfade duration_ms=1000
-@wait start duration_ms=1000
-@textbox show
 @text show id=TX03_003_0001 speaker=narration
 談話室へ戻ると、修蔵さんが温かい茶を淹れていた。
 @char show id=CH_002 expression=基本 position=left
@@ -957,6 +955,7 @@
 @text show id=TX03_003_0005 speaker=CH_005
 お湯をこぼす分まで、今日作らなくても
 @char hide id=CH_005
+@wait sync
 @char show id=CH_001 expression=基本 position=right
 @text show id=TX03_003_0006 speaker=narration
 急須の下が濡れていた。修蔵さんは布巾を探し、栞が持っていたタオルを見る。栞は黙って、まだ使っていない角を渡した。
@@ -980,11 +979,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC03_004
-@location show text="栞葉荘・本館廊下／十八時三十分頃"
-@char hide id=ALL
 @textbox hide
-@bg show id=BG_005 image=base filter=dim transition=blackfade duration_ms=1000
-@wait start duration_ms=1000
+@bg hide
+@char hide id=ALL
+@wait sync
+@bg show id=BG_005 filter=dim transition=fade
+@wait sync
+@location show text="栞葉荘・本館廊下／十八時三十分頃"
 @textbox show
 @se play file=S001.dat
 @text show id=TX03_004_0001 speaker=narration
@@ -1007,7 +1008,7 @@
 撮れていなかった。僕が画面を見せると、早瀬さんは顔がないなら上出来だと言った。
 @text show id=TX03_004_0009 speaker=narration
 千鶴さんも覗き込み、そのまま受付の布を畳んだ。
-@bgm stop fade_ms=1000
+@bgm stop
 @char hide id=ALL
 @text show id=TX03_004_0010 speaker=narration
 廊下の天井で、硬いものが弾けた。
@@ -1017,7 +1018,7 @@
 数秒後、ガラスの落ちる音がした。栞が僕の腕を掴んだ。
 @text show id=TX03_004_0012 speaker=CH_003
 天窓です。皆様、そのままお待ちください
-@bg show id=BG_005 image=broken_skylight filter=dim transition=cut duration_ms=0
+@bg show id=BG_005 image=broken_skylight filter=dim
 @text show id=TX03_004_0013 speaker=narration
 玄関へ続く短い廊下に、細かな破片が散っていた。雨と一緒に紅葉が吹き込み、床を濡らしている。
 @text show id=TX03_004_0014 speaker=narration
@@ -1032,13 +1033,13 @@
 @text show id=TX03_004_0018 speaker=CH_002
 私の方はいい。先にそっちを
 @char hide id=ALL
-@bg show id=BG_005 image=broken_skylight filter=dim_strong transition=cut duration_ms=0
-@effect play id=blackfade strength=normal effect_ms=800
+@wait sync
+@bg show id=BG_005 image=broken_skylight filter=dim_strong
+@effect play id=blackfade effect_ms=800
 @text show id=TX03_004_0019 speaker=narration
 雨音が変わり、照明が落ちた。
 @text show id=TX03_004_0020 speaker=CH_001
 律さん
-@bg show id=BG_005 image=broken_skylight filter=dim transition=cut duration_ms=0
 @text show id=TX03_004_0021 speaker=narration
 僕は声の方へ手を伸ばした。栞の指先に触れた直後、廊下の非常灯が白く点いた。
 @text show id=TX03_004_0022 speaker=narration
@@ -1051,7 +1052,6 @@
 予備が入った。揺れるかもしれんが、慌てるな
 @text show id=TX03_004_0026 speaker=CH_003
 念のため配電室を確認してまいります。皆様はこちらへ
-@location show text="栞葉荘・談話室／停電後"
 @text show id=TX03_004_0027 speaker=narration
 僕と栞、黒田さんは談話室へ入った。千鶴さんは厨房の火を確認しに行くと言った。
 @text show id=TX03_004_0028 speaker=narration
@@ -1060,13 +1060,11 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC03_005
-@location show text="栞葉荘・談話室／停電後"
 @char hide id=ALL
-@textbox hide
-@bgm play file=B008.dat fade_ms=1200 
-@bg show id=BG_011 image=base filter=dim transition=blackfade duration_ms=1200
-@wait start duration_ms=1200
-@textbox show
+@bgm play file=B008.dat
+@bg show id=BG_011 filter=dim
+@wait sync
+@location show text="栞葉荘・談話室／停電後"
 @text show id=TX03_005_0001 speaker=narration
 卓上に懐中電灯を置くと、部屋の隅の影が濃くなった。栞の手は僕の袖を離れたが、近くに残っていた。
 @char show id=CH_001 expression=基本 position=left
@@ -1117,6 +1115,7 @@
 @text show id=TX03_005_0023 speaker=narration
 僕もその説明を、灯りが戻った理由として受け取った。
 @char hide id=CH_003
+@wait sync
 @char show id=CH_005 expression=基本 position=right
 @text show id=TX03_005_0024 speaker=narration
 十九時を過ぎて、千鶴さんが湯呑を運んできた。
@@ -1139,9 +1138,10 @@
 @se play file=S006.dat
 @text show id=TX03_005_0032 speaker=narration
 戸が動く音のあと、何かが床に落ちた。
-@bgm stop fade_ms=1000
+@bgm stop
 @char hide id=ALL
-@wait start duration_ms=700 mode=auto_only
+@wait sync
+@wait beat
 @text show id=TX03_005_0033 speaker=narration
 一拍遅れて、千鶴さんが叫んだ。
 @scene end id=SC03_005
@@ -1151,18 +1151,20 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC04_001
-@location show text="栞葉荘・事務室前／十九時十分頃"
-@char hide id=ALL
 @textbox hide
-@bg show id=BG_005 image=base filter=dim transition=blackfade duration_ms=800
-@wait start duration_ms=800
-@textbox show
+@bg hide
+@char hide id=ALL
+@wait sync
+@bg show id=BG_005 filter=dim transition=fade duration_ms=1000
 @chapter_title show chapter="第四章" title="食事の前に"
+@wait sync
+@location show text="栞葉荘・事務室前／十九時十分頃"
+@textbox show
 @text show id=TX04_001_0001 speaker=narration
 千鶴さんは戸口で腰を落としていた。膝の前に、割れた湯呑が転がっている。
 @text show id=TX04_001_0002 speaker=narration
 僕は肩を支えようとして、事務室の中を見た。
-@bg show id=BG_012 image=crime filter=dim transition=cut duration_ms=0
+@bg show id=BG_012 image=crime filter=dim
 @effect play id=flash strength=small effect_ms=180
 @text show id=TX04_001_0003 speaker=narration
 椅子が倒れていた。机の角から、腕が見えた。その先に、修蔵さんの顔があった。
@@ -1200,6 +1202,7 @@
 @text show id=TX04_001_0018 speaker=narration
 奈緒が救急箱を持ってきた。蓋を開きかけたところで、黒田さんの顔を見て止まった。
 @char hide id=CH_001
+@wait sync
 @char show id=CH_004 expression=悲しみ
 @text show id=TX04_001_0019 speaker=narration
 早瀬さんは部屋の中を見た途端、入口の柱を殴るように掴んだ。
@@ -1215,12 +1218,11 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC04_002
-@location show text="栞葉荘・本館廊下／十九時十九分頃"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_005 image=base filter=dim transition=blackfade duration_ms=800
-@wait start duration_ms=800
-@textbox show
+@wait sync
+@bg show id=BG_005 filter=dim
+@wait sync
+@location show text="栞葉荘・本館廊下／十九時十九分頃"
 @text show id=TX04_002_0001 speaker=CH_000
 人が倒れています。頭から血が出ています。山道が崩れて、宿から出られません
 @text show id=TX04_002_0002 speaker=narration
@@ -1262,12 +1264,9 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC04_003
-@location show text="栞葉荘・事務室前／通話が切れた後"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_005 image=base filter=dim transition=blackfade duration_ms=800
-@wait start duration_ms=800
-@textbox show
+@wait sync
+@location show text="栞葉荘・事務室前／通話が切れた後"
 @text show id=TX04_003_0001 speaker=narration
 通話が切れた携帯を、僕はしばらく耳に当てていた。
 @text show id=TX04_003_0002 speaker=narration
@@ -1277,7 +1276,7 @@
 @text show id=TX04_003_0004 speaker=CH_000
 はい
 @text show id=TX04_003_0005 speaker=narration
-声が出たので、僕は驚いた。喉が詰まっていると思っていた。
+声が出たので、僕は驚いた。喉が詰まっているつもりだった。
 @text show id=TX04_003_0006 speaker=narration
 千鶴さんが事務室へ戻ろうとした。修蔵さんに掛ける物を探していた。
 @char show id=CH_005 expression=涙 position=left
@@ -1290,6 +1289,7 @@
 @text show id=TX04_003_0010 speaker=narration
 奈緒が清潔なシーツを持ってきた。黒田さんはどこを通ったか僕に見ていてほしいと言い、部屋へ入った。
 @char hide id=CH_005
+@wait sync
 @char show id=CH_001 expression=悲しみ position=right
 @text show id=TX04_003_0011 speaker=narration
 栞は廊下の壁を見ていた。見たくないのだと分かったので、僕は戸のところに立ち、視界を遮った。
@@ -1302,7 +1302,7 @@
 @text show id=TX04_003_0015 speaker=narration
 僕は位置を変えなかった。
 @text show id=TX04_003_0016 speaker=narration
-シーツが広がる音がした。黒田さんが戻った。救急箱の手袋を使ったことは記録し、外した手袋も捨てずに残した。
+シーツが広がる音がした。黒田さんが戻り、手についたものをどうすればよいかと呟いた。救急箱の手袋を使ったことは記録し、外した手袋も捨てずに残した。
 @text show id=TX04_003_0017 speaker=narration
 何を触ったか覚えるだけのことが、ひどく難しかった。
 @char hide id=CH_001
@@ -1338,12 +1338,14 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC04_004
-@location show text="栞葉荘・談話室／夜"
-@char hide id=ALL
 @textbox hide
-@bgm play file=B009.dat fade_ms=1800 
-@bg show id=BG_011 image=base filter=dim transition=blackfade duration_ms=1800
-@wait start duration_ms=1800
+@bg hide
+@char hide id=ALL
+@wait sync
+@bgm play file=B009.dat
+@bg show id=BG_011 filter=dim transition=fade
+@wait sync
+@location show text="栞葉荘・談話室／夜"
 @textbox show
 @text show id=TX04_004_0001 speaker=narration
 事務室の戸を閉めた。施錠はせず、入口の外に椅子を置いた。
@@ -1386,6 +1388,7 @@
 @text show id=TX04_004_0019 speaker=narration
 僕は背中に触れてよいか迷い、椅子を寄せた。栞がこちらへ傾いた。肩を支えると、初めて体重が預けられた。
 @char hide id=CH_001
+@wait sync
 @char show id=CH_003 expression=基本 position=right
 @text show id=TX04_004_0020 speaker=narration
 少し離れたところで、奈緒が湯呑を並べた。
@@ -1404,6 +1407,7 @@
 @text show id=TX04_004_0026 speaker=narration
 彼は自分の包帯を見た。袖の血はすでに乾いていた。その袖から千鶴さんが目を逸らすのを、僕は見てしまった。
 @char hide id=CH_003
+@wait sync
 @char show id=CH_006 expression=真剣 position=right
 @text show id=TX04_004_0027 speaker=CH_006
 今夜は皆さんでここに。移動が必要なら、二人以上で声をかけてください
@@ -1418,7 +1422,8 @@
 @text show id=TX04_004_0032 speaker=CH_004
 俺たちのうちの、誰かが
 @char hide id=ALL
-@wait start duration_ms=1000 mode=auto_only
+@wait sync
+@wait beat
 @text show id=TX04_004_0033 speaker=narration
 栞が僕の手を握り直した。卓上の六つの湯呑のうち、一つにもまだ口がついていなかった。
 @scene end id=SC04_004
@@ -1428,11 +1433,16 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC05_001
-@location show text="栞葉荘・談話室／夜"
-@bgm play file=B007.dat fade_ms=1200 
-@bg show id=BG_011 image=table_oblique filter=dim transition=dissolve duration_ms=800
+@textbox hide
+@bgm stop
+@bg hide
 @char hide id=ALL
+@wait sync
+@bgm play file=B007.dat fade_ms=2000
+@bg show id=BG_011 image=table_oblique filter=dim transition=fade duration_ms=1000
 @chapter_title show chapter="第五章" title="袖の赤"
+@wait sync
+@textbox show
 @text show id=TX05_001_0001 speaker=narration
 黒田さんが白い紙を置き、停電した時刻を書いた。
 @text show id=TX05_001_0002 speaker=narration
@@ -1458,6 +1468,7 @@
 @text show id=TX05_001_0011 speaker=CH_004
 いまも、思いたくはねえよ
 @char hide id=CH_006
+@wait sync
 @char show id=CH_003 expression=基本 position=right
 @text show id=TX05_001_0012 speaker=narration
 奈緒が顔を上げた。
@@ -1507,10 +1518,11 @@
 @text show id=TX05_001_0034 speaker=CH_000
 そうじゃ
 @text show id=TX05_001_0035 speaker=CH_004
-こいつの隣に座らせておけない。そう思ったろ
+俺の隣に座らせておけない。そう思ったろ
 @text show id=TX05_001_0036 speaker=narration
 僕はすぐには答えられなかった。
 @char hide id=CH_003
+@wait sync
 @char show id=CH_001 expression=決意 position=right
 @text show id=TX05_001_0037 speaker=narration
 栞が椅子を少し前へ出した。
@@ -1525,7 +1537,9 @@
 僕はカメラを取り出した。事件の写真を見せるのだと思ったのか、栞の顔が強張った。
 @text show id=TX05_001_0042 speaker=CH_000
 廊下の写真です。さっきの
-@bgm play file=B010.dat fade_ms=1200 
+@bgm stop
+@wait sync
+@bgm play file=B010.dat
 @overlay show id=I003
 @text show id=TX05_001_0043 speaker=narration
 画面を拡大した。早瀬さんの手から離れたレンチ。受付の布。千鶴さんの指。
@@ -1542,8 +1556,9 @@
 その前、到着時の廊下の写真にも、早瀬さんは写っていた。袖の染みは同じ場所にある。
 @text show id=TX05_001_0049 speaker=narration
 さらに栞が、到着直後に怪我の話を聞いたと答えた。
-@overlay hide duration_ms=600
+@overlay hide
 @char hide id=CH_001
+@wait sync
 @char show id=CH_006 expression=真剣 position=right
 @text show id=TX05_001_0050 speaker=CH_006
 これで犯行全体が不可能になるわけではありません。ただ、血のついた袖を根拠にはできません。工具も早瀬さん専用ではない
@@ -1570,15 +1585,16 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC05_002
-@location show text="栞葉荘・談話室／夜"
-@bg show id=BG_011 image=window_oblique filter=dim transition=dissolve duration_ms=800
-@bgm play file=B011.dat fade_ms=1200 
+@bgm stop
 @char hide id=CH_006
+@wait sync
+@bg show id=BG_011 image=window_oblique filter=dim
+@bgm play file=B011.dat
 @char show id=CH_001 expression=悲しみ position=right
 @text show id=TX05_002_0001 speaker=narration
 栞は写真を見せてもらいたいと言った。
 @text show id=TX05_002_0002 speaker=narration
-僕がカメラを差し出すと、栞は早瀬さんの袖の画像を拡大した。長く見た後、彼へ渡した。
+僕がカメラを差し出すと、早瀬さんの袖の画像を拡大した。長く見た後、彼へ渡した。
 @text show id=TX05_002_0003 speaker=CH_001
 これを、最初から知っていたのに、言えませんでした
 @text show id=TX05_002_0004 speaker=CH_004
@@ -1601,6 +1617,7 @@
 @text show id=TX05_002_0012 speaker=CH_004
 思っただけだ。死ねと思ったわけじゃない。……その差も、誰かに見せる方法はねえんだな
 @char hide id=CH_001
+@wait sync
 @char show id=CH_006 expression=基本 position=right
 @text show id=TX05_002_0013 speaker=CH_006
 言葉にしていただければ、聞くことはできます
@@ -1631,6 +1648,7 @@
 @text show id=TX05_002_0026 speaker=narration
 僕は直した。訂正前の字も読めるよう、一重の線で消した。
 @char hide id=CH_006
+@wait sync
 @char show id=CH_001 expression=決意 position=right
 @text show id=TX05_002_0027 speaker=CH_001
 急いで、一人を犯人だと決めなくていいと思います。いま、分からないところは、分からないままで
@@ -1682,11 +1700,17 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC06_001
-@location show text="栞葉荘・談話室／二十時過ぎ"
-@bgm play file=B007.dat fade_ms=1200 
-@bg show id=BG_011 image=base filter=dim transition=dissolve duration_ms=800
+@textbox hide
+@bgm stop
+@bg hide
 @char hide id=ALL
+@wait sync
+@bgm play file=B007.dat fade_ms=2000
+@bg show id=BG_011 filter=dim transition=fade duration_ms=1000
 @chapter_title show chapter="第六章" title="開かなかった扉"
+@wait sync
+@location show text="栞葉荘・談話室／二十時過ぎ"
+@textbox show
 @text show id=TX06_001_0001 speaker=narration
 食べ物が少し減ると、誰もがそれを申し訳なく思っているようだった。
 @text show id=TX06_001_0002 speaker=narration
@@ -1721,19 +1745,18 @@
 @text show id=TX06_001_0015 speaker=CH_003
 はい。……いえ、小窓から見たことと混同しているかもしれません。慌てていましたので
 @text show id=TX06_001_0016 speaker=narration
-言い直した内容は、紙に書いた最初の説明と食い違っていた。
+言い直すたびに、紙に書いた最初の説明から離れていった。
 @text show id=TX06_001_0017 speaker=narration
 早瀬さんが昼の封印紙のことを話した。奈緒は、では見てください、と答えた。
 @scene end id=SC06_001
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC06_002
-@location show text="栞葉荘・配電室前／夜"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_008 image=base filter=dim transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
-@textbox show
+@wait sync
+@bg show id=BG_008 filter=dim
+@wait sync
+@location show text="栞葉荘・配電室前／夜"
 @text show id=TX06_002_0001 speaker=narration
 全員で移動した。談話室を空にするのが不安で、千鶴さんは入口を振り返った。
 @text show id=TX06_002_0002 speaker=narration
@@ -1754,7 +1777,8 @@
 修蔵さんの書類を撮るつもりで持ってきたカメラで、僕は窓と盤を撮った。いまは硝子越しで、細かい断定まではできない。
 @text show id=TX06_002_0009 speaker=narration
 それでも、扉を開いて手動操作したという説明を、そのまま書くことはできなくなった。
-@overlay hide duration_ms=600
+@overlay hide
+@wait sync
 @char show id=CH_003 expression=緊張 position=right
 @char show id=CH_004 expression=基本 position=left
 @text show id=TX06_002_0010 speaker=CH_003
@@ -1782,6 +1806,7 @@
 @text show id=TX06_002_0021 speaker=CH_000
 葉は事務室の入口にもありました。風で移動したのか、人が運んだのか、分かりません
 @char hide id=CH_004
+@wait sync
 @char show id=CH_006 expression=真剣 position=left
 @text show id=TX06_002_0022 speaker=CH_006
 葉がついていたことだけで、入室は証明できませんね。ただ、所在の説明が変わったことは記録します
@@ -1791,12 +1816,11 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC06_003
-@location show text="栞葉荘・受付／夜"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_003 image=base filter=dim transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
-@textbox show
+@wait sync
+@bg show id=BG_003 filter=dim
+@wait sync
+@location show text="栞葉荘・受付／夜"
 @text show id=TX06_003_0001 speaker=narration
 談話室へ戻る途中で、早瀬さんが受付の棚を指した。
 @text show id=TX06_003_0002 speaker=CH_004
@@ -1821,6 +1845,7 @@
 @text show id=TX06_003_0010 speaker=narration
 透明な保護紙の下に、細い紙が重ねて貼られていた。栞は指を伸ばさず、横から光を当てた。
 @char hide id=CH_005
+@wait sync
 @char show id=CH_001 expression=真剣 position=right
 @text show id=TX06_003_0011 speaker=CH_001
 貼った順番を、あとで見た方がいいかもしれません。上の紙だけ、端の変色が違います
@@ -1834,8 +1859,10 @@
 はい。だから、その前の記録を残すんです。どこを訂正したか、分かるように
 @text show id=TX06_003_0016 speaker=narration
 黒田さんが書類の所在を訊いた。奈緒は、資料室の原本と、支払いをまとめた事務室の台帳を照らし合わせる予定だったと答えた。
-@overlay hide duration_ms=600
-@bgm play file=B011.dat volume=0.5 fade_ms=1200 
+@bgm stop
+@overlay hide
+@wait sync
+@bgm play file=B011.dat volume=0.5
 @text show id=TX06_003_0017 speaker=narration
 早瀬さんの目が、初めて卓上の紙に集中した。
 @text show id=TX06_003_0018 speaker=CH_004
@@ -1882,7 +1909,7 @@
 @text show id=TX06_003_0038 speaker=narration
 早瀬さんの指が止まった。
 @text show id=TX06_003_0039 speaker=CH_004
-……あんな危ねえところ、見せるもんじゃなかったかもな
+……あんな危ねえところ、見るもんじゃなかったかもな
 @text show id=TX06_003_0040 speaker=CH_000
 危ない場所を知っておくのも、必要だったと思います
 @text show id=TX06_003_0041 speaker=CH_004
@@ -1894,6 +1921,7 @@
 @text show id=TX06_003_0044 speaker=narration
 原本を確かめるための紙が、初めて彼の話をそのまま受け止める形になった。
 @char hide id=CH_004
+@wait sync
 @char show id=CH_003 expression=微笑み position=left
 @text show id=TX06_003_0045 speaker=narration
 奈緒は早瀬さんを見てから、栞に微笑みかけた。
@@ -1902,8 +1930,8 @@
 @char change id=CH_001 expression=真剣
 @text show id=TX06_003_0047 speaker=CH_001
 隠すかどうかではなくて。残っているものを、順番に見たいだけです
-@se play file=S001.dat
 @overlay show id=I007
+@se play file=S001.dat
 @text show id=TX06_003_0048 speaker=narration
 僕は受付控え帳の写真も撮った。欠けた右上と、綴じ目に残る切れ端が写った。
 @text show id=TX06_003_0049 speaker=narration
@@ -1912,14 +1940,14 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC06_004
-@location show text="栞葉荘・談話室／夜"
-@overlay hide duration_ms=600
+@bgm stop
+@overlay hide
 @char hide id=ALL
-@textbox hide
-@bgm play file=B008.dat fade_ms=1600 
-@bg show id=BG_011 image=base filter=dim transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
-@textbox show
+@wait sync
+@bgm play file=B008.dat
+@bg show id=BG_011 filter=dim
+@wait sync
+@location show text="栞葉荘・談話室／夜"
 @text show id=TX06_004_0001 speaker=narration
 すぐに資料室へは行かなかった。
 @text show id=TX06_004_0002 speaker=narration
@@ -1945,11 +1973,15 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC07_001
-@location show text="栞葉荘・談話室／二十一時前"
-@bgm play file=B011.dat fade_ms=1200 
-@bg show id=BG_011 image=base filter=dim transition=dissolve duration_ms=800
+@textbox hide
+@bgm stop
 @char hide id=ALL
+@wait sync
+@bgm play file=B011.dat fade_ms=2000
 @chapter_title show chapter="第七章" title="原本を見せる"
+@wait sync
+@location show text="栞葉荘・談話室／二十一時前"
+@textbox show
 @text show id=TX07_001_0001 speaker=narration
 雨戸の向こうで、何かが転がった。千鶴さんが膝の上のタオルを握った。
 @text show id=TX07_001_0002 speaker=narration
@@ -1986,6 +2018,7 @@
 @text show id=TX07_001_0016 speaker=narration
 栞の声を聞く間、早瀬さんの指は包帯から離れていた。
 @char hide id=CH_001
+@wait sync
 @char show id=CH_006 expression=基本 position=right
 @text show id=TX07_001_0017 speaker=narration
 黒田さんが湯守室の警報表示について奈緒に訊いた。予備電源の負荷を二十一時半までに一度記録したい、という話が先ほどから出ていた。
@@ -2000,8 +2033,9 @@
 @text show id=TX07_001_0022 speaker=CH_006
 道具というのは？
 @text show id=TX07_001_0023 speaker=CH_004
-バルブの工具と、短い点検用の金槌。重い金槌は旧浴場の作業台に置いた。扉を直す途中だったから
+バルブの工具と、短い点検用の金槌。重い方は旧浴場の作業台に置いた。扉を直す途中だったから
 @char hide id=CH_006
+@wait sync
 @char show id=CH_003 expression=基本 position=right
 @text show id=TX07_001_0024 speaker=narration
 奈緒が口を挟んだ。
@@ -2015,8 +2049,8 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC07_002
-@location show text="栞葉荘・談話室／二十一時過ぎ"
 @char hide id=CH_003
+@location show text="栞葉荘・談話室／二十一時過ぎ"
 @text show id=TX07_002_0001 speaker=narration
 千鶴さんが、人数分の膝掛けを取りに行く相談をした。廊下の棚なら僕が一緒に行ける。黒田さんは入口へ椅子を移し、こちらを見ていると答えた。
 @text show id=TX07_002_0002 speaker=narration
@@ -2035,11 +2069,10 @@
 # 千鶴と廊下の棚へ膝掛けを取りに行く
 @scene start id=SC07_003
 @char hide id=ALL
-@textbox hide
+@wait sync
+@bg show id=BG_005 filter=dim
+@wait sync
 @location show text="栞葉荘・廊下の棚／二十一時過ぎ"
-@bg show id=BG_005 image=base filter=dim transition=blackfade duration_ms=800
-@wait start duration_ms=800
-@textbox show
 @text show id=TX07_003_0001 speaker=narration
 千鶴さんと棚へ行くと、乾いた布の匂いがした。
 @text show id=TX07_003_0002 speaker=narration
@@ -2064,11 +2097,10 @@
 # 膝掛けを持ち談話室・受付の見える位置へ戻る
 @scene start id=SC07_004
 @char hide id=ALL
-@textbox hide
+@wait sync
+@bg show id=BG_011 filter=dim
+@wait sync
 @location show text="栞葉荘・談話室／二十一時過ぎ"
-@bg show id=BG_011 image=base filter=dim transition=blackfade duration_ms=800
-@wait start duration_ms=800
-@textbox show
 @text show id=TX07_004_0001 speaker=narration
 戻ると、早瀬さんと黒田さんが受付へ移るところだった。奈緒が照合票の整理をしながら、先ほどの控えを探している。受付は談話室の戸口から見えた。
 @text show id=TX07_004_0002 speaker=narration
@@ -2097,9 +2129,11 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC07_005
-@location show text="栞葉荘・談話室／二十一時十六分頃"
-@bgm play file=B007.dat fade_ms=1200 
+@bgm stop
 @char hide id=CH_005
+@wait sync
+@bgm play file=B007.dat volume=0.5
+@location show text="栞葉荘・談話室／二十一時十六分頃"
 @text show id=TX07_005_0001 speaker=narration
 千鶴さんが膝掛けを配っていた。栞の肩へ掛けた一枚がずれて、僕は椅子を引いた。
 @text show id=TX07_005_0002 speaker=narration
@@ -2157,7 +2191,7 @@
 @text show id=TX07_005_0024 speaker=narration
 黒田さんはお手洗いの戸を一度見て、奈緒に続いた。二十一時二十分だった。
 @text show id=TX07_005_0025 speaker=narration
-僕は廊下を覗いた。お手洗いの戸は閉まり、その先は曲がって見えなくなっていた。
+僕は談話室に戻る前に廊下を覗いた。お手洗いの戸は閉まり、その先は曲がって見えなくなっていた。
 @char show id=CH_001 expression=基本
 @text show id=TX07_005_0026 speaker=CH_001
 原本、見せてもらえるのかな
@@ -2169,13 +2203,17 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC07_006
+@textbox hide
+@bgm stop
+@wait sync
 @location show text="栞葉荘・談話室／二十一時半過ぎ"
-@bgm stop fade_ms=1000
+@textbox show
 @text show id=TX07_006_0001 speaker=narration
 時計の針の音が、雨に混じって聞こえた。
 @text show id=TX07_006_0002 speaker=narration
 栞が覆いを取ったおにぎりを一口食べた。その手が、廊下の音で止まった。
 @char hide id=CH_001
+@wait sync
 @char show id=CH_006 expression=動揺 position=left
 @char show id=CH_003 expression=基本 position=right
 @text show id=TX07_006_0003 speaker=narration
@@ -2197,11 +2235,10 @@
 # 便所前から所在不明者の捜索へ切り替わる
 @scene start id=SC07_007
 @char hide id=ALL
-@textbox hide
+@wait sync
+@bg show id=BG_005 filter=dim
+@wait sync
 @location show text="栞葉荘・館内／二十一時半過ぎ"
-@bg show id=BG_005 image=base filter=dim transition=blackfade duration_ms=800
-@wait start duration_ms=800
-@textbox show
 @se play file=S005.dat
 @text show id=TX07_007_0001 speaker=narration
 僕はお手洗いへ行った。手前で名前を呼び、返事がないので戸を叩いた。中には誰もいなかった。
@@ -2215,7 +2252,8 @@
 @text show id=TX07_007_0005 speaker=narration
 声をかけ合い、館内の灯りのあるところから確かめた。客室、受付、倉庫の前。早瀬さんの車の鍵は、談話室の彼の荷物に残っていた。
 @char hide id=ALL
-@bgm play file=B012.dat fade_ms=1200 
+@wait sync
+@bgm play file=B012.dat volume=0.5
 @text show id=TX07_007_0006 speaker=CH_006
 旧浴場へ。客用廊下から行きましょう。全員、離れないで
 @text show id=TX07_007_0007 speaker=narration
@@ -2226,22 +2264,21 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC07_008
-@location show text="栞葉荘・旧浴場入口／二十一時四十分頃"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_013 image=base filter=dim transition=blackfade duration_ms=900
-@wait start duration_ms=900
-@textbox show
+@bg show id=BG_013 filter=dim
+@wait sync
+@location show text="栞葉荘・旧浴場入口／二十一時四十分頃"
 @text show id=TX07_008_0001 speaker=narration
 浴場の戸が少し開いていた。
 @text show id=TX07_008_0002 speaker=narration
 黒田さんが手をかける前に、僕たちを止めた。床に、早瀬さんの包帯が見えた。
 @effect play id=flash strength=small effect_ms=180
-@wait start duration_ms=900 mode=auto_only
+@wait sync
+@wait beat
 @text show id=TX07_008_0003 speaker=narration
 剥がれたのではない。手がついていた。
 @text show id=TX07_008_0004 speaker=narration
-栞の息が、背後で止まった。
+栞の息が、背中で止まった。
 @text show id=TX07_008_0005 speaker=narration
 僕は戸口へ進んだ。濡れた床に早瀬さんが倒れていた。頭と顔に傷があった。目を逸らしたいのに、名前を呼ぶためには顔を見るほかなかった。
 @text show id=TX07_008_0006 speaker=CH_000
@@ -2257,10 +2294,12 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC08_001
-@location show text="栞葉荘・旧浴場入口／夜"
-@bg show id=BG_013 image=base filter=dim transition=dissolve duration_ms=800
+@textbox hide
 @char hide id=ALL
 @chapter_title show chapter="第八章" title="五人目の湯呑"
+@wait sync
+@location show text="栞葉荘・旧浴場入口／夜"
+@textbox show
 @text show id=TX08_001_0001 speaker=narration
 黒田さんは膝をついた。呼びかけ、早瀬さんの肩に触れた。
 @text show id=TX08_001_0002 speaker=narration
@@ -2276,6 +2315,7 @@
 @text show id=TX08_001_0006 speaker=CH_003
 何か、掛けるものを
 @char hide id=CH_005
+@wait sync
 @char show id=CH_006 expression=真剣 position=left
 @text show id=TX08_001_0007 speaker=narration
 奈緒が僕たちの後ろから入ろうとした。黒田さんが左手を上げた。
@@ -2297,7 +2337,7 @@
 @text show id=TX08_001_0015 speaker=CH_006
 私が追うと言いました
 @text show id=TX08_001_0016 speaker=CH_000
-僕たちも、早瀬さんが黒田さんと会うと思っていました
+僕たちも、黒田さんと会うと思っていました
 @text show id=TX08_001_0017 speaker=narration
 言葉が重なるほど、誰も早瀬さんのそばにいなかったことが明らかになった。
 @text show id=TX08_001_0018 speaker=narration
@@ -2315,13 +2355,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC08_002
-@location show text="栞葉荘・談話室／夜"
+@bgm stop
 @char hide id=ALL
-@textbox hide
-@bgm play file=B009.dat fade_ms=1800 
-@bg show id=BG_011 image=base filter=dim transition=blackfade duration_ms=1800
-@wait start duration_ms=1800
-@textbox show
+@wait sync
+@bgm play file=B009.dat
+@bg show id=BG_011 filter=dim
+@wait sync
+@location show text="栞葉荘・談話室／夜"
 @text show id=TX08_002_0001 speaker=narration
 全員で戻った。
 @text show id=TX08_002_0002 speaker=narration
@@ -2360,6 +2400,7 @@
 @text show id=TX08_002_0017 speaker=CH_001
 さっきも、同じことを考えたのに。誰かが、あの人のそばにいると思って
 @char hide id=CH_005
+@wait sync
 @char show id=CH_006 expression=動揺 position=left
 @text show id=TX08_002_0018 speaker=narration
 黒田さんが机の端へ手を置いた。
@@ -2385,7 +2426,7 @@
 @text show id=TX08_002_0028 speaker=narration
 僕は頷いた。水はすぐそこにあるのに、手を伸ばすことまで他の人に言われなければできなくなっていた。
 @text show id=TX08_002_0029 speaker=narration
-栞は二十一時十八分の記録を読み、その時刻より後に何を見たか僕に訊いた。
+栞は二十一時十八分の記録を読み、その後に何を見たか僕に訊いた。
 @text show id=TX08_002_0030 speaker=narration
 桶の水、お手洗いの戸、黒田さんの声。一つずつ答えていくと、少しだけ手が動くようになった。
 @text show id=TX08_002_0031 speaker=CH_000
@@ -2396,10 +2437,12 @@
 僕は頷き、二十一時十六分頃と書いた。
 @text show id=TX08_002_0034 speaker=CH_000
 仕事の控えだと言っていました。でも、席を立つ直前です。誰かから呼ばれた可能性は
+@bgm stop
 @char hide id=CH_006
+@wait sync
 @char show id=CH_003 expression=基本 position=left
-@bgm play file=B007.dat fade_ms=1200 
-@bg show id=BG_011 image=table_oblique filter=dim transition=dissolve duration_ms=1200
+@bgm play file=B007.dat
+@bg show id=BG_011 image=table_oblique filter=dim
 @text show id=TX08_002_0035 speaker=CH_003
 これでしょうか
 @text show id=TX08_002_0036 speaker=narration
@@ -2430,11 +2473,12 @@
 @text show id=TX08_002_0048 speaker=narration
 早瀬さんが「仕事の控え」と紙を伏せた理由が、初めて違って見えた。
 @text show id=TX08_002_0049 speaker=narration
-公の確認の前に、自分の会社へ払われたはずの金の行き先を見たい。誰かに恥をかかせずに、取り違えなら直したい。そんな希望を持ったのかもしれない。
+彼は秘密を抱えて逃げたのではなかった。公の確認の前に、自分の会社へ払われたはずの金の行き先を見たい。誰かに恥をかかせずに、取り違えなら直したい。そんな希望を持ったのかもしれない。
 @text show id=TX08_002_0050 speaker=narration
 本人に確かめることは、もうできなかった。
-@overlay hide duration_ms=600
+@overlay hide
 @char hide id=CH_003
+@wait sync
 @char show id=CH_006 expression=真剣 position=left
 @text show id=TX08_002_0051 speaker=CH_006
 私の名前を使われた。設備確認の予定を知っていた人が書ける内容です。ただ、その予定はこの場で話していました
@@ -2469,9 +2513,9 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC08_003
-@location show text="栞葉荘・談話室／夜"
 @char hide id=ALL
-@bgm stop fade_ms=1000
+@bgm stop
+@wait sync
 @char show id=CH_005 expression=不安
 @text show id=TX08_003_0001 speaker=narration
 千鶴さんが湯呑を片付けた。
@@ -2495,13 +2539,17 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC09_001
-@location show text="栞葉荘・談話室／夜"
-@bgm play file=B007.dat fade_ms=1200 
-@bg show id=BG_011 image=base filter=dim transition=dissolve duration_ms=800
+@textbox hide
+@bg hide
 @char hide id=ALL
+@wait sync
+@bgm play file=B007.dat fade_ms=2000
+@bg show id=BG_011 filter=dim transition=fade duration_ms=1000
 @char show id=CH_005 expression=不安 position=left
 @char show id=CH_003 expression=緊張 position=right
 @chapter_title show chapter="第九章" title="書かなかったこと"
+@wait sync
+@textbox show
 @text show id=TX09_001_0001 speaker=CH_005
 支払済みの印を押したのは、私です
 @text show id=TX09_001_0002 speaker=narration
@@ -2519,9 +2567,9 @@
 @text show id=TX09_001_0008 speaker=CH_005
 早瀬さんが払ってもらっていないと言ってからも、控えに印があるからって、三枝さんに答えていた。私の確認が間違っていると思われたくなかったの
 @text show id=TX09_001_0009 speaker=CH_000
-口座のことで、何か気づいたことがあったんですか
+その後、控えは確かめたんですか
 @text show id=TX09_001_0010 speaker=CH_005
-今日の昼、三枝さんに、昔の照合票を出してと言われて。重ねた紙の下に、違う番号が見えていた
+今日の昼。三枝さんに、昔の照合票を出してと言われて。重ねた紙の下に、違う番号が見えていた
 @text show id=TX09_001_0011 speaker=CH_001
 伯父には？
 @text show id=TX09_001_0012 speaker=CH_005
@@ -2540,6 +2588,7 @@
 @text show id=TX09_001_0018 speaker=CH_005
 はい
 @char hide id=CH_005
+@wait sync
 @char show id=CH_006 expression=真剣 position=left
 @text show id=TX09_001_0019 speaker=CH_000
 紙片を拾ったところも、もう一度確認したいです
@@ -2563,11 +2612,12 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC09_002
-@location show text="栞葉荘・談話室／夜"
-@bg show id=BG_011 image=window_oblique filter=dim transition=dissolve duration_ms=800
-@bgm play file=B011.dat fade_ms=1200 
+@bgm stop
 @char hide id=CH_003
 @char hide id=CH_006
+@wait sync
+@bg show id=BG_011 image=window_oblique filter=dim
+@bgm play file=B011.dat
 @char show id=CH_005 expression=不安 position=left
 @text show id=TX09_002_0001 speaker=narration
 千鶴さんの話を書き終えて、黒田さんがペンを置いた。
@@ -2595,6 +2645,7 @@
 @text show id=TX09_002_0012 speaker=narration
 僕は栞が彼女をすぐ慰めなかったことを、冷たさだとは思わなかった。知っている人の全てを、優しかった記憶だけで守れない。いまの栞には、それを引き受ける余裕まで求められない。
 @char hide id=CH_005
+@wait sync
 @char show id=CH_006 expression=真剣 position=left
 @text show id=TX09_002_0013 speaker=CH_006
 この後、どう過ごすかも決めましょう
@@ -2625,11 +2676,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC09_003
-@location show text="栞葉荘・談話室／二十二時過ぎ"
-@bgm play file=B010.dat fade_ms=1200 
+@bgm stop
 @char hide id=CH_001
-@bg show id=BG_011 image=table_oblique filter=dim transition=dissolve duration_ms=800
+@wait sync
+@bgm play file=B010.dat
+@bg show id=BG_011 image=table_oblique filter=dim
 @char show id=CH_003 expression=緊張 position=right
+@location show text="栞葉荘・談話室／二十二時過ぎ"
 @text show id=TX09_003_0001 speaker=narration
 黒田さんは湯守室の図を描いた。僕が午後の写真を出し、栞が入口の位置を指した。
 @text show id=TX09_003_0002 speaker=CH_006
@@ -2651,6 +2704,7 @@
 @text show id=TX09_003_0010 speaker=narration
 黒田さんはペンを持ち替えた。握っていたところに汗がついていた。
 @char hide id=CH_003
+@wait sync
 @char show id=CH_001 expression=真剣 position=right
 @text show id=TX09_003_0011 speaker=CH_001
 黒田さんが奈緒さんを見ていなかった時間を確かめることは、思い込みを見直すために必要です。でも、それだけで奈緒さんが旧浴場へ行ったとは言えません
@@ -2659,6 +2713,7 @@
 @text show id=TX09_003_0013 speaker=CH_006
 犯行が可能かという検討にはなります。時刻自体も、私の携帯を見た記憶による部分があります。秒単位で正確とは言えません
 @char hide id=CH_001
+@wait sync
 @char show id=CH_003 expression=緊張 position=right
 @text show id=TX09_003_0014 speaker=CH_003
 私には、そのようなことはできません
@@ -2675,7 +2730,8 @@
 @text show id=TX09_003_0020 speaker=CH_005
 同じように……顔を
 @char hide id=ALL
-@wait start duration_ms=600 mode=auto_only
+@wait sync
+@wait beat
 @text show id=TX09_003_0021 speaker=narration
 言葉がそこで途切れた。栞は机の一点を見たまま、息を吐いた。
 @text show id=TX09_003_0022 speaker=CH_000
@@ -2705,11 +2761,15 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC10_001
-@location show text="栞葉荘・談話室／夜"
-@bgm play file=B010.dat fade_ms=1200 
-@bg show id=BG_011 image=base filter=dim transition=dissolve duration_ms=800
+@textbox hide
+@bg hide
 @char hide id=ALL
+@wait sync
+@bg show id=BG_011 filter=dim transition=fade duration_ms=1000
 @chapter_title show chapter="第十章" title="書いた人、切った紙"
+@wait sync
+@location show text="栞葉荘・談話室／夜"
+@textbox show
 @text show id=TX10_001_0001 speaker=narration
 僕は控え帳の字と、呼び出し紙の字を写真で並べた。
 @text show id=TX10_001_0002 speaker=narration
@@ -2757,7 +2817,7 @@
 紙の出所ですか
 @text show id=TX10_001_0022 speaker=CH_001
 綴じ目に切り残した部分がありました。そこが残っていれば、実物で確かめられます。合わせるときに、無理に触る必要もありません
-@overlay hide duration_ms=600
+@overlay hide
 @se play file=S001.dat
 @text show id=TX10_001_0023 speaker=narration
 僕は紙片の裏表を、現状のまま撮った。奈緒が持っていたこと、卓上に置いた時刻も記した。
@@ -2769,12 +2829,11 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC10_002
-@location show text="栞葉荘・受付／夜"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_003 image=base filter=dim transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
-@textbox show
+@wait sync
+@bg show id=BG_003 filter=dim
+@wait sync
+@location show text="栞葉荘・受付／夜"
 @text show id=TX10_002_0001 speaker=narration
 五人で移動すると、通路がひどく狭く感じられた。奈緒を最後尾にしないよう、黒田さんが自然に歩調を落とした。
 @text show id=TX10_002_0002 speaker=narration
@@ -2820,6 +2879,7 @@
 @text show id=TX10_002_0021 speaker=CH_001
 ここに、貼っていた紙の端がありました。紙帯がまだ残っているところと、剥がれたところ。その境を見てください
 @char hide id=CH_005
+@wait sync
 @char show id=CH_003 expression=緊張 position=left
 @text show id=TX10_002_0022 speaker=CH_003
 貼り替えは、先ほどもお話ししました
@@ -2845,8 +2905,9 @@
 受付にあった照合票から取られた紙だということです。筆跡が違うから無関係、と片付けなくてよくなります
 @text show id=TX10_002_0032 speaker=narration
 千鶴さんが目を近づけた。栞はそっと、息がかかるので、と伝えた。千鶴さんは慌てて離れた。
-@overlay hide duration_ms=600
+@overlay hide
 @char hide id=CH_001
+@wait sync
 @char show id=CH_006 expression=真剣 position=right
 @text show id=TX10_002_0033 speaker=CH_006
 この頁を扱ったのは、どなたですか
@@ -2861,6 +2922,7 @@
 @text show id=TX10_002_0038 speaker=CH_000
 でも、どこから出たのか分からない紙ではなくなった。そこは記録します
 @char hide id=CH_006
+@wait sync
 @char show id=CH_001 expression=真剣 position=right
 @text show id=TX10_002_0039 speaker=narration
 栞は欠けた頁を見たまま、指先を自分の掌へ折り込んだ。
@@ -2879,13 +2941,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC10_003
-@location show text="栞葉荘・談話室／夜"
+@bgm stop
 @char hide id=ALL
-@textbox hide
-@bgm play file=B008.dat fade_ms=1600 
-@bg show id=BG_011 image=base filter=dim transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
-@textbox show
+@wait sync
+@bgm play file=B008.dat
+@bg show id=BG_011 filter=dim
+@wait sync
+@location show text="栞葉荘・談話室／夜"
 @text show id=TX10_003_0001 speaker=narration
 紙片と控え帳を一緒にせず、それぞれ現状を撮って保全した。栞は貼られた紙を剥がさなかった。剥がせば見えるものもあるが、失うものもあると言った。
 @text show id=TX10_003_0002 speaker=narration
@@ -2899,7 +2961,7 @@
 @text show id=TX10_003_0005 speaker=CH_005
 私も見ていたわ。……黒田さんが、入らないでと
 @text show id=TX10_003_0006 speaker=CH_006
-奈緒さんが入ってこないよう、手を上げました。奈緒さんは、床へ屈んだことも、その後に私の脇を通ったこともありません
+奈緒さんが入ってこないよう、手を上げました。床へ屈んだことも、その後に私の脇を通ったこともありません
 @text show id=TX10_003_0007 speaker=CH_003
 タオルを取るときに、拾ったのだと思います。あの状況です。皆様も、何もかも見ておられたわけでは
 @text show id=TX10_003_0008 speaker=CH_000
@@ -2911,6 +2973,7 @@
 @text show id=TX10_003_0011 speaker=narration
 それでも、配電盤、八分間の空白、呼び出し紙を持っていたこと。その三つに、同じ人の説明の揺れが重なっていた。
 @char hide id=CH_003
+@wait sync
 @char show id=CH_001 expression=真剣 position=right
 @text show id=TX10_003_0012 speaker=narration
 僕は栞の手元を見た。栞は自分の作業を終えた顔ではなかった。まだ、目の前の紙から目を離せない顔だった。
@@ -2921,12 +2984,16 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC11_001
-@location show text="栞葉荘・談話室／二十三時前"
-@bgm play file=B011.dat fade_ms=1200 
-@bg show id=BG_011 image=base filter=dim transition=dissolve duration_ms=800
+@textbox hide
+@bgm stop
 @char hide id=ALL
+@wait sync
+@bgm play file=B011.dat fade_ms=2000
 @char show id=CH_001 expression=基本
 @chapter_title show chapter="第十一章" title="残しておくために"
+@wait sync
+@location show text="栞葉荘・談話室／二十三時前"
+@textbox show
 @text show id=TX11_001_0001 speaker=narration
 栞が席を立った。僕も立つと、栞は驚いた顔をした。
 @text show id=TX11_001_0002 speaker=CH_001
@@ -2946,11 +3013,10 @@
 # 二人で隣の厨房へ湯を替えに行く
 @scene start id=SC11_002
 @char hide id=ALL
-@textbox hide
+@wait sync
+@bg show id=BG_014 filter=dim
+@wait sync
 @location show text="栞葉荘・厨房／二十三時前"
-@bg show id=BG_014 image=base filter=dim transition=blackfade duration_ms=900
-@wait start duration_ms=900
-@textbox show
 @text show id=TX11_002_0001 speaker=narration
 厨房は談話室の隣だった。千鶴さんに断り、戸を開けたままにした。栞が湯を注いでいて手を滑らせかけたので、僕が急須を受け取った。
 @char show id=CH_001 expression=悲しみ
@@ -2994,19 +3060,18 @@
 # 呼びかけに答えて談話室へ戻る
 @scene start id=SC11_003
 @char hide id=ALL
-@textbox hide
+@wait sync
+@bg show id=BG_011 filter=dim
+@wait sync
 @location show text="栞葉荘・談話室／二十三時前"
-@bg show id=BG_011 image=base filter=dim transition=blackfade duration_ms=900
-@wait start duration_ms=900
-@textbox show
 @text show id=TX11_003_0001 speaker=narration
 僕たちは返事をし、すぐ戻った。
 @scene end id=SC11_003
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC11_004
+@bgm stop
 @location show text="栞葉荘・談話室／二十三時過ぎ"
-@bgm stop fade_ms=1000
 @se play file=S011.dat
 @text show id=TX11_004_0001 speaker=narration
 警報は、短い電子音で始まった。
@@ -3043,8 +3108,9 @@
 @text show id=TX11_004_0016 speaker=narration
 僕は手帳を開いた。憶測を設備の確定情報として受け取らないために、言葉を区切った。
 @char hide id=CH_006
+@wait sync
 @char show id=CH_001 expression=決意 position=left
-@bgm play file=B008.dat volume=0.5 fade_ms=1200 
+@bgm play file=B008.dat volume=0.5
 @text show id=TX11_004_0017 speaker=CH_001
 全員で入口から見て、危険なら戻りましょう。紙を守る仕事だからといって、人の命より優先はしません
 @text show id=TX11_004_0018 speaker=CH_006
@@ -3062,12 +3128,12 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC11_005
-@location show text="栞葉荘・談話室／出発前"
 @char hide id=CH_003
+@location show text="栞葉荘・談話室／出発前"
 @text show id=TX11_005_0001 speaker=narration
 黒田さんが、談話室の戸を開けたまま廊下を照らした。
 @text show id=TX11_005_0002 speaker=narration
-誰かをここへ残す案は出さなかった。五人で動けば、危険にさらされるのも全員だ。だからといって、二人だけを残して、その組み合わせを信用できるかという問題も解けていない。
+誰かをここへ残す案は出さなかった。五人で動けば、危険にさらされるのも全員だ。だからといって、二人を残して、その組み合わせを信用できるかという問題も解けていない。
 @text show id=TX11_005_0003 speaker=CH_006
 まず、この部屋を戻る場所にします。動かす資料も、ここです。状況が悪くなったら、本館の階段から上へ
 @text show id=TX11_005_0004 speaker=narration
@@ -3110,17 +3176,15 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC11_006
-@location show text="栞葉荘・湯守室／夜・浸水警報"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_006 image=base filter=dim transition=blackfade duration_ms=1200
-@wait start duration_ms=1200
-@textbox show
+@wait sync
+@bg show id=BG_006 filter=dim
+@wait sync
+@location show text="栞葉荘・湯守室／夜・浸水警報"
 @text show id=TX11_006_0001 speaker=narration
 客用廊下の低い部分には、窓の下から水が流れ込んでいた。水深を試して進むことはやめた。
 @char show id=CH_003 expression=基本 position=right
 @char show id=CH_006 expression=真剣 position=left
-@se play file=S011.dat
 @text show id=TX11_006_0002 speaker=narration
 湯守室の入口に五人で集まる。奈緒は表示を指し、点検口の排水が詰まっていないかを見る必要があると言った。
 @text show id=TX11_006_0003 speaker=narration
@@ -3137,13 +3201,13 @@
 
 # 全員の位置を確認し保守通路へ入る
 @scene start id=SC11_007
+@ambient stop
 @char hide id=ALL
-@textbox hide
+@wait sync
+@bg show id=BG_007 filter=dim
+@ambient play file=A001.dat volume=0.5
+@wait sync
 @location show text="栞葉荘・保守通路／夜・浸水警報"
-@bg show id=BG_007 image=base filter=dim transition=blackfade duration_ms=900
-@wait start duration_ms=900
-@textbox show
-@ambient play file=A001.dat fade_ms=800 
 @text show id=TX11_007_0001 speaker=narration
 千鶴さんが僕の後ろへ入り、栞は僕の前に立った。細い場所で、全員が互いの姿を見ていた。
 @text show id=TX11_007_0002 speaker=narration
@@ -3166,16 +3230,18 @@
 箱を運ぶなら、ここを戻る必要がありますよね。棚の上へ移すだけにして、ここを行き来する人数を増やさずに
 @text show id=TX11_007_0010 speaker=narration
 奈緒の手が、栞の肩へ伸びた。
+@bgm stop
 @char hide id=ALL
-@bgm play file=B013.dat fade_ms=200 
-@effect play id=shake strength=normal effect_ms=500
+@wait sync
+@bgm play file=B013.dat
+@effect play id=shake effect_ms=500
 @text show id=TX11_007_0011 speaker=narration
 道を譲ってもらう動きに見えた。次の瞬間、栞の身体が横へ押し出された。
 @text show id=TX11_007_0012 speaker=CH_001
 ――っ
 @text show id=TX11_007_0013 speaker=narration
 栞は壁へ手を伸ばした。指が濡れた面を滑った。
-@wait start duration_ms=700 mode=auto_only
+@wait beat
 @text show id=TX11_007_0014 speaker=narration
 その向こうは、床ではなかった。
 @scene end id=SC11_007
@@ -3185,11 +3251,12 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC12_001
-@location show text="栞葉荘・保守通路／夜"
-@bg show id=BG_007 image=base filter=dim transition=dissolve duration_ms=800
+@textbox hide
 @char hide id=ALL
-@bgm play file=B013.dat fade_ms=200 
 @chapter_title show chapter="第十二章" title="手を離さないで"
+@wait sync
+@location show text="栞葉荘・保守通路／夜"
+@textbox show
 @text show id=TX12_001_0001 speaker=narration
 栞のコートの裾が、手すりをかすめた。
 @effect play id=shake strength=small effect_ms=350
@@ -3240,7 +3307,7 @@
 僕は息を止めた。やり直してくれ、と言いたかった。急いでくれ、とも。どちらも言えば、彼女の足をもっと震わせる気がした。
 @text show id=TX12_001_0023 speaker=CH_000
 僕、持ってる。見てからでいい
-@wait start duration_ms=500 mode=auto_only
+@wait beat
 @text show id=TX12_001_0024 speaker=narration
 栞は一度顔を上げた。目が合った。
 @text show id=TX12_001_0025 speaker=narration
@@ -3261,7 +3328,7 @@
 栞が足を上げた。
 @text show id=TX12_001_0033 speaker=narration
 もう一段。膝が足場の高さに来たとき、千鶴さんが栞の脇へ手を伸ばした。
-@bgm stop fade_ms=1000
+@bgm stop
 @text show id=TX12_001_0034 speaker=narration
 僕は栞を抱えて壁側へ寄った。重さが戻った。床のあるところへ、二人とも座り込んだ。
 @text show id=TX12_001_0035 speaker=CH_001
@@ -3272,7 +3339,7 @@
 ごめん。どこ。肩？
 @text show id=TX12_001_0038 speaker=CH_001
 手首。……でも、離さないで
-@wait start duration_ms=900 mode=auto_only
+@wait beat
 @text show id=TX12_001_0039 speaker=narration
 僕は傷めたところを避けて、栞の背に手を回した。
 @text show id=TX12_001_0040 speaker=narration
@@ -3289,14 +3356,14 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC12_002
-@location show text="栞葉荘・湯守室／救出直後"
+@ambient stop
 @char hide id=ALL
-@textbox hide
-@bgm play file=B011.dat fade_ms=1400 
-@bg show id=BG_006 image=base filter=dim transition=blackfade duration_ms=1400
-@wait start duration_ms=1400
-@textbox show
-@ambient play file=A002.dat volume=0.3 fade_ms=800 
+@wait sync
+@bgm play file=B011.dat
+@bg show id=BG_006 filter=dim
+@ambient play file=A002.dat volume=0.3
+@wait sync
+@location show text="栞葉荘・湯守室／救出直後"
 @text show id=TX12_002_0001 speaker=narration
 黒田さんが横棒を戻し、千鶴さんが栞の肩を抱いた。
 @text show id=TX12_002_0002 speaker=narration
@@ -3316,6 +3383,7 @@
 @text show id=TX12_002_0008 speaker=CH_003
 私は、橘様を避けようとして
 @char hide id=CH_006
+@wait sync
 @char show id=CH_005 expression=決意 position=left
 @text show id=TX12_002_0009 speaker=CH_005
 やめて
@@ -3324,6 +3392,7 @@
 @text show id=TX12_002_0011 speaker=CH_005
 いま、あの子の前で、それを言わないで
 @char hide id=CH_005
+@wait sync
 @char show id=CH_001 expression=決意 position=left
 @text show id=TX12_002_0012 speaker=narration
 栞は千鶴さんの腕に手を添えた。
@@ -3341,12 +3410,11 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC12_003
-@location show text="栞葉荘・談話室／深夜"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_011 image=base filter=dim transition=blackfade duration_ms=1400
-@wait start duration_ms=1400
-@textbox show
+@wait sync
+@bg show id=BG_011 filter=dim
+@wait sync
+@location show text="栞葉荘・談話室／深夜"
 @text show id=TX12_003_0001 speaker=narration
 栞は椅子に座ると、両足を床に押しつけた。
 @text show id=TX12_003_0002 speaker=narration
@@ -3384,7 +3452,7 @@
 @char change id=CH_001 expression=涙
 @text show id=TX12_003_0017 speaker=narration
 栞は頷こうとした。途中で顔が歪み、目から涙が落ちた。
-@wait start duration_ms=1200 mode=auto_only
+@wait beat
 @text show id=TX12_003_0018 speaker=narration
 僕たちはそれ以上、言葉を探さなかった。
 @scene end id=SC12_003
@@ -3394,13 +3462,18 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC13_001
-@location show text="栞葉荘・談話室／深夜"
-@bgm play file=B010.dat fade_ms=1200 
-@bg show id=BG_011 image=table_oblique filter=dim transition=dissolve duration_ms=800
+@textbox hide
+@bgm stop
+@bg hide
 @char hide id=ALL
+@wait sync
+@bgm play file=B010.dat fade_ms=2000
+@bg show id=BG_011 image=table_oblique filter=dim transition=fade duration_ms=1000
 @char show id=CH_003 expression=緊張 position=right
 @char show id=CH_006 expression=真剣 position=left
 @chapter_title show chapter="第十三章" title="確かめられること"
+@wait sync
+@textbox show
 @text show id=TX13_001_0001 speaker=narration
 黒田さんは奈緒の席を入口から離し、机を挟んだ向かいに座った。
 @text show id=TX13_001_0002 speaker=narration
@@ -3429,7 +3502,7 @@
 # 推理選択・誤答訂正・正答・共通合流の制御単位
 @scene start id=SC13_002
 @char hide id=ALL
-@bgm play file=B010.dat fade_ms=1200 
+@wait sync
 @char show id=CH_006 expression=真剣 position=left
 @char show id=CH_001 expression=真剣 position=right
 @text show id=TX13_002_0001 speaker=narration
@@ -3480,8 +3553,8 @@
 
 # 推理選択・誤答訂正・正答・共通合流の制御単位
 @scene start id=SC13_006
-@bg show id=BG_011 image=base filter=dim transition=dissolve duration_ms=800
 # 以降、共通。
+@bg show id=BG_011 filter=dim
 @char show id=CH_001 expression=真剣 position=left
 @char show id=CH_003 expression=緊張 position=right
 @text show id=TX13_006_0001 speaker=CH_000
@@ -3499,10 +3572,12 @@
 @text show id=TX13_006_0007 speaker=CH_003
 混乱していたと、申し上げました
 @char hide id=CH_001
+@wait sync
 @char show id=CH_006 expression=真剣 position=left
 @text show id=TX13_006_0008 speaker=CH_006
 混乱していたことと、その場でできた動きは別です。あなたは廊下から先へ入りませんでした。屈んで拾う動作も、私の前ではしていません
 @char hide id=CH_006
+@wait sync
 @char show id=CH_005 expression=決意 position=left
 @text show id=TX13_006_0009 speaker=CH_005
 私も、栞ちゃんのすぐ横で見ていたわ。奈緒さんはタオルを渡して、それから、ずっと立っていた
@@ -3513,6 +3588,7 @@
 @text show id=TX13_006_0012 speaker=narration
 僕はそこに線を引かなかった。強調すれば事実が強くなるわけではない。
 @char hide id=CH_005
+@wait sync
 @char show id=CH_006 expression=真剣 position=left
 @text show id=TX13_006_0013 speaker=CH_000
 次に、湯守室です。二十一時二十二分頃から三十分頃まで、黒田さんは奈緒さんの姿を見ていません。保守通路は旧浴場へ繋がっている
@@ -3536,15 +3612,18 @@
 最初は、扉を開けたと言ったわ
 @text show id=TX13_006_0023 speaker=narration
 奈緒の唇が動いた。否定は出てこなかった。
-@bgm play file=B014.dat volume=0.5 fade_ms=1200 
+@bgm stop
+@wait sync
+@bgm play file=B014.dat volume=0.5
 @text show id=TX13_006_0024 speaker=CH_000
 それぞれ、単独では犯人を決められない。でも、二つの事件で所在を裏付ける説明が崩れ、呼び出しに使われたと考えられる紙を持っていて、回収した経緯が合わない。そして、紙のことを調べた栞を、僕たちの前で押した
 @text show id=TX13_006_0025 speaker=narration
 僕はそこで、奈緒を見た。
 @text show id=TX13_006_0026 speaker=CH_000
 僕たちは、これを全部渡します。奈緒さんが何も話さなくても
-@bgm stop fade_ms=1000
-@wait start duration_ms=900 mode=auto_only
+@bgm stop
+@wait sync
+@wait beat
 @text show id=TX13_006_0027 speaker=narration
 雨音だけが続いた。
 @char change id=CH_003 expression=動揺
@@ -3566,13 +3645,17 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC14_001
-@location show text="栞葉荘・談話室／深夜"
-@bgm play file=B015.dat volume=0.5 fade_ms=1200 
-@bg show id=BG_011 image=table_oblique filter=dim transition=dissolve duration_ms=800
+@textbox hide
+@bg hide
 @char hide id=ALL
+@wait sync
+@bgm play file=B015.dat volume=0.5 fade_ms=2000
+@bg show id=BG_011 image=table_oblique filter=dim transition=fade duration_ms=1000
 @char show id=CH_003 expression=沈痛 position=right
 @char show id=CH_005 expression=不安 position=left
 @chapter_title show chapter="第十四章" title="居場所"
+@wait sync
+@textbox show
 @text show id=TX14_001_0001 speaker=CH_003
 先に埋めれば、誰も困らないと思ったんです
 @text show id=TX14_001_0002 speaker=narration
@@ -3598,6 +3681,7 @@
 @text show id=TX14_001_0012 speaker=narration
 二人とも泣いてはいなかった。目を合わせたまま、どちらも続く言葉を探せなかった。
 @char hide id=CH_005
+@wait sync
 @char show id=CH_006 expression=真剣 position=left
 @text show id=TX14_001_0013 speaker=CH_003
 三枝さんは今日、全部の原本を出すと言いました。承継の前に、一度、清算するのだと。少し待ってほしいとお願いしました。私が戻すから、皆様の前で話すのは
@@ -3612,6 +3696,7 @@
 @text show id=TX14_001_0018 speaker=narration
 言葉が急に止まった。
 @char hide id=CH_006
+@wait sync
 @char show id=CH_001 expression=悲しみ position=left
 @text show id=TX14_001_0019 speaker=narration
 栞は奈緒を見ていた。僕の手を握る力が、少し強くなった。
@@ -3647,6 +3732,7 @@
 @text show id=TX14_001_0034 speaker=narration
 栞は目を閉じた。謝罪を受け取るための返事はしなかった。
 @char hide id=CH_001
+@wait sync
 @char show id=CH_006 expression=真剣 position=left
 @text show id=TX14_001_0035 speaker=CH_006
 早瀬さんのことは
@@ -3672,7 +3758,7 @@
 @text show id=TX14_001_0045 speaker=narration
 そこで奈緒が口を覆った。
 @text show id=TX14_001_0046 speaker=narration
-僕は、涙が出るのかと思った。違った。奈緒は吐き気を堪えるように息を止め、ゆっくり吐いた。
+僕は、涙が出るのかと思った。違った。吐き気を堪えるように息を止め、ゆっくり吐いた。
 @text show id=TX14_001_0047 speaker=CH_003
 作業台の工具を使いました。書いた紙を早瀬さんの上着の内側から取って、戻りました。黒田様に呼ばれたので、処分する前に
 @text show id=TX14_001_0048 speaker=CH_006
@@ -3682,8 +3768,9 @@
 間に合ったと思いました
 @text show id=TX14_001_0050 speaker=narration
 その言葉に、僕の指が止まった。
-@bg show id=BG_011 image=window_oblique filter=dim transition=dissolve duration_ms=800
-@wait start duration_ms=800 mode=auto_only
+@bg show id=BG_011 image=window_oblique filter=dim
+@wait sync
+@wait beat
 @text show id=TX14_001_0051 speaker=narration
 早瀬さんは、間に合わなかった。僕たちが追うのも、支払原本を見るのも、和解の言葉も。その隣で、奈緒だけが戻る時間に間に合ったと思っていた。
 @text show id=TX14_001_0052 speaker=CH_000
@@ -3691,7 +3778,7 @@
 @text show id=TX14_001_0053 speaker=narration
 奈緒は頷かなかった。
 @text show id=TX14_001_0054 speaker=CH_006
-戻ったときに、紙を見せて話すこともできたはずです
+紙を返して、話すこともできたはずです
 @text show id=TX14_001_0055 speaker=narration
 奈緒は目を閉じた。
 @text show id=TX14_001_0056 speaker=CH_006
@@ -3703,6 +3790,7 @@
 @text show id=TX14_001_0059 speaker=CH_003
 言えば、宿が終わると思いました
 @char hide id=CH_006
+@wait sync
 @char show id=CH_005 expression=決意 position=left
 @text show id=TX14_001_0060 speaker=CH_005
 宿が終わるのと、早瀬さんが死ぬのは、同じではないわ
@@ -3741,6 +3829,7 @@
 @text show id=TX14_001_0077 speaker=narration
 僕はその言葉も、本人の説明として書いた。
 @char hide id=CH_005
+@wait sync
 @char show id=CH_001 expression=決意 position=left
 @text show id=TX14_001_0078 speaker=narration
 栞は紙面ではなく、奈緒を見ていた。
@@ -3775,7 +3864,7 @@
 @char hide id=ALL
 @text show id=TX14_001_0092 speaker=narration
 誰も立たなかった。誰も彼女の肩へ手を置かなかった。
-@wait start duration_ms=1100 mode=auto_only
+@wait beat
 @text show id=TX14_001_0093 speaker=narration
 僕は手帳の最後に時刻を記し、供述という言葉をつけた。分かったことが増えても、修蔵さんと早瀬さんがいない部屋は、そのままだった。
 @scene end id=SC14_001
@@ -3785,11 +3874,17 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC15_001
-@location show text="栞葉荘・談話室／未明"
-@bgm play file=B011.dat volume=0.5 fade_ms=1200 
-@bg show id=BG_011 image=base filter=dim transition=dissolve duration_ms=800
+@textbox hide
+@bgm stop
+@bg hide
 @char hide id=ALL
+@wait sync
+@bgm play file=B011.dat volume=0.5 fade_ms=2000
+@bg show id=BG_011 filter=dim transition=fade duration_ms=1000
 @chapter_title show chapter="第十五章" title="夜を越す人"
+@wait sync
+@location show text="栞葉荘・談話室／未明"
+@textbox show
 @se play file=S011.dat
 @text show id=TX15_001_0001 speaker=narration
 告白が終わっても、警報は止まらなかった。
@@ -3826,6 +3921,7 @@
 @text show id=TX15_001_0016 speaker=narration
 湯はもうぬるかった。それでも、喉を通る感触がした。
 @char hide id=CH_005
+@wait sync
 @char show id=CH_006 expression=真剣 position=left
 @text show id=TX15_001_0017 speaker=CH_006
 交代で目を閉じましょう。一人になる当番は作りません
@@ -3838,6 +3934,7 @@
 @text show id=TX15_001_0021 speaker=narration
 栞は頷いて椅子へ深く座った。僕も隣へ移動した。
 @char hide id=CH_006
+@wait sync
 @char show id=CH_003 expression=沈痛 position=left
 @text show id=TX15_001_0022 speaker=CH_003
 橘様
@@ -3856,8 +3953,7 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC15_002
-@location show text="栞葉荘・談話室／未明"
-@bg show id=BG_011 image=window_oblique filter=dim transition=dissolve duration_ms=800
+@bg show id=BG_011 image=window_oblique filter=dim
 @char change id=CH_001 expression=悲しみ crop=face
 @text show id=TX15_002_0001 speaker=narration
 しばらくして、栞の頭が僕の肩に触れた。
@@ -3910,17 +4006,21 @@
 @char hide id=CH_001
 @text show id=TX15_002_0025 speaker=narration
 栞は小さく息を吐いた。それから、今度は本当に目を閉じた。
-@wait start duration_ms=900 mode=auto_only
+@wait beat
 @text show id=TX15_002_0026 speaker=narration
-僕はその言葉を、告白だとは受け取らなかった。この夜から帰った後にも話せる相手がいる。その約束として、忘れないようにした。
+僕はその言葉を、告白の返事だとは受け取らなかった。この夜から帰った後にも話せる相手がいる。その約束として、忘れないようにした。
 @scene end id=SC15_002
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC15_003
-@location show text="栞葉荘・談話室／明け方前"
-@bg show id=BG_011 image=table_oblique filter=dim transition=dissolve duration_ms=800
+@textbox hide
+@bg hide
+@wait sync
+@bg show id=BG_011 image=table_oblique filter=dim transition=fade
 @char show id=CH_005 expression=涙 position=left
 @char show id=CH_006 expression=基本 position=right
+@location show text="栞葉荘・談話室／明け方前"
+@textbox show
 @text show id=TX15_003_0001 speaker=narration
 僕がうとうとした間に、千鶴さんは早瀬さんの荷物をまとめていた。
 @text show id=TX15_003_0002 speaker=narration
@@ -3955,6 +4055,7 @@
 別の頁に書き、記録へ添えることにした。
 @char hide id=CH_005
 @char hide id=CH_006
+@wait sync
 @char show id=CH_003 expression=沈痛 position=right
 @text show id=TX15_003_0017 speaker=narration
 奈緒は机の反対側で、窓のない壁を見ていた。
@@ -3966,13 +4067,15 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC15_004
-@location show text="栞葉荘・談話室／夜明け前"
-@char hide id=ALL
 @textbox hide
-@bg show id=BG_011 image=window_oblique filter=cool transition=blackfade duration_ms=1800
-@wait start duration_ms=1800
+@bg hide
+@char hide id=ALL
+@bgm stop
+@wait sync
+@bg show id=BG_011 image=window_oblique filter=cool transition=fade
+@wait sync
+@location show text="栞葉荘・談話室／夜明け前"
 @textbox show
-@bgm stop fade_ms=1000
 @text show id=TX15_004_0001 speaker=narration
 表示器の音が止まった。
 @text show id=TX15_004_0002 speaker=narration
@@ -4006,15 +4109,17 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC16_001
-@location show text="栞葉荘・談話室／翌朝"
-@char hide id=ALL
 @textbox hide
-@bgm play file=B011.dat fade_ms=1800 
-@bg show id=BG_011 image=base filter=cool transition=blackfade duration_ms=1800
-@wait start duration_ms=1800
-@textbox show
-@ambient stop fade_ms=800
+@bg hide
+@char hide id=ALL
+@ambient stop
+@wait sync
+@bgm play file=B011.dat fade_ms=2000
+@bg show id=BG_011 filter=cool transition=fade duration_ms=1000
 @chapter_title show chapter="第十六章" title="迎えの足音"
+@wait sync
+@location show text="栞葉荘・談話室／翌朝"
+@textbox show
 @text show id=TX16_001_0001 speaker=narration
 声を聞いて、まず宿の名を言った。
 @text show id=TX16_001_0002 speaker=narration
@@ -4042,11 +4147,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC16_002
-@location show text="栞葉荘・玄関／朝"
-@char hide id=ALL
 @textbox hide
-@bg show id=BG_003 transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
+@bg hide
+@char hide id=ALL
+@wait sync
+@bg show id=BG_003 transition=fade
+@wait sync
+@location show text="栞葉荘・玄関／朝"
 @textbox show
 @se play file=S008.dat
 @text show id=TX16_002_0001 speaker=narration
@@ -4072,6 +4179,7 @@
 @text show id=TX16_002_0010 speaker=narration
 警察官が奈緒へ声をかけた。黒田さんが目撃の概要を伝えた。奈緒は否定せず立ち、僕たちと距離を置くよう促された。
 @char hide id=CH_001
+@wait sync
 @char show id=CH_005 expression=涙 position=left
 @char show id=CH_003 expression=沈痛 position=right
 @text show id=TX16_002_0011 speaker=narration
@@ -4098,11 +4206,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC16_003
-@location show text="栞葉荘・談話室／朝"
-@char hide id=ALL
 @textbox hide
-@bg show id=BG_011 transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
+@bg hide
+@char hide id=ALL
+@wait sync
+@bg show id=BG_011 transition=fade
+@wait sync
+@location show text="栞葉荘・談話室／朝"
 @textbox show
 @text show id=TX16_003_0001 speaker=narration
 手帳と写真を渡すまでに、何度も同じことを話した。
@@ -4133,17 +4243,18 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC16_004
-@location show text="栞葉荘・客室前／朝"
-@char hide id=ALL
 @textbox hide
-@bg show id=BG_009 transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
+@bg hide
+@char hide id=ALL
+@wait sync
+@bg show id=BG_009 transition=fade
+@wait sync
+@location show text="栞葉荘・客室前／朝"
 @textbox show
 @text show id=TX16_004_0001 speaker=narration
 荷物を取りに、警察官についてきてもらった。
 @text show id=TX16_004_0002 speaker=narration
 栞は部屋へ入る前に一度立ち止まり、母の標本帳が窓から離れた机の上にあることを確かめた。
-@location show text="栞葉荘・客室／朝"
 @text show id=TX16_004_0003 speaker=narration
 風呂敷は濡れていなかった。紐を解かず、そのまま鞄へ収めた。
 @char show id=CH_001 expression=悲しみ
@@ -4167,11 +4278,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC16_005
-@location show text="栞葉荘・受付／朝"
-@char hide id=ALL
 @textbox hide
-@bg show id=BG_003 transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
+@bg hide
+@char hide id=ALL
+@wait sync
+@bg show id=BG_003 transition=fade
+@wait sync
+@location show text="栞葉荘・受付／朝"
 @textbox show
 @text show id=TX16_005_0001 speaker=narration
 黒田さんは、宿の事業を引き継ぐための書類を鞄へしまっていた。
@@ -4182,9 +4295,9 @@
 @text show id=TX16_005_0003 speaker=CH_005
 早瀬さんのところへの支払いは
 @text show id=TX16_005_0004 speaker=CH_006
-未払いとして、確認を進めます。今日中に支払いが済むとは申し上げられません。ご遺族への説明も、私の担当できる範囲で続けます
+未払いとして、確認を進めます。今日中に全部戻るとは申し上げられません。ご遺族への説明も、私の担当できる範囲で続けます
 @text show id=TX16_005_0005 speaker=narration
-千鶴さんは顔を覆った。すぐに、眼鏡を外すためだったと分かった。
+千鶴さんは顔へ手を上げた。すぐに、眼鏡を外すためだったと分かった。
 @text show id=TX16_005_0006 speaker=CH_005
 ええ。お願いします。私も、覚えていることを、もう一度
 @text show id=TX16_005_0007 speaker=CH_006
@@ -4222,7 +4335,7 @@
 @overlay show id=I010
 @text show id=TX16_005_0022 speaker=narration
 封筒には、栞へ、と書かれていた。
-@overlay hide duration_ms=600
+@overlay hide
 @text show id=TX16_005_0023 speaker=narration
 栞はそれを裏返した。封はしてあった。切手は貼られていなかった。
 @scene end id=SC16_005
@@ -4232,14 +4345,17 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC17_001
-@location show text="町の病院・待合室／昼前"
-@char hide id=ALL
 @textbox hide
-@bgm play file=B004.dat fade_ms=2200 
-@bg show id=BG_015 transition=blackfade duration_ms=2200
-@wait start duration_ms=2200
-@textbox show
+@bgm stop
+@bg hide
+@char hide id=ALL
+@wait sync
+@bgm play file=B004.dat fade_ms=2000
+@bg show id=BG_015 transition=fade duration_ms=1000
 @chapter_title show chapter="第十七章" title="栞へ"
+@wait sync
+@location show text="町の病院・待合室／昼前"
+@textbox show
 @text show id=TX17_001_0001 speaker=narration
 病院の自動ドアは、誰が近づいても開いた。
 @text show id=TX17_001_0002 speaker=narration
@@ -4275,15 +4391,14 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC17_002
-@location show text="町の病院・小さな休憩室／昼"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_016 transition=blackfade duration_ms=1800
-@wait start duration_ms=1800
-@textbox show
+@wait sync
+@bg show id=BG_016
+@wait sync
+@location show text="町の病院・小さな休憩室／昼"
 @text show id=TX17_002_0001 speaker=narration
 窓際の椅子が二つ空いていた。話し声は廊下の向こうに遠ざかった。
-@bgm stop fade_ms=1000
+@bgm stop
 @text show id=TX17_002_0002 speaker=narration
 栞が封筒を開けた。乱暴に破らず、折り目に沿ってゆっくりと。便箋は二枚あった。
 @text show id=TX17_002_0003 speaker=narration
@@ -4299,8 +4414,8 @@
 『栞へ』
 @text show id=TX17_002_0008 speaker=narration
 そこで息を吸い直し、読み始めた。
-@bgm play file=B009.dat volume=0.5 fade_ms=2000 
 # 修蔵の手紙。登録済み筆者CH_002の文章として表示し、立ち絵は表示しない。
+@bgm play file=B009.dat volume=0.5
 @text show id=TX17_002_0009 speaker=CH_002
 標本帳を返す。
 @text show id=TX17_002_0010 speaker=CH_002
@@ -4347,7 +4462,7 @@
 @char change id=CH_001 expression=涙
 @text show id=TX17_002_0028 speaker=narration
 栞は便箋を膝へ置いた。僕が差し出す前に、自分でハンカチを取った。
-@wait start duration_ms=1300 mode=auto_only
+@wait beat
 @text show id=TX17_002_0029 speaker=narration
 目元を押さえ、少し待って、と言った。
 @text show id=TX17_002_0030 speaker=CH_000
@@ -4398,7 +4513,7 @@
 母さんに似てきたと思うことはある。けれど、会いたいのは、お前だ。顔を見せてくれてありがとう。
 @text show id=TX17_002_0051 speaker=CH_002
 修蔵
-@wait start duration_ms=1000 mode=auto_only
+@wait beat
 @text show id=TX17_002_0052 speaker=narration
 栞は最後の名前を読まなかった。
 @char change id=CH_001 expression=涙
@@ -4431,16 +4546,18 @@
 聞いてるよ
 @text show id=TX17_002_0066 speaker=narration
 栞は僕の上着を握った。
-@wait start duration_ms=1300 mode=auto_only
+@wait beat
 @text show id=TX17_002_0067 speaker=narration
 昨夜、床のないところから戻った手だった。いまは僕の胸で、行き先のない言葉を支えていた。
 @scene end id=SC17_002
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC17_003
-@location show text="町の病院・休憩室／午後"
-@bgm play file=B004.dat volume=0.7 fade_ms=1200 
+@bgm stop
+@wait sync
+@bgm play file=B004.dat volume=0.5
 @char show id=CH_001 expression=悲しみ position=right
+@location show text="町の病院・休憩室／午後"
 @text show id=TX17_003_0001 speaker=narration
 栞は泣き終えた後、便箋を広げた。
 @char change id=CH_001 expression=微笑み
@@ -4467,7 +4584,7 @@
 事件の時刻も、口座の番号も、犯人の名も書かれていない。謎は何も解けなかった。
 @text show id=TX17_003_0012 speaker=narration
 ただ、昨日の事務室で急に話を変えた男と、標本帳を返す手配をしていた男が、栞の中で同じ人へ戻っていくようだった。
-@overlay hide duration_ms=600
+@overlay hide
 @text show id=TX17_003_0013 speaker=CH_001
 これ、持って帰るね
 @text show id=TX17_003_0014 speaker=CH_000
@@ -4485,14 +4602,17 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC18_001
-@location show text="町の喫茶店／事件から一週間後"
-@char hide id=ALL
 @textbox hide
-@bgm play file=B011.dat fade_ms=2200 
-@bg show id=BG_017 transition=blackfade duration_ms=2200
-@wait start duration_ms=2200
-@textbox show
+@bgm stop
+@bg hide
+@char hide id=ALL
+@wait sync
+@bgm play file=B011.dat fade_ms=2000
+@bg show id=BG_017 transition=fade duration_ms=1000
 @chapter_title show chapter="第十八章" title="帰ったあとで"
+@wait sync
+@location show text="町の喫茶店／事件から一週間後"
+@textbox show
 @text show id=TX18_001_0001 speaker=narration
 窓の外を、人が傘も持たず歩いていた。
 @text show id=TX18_001_0002 speaker=narration
@@ -4576,7 +4696,7 @@
 @text show id=TX18_002_0008 speaker=narration
 僕は手を止めた。
 @text show id=TX18_002_0009 speaker=CH_001
-ごめん。似た色だから
+ごめん。あの夜の手帳と、似た色だから
 @text show id=TX18_002_0010 speaker=CH_000
 別のにする
 @text show id=TX18_002_0011 speaker=CH_001
@@ -4600,8 +4720,10 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC18_003
+@bgm stop
+@wait sync
+@bgm play file=B016.dat volume=0.5
 @location show text="町の喫茶店／同日・午後"
-@bgm play file=B016.dat fade_ms=1200 
 @text show id=TX18_003_0001 speaker=narration
 菓子が、隣の卓へ運ばれた。
 @text show id=TX18_003_0002 speaker=narration
@@ -4669,17 +4791,16 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC18_004
-@location show text="駅前／夕方"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_018 image=base filter=evening transition=blackfade duration_ms=1800
-@wait start duration_ms=1800
-@textbox show
-@bgm stop fade_ms=1000
+@bgm stop
+@wait sync
+@bg show id=BG_018 filter=evening
+@wait sync
+@location show text="駅前／夕方"
 @text show id=TX18_004_0001 speaker=narration
 店を出ると、夕方の灯りが点いていた。
-@se play file=S012.dat
 @char show id=CH_001 expression=恐怖
+@se play file=S012.dat
 @text show id=TX18_004_0002 speaker=narration
 車が通る音に、栞が立ち止まった。金属を引きずるような音が混じっていた。路上の工事だった。
 @text show id=TX18_004_0003 speaker=narration
@@ -4724,12 +4845,14 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC18_005
-@location show text="成瀬律の部屋／数日後・夜"
-@char hide id=ALL
 @textbox hide
-@bgm play file=B017.dat fade_ms=2200 
-@bg show id=BG_019 image=base filter=night transition=blackfade duration_ms=2200
-@wait start duration_ms=2200
+@bg hide
+@char hide id=ALL
+@wait sync
+@bgm play file=B017.dat
+@bg show id=BG_019 filter=night transition=fade
+@wait sync
+@location show text="成瀬律の部屋／数日後・夜"
 @textbox show
 @text show id=TX18_005_0001 speaker=narration
 栞から、今日はもう休むと短い連絡が来た。
@@ -4760,12 +4883,12 @@
 葉に二つ、穴があいていた。
 @text show id=TX18_005_0014 speaker=narration
 僕はその一枚を選び、栞へ送るのは別の日にした。いま見せてよいか、訊いてからにしようと思った。
-@overlay hide duration_ms=600
+@overlay hide
 @text show id=TX18_005_0015 speaker=narration
 画面を閉じる前に、時計の設定を開いた。
 @text show id=TX18_005_0016 speaker=narration
 二分のずれを直した。
-@wait start duration_ms=900 mode=auto_only
+@wait beat
 @text show id=TX18_005_0017 speaker=narration
 記録から誤差を消したわけではない。あの夜の写真は、二分遅れたまま残っている。これから撮る時間を、合わせたのだった。
 @scene end id=SC18_005
@@ -4775,14 +4898,17 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC19_001
-@location show text="町の植物園・入口／数週間後"
-@char hide id=ALL
 @textbox hide
-@bgm play file=B002.dat fade_ms=2200 
-@bg show id=BG_020 transition=blackfade duration_ms=2200
-@wait start duration_ms=2200
-@textbox show
+@bgm stop
+@bg hide
+@char hide id=ALL
+@wait sync
+@bgm play file=B002.dat fade_ms=2000
+@bg show id=BG_020 transition=fade duration_ms=1000
 @chapter_title show chapter="第十九章" title="仕事ではなく"
+@wait sync
+@location show text="町の植物園・入口／数週間後"
+@textbox show
 @text show id=TX19_001_0001 speaker=narration
 栞は約束より少し早く来た。
 @text show id=TX19_001_0002 speaker=narration
@@ -4808,12 +4934,9 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC19_002
-@location show text="町の植物園・園路／午後"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_020 transition=blackfade duration_ms=1000
-@wait start duration_ms=1000
-@textbox show
+@wait sync
+@location show text="町の植物園・園路／午後"
 @text show id=TX19_002_0001 speaker=narration
 葉を落とした木があった。その隣には、まだ黄色い葉をつけた木がある。
 @char show id=CH_001 expression=基本
@@ -4852,13 +4975,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC19_003
-@location show text="町の植物園・池のそば／午後"
+@bgm stop
 @char hide id=ALL
-@textbox hide
-@bgm play file=B005.dat fade_ms=1600 
-@bg show id=BG_021 transition=blackfade duration_ms=1600
-@wait start duration_ms=1600
-@textbox show
+@wait sync
+@bgm play file=B005.dat
+@bg show id=BG_021
+@wait sync
+@location show text="町の植物園・池のそば／午後"
 @text show id=TX19_003_0001 speaker=narration
 ベンチに陽が当たっていた。今度は乾いている。
 @text show id=TX19_003_0002 speaker=narration
@@ -4909,7 +5032,8 @@
 また、二人とも見てるだけになったね
 @text show id=TX19_003_0024 speaker=narration
 僕は笑い、それからカメラをしまった。
-@bgm stop fade_ms=1000
+@bgm stop
+@wait sync
 @char change id=CH_001 expression=基本
 @text show id=TX19_003_0025 speaker=CH_000
 今日は、話したいことがある
@@ -4925,7 +5049,7 @@
 取材で知り合って、記事が終わってからも、また会いたいと思ってた。仕事の話があれば誘えるから、ずっと、そういう話を探してた
 @text show id=TX19_003_0031 speaker=narration
 栞は僕を見た。目を逸らさなかった。
-@bgm play file=B018.dat volume=0.5 fade_ms=2200 
+@bgm play file=B018.dat volume=0.5
 @text show id=TX19_003_0032 speaker=CH_000
 あの夜、栞を失うと思って、怖かった。でも、あれがあったから好きになったわけじゃない。それより前から、好きだった
 @text show id=TX19_003_0033 speaker=narration
@@ -4973,7 +5097,7 @@
 私も、律さんが好きです。仕事の話をしていないときも、また会いたいと思っていた。あの宿に、あなたと行きたかった
 @char change id=CH_001 expression=涙
 @text show id=TX19_003_0053 speaker=narration
-栞の目に涙が溜まった。拭く前に、言葉を続けた。
+涙が目に溜まった。栞は拭く前に、言葉を続けた。
 @text show id=TX19_003_0054 speaker=CH_001
 帰ってから、会えるって言ってくれたの、嬉しかった。今日も来てくれて、嬉しい。……私と、付き合ってください
 @text show id=TX19_003_0055 speaker=CH_000
@@ -4997,19 +5121,18 @@
 緊張してた
 @text show id=TX19_003_0064 speaker=CH_000
 僕も
-@wait start duration_ms=1200 mode=auto_only
+@wait beat
 @text show id=TX19_003_0065 speaker=narration
 重ねた手が、温かくなるまで待った。
 @scene end id=SC19_003
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC19_004
-@location show text="町の植物園・園路／夕方"
 @char hide id=ALL
-@textbox hide
-@bg show id=BG_020 image=base filter=evening transition=blackfade duration_ms=1800
-@wait start duration_ms=1800
-@textbox show
+@wait sync
+@bg show id=BG_020 filter=evening
+@wait sync
+@location show text="町の植物園・園路／夕方"
 @text show id=TX19_004_0001 speaker=narration
 帰り道は、少し歩きづらかった。
 @text show id=TX19_004_0002 speaker=narration
@@ -5036,7 +5159,7 @@
 うん。ここに置いていく
 @text show id=TX19_004_0012 speaker=narration
 手は離れなかった。
-@wait start duration_ms=1000 mode=auto_only
+@wait beat
 @text show id=TX19_004_0013 speaker=narration
 門の向こうでは、バスが停まっていた。乗れなくても次がある。二人で時刻を見て、急がず歩いた。
 @scene end id=SC19_004
@@ -5046,14 +5169,17 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC20_001
-@location show text="橘栞の作業机／初冬・午後"
-@char hide id=ALL
 @textbox hide
-@bgm play file=B019.dat fade_ms=2200 
-@bg show id=BG_022 transition=blackfade duration_ms=2200
-@wait start duration_ms=2200
-@textbox show
+@bgm stop
+@bg hide
+@char hide id=ALL
+@wait sync
+@bgm play file=B019.dat fade_ms=2000
+@bg show id=BG_022 transition=fade duration_ms=1000
 @chapter_title show chapter="第二十章" title="次の頁"
+@wait sync
+@location show text="橘栞の作業机／初冬・午後"
+@textbox show
 @text show id=TX20_001_0001 speaker=narration
 栞は作業を始める前に、手を洗った。
 @text show id=TX20_001_0002 speaker=narration
@@ -5081,7 +5207,7 @@
 残す義理はないって、書いてあったね
 @text show id=TX20_001_0012 speaker=CH_001
 うん。だから、私が残すと決める
-@overlay hide duration_ms=600
+@overlay hide
 @text show id=TX20_001_0013 speaker=narration
 栞は紙の端に触れる前に指を止め、支え方を変えた。
 @text show id=TX20_001_0014 speaker=narration
@@ -5108,11 +5234,13 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC20_002
-@location show text="橘栞の部屋／初冬・夕方"
-@char hide id=ALL
 @textbox hide
-@bg show id=BG_023 image=base filter=evening transition=blackfade duration_ms=1800
-@wait start duration_ms=1800
+@bg hide
+@char hide id=ALL
+@wait sync
+@bg show id=BG_023 filter=evening transition=fade
+@wait sync
+@location show text="橘栞の部屋／初冬・夕方"
 @textbox show
 @text show id=TX20_002_0001 speaker=narration
 台所から、湯が沸く音がした。
@@ -5136,7 +5264,7 @@
 見せても大丈夫か訊いたとき、栞は少し考えてから、自分で選びたいと答えた。何枚か送ると、二つの穴のある葉を持った手の写真が選ばれた。
 @text show id=TX20_002_0010 speaker=narration
 顔は写っていない。それでも、そのときの会話を二人とも覚えていた。
-@overlay hide duration_ms=600
+@overlay hide
 @text show id=TX20_002_0011 speaker=CH_001
 伯父にも、見せたかったな
 @text show id=TX20_002_0012 speaker=narration
@@ -5168,18 +5296,21 @@
 
 # ②で明示された場面・時間・焦点の区切り
 @scene start id=SC20_003
-@location show text="橘栞の部屋・玄関／夜"
-@char hide id=ALL
 @textbox hide
-@bg show id=BG_023 transition=blackfade duration_ms=1800
-@wait start duration_ms=1800
+@bg hide
+@char hide id=ALL
+@wait sync
+@bg show id=BG_023 transition=fade
+@wait sync
+@location show text="橘栞の部屋・玄関／夜"
 @textbox show
 @text show id=TX20_003_0001 speaker=narration
 帰ろうとすると、栞がコートを持ってきた。
 @overlay show id=I014
 @text show id=TX20_003_0002 speaker=narration
-袖を通す間、彼女は玄関の小さな棚に置いた髪留めを見た。金色の紅葉は、外した後も窓の灯りを受けていた。
-@overlay hide duration_ms=600
+僕が袖を通す間、彼女は玄関の小さな棚に置いた髪留めを見た。金色の紅葉は、外した後も窓の灯りを受けていた。
+@overlay hide
+@wait sync
 @char show id=CH_001 expression=髪飾りなし照れ position=right
 @text show id=TX20_003_0003 speaker=CH_001
 律さん
@@ -5200,10 +5331,11 @@
 @text show id=TX20_003_0010 speaker=CH_000
 木曜日に
 @char hide id=CH_001
-@bgm stop fade_ms=1000
-@ambient play file=A003.dat volume=0.3 fade_ms=1500 
+@bgm stop
+@wait sync
+@ambient play file=A003.dat volume=0.3
+@bg show id=BG_024 filter=night
 @location show text="橘栞の部屋の外／夜"
-@bg show id=BG_024 image=base filter=night transition=dissolve duration_ms=800
 @text show id=TX20_003_0011 speaker=narration
 外へ出ると、冷たい風が頬に当たった。
 @text show id=TX20_003_0012 speaker=narration
@@ -5217,11 +5349,12 @@
 @text show id=TX20_003_0016 speaker=narration
 栞が顔を上げ、はい、と答えた。
 @location hide
-@ambient stop fade_ms=800
+@ambient stop
 @char hide id=ALL
 @textbox hide
 @bg hide
-@wait start duration_ms=1600
+@wait sync
+@wait beat
 @textbox show
 @text show id=TX20_003_0017 speaker=narration
 終
