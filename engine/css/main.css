@@ -1138,26 +1138,47 @@ input[type=range] {
   z-index: 35;
   display: grid;
   place-items: center;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity var(--chapter-fade-ms, 450ms) ease
+  pointer-events: none
 }
 
 #chapter-presentation[hidden] {
   display: none
 }
 
-#chapter-presentation[data-visible="true"] {
-  opacity: 1
-}
-
 .chapter-presentation-band {
+  position: relative;
   width: 100%;
   padding: 24px 8vw;
   text-align: center;
+  background: rgba(10, 12, 16, 0);
+  transform: translateY(-100px);
+  transition: background-color var(--chapter-fade-ms, 450ms) ease
+}
+
+.chapter-presentation-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(10, 12, 16, .72);
   backdrop-filter: blur(3px);
-  transform: translateY(-100px);
+  opacity: 0;
+  transition: opacity var(--chapter-fade-ms, 450ms) ease
+}
+
+#chapter-presentation[data-visible="true"] .chapter-presentation-band::before {
+  opacity: 1
+}
+
+#chapter-presentation-number,
+#chapter-presentation-title {
+  opacity: 0;
+  transition: opacity var(--chapter-fade-ms, 450ms) ease
+}
+
+#chapter-presentation[data-visible="true"] #chapter-presentation-number,
+#chapter-presentation[data-visible="true"] #chapter-presentation-title {
+  opacity: 1
 }
 
 #chapter-presentation-number {

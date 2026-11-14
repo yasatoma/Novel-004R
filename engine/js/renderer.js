@@ -151,6 +151,14 @@ export class Renderer {
       delete this.transition.dataset.effect;
       delete this.transition.dataset.active;
     }
+    if (typeof document !== "undefined" && typeof document.querySelectorAll === "function") {
+      for (const outgoing of document.querySelectorAll(".presentation-effect-layer-outgoing")) outgoing.remove();
+    }
+    if (this.foregroundEffect) {
+      this.foregroundEffect.style.opacity = "";
+      this.foregroundEffect.style.transition = "";
+      this.updateEffectLayer(this.background.dataset.effect ?? "none", this.background.dataset.effectLayer ?? "background");
+    }
   }
 
   resetPresentation() {
@@ -474,14 +482,61 @@ export class Renderer {
     }
   }
 
+  transitionEffectLayer(effect, layer, duration) {
+    const ms = Math.max(0, Number(duration ?? 0));
+    if (ms <= 0) {
+      this.updateEffectLayer(effect, layer);
+      return;
+    }
+    const generation = this.transitionGeneration;
+    const current = this.foregroundEffect;
+    if (current && !current.hidden && current.dataset.effect && current.dataset.effect !== "none") {
+      const outgoing = current.cloneNode(false);
+      outgoing.classList.add("presentation-effect-layer-outgoing");
+      outgoing.style.opacity = getComputedStyle(current).opacity || "1";
+      outgoing.style.transition = `opacity ${ms}ms ease`;
+      this.game.append(outgoing);
+      void outgoing.offsetWidth;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          if (generation === this.transitionGeneration) outgoing.style.opacity = "0";
+        });
+      });
+      this.transitionTimers.push(setTimeout(() => outgoing.remove(), ms));
+    }
+    if (layer === "foreground" && effect !== "none") {
+      this.updateEffectLayer(effect, layer);
+      this.foregroundEffect.style.transition = `opacity ${ms}ms ease`;
+      this.foregroundEffect.style.opacity = "0";
+      void this.foregroundEffect.offsetWidth;
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          if (generation === this.transitionGeneration && this.foregroundEffect) this.foregroundEffect.style.opacity = "1";
+        });
+      });
+      this.transitionTimers.push(setTimeout(() => {
+        if (generation !== this.transitionGeneration || !this.foregroundEffect) return;
+        this.foregroundEffect.style.opacity = "";
+        this.foregroundEffect.style.transition = "";
+      }, ms));
+    } else if (this.foregroundEffect) {
+      this.foregroundEffect.hidden = true;
+      this.foregroundEffect.style.opacity = "";
+      this.foregroundEffect.style.transition = "";
+    }
+  }
+
   showBackground(command, assets, done) {
     this.clearTransition();
-    const clearBackground = () => {
+    const previousEffect = this.background.dataset.effect ?? "none";
+    const previousEffectLayer = this.background.dataset.effectLayer ?? "background";
+    const clearBackground = (manageEffect = true) => {
       this.background.style.backgroundImage = "";
       this.background.style.backgroundPosition = "center";
       this.background.dataset.filter = "normal";
       this.background.dataset.effect = "none";
-      this.updateEffectLayer("none", "background");
+      this.background.dataset.effectLayer = "background";
+      if (manageEffect) this.updateEffectLayer("none", "background");
     };
     if (command.action === "hide") {
       const duration = Number(command.args?.duration_ms ?? 0);
@@ -501,18 +556,16 @@ export class Renderer {
       layer.style.backgroundPosition = getComputedStyle(this.background).backgroundPosition;
       layer.style.backgroundSize = getComputedStyle(this.background).backgroundSize;
       layer.style.filter = getComputedStyle(this.background).filter;
-      layer.dataset.effect = this.background.dataset.effect ?? "none";
+      layer.dataset.effect = previousEffectLayer === "background" ? previousEffect : "none";
       layer.className = "transition-crossfade";
-      clearBackground();
-      // Force the initial opacity:1 state to be committed before starting
-      // the transition. A single requestAnimationFrame can be coalesced by
-      // the browser and skip the visible fade entirely.
+      this.transitionEffectLayer("none", "background", duration);
+      clearBackground(false);
       void layer.offsetWidth;
       requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        if (generation === this.transitionGeneration) layer.dataset.active = "true";
+        requestAnimationFrame(() => {
+          if (generation === this.transitionGeneration) layer.dataset.active = "true";
+        });
       });
-    });
       this.transitionTimers.push(setTimeout(() => {
         if (generation !== this.transitionGeneration) return;
         this.transitionTimers = [];
@@ -524,56 +577,72 @@ export class Renderer {
         layer.style.filter = "";
         delete layer.dataset.effect;
         delete layer.dataset.active;
+        this.updateEffectLayer("none", "background");
         done?.();
       }, duration));
       return;
     }
+
     const file = resolveBackgroundAsset(assets, command.args.id, command.args.image ?? "base");
-    const apply = () => {
+    const targetEffect = command.args.effect ?? "none";
+    const targetEffectLayer = command.args.effect_layer ?? "background";
+    const apply = (manageEffect = true) => {
       const backgroundUrl = resolveContentUrl(this.workRoot, `images/bg/${file}`);
       this.background.style.backgroundImage = `url("${backgroundUrl}")`;
       this.background.style.backgroundPosition = resolveBackgroundPosition(assets, command.args.id);
       this.background.dataset.filter = command.args.filter ?? "normal";
-      this.background.dataset.effect = command.args.effect ?? "none";
-      this.updateEffectLayer(command.args.effect ?? "none", command.args.effect_layer ?? "background");
+      this.background.dataset.effect = targetEffect;
+      this.background.dataset.effectLayer = targetEffectLayer;
+      if (manageEffect) this.updateEffectLayer(targetEffect, targetEffectLayer);
     };
     const transition = command.args.transition ?? "cut";
     const duration = Number(command.args.duration_ms ?? 0);
-    if (transition === "cut" || duration <= 0 || !this.transition) { apply(); done?.(); return; }
+    if (transition === "cut" || duration <= 0 || !this.transition) {
+      apply();
+      done?.();
+      return;
+    }
+
     const layer = this.transition;
     const generation = this.transitionGeneration;
     layer.hidden = false;
     layer.dataset.transition = transition;
     layer.style.setProperty("--transition-ms", `${duration}ms`);
+
     if (transition === "blackfade") {
       layer.style.backgroundImage = "";
       layer.style.backgroundColor = "#000";
+      layer.dataset.effect = "none";
       layer.className = "transition-blackfade";
-      this.transitionTimers.push(setTimeout(() => { if (generation === this.transitionGeneration) apply(); }, duration / 2));
+      this.transitionEffectLayer("none", "background", duration / 2);
+      this.transitionTimers.push(setTimeout(() => {
+        if (generation !== this.transitionGeneration) return;
+        apply(false);
+        this.transitionEffectLayer(targetEffect, targetEffectLayer, duration / 2);
+      }, duration / 2));
     } else if (transition === "fade") {
-      // Fade means the incoming background itself fades in. This also works
-      // when there is no outgoing background (for example after @bg hide).
-      apply();
+      apply(false);
       layer.style.backgroundColor = "";
       layer.style.backgroundImage = this.background.style.backgroundImage;
       layer.style.backgroundPosition = getComputedStyle(this.background).backgroundPosition;
       layer.style.backgroundSize = getComputedStyle(this.background).backgroundSize;
       layer.style.filter = getComputedStyle(this.background).filter;
-      layer.dataset.effect = this.background.dataset.effect ?? "none";
+      layer.dataset.effect = targetEffectLayer === "background" ? targetEffect : "none";
       layer.className = "transition-fade-in";
       this.background.style.backgroundImage = "";
+      this.transitionEffectLayer(targetEffect, targetEffectLayer, duration);
     } else {
       layer.style.backgroundColor = "";
       layer.style.backgroundImage = this.background.style.backgroundImage;
       layer.style.backgroundPosition = getComputedStyle(this.background).backgroundPosition;
       layer.style.backgroundSize = getComputedStyle(this.background).backgroundSize;
       layer.style.filter = getComputedStyle(this.background).filter;
-      layer.dataset.effect = this.background.dataset.effect ?? "none";
+      layer.dataset.effect = previousEffectLayer === "background" ? previousEffect : "none";
       layer.className = "transition-crossfade";
-      apply();
+      apply(false);
+      this.transitionEffectLayer(targetEffect, targetEffectLayer, duration);
     }
-    // Commit the initial opacity before toggling the active state so the
-    // browser cannot collapse both states into one frame and skip the fade.
+
     void layer.offsetWidth;
     if (transition === "fade") layer.classList.add("transition-ready");
     requestAnimationFrame(() => {
@@ -584,7 +653,7 @@ export class Renderer {
     this.transitionTimers.push(setTimeout(() => {
       if (generation !== this.transitionGeneration) return;
       this.transitionTimers = [];
-      if (transition === "fade" && command.action === "show") apply();
+      if (transition === "fade") apply(false);
       layer.hidden = true;
       layer.className = "";
       layer.style.backgroundImage = "";
@@ -594,6 +663,11 @@ export class Renderer {
       layer.style.filter = "";
       delete layer.dataset.effect;
       delete layer.dataset.active;
+      this.updateEffectLayer(targetEffect, targetEffectLayer);
+      if (this.foregroundEffect) {
+        this.foregroundEffect.style.opacity = "";
+        this.foregroundEffect.style.transition = "";
+      }
       done?.();
     }, duration));
   }
